@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="nhi-supporting-info-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem nhi-supporting-info-type</b></p><a name="nhi-supporting-info-type"> </a><a name="hcnhi-supporting-info-type"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">weight<a name="nhi-supporting-info-type-weight"> </a></td><td>病人體重</td></tr><tr><td style="white-space:nowrap">height<a name="nhi-supporting-info-type-height"> </a></td><td>病人身高</td></tr><tr><td style="white-space:nowrap">pregnancyBreastfeedingStatus<a name="nhi-supporting-info-type-pregnancyBreastfeedingStatus"> </a></td><td>是否懷孕或哺乳</td></tr><tr><td style="white-space:nowrap">imagingReport<a name="nhi-supporting-info-type-imagingReport"> </a></td><td>影像報告</td></tr><tr><td style="white-space:nowrap">cancerStage<a name="nhi-supporting-info-type-cancerStage"> </a></td><td>癌症分期量表</td></tr><tr><td style="white-space:nowrap">examinationReport<a name="nhi-supporting-info-type-examinationReport"> </a></td><td>檢查報告</td></tr><tr><td style="white-space:nowrap">geneInfo<a name="nhi-supporting-info-type-geneInfo"> </a></td><td>基因資訊</td></tr><tr><td style="white-space:nowrap">tests<a name="nhi-supporting-info-type-tests"> </a></td><td>檢驗(查)</td></tr><tr><td style="white-space:nowrap">patientAssessment<a name="nhi-supporting-info-type-patientAssessment"> </a></td><td>病人狀態評估</td></tr><tr><td style="white-space:nowrap">medicationRequest<a name="nhi-supporting-info-type-medicationRequest"> </a></td><td>用藥品項</td></tr><tr><td style="white-space:nowrap">radiotherapy<a name="nhi-supporting-info-type-radiotherapy"> </a></td><td>放射治療</td></tr><tr><td style="white-space:nowrap">carePlanDocument<a name="nhi-supporting-info-type-carePlanDocument"> </a></td><td>治療計畫文件</td></tr><tr><td style="white-space:nowrap">medicalRecord<a name="nhi-supporting-info-type-medicalRecord"> </a></td><td>病歷資料</td></tr><tr><td style="white-space:nowrap">treatmentAssessment<a name="nhi-supporting-info-type-treatmentAssessment"> </a></td><td>結果資訊</td></tr></table></div>
+  </text>
+  <url value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"/>
+  <version value="1.0.6"/>
+  <name value="NHIPASSupportingInfoType"/>
+  <title value="NHI-健保事前審查-補充資訊類別"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-07-01"/>
+  <publisher value="衛生福利部中央健康保險署"/>
+  <contact>
+    <name value="衛生福利部中央健康保險署"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nhi.gov.tw"/>
+    </telecom>
+  </contact>
+  <description value="臺灣衛生福利部中央健康保險署「補充資訊類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="14"/>
+  <concept>
+    <code value="weight"/>
+    <display value="病人體重"/>
+  </concept>
+  <concept>
+    <code value="height"/>
+    <display value="病人身高"/>
+  </concept>
+  <concept>
+    <code value="pregnancyBreastfeedingStatus"/>
+    <display value="是否懷孕或哺乳"/>
+  </concept>
+  <concept>
+    <code value="imagingReport"/>
+    <display value="影像報告"/>
+  </concept>
+  <concept>
+    <code value="cancerStage"/>
+    <display value="癌症分期量表"/>
+  </concept>
+  <concept>
+    <code value="examinationReport"/>
+    <display value="檢查報告"/>
+  </concept>
+  <concept>
+    <code value="geneInfo"/>
+    <display value="基因資訊"/>
+  </concept>
+  <concept>
+    <code value="tests"/>
+    <display value="檢驗(查)"/>
+  </concept>
+  <concept>
+    <code value="patientAssessment"/>
+    <display value="病人狀態評估"/>
+  </concept>
+  <concept>
+    <code value="medicationRequest"/>
+    <display value="用藥品項"/>
+  </concept>
+  <concept>
+    <code value="radiotherapy"/>
+    <display value="放射治療"/>
+  </concept>
+  <concept>
+    <code value="carePlanDocument"/>
+    <display value="治療計畫文件"/>
+  </concept>
+  <concept>
+    <code value="medicalRecord"/>
+    <display value="病歷資料"/>
+  </concept>
+  <concept>
+    <code value="treatmentAssessment"/>
+    <display value="結果資訊"/>
+  </concept>
+</CodeSystem>

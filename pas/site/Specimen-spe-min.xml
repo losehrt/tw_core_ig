@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Specimen xmlns="http://hl7.org/fhir">
+  <id value="spe-min"/>
+  <meta>
+    <profile value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Specimen-twpas"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-Specimen-twpas.html">基因檢測檢體-Specimen TWPAS</a></p></div><p><b>類型</b>：基因資訊<span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://loinc.org/">LOINC-基因檢測檢體類型值集</a>#LP7057-5)</span></p><p><b>病人</b>：<a href="Patient-pat-min.html">Patient/pat-min</a></p><p><b>基因檢測日期</b>：2024-05-06T09:00:00.000Z</p></div>
+  </text>
+  <type>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="LP7057-5"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/pat-min"/>
+  </subject>
+  <receivedTime value="2024-05-06T09:00:00.000Z"/>
+</Specimen>

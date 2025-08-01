@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="obs-cancer-cns"/>
+  <meta>
+    <profile value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-cancer-stage-twpas"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-Observation-cancer-stage-twpas.html">癌症分期量表-Observation Cancer Stage TWPAS</a></p></div><p><b>狀態</b>：final</p><p><b>癌症分期量表項目</b>：WHO CNS tumour grading system <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">(<a href="ValueSet-cancer-stage.html/">SCT + NCI-癌症分期量表項目值集</a>#277460003)</span></p><p><b>病人</b>：<a href="Patient-pat-min.html">Patient/pat-min</a></p><p><b>癌症分期量表評估日期</b>：2024-05-07</p><p><b>簽發癌症分期報告醫師</b>：<a href="Practitioner-pra-min.html">Practitioner/pra-min</a></p><p><b>癌症分期分數或結果</b>：2</p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"/>
+      <code value="cancerStage"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="277460003"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/pat-min"/>
+  </subject>
+  <effectiveDateTime value="2024-05-07"/>
+  <performer>
+    <reference value="Practitioner/pra-min"/>
+  </performer>
+  <valueInteger value="2"/>
+</Observation>

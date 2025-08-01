@@ -1,0 +1,120 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://nhicore.nhi.gov.tw/pas/Bundle/bun-response> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "bun-response"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Bundle-response-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Bundle-response-twpas>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "searchset"] ; # 
+  fhir:total [ fhir:v "1"^^xsd:nonNegativeInteger] ; # 
+  fhir:link ( [
+     fhir:relation [ fhir:v "self" ] ;
+     fhir:url [ fhir:v "https://twcore.mohw.gov.tw/fhir/ClaimResponse?request.patient.identifier=A123456789"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/ClaimResponse/claim-response-example"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/ClaimResponse/claim-response-example> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "match" ]
+     ]
+  ] ) . # 
+
+<https://nhicore.nhi.gov.tw/pas/ClaimResponse/claim-response-example> a fhir:ClaimResponse ;
+  fhir:id [ fhir:v "claim-response-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/ClaimResponse-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/ClaimResponse-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><a name=\"ClaimResponse_claim-response-example\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ClaimResponse-twpas.html\">事前審查結果-ClaimResponse TWPAS</a></p></div><p><b>狀態</b>：Active</p><p><b>類型</b>：<span title=\"Codes:{http://terminology.hl7.org/CodeSystem/claim-type institutional}\">Institutional</span></p><p><b>用途</b>：Preauthorization</p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a></p><p><b>核定日期</b>：2024-07-30</p><p><b>關聯的事前審查</b>：<a href=\"Claim-cla-1.html\">Claim/cla-1</a></p><p><b>保險商</b>：<a href=\"Organization-org-nhi.html\">Organization 衛生福利部中央健康保險署</a></p><p><b>處置狀態</b>：Processing Complete</p><p><b>案件受理狀態</b>：審畢結果</p><blockquote><p><b>item</b></p><p><b>itemSequence</b>：1</p><h3>受理審查案件核定註記</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>類型</b></td><td><b>受理審查案件核定註記</b></td><td><b>核定數量</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/adjudication submitted}\">Submitted Amount</span></td><td>同意備查 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"CodeSystem-nhi-approve-comment.html\">NHI-健保事前審查-核定註記</a>#1) </span>)</td><td>2</td></tr></table><h3>個別醫令核定註記</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>類型</b></td><td><b>Claim.item.sequence</b></td><td><b>個別醫令核定註記</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/adjudication submitted}\">Submitted Amount</span></td><td>1</td><td>同意備查 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"CodeSystem-nhi-approve-comment.html\">NHI-健保事前審查-核定註記</a>#1) </span>)</td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/adjudication submitted}\">Submitted Amount</span></td><td>2</td><td>同意備查 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"CodeSystem-nhi-approve-comment.html\">NHI-健保事前審查-核定註記</a>#1) </span>)</td></tr></table></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/claim-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "institutional" ]
+     ] )
+  ] ; # 
+  fhir:use [ fhir:v "preauthorization"] ; # 
+  fhir:patient [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:created [ fhir:v "2024-07-30"^^xsd:date] ; # 
+  fhir:insurer [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Organization/org-nhi> ;
+     fhir:reference [ fhir:v "Organization/org-nhi" ]
+  ] ; # 
+  fhir:request [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Claim/cla-1> ;
+     fhir:reference [ fhir:v "Claim/cla-1" ]
+  ] ; # 
+  fhir:outcome [ fhir:v "complete"] ; # 
+  fhir:disposition [ fhir:v "審畢結果"] ; # 
+  fhir:item ( [
+     fhir:itemSequence [ fhir:v "1"^^xsd:positiveInteger ] ;
+     fhir:adjudication ( [
+       fhir:category [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/adjudication"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "submitted" ]
+         ] )
+       ] ;
+       fhir:reason [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-approve-comment"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "1" ]
+         ] )
+       ] ;
+       fhir:value [ fhir:v "2"^^xsd:decimal ]
+     ] ) ;
+     fhir:detail ( [
+       fhir:detailSequence [ fhir:v "1"^^xsd:positiveInteger ] ;
+       fhir:adjudication ( [
+         fhir:category [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/adjudication"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "submitted" ]
+           ] )
+         ] ;
+         fhir:reason [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-approve-comment"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "1" ]
+           ] )
+         ]
+       ] )
+     ] [
+       fhir:detailSequence [ fhir:v "2"^^xsd:positiveInteger ] ;
+       fhir:adjudication ( [
+         fhir:category [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/adjudication"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "submitted" ]
+           ] )
+         ] ;
+         fhir:reason [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-approve-comment"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "1" ]
+           ] )
+         ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

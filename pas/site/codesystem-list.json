@@ -1,0 +1,164 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/inca-osiris",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "INCaOsiris",
+      "title" : "INCa-健保事前審查-基因突變類型",
+      "description" : "INCa-健保事前審查-基因突變類型，資料所屬單位：Institut National du Cancer (INCa)，參照至：https://github.com/InstitutNationalduCancer/OSIRIS。"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIMedicationFrequency",
+      "title" : "NHI-健保事前審查-藥品使用頻率",
+      "description" : "NHI-健保事前審查-藥品使用頻率，參照至[健保署檔案譯碼簿](https://www.nhi.gov.tw/ch/cp-1880-20811-3142-1.html)中的「藥品使用頻率（2022/8/2版本）」。\n\n代碼出版日期：2024-05-27；資料所屬單位：衛生福利部中央健康保險署。\n\n*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nci-thesaurus",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NciThesaurus",
+      "title" : "NCI 健保事前審查-Thesaurus",
+      "description" : "NCI 健保事前審查-Thesaurus，參照至http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl  \n代碼出版日期：2022-10-13。"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-acceptance-status",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIAcceptanceStatus",
+      "title" : "NHI-健保事前審查-案件受理狀態",
+      "description" : "臺灣衛生福利部中央健康保險署「案件受理狀態」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-apply-reason",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIApplyReason",
+      "title" : "NHI-健保事前審查-給付適應症",
+      "description" : "臺灣衛生福利部中央健康保險署「給付適應症」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-apply-side",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIApplySide",
+      "title" : "NHI-健保事前審查-申請部位",
+      "description" : "臺灣衛生福利部中央健康保險署「申請部位」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-apply-type",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIApplyType",
+      "title" : "NHI-健保事前審查-申報類別",
+      "description" : "臺灣衛生福利部中央健康保險署「申報類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-approve-comment",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIApproveComment",
+      "title" : "NHI-健保事前審查-核定註記",
+      "description" : "臺灣衛生福利部中央健康保險署「核定註記」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-body-site",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIBodySite",
+      "title" : "NHI-健保事前審查-身體部位",
+      "description" : "臺灣衛生福利部中央健康保險署「身體部位」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-continuation-status",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIContinuationStatus",
+      "title" : "NHI-健保事前審查-續用註記",
+      "description" : "臺灣衛生福利部中央健康保險署「續用註記」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-drug-category",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIDrugCategory",
+      "title" : "NHI-健保事前審查-藥物類型",
+      "description" : "臺灣衛生福利部中央健康保險署「藥物類型」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-line-of-therapy",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHILOT",
+      "title" : "NHI-健保事前審查-用藥線別",
+      "description" : "臺灣衛生福利部中央健康保險署「用藥線別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-medication",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIMedicationCodes",
+      "title" : "NHI-健保事前審查-用藥品項",
+      "description" : "NHI-健保事前審查-用藥品項，參照自[健保用藥品項](https://www.nhi.gov.tw/ch/lp-2466-1.html)中的「健保用藥品項114年4月查詢檔(帶走所有壓縮檔114.4.2更新)」。  \n\n代碼出版日期：2025-04-30；資料所屬單位：衛生福利部中央健康保險署。\n\n*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*  \n\n因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處僅擷取部分代碼，相關代碼可至[健保用藥品項網路查詢服務](https://info.nhi.gov.tw/INAE3000/INAE3000S01)查閱"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-order-type",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIOrderType",
+      "title" : "NHI-健保事前審查-醫令類別",
+      "description" : "臺灣衛生福利部中央健康保險署「醫令類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pat-ast",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "PatAst",
+      "title" : "NHI-健保事前審查-病人狀態評估項目",
+      "description" : "臺灣衛生福利部中央健康保險署「病人狀態評估項目」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pdf-type",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIPDFType",
+      "title" : "NHI-健保事前審查-文件類型",
+      "description" : "臺灣衛生福利部中央健康保險署「文件類型」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIPASSupportingInfoType",
+      "title" : "NHI-健保事前審查-補充資訊類別",
+      "description" : "臺灣衛生福利部中央健康保險署「補充資訊類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-tmhb-type",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHITMHBType",
+      "title" : "NHI-健保事前審查-申請案件類別",
+      "description" : "臺灣衛生福利部中央健康保險署「申請案件類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-tx-ast",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHITreatmentAst",
+      "title" : "NHI-健保事前審查-治療後疾病狀態評估項目",
+      "description" : "臺灣衛生福利部中央健康保險署「治療後疾病狀態評估項目」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/organization-identifier-tw",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIOrganization",
+      "title" : "NHI-健保事前審查-特約醫事機構",
+      "description" : "臺灣衛生福利部中央健康保險署「特約醫事機構」代碼，參照至[衛福部健保署特約醫事機構代碼網路查詢服務](https://www.nhi.gov.tw/ch/cp-5548-135e8-2931-1.html)中的[健保特約醫療院所名冊](https://info.nhi.gov.tw/IODE0000/IODE0000S09?id=1120)\n\n代碼出版日期：2024-04-22；資料所屬單位：衛生福利部中央健康保險署。\n\n*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*"
+    }
+  ]
+}

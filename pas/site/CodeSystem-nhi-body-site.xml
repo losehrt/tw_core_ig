@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="nhi-body-site"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem nhi-body-site</b></p><a name="nhi-body-site"> </a><a name="hcnhi-body-site"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-body-site</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">H<a name="nhi-body-site-H"> </a></td><td>頭部</td></tr><tr><td style="white-space:nowrap">A<a name="nhi-body-site-A"> </a></td><td>頸部</td></tr><tr><td style="white-space:nowrap">F<a name="nhi-body-site-F"> </a></td><td>頭頸部</td></tr><tr><td style="white-space:nowrap">U<a name="nhi-body-site-U"> </a></td><td>胸部</td></tr><tr><td style="white-space:nowrap">N<a name="nhi-body-site-N"> </a></td><td>頸椎</td></tr><tr><td style="white-space:nowrap">J<a name="nhi-body-site-J"> </a></td><td>胸椎</td></tr><tr><td style="white-space:nowrap">K<a name="nhi-body-site-K"> </a></td><td>腰椎</td></tr><tr><td style="white-space:nowrap">G<a name="nhi-body-site-G"> </a></td><td>胸部及上腹部</td></tr><tr><td style="white-space:nowrap">C<a name="nhi-body-site-C"> </a></td><td>上腹部</td></tr><tr><td style="white-space:nowrap">I<a name="nhi-body-site-I"> </a></td><td>腹部(含骨盆腔)</td></tr><tr><td style="white-space:nowrap">P<a name="nhi-body-site-P"> </a></td><td>骨盆腔</td></tr><tr><td style="white-space:nowrap">E<a name="nhi-body-site-E"> </a></td><td>肢部</td></tr><tr><td style="white-space:nowrap">Q<a name="nhi-body-site-Q"> </a></td><td>臂神經血管叢</td></tr><tr><td style="white-space:nowrap">M<a name="nhi-body-site-M"> </a></td><td>骨骼肌肉系統</td></tr><tr><td style="white-space:nowrap">V<a name="nhi-body-site-V"> </a></td><td>心血管系統</td></tr><tr><td style="white-space:nowrap">B<a name="nhi-body-site-B"> </a></td><td>薦椎</td></tr><tr><td style="white-space:nowrap">D<a name="nhi-body-site-D"> </a></td><td>周邊神經</td></tr></table></div>
+  </text>
+  <url value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-body-site"/>
+  <version value="1.0.6"/>
+  <name value="NHIBodySite"/>
+  <title value="NHI-健保事前審查-身體部位"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-07-01"/>
+  <publisher value="衛生福利部中央健康保險署"/>
+  <contact>
+    <name value="衛生福利部中央健康保險署"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nhi.gov.tw"/>
+    </telecom>
+  </contact>
+  <description value="臺灣衛生福利部中央健康保險署「身體部位」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="17"/>
+  <concept>
+    <code value="H"/>
+    <display value="頭部"/>
+  </concept>
+  <concept>
+    <code value="A"/>
+    <display value="頸部"/>
+  </concept>
+  <concept>
+    <code value="F"/>
+    <display value="頭頸部"/>
+  </concept>
+  <concept>
+    <code value="U"/>
+    <display value="胸部"/>
+  </concept>
+  <concept>
+    <code value="N"/>
+    <display value="頸椎"/>
+  </concept>
+  <concept>
+    <code value="J"/>
+    <display value="胸椎"/>
+  </concept>
+  <concept>
+    <code value="K"/>
+    <display value="腰椎"/>
+  </concept>
+  <concept>
+    <code value="G"/>
+    <display value="胸部及上腹部"/>
+  </concept>
+  <concept>
+    <code value="C"/>
+    <display value="上腹部"/>
+  </concept>
+  <concept>
+    <code value="I"/>
+    <display value="腹部(含骨盆腔)"/>
+  </concept>
+  <concept>
+    <code value="P"/>
+    <display value="骨盆腔"/>
+  </concept>
+  <concept>
+    <code value="E"/>
+    <display value="肢部"/>
+  </concept>
+  <concept>
+    <code value="Q"/>
+    <display value="臂神經血管叢"/>
+  </concept>
+  <concept>
+    <code value="M"/>
+    <display value="骨骼肌肉系統"/>
+  </concept>
+  <concept>
+    <code value="V"/>
+    <display value="心血管系統"/>
+  </concept>
+  <concept>
+    <code value="B"/>
+    <display value="薦椎"/>
+  </concept>
+  <concept>
+    <code value="D"/>
+    <display value="周邊神經"/>
+  </concept>
+</CodeSystem>

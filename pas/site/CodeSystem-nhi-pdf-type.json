@@ -1,0 +1,43 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "nhi-pdf-type",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem nhi-pdf-type</b></p><a name=\"nhi-pdf-type\"> </a><a name=\"hcnhi-pdf-type\"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pdf-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">gene<a name=\"nhi-pdf-type-gene\"> </a></td><td>基因報告</td></tr><tr><td style=\"white-space:nowrap\">careplan<a name=\"nhi-pdf-type-careplan\"> </a></td><td>治療計畫文件</td></tr><tr><td style=\"white-space:nowrap\">test<a name=\"nhi-pdf-type-test\"> </a></td><td>檢驗(查)附件</td></tr><tr><td style=\"white-space:nowrap\">medrec<a name=\"nhi-pdf-type-medrec\"> </a></td><td>病歷資料</td></tr></table></div>"
+  },
+  "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pdf-type",
+  "version" : "1.0.6",
+  "name" : "NHIPDFType",
+  "title" : "NHI-健保事前審查-文件類型",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-07-01",
+  "publisher" : "衛生福利部中央健康保險署",
+  "contact" : [{
+    "name" : "衛生福利部中央健康保險署",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.nhi.gov.tw"
+    }]
+  }],
+  "description" : "臺灣衛生福利部中央健康保險署「文件類型」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 4,
+  "concept" : [{
+    "code" : "gene",
+    "display" : "基因報告"
+  },
+  {
+    "code" : "careplan",
+    "display" : "治療計畫文件"
+  },
+  {
+    "code" : "test",
+    "display" : "檢驗(查)附件"
+  },
+  {
+    "code" : "medrec",
+    "display" : "病歷資料"
+  }]
+}

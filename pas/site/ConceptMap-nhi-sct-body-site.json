@@ -1,0 +1,167 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "nhi-sct-body-site",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap nhi-sct-body-site</b></p><a name=\"nhi-sct-body-site\"> </a><a name=\"hcnhi-sct-body-site\"> </a><p>Mapping from <a href=\"ValueSet-nhi-body-site.html\">NHI-健保事前審查-身體部位值集</a> to <a href=\"ValueSet-sct-body-site.html\">SNOMEDCT-健保事前審查-身體部位值集</a></p><br/><p><b>Group 1 </b>Mapping from <a href=\"CodeSystem-nhi-body-site.html\">NHI-健保事前審查-身體部位version: null1.0.6)</a> to <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\">SNOMED CT (all versions)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>H (頭部)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>69536005 (Head)</td></tr><tr><td>A (頸部)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>45048000 (Neck)</td></tr><tr><td>F (頭頸部)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>774007 (Head and neck structure)</td></tr><tr><td>U (胸部)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>43799004 (Thoracic cavity)</td></tr><tr><td>N (頸椎)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>122494005 (Cervical spine)</td></tr><tr><td>J (胸椎)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>122495006 (Thoracic spine)</td></tr><tr><td>K (腰椎)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>122496007 (Lumbar spine)</td></tr><tr><td>G (胸部及上腹部)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>416550000 (Chest and/or abdomen structure (body structure))</td></tr><tr><td>C (上腹部)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>80581009 (Upper abdomen)</td></tr><tr><td>I (腹部(含骨盆腔))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>818987002 (Abdominopelvic cavity)</td></tr><tr><td>P (骨盆腔)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>816991004 (Structure of cavity of true pelvis (body structure))</td></tr><tr><td>E (肢部)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>66019005 (Extremity)</td></tr><tr><td>Q (臂神經血管叢)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>36582005 (Brachial plexus)</td></tr><tr><td>M (骨骼肌肉系統)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>26107004 (Musculoskeletal system)</td></tr><tr><td>V (心血管系統)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>113257007 (Cardiovascular system)</td></tr><tr><td>B (薦椎)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>87141009 (Sacral vertebra)</td></tr><tr><td>D (周邊神經)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>3058005 (Peripheral nervous system)</td></tr></table></div>"
+  },
+  "url" : "https://nhicore.nhi.gov.tw/pas/ConceptMap/nhi-sct-body-site",
+  "version" : "1.0.6",
+  "name" : "NHISNOMEDCT",
+  "title" : "臺灣健保署身體部位代碼對應SNOMED CT",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-07-01",
+  "publisher" : "衛生福利部中央健康保險署",
+  "contact" : [{
+    "name" : "衛生福利部中央健康保險署",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.nhi.gov.tw"
+    }]
+  }],
+  "description" : "此對應表為臺灣健保署身體部位代碼對應SNOMED CT，供實作者於撰寫程式以自動化對應或轉代碼時使用。",
+  "sourceCanonical" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-body-site",
+  "targetCanonical" : "https://nhicore.nhi.gov.tw/pas/ValueSet/sct-body-site",
+  "group" : [{
+    "source" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-body-site",
+    "sourceVersion" : "1.0.6",
+    "target" : "http://snomed.info/sct",
+    "element" : [{
+      "code" : "H",
+      "display" : "頭部",
+      "target" : [{
+        "code" : "69536005",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "A",
+      "display" : "頸部",
+      "target" : [{
+        "code" : "45048000",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "F",
+      "display" : "頭頸部",
+      "target" : [{
+        "code" : "774007",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "U",
+      "display" : "胸部",
+      "target" : [{
+        "code" : "43799004",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "N",
+      "display" : "頸椎",
+      "target" : [{
+        "code" : "122494005",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "J",
+      "display" : "胸椎",
+      "target" : [{
+        "code" : "122495006",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "K",
+      "display" : "腰椎",
+      "target" : [{
+        "code" : "122496007",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "G",
+      "display" : "胸部及上腹部",
+      "target" : [{
+        "code" : "416550000",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "C",
+      "display" : "上腹部",
+      "target" : [{
+        "code" : "80581009",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "I",
+      "display" : "腹部(含骨盆腔)",
+      "target" : [{
+        "code" : "818987002",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "P",
+      "display" : "骨盆腔",
+      "target" : [{
+        "code" : "816991004",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "E",
+      "display" : "肢部",
+      "target" : [{
+        "code" : "66019005",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "Q",
+      "display" : "臂神經血管叢",
+      "target" : [{
+        "code" : "36582005",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "M",
+      "display" : "骨骼肌肉系統",
+      "target" : [{
+        "code" : "26107004",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "V",
+      "display" : "心血管系統",
+      "target" : [{
+        "code" : "113257007",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "B",
+      "display" : "薦椎",
+      "target" : [{
+        "code" : "87141009",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "D",
+      "display" : "周邊神經",
+      "target" : [{
+        "code" : "3058005",
+        "equivalence" : "equal"
+      }]
+    }]
+  }]
+}

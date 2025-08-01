@@ -1,0 +1,1562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Artifacts Summary - 臺灣健保癌症用藥事前審查實作指引 v1.0.6</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+<link href="assets/css/ig.css" rel="stylesheet" />
+    
+<!-- Google tag (gtag.js) HITSTDIO>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1Y4JEG6RS2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1Y4JEG6RS2');
+</script-->
+
+<!-- Google tag (gtag.js) TWCORE 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60R1T0P9G0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60R1T0P9G0');
+</script>-->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"13"}
+    h3,h4,h5,h6{--heading-prefix:"13.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div id="hl7-nav">
+  <a id="hl7-logo" no-external="true" href="index.html" style="width: 10px;">
+    <img height="50" alt="TW" src="assets/images/logo-header.png" />
+  </a>
+</div>
+<div id="hl7-search">
+  <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR"
+      src="assets/images/search.png" /></a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">臺灣健保癌症用藥事前審查實作指引</span>
+            <br/>
+            <span style="display:inline-block;">1.0.6 - STU1.0.6
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+	<li><a href="index.html">應用說明</a></li>
+	<li><a href="toc.html">目錄</a></li>
+	<li><a href="vision.html">視覺化邏輯模型</a></li>
+ 	<li class="dropdown">
+		<a href="artifacts.html">規範文件<b class="caret"></b></a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="capabilitystatements.html">能力聲明</a>
+			</li>
+			<li>
+				<a href="searchparameters.html">查詢參數</a>
+			</li>
+			<li>
+				<a href="models.html">邏輯模型</a>
+			</li>
+			<li>
+				<a href="profiles-and-extensions.html">FHIR Profiles及Extensions</a>
+			</li>
+			<li>
+				<a href="terminologies.html">專門術語</a>
+			</li>
+		</ul>
+	</li>
+ 	<li><a href="examples.html">範例</a></li>
+	<li><a href="downloads.html">結構定義與範例檔下載</a></li>
+	<li><a href="security.html">安全性</a></li>
+	<li><a href="validate.html">驗證教學</a></li>
+</ul>      
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">臺灣健保癌症用藥事前審查實作指引 - Downloaded Version 1.0.6 See the <a href="https://nhicore.nhi.gov.tw/pas/history.html">Directory of published versions</a></p></p><!--EndReleaseHeader-->
+  <h2>Artifacts Summary</h2>
+  
+  
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     class="markdown-toc">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Behavior: Capability Statements</a>
+      </li>
+      <li>
+         <a href="#2">Behavior: Search Parameters</a>
+      </li>
+      <li>
+         <a href="#3">Structures: Logical Models</a>
+      </li>
+      <li>
+         <a href="#4">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#5">Structures: Extension Definitions</a>
+      </li>
+      <li>
+         <a href="#6">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#7">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#8">Terminology: Concept Maps</a>
+      </li>
+      <li>
+         <a href="#9">Example: Example Instances</a>
+      </li>
+   </ul>
+</div>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Behavior: Capability Statements </h3>
+    <p>The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide.  Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-CapabilityStatementTWPASServer.html"
+                  title="CapabilityStatement/CapabilityStatementTWPASServer">臺灣癌藥事前審查-伺服端(TWPAS Server)</a>
+            </td>
+            <td>
+<p>臺灣健保癌症用藥事前審查實作指引(TWPAS IG)伺服端(Server)之能力聲明</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-CapabilityStatementTWPASClient.html"
+                  title="CapabilityStatement/CapabilityStatementTWPASClient">臺灣癌藥事前審查-用戶端(TWPAS Client)</a>
+            </td>
+            <td>
+<p>臺灣健保癌症用藥事前審查實作指引(TWPAS IG)用戶端(Client)之能力聲明</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Behavior: Search Parameters </h3>
+    <p>These define the properties by which a RESTful server can be searched.  They can also be used for sorting and including related resources.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-Bundle-id.html" title="SearchParameter/Bundle-id">Bundle-id</a>
+            </td>
+            <td>
+<p>事前審查(Bundle)的邏輯性ID</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-Claim-func-type.html"
+                  title="SearchParameter/Claim-func-type">Claim-func-type</a>
+            </td>
+            <td>
+<p>事前審查(Claim)的就醫科別(extension: encounter)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-Claim-identifier.html"
+                  title="SearchParameter/Claim-identifier">Claim-identifier</a>
+            </td>
+            <td>
+<p>事前審查(Claim)的受理編號(identifier)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-Claim-patient.html"
+                  title="SearchParameter/Claim-patient">Claim-patient</a>
+            </td>
+            <td>
+<p>事前審查(Claim)的病人資訊(patient)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-ClaimResponse-adjudication-reason.html"
+                  title="SearchParameter/ClaimResponse-adjudication-reason">ClaimResponse-adjudication-reason</a>
+            </td>
+            <td>
+<p>事前審查回覆(ClaimResponse)的核定註記(item.adjudication.reason)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-ClaimResponse-created.html"
+                  title="SearchParameter/ClaimResponse-created">ClaimResponse-created</a>
+            </td>
+            <td>
+<p>事前審查回覆(ClaimResponse)的受理日期或核定日期(Claim)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-ClaimResponse-disposition.html"
+                  title="SearchParameter/ClaimResponse-disposition">ClaimResponse-disposition</a>
+            </td>
+            <td>
+<p>事前審查回覆(ClaimResponse)的案件受理狀態(disposition)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-ClaimResponse-request.html"
+                  title="SearchParameter/ClaimResponse-request">ClaimResponse-request</a>
+            </td>
+            <td>
+<p>事前審查回覆(ClaimResponse)關聯的事前審查(Claim)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-Encounter-service-type.html"
+                  title="SearchParameter/Encounter-service-type">Encounter-service-type</a>
+            </td>
+            <td>
+<p>就醫科別(serviceType)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-Patient-identifier.html"
+                  title="SearchParameter/Patient-identifier">Patient-identifier</a>
+            </td>
+            <td>
+<p>病人的身分證號(identifier)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-Patient-name.html"
+                  title="SearchParameter/Patient-name">Patient-name</a>
+            </td>
+            <td>
+<p>病人的姓名(name)，該查詢可能與 HumanName 中的任何字串匹配，包括完整的中文姓名(text)、英文姓(family)、英文名(given)、姓名前面的頭銜(prefix)、姓名後面的稱謂(suffix)。</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Structures: Logical Models </h3>
+    <p>These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ResponseModel.html"
+                  title="StructureDefinition/ResponseModel">回覆(Response)癌症用藥癌藥事前審查之資料模型</a>
+            </td>
+            <td>
+<p>回覆(Response)癌症用藥癌藥事前審查之資料模型，此邏輯模型為定義癌症用藥事前審查情境下使用的所有資料欄位。<br />
+為了便於實作者快速理解，資料欄位會使用易於理解的命名，實作者再透過邏輯模型中的功能頁籤「Mappings」瞭解各資料欄位實際使用本IG的哪個Profiles的哪個資料項目（element）。亦可配合<a href="vision.html#bundle%E6%9E%B6%E6%A7%8B%E5%9C%96">視覺化邏輯模型圖</a>進行欄位對應</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ApplyModel.html"
+                  title="StructureDefinition/ApplyModel">申請(Apply)癌症用藥癌藥事前審查之資料模型</a>
+            </td>
+            <td>
+<p>申請(Apply)癌症用藥癌藥事前審查之資料模型，此邏輯模型為定義癌症用藥事前審查情境下使用的所有資料欄位。<br />
+為了便於實作者快速理解，資料欄位會使用易於理解的命名，實作者再透過邏輯模型中的功能頁籤「Mappings」瞭解各資料欄位實際使用本IG的哪個Profiles的哪個資料項目（element）。亦可配合<a href="vision.html#bundle%E6%9E%B6%E6%A7%8B%E5%9C%96">視覺化邏輯模型圖</a>進行欄位對應</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Structures: Resource Profiles </h3>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ImagingStudy-twpas.html"
+                  title="StructureDefinition/ImagingStudy-twpas">DICOM影像-ImagingStudy TWPAS</a>
+            </td>
+            <td>
+<p>此DICOM影像-ImagingStudy TWPAS Profile說明本IG如何進一步定義臺灣核心-影像檢查(TW Core ImagingStudy) Profile以呈現癌藥事前審查中疾病資訊之影像報告的影像檢查的身體部位及DICOM影像</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Bundle-twpas.html"
+                  title="StructureDefinition/Bundle-twpas">事前審查-Bundle TWPAS</a>
+            </td>
+            <td>
+<p>此事前審查-Bundle TWPAS Profile說明本IG如何進一步定義資料交換基本單位(TW Core Bundle) Profile以呈現癌藥事前審查之內容</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Claim-twpas.html"
+                  title="StructureDefinition/Claim-twpas">事前審查-Claim TWPAS</a>
+            </td>
+            <td>
+<p>此事前審查-Claim TWPAS Profile說明本IG如何進一步定義FHIR的Claim Resource以呈現癌藥事前審查之內容</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-MedicationRequest-apply-twpas.html"
+                  title="StructureDefinition/MedicationRequest-apply-twpas">事前審查品項-MedicationRequest Apply TWPAS</a>
+            </td>
+            <td>
+<p>此事前審查品項-MedicationRequest Apply TWPAS Profile說明本IG如何進一步定義臺灣核心-藥品請求(TW Core MedicationRequest) Profile以呈現癌藥事前審查中申請項目之事前審查品項</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Bundle-response-twpas.html"
+                  title="StructureDefinition/Bundle-response-twpas">事前審查回覆-Bundle Response TWPAS</a>
+            </td>
+            <td>
+<p>此事前審查回覆-Bundle Response TWPAS Profile說明本IG如何進一步定義資料交換基本單位(TW Core Bundle) Profile以呈現回覆癌藥事前審查之內容</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ClaimResponse-twpas.html"
+                  title="StructureDefinition/ClaimResponse-twpas">事前審查回覆-ClaimResponse TWPAS</a>
+            </td>
+            <td>
+<p>此事前審查回覆-ClaimResponse TWPAS Profile說明本IG如何進一步定義FHIR的ClaimResponse Resource以呈現癌藥事前審查回覆之內容</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Coverage-twpas.html"
+                  title="StructureDefinition/Coverage-twpas">健保事前審查計畫-Coverage TWPAS</a>
+            </td>
+            <td>
+<p>此健保事前審查計畫-Coverage TWPAS Profile說明本IG如何進一步定義FHIR的Coverage Resource以呈現癌藥事前審查之健保事前審查計畫</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Organization-genetic-testing-twpas.html"
+                  title="StructureDefinition/Organization-genetic-testing-twpas">基因檢測機構-Organization Genetic Testing TWPAS</a>
+            </td>
+            <td>
+<p>此基因檢測機構-Organization Genetic Testing TWPAS Profile說明本IG如何進一步定義臺灣核心-機構(TW Core Organization) Profile以呈現癌藥事前審查之基因檢測機構基本資料</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Specimen-twpas.html"
+                  title="StructureDefinition/Specimen-twpas">基因檢測檢體-Specimen TWPAS</a>
+            </td>
+            <td>
+<p>此基因檢測檢體-Specimen TWPAS Profile說明本IG如何進一步定義臺灣核心-檢體(TW Core Specimen) Profile以呈現癌藥事前審查中基因資訊之檢測檢體相關內容</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Observation-diagnostic-twpas.html"
+                  title="StructureDefinition/Observation-diagnostic-twpas">基因資訊-Observation Diagnostic TWPAS</a>
+            </td>
+            <td>
+<p>此基因資訊-Observation Diagnostic TWPAS Profile說明本IG如何進一步定義FHIR的Observation Resource以呈現癌藥事前審查之基因資訊</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Encounter-twpas.html"
+                  title="StructureDefinition/Encounter-twpas">就醫科別-Encounter TWPAS</a>
+            </td>
+            <td>
+<p>此就醫科別-Encounter TWPAS Profile說明本IG如何進一步定義臺灣核心-就醫事件(TW Core Encounter) Profile以呈現癌藥事前審查中院所資訊之就醫科別</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-DiagnosticReport-image-twpas.html"
+                  title="StructureDefinition/DiagnosticReport-image-twpas">影像報告-DiagnosticReport Image TWPAS</a>
+            </td>
+            <td>
+<p>此影像報告-DiagnosticReport Image TWPAS Profile說明本IG如何進一步定義臺灣核心-診斷報告(TW Core DiagnosticReport) Profile以呈現癌藥事前審查之影像報告</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Procedure-twpas.html"
+                  title="StructureDefinition/Procedure-twpas">放射治療-Procedure TWPAS</a>
+            </td>
+            <td>
+<p>此放射治療-Procedure TWPAS Profile說明本IG如何進一步定義FHIR的Procedure Resource以呈現癌藥事前審查中治療資訊之放射治療</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Substance-twpas.html"
+                  title="StructureDefinition/Substance-twpas">放射治療總劑量-Substance TWPAS</a>
+            </td>
+            <td>
+<p>此放射治療總劑量-Substance TWPAS Profile說明本IG如何進一步定義FHIR的Substance Resource以呈現癌藥事前審查中治療資訊之放射治療總劑量</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-DocumentReference-twpas.html"
+                  title="StructureDefinition/DocumentReference-twpas">文件參照-DocumentReference TWPAS</a>
+            </td>
+            <td>
+<p>此文件參照-DocumentReference TWPAS Profile說明本IG如何進一步定義臺灣核心-文件參照(TW Core DocumentReference) Profile以呈現癌藥事前審查之治療計畫文件及基因報告</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-DiagnosticReport-twpas.html"
+                  title="StructureDefinition/DiagnosticReport-twpas">檢查報告-DiagnosticReport TWPAS</a>
+            </td>
+            <td>
+<p>此檢查報告-DiagnosticReport TWPAS Profile說明本IG如何進一步定義臺灣核心-診斷報告(TW Core DiagnosticReport) Profile以呈現癌藥事前審查中疾病資訊之檢查報告</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Observation-laboratory-result-twpas.html"
+                  title="StructureDefinition/Observation-laboratory-result-twpas">檢驗檢查-Observation Laboratory Result TWPAS</a>
+            </td>
+            <td>
+<p>此檢驗檢查-Observation Laboratory Result TWPAS Profile說明本IG如何進一步定義臺灣核心-檢驗檢查(TW Core Observation Laboratory Result) Profile以呈現癌藥事前審查中評估資訊之檢驗(查)相關資料</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Observation-tx-assessment-twpas.html"
+                  title="StructureDefinition/Observation-tx-assessment-twpas">治療後疾病狀態評估-Observation Treatment Assessment TWPAS</a>
+            </td>
+            <td>
+<p>此治療後疾病狀態評估-Observation Treatment Assessment TWPAS Profile說明本IG如何進一步定義FHIR的Observation Resource以呈現癌藥事前審查中結果資訊之治療後疾病狀態評估</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-MedicationRequest-treat-twpas.html"
+                  title="StructureDefinition/MedicationRequest-treat-twpas">用藥品項-MedicationRequest Treat TWPAS</a>
+            </td>
+            <td>
+<p>此用藥品項-MedicationRequest Treat TWPAS Profile說明本IG如何進一步定義臺灣核心-藥品請求(TW Core MedicationRequest) Profile以呈現癌藥事前審查中治療資訊之用藥品項</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Observation-pat-assessment-twpas.html"
+                  title="StructureDefinition/Observation-pat-assessment-twpas">病人狀態評估-Observation Patient Assessment TWPAS</a>
+            </td>
+            <td>
+<p>此病人狀態評估-Observation Patient Assessment TWPAS Profile說明本IG如何進一步定義FHIR的Observation Resource以呈現癌藥事前審查中評估資訊之病人狀態評估</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Patient-twpas.html"
+                  title="StructureDefinition/Patient-twpas">病人資訊-Patient TWPAS</a>
+            </td>
+            <td>
+<p>此病人資訊-Patient TWPAS Profile說明本IG如何進一步定義臺灣核心-病人(TW Core Patient) Profile以呈現癌藥事前審查之病人基本資料</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Observation-cancer-stage-twpas.html"
+                  title="StructureDefinition/Observation-cancer-stage-twpas">癌症分期量表-Observation Cancer Stage TWPAS</a>
+            </td>
+            <td>
+<p>此癌症分期量表-Observation Cancer Stage TWPAS Profile說明本IG如何進一步定義FHIR的Observation Resource以呈現癌藥事前審查中疾病資訊之癌症分期量表相關資料</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Operationoutcome-twpas.html"
+                  title="StructureDefinition/Operationoutcome-twpas">系統回應訊息-OperationOutcome TWPAS</a>
+            </td>
+            <td>
+<p>此系統回應訊-OperationOutcome TWPAS Profile說明本IG如何進一步定義FHIR的OperationOutcome Resource以呈現系統回應訊息之內容</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ClaimResponse-self-assessment-twpas.html"
+                  title="StructureDefinition/ClaimResponse-self-assessment-twpas">自主審查報備-ClaimResponse Self Assessment TWPAS</a>
+            </td>
+            <td>
+<p>此自主審查報備-ClaimResponse TWPAS Profile說明本IG如何進一步定義FHIR的ClaimResponse Resource以呈現自主審查報備之內容。</p>
+
+<p>現行開放自主事前審查項目僅有心臟及肝臟移植，若醫院要自主事前審查需向健保署申請，通過後，健保署會於署內系統維護，具有此資格之院所才可填報自主審查報備。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Practitioner-twpas.html"
+                  title="StructureDefinition/Practitioner-twpas">醫事人員-Practitioner TWPAS</a>
+            </td>
+            <td>
+<p>此醫事人員-Practitioner TWPAS Profile說明本IG如何進一步定義臺灣核心-健康照護服務提供者(TW Core Practitioner) Profile以呈現癌藥事前審查之申請醫師、簽發影像報告醫師、簽發癌症分期報告醫師、檢查報告醫師、簽發檢驗(查)報告醫事人員及評估項目醫事人員基本資料</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Organization-twpas.html"
+                  title="StructureDefinition/Organization-twpas">醫事機構-Organization TWPAS</a>
+            </td>
+            <td>
+<p>此醫事機構-Organization TWPAS Profile說明本IG如何進一步定義臺灣核心-機構(TW Core Organization) Profile以呈現癌藥事前審查之醫事機構基本資料</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Media-twpas.html"
+                  title="StructureDefinition/Media-twpas">非DICOM影像-Media TWPAS</a>
+            </td>
+            <td>
+<p>此非DICOM影像-Media TWPAS Profile說明本IG如何進一步定義臺灣核心-多媒體(TW Core Media) Profile以呈現癌藥事前審查中疾病資訊之影像報告的非DICOM影像</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Structures: Extension Definitions </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-extension-claim-encounter.html"
+                  title="StructureDefinition/extension-claim-encounter">ClaimEncounter</a>
+            </td>
+            <td>
+<p>就醫科別</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-extension-requestedService.html"
+                  title="StructureDefinition/extension-requestedService">RequestedService</a>
+            </td>
+            <td>
+<p>事前審查品項</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-medication-frequency-hl7-nhi.html"
+                  title="ValueSet/medication-frequency-hl7-nhi">HL7 TimingAbbreviation + NHI-健保事前審查-藥品使用頻率值集</a>
+            </td>
+            <td>
+<p>HL7 TimingAbbreviation + NHI-健保事前審查-藥品使用頻率值集。為配合專案時程，使用暫時性代碼系統，日後將統一使用TW Core IG的臺灣健保署藥品使用頻率。<br />
+代碼對應請參照<a href="https://build.fhir.org/ig/cctwFHIRterm/MOHW_TWCoreIG_Build/ConceptMap-medication-frequency-tw.html">臺灣健保署藥品使用頻率代碼對應對應HL7 TimingAbbreviation</a></p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-dicom-cid-29-AcquisitionModality.html"
+                  title="ValueSet/dicom-cid-29-AcquisitionModality">HL7-AcquisitionModality值集</a>
+            </td>
+            <td>
+<p>原值集因總會工具問題無法正常顯示，故先自建值集。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-media-mimetypes.html" title="ValueSet/media-mimetypes">HL7-非DICOM影像MimeType值集</a>
+            </td>
+            <td>
+<p>HL7-非DICOM影像MimeType值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-pat-ast.html" title="ValueSet/pat-ast">LOINC + NHI-健保事前審查-病人狀態評估項目值集</a>
+            </td>
+            <td>
+<p>LOINC + NHI-病人狀態評估項目值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-gene-test-code.html" title="ValueSet/gene-test-code">LOINC-健保事前審查-基因檢測代碼值集</a>
+            </td>
+            <td>
+<p>LOINC-健保事前審查-基因檢測代碼值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-specime-type.html" title="ValueSet/specime-type">LOINC-健保事前審查-基因檢測檢體類型值集</a>
+            </td>
+            <td>
+<p>LOINC-健保事前審查-基因檢測檢體類型值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-dna-change-type.html" title="ValueSet/dna-change-type">LOINC-健保事前審查-基因突變類型值集</a>
+            </td>
+            <td>
+<p>LOINC-健保事前審查-基因突變類型值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-report-type.html" title="ValueSet/report-type">LOINC-健保事前審查-報告類型值集</a>
+            </td>
+            <td>
+<p>LOINC-健保事前審查-報告類型值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-cancer-stage-score.html"
+                  title="ValueSet/cancer-stage-score">NCI-健保事前審查-FIGO癌症分期量表結果值集</a>
+            </td>
+            <td>
+<p>NCI-健保事前審查-FIGO癌症分期量表結果值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nhi-approve-item-comment.html"
+                  title="ValueSet/nhi-approve-item-comment">NHI-健保事前審查-個別醫令核定註記值集</a>
+            </td>
+            <td>
+<p>NHI-健保事前審查-個別醫令核定註記值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nhi-approve-claim-comment.html"
+                  title="ValueSet/nhi-approve-claim-comment">NHI-健保事前審查-受理審查案件核定註記值集</a>
+            </td>
+            <td>
+<p>NHI-健保事前審查-受理審查案件核定註記值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nhi-pdf-type.html" title="ValueSet/nhi-pdf-type">NHI-健保事前審查-文件類型值集</a>
+            </td>
+            <td>
+<p>NHI-健保事前審查-文件類型值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nhi-acceptance-status.html"
+                  title="ValueSet/nhi-acceptance-status">NHI-健保事前審查-案件受理狀態值集</a>
+            </td>
+            <td>
+<p>NHI-健保事前審查-案件受理狀態值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nhi-tx-ast.html" title="ValueSet/nhi-tx-ast">NHI-健保事前審查-治療後疾病狀態評估項目值集</a>
+            </td>
+            <td>
+<p>NHI-健保事前審查-治療後疾病狀態評估項目值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nhi-organization.html" title="ValueSet/nhi-organization">NHI-健保事前審查-特約醫事機構值集</a>
+            </td>
+            <td>
+<p>NHI-健保事前審查-特約醫事機構值集，參照至<a href="https://www.nhi.gov.tw/ch/cp-5548-135e8-2931-1.html">衛福部健保署特約醫事機構代碼網路查詢服務</a>中的<a href="https://info.nhi.gov.tw/IODE0000/IODE0000S09?id=1120">健保特約醫療院所名冊</a></p>
+
+<p>代碼出版日期：2024-04-22；資料所屬單位：衛生福利部中央健康保險署。</p>
+
+<p><em>因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。</em></p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nhi-medication.html" title="ValueSet/nhi-medication">NHI-健保事前審查-用藥品項值集</a>
+            </td>
+            <td>
+<p>NHI-健保事前審查-用藥品項值集。<br />
+此值集所涵蓋代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至<a href="https://info.nhi.gov.tw/INAE3000/INAE3000S01">健保用藥品項網路查詢服務</a>查閱</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nhi-line-of-therapy.html"
+                  title="ValueSet/nhi-line-of-therapy">NHI-健保事前審查-用藥線別值集</a>
+            </td>
+            <td>
+<p>NHI-健保事前審查-用藥線別值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nhi-apply-type.html" title="ValueSet/nhi-apply-type">NHI-健保事前審查-申報類別值集</a>
+            </td>
+            <td>
+<p>NHI-健保事前審查-申報類別值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nhi-tmhb-type.html" title="ValueSet/nhi-tmhb-type">NHI-健保事前審查-申請案件類別值集</a>
+            </td>
+            <td>
+<p>NHI-健保事前審查-申請案件類別值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nhi-apply-side.html" title="ValueSet/nhi-apply-side">NHI-健保事前審查-申請部位值集</a>
+            </td>
+            <td>
+<p>NHI-健保事前審查-申請部位值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nhi-apply-reason.html" title="ValueSet/nhi-apply-reason">NHI-健保事前審查-給付適應症值集</a>
+            </td>
+            <td>
+<p>NHI-健保事前審查-給付適應症值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nhi-continuation-status.html"
+                  title="ValueSet/nhi-continuation-status">NHI-健保事前審查-續用註記值集</a>
+            </td>
+            <td>
+<p>NHI-健保事前審查-續用註記值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nhi-drug-category.html"
+                  title="ValueSet/nhi-drug-category">NHI-健保事前審查-藥物類型值集</a>
+            </td>
+            <td>
+<p>NHI-健保事前審查-藥物類型值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nhi-supporting-info-type.html"
+                  title="ValueSet/nhi-supporting-info-type">NHI-健保事前審查-補充資訊類別值集</a>
+            </td>
+            <td>
+<p>NHI-健保事前審查-補充資訊類別值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nhi-body-site.html" title="ValueSet/nhi-body-site">NHI-健保事前審查-身體部位值集</a>
+            </td>
+            <td>
+<p>NHI-健保事前審查-身體部位值集，代碼對應請參考<a href="ConceptMap-nhi-sct-body-site.html">臺灣健保署身體部位代碼對應SNOMED CT</a>。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-nhi-order-type.html" title="ValueSet/nhi-order-type">NHI-健保事前審查-醫令類別值集</a>
+            </td>
+            <td>
+<p>NHI-健保事前審查-醫令類別值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-icd-10-pcs-2014-image.html"
+                  title="ValueSet/icd-10-pcs-2014-image">NHI-臺灣健保署2014年中文版ICD 10 PCS-影像報告值集</a>
+            </td>
+            <td>
+<p>NHI-臺灣健保署2014年中文版ICD 10 PCS-影像報告值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-icd-10-pcs-2014-radiotherapy.html"
+                  title="ValueSet/icd-10-pcs-2014-radiotherapy">NHI-臺灣健保署2014年中文版ICD 10 PCS-放射治療項目值集</a>
+            </td>
+            <td>
+<p>NHI-臺灣健保署2014年中文版ICD 10 PCS-放射治療項目值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-icd-10-pcs-2023-image.html"
+                  title="ValueSet/icd-10-pcs-2023-image">NHI-臺灣健保署2023年中文版ICD 10 PCS-影像報告值集</a>
+            </td>
+            <td>
+<p>NHI-臺灣健保署2023年中文版ICD 10 PCS-影像報告值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-icd-10-pcs-2023-radiotherapy.html"
+                  title="ValueSet/icd-10-pcs-2023-radiotherapy">NHI-臺灣健保署2023年中文版ICD 10 PCS-放射治療項目值集</a>
+            </td>
+            <td>
+<p>NHI-臺灣健保署2023年中文版ICD 10 PCS-放射治療項目值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-cancer-stage.html" title="ValueSet/cancer-stage">SCT + NCI-健保事前審查-癌症分期量表項目值集</a>
+            </td>
+            <td>
+<p>SCT + NCI-健保事前審查-癌症分期量表項目值集</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-medication-path-sct-tw.html"
+                  title="ValueSet/medication-path-sct-tw">SNOMED CT + 臺灣健保署-健保事前審查-給藥途徑值集</a>
+            </td>
+            <td>
+<p>SNOMED CT + 臺灣健保署-健保事前審查-給藥途徑值集。
+代碼對應請參照<a href="https://build.fhir.org/ig/cctwFHIRterm/MOHW_TWCoreIG_Build/ConceptMap-medication-path-tw.html">臺灣健保署給藥途徑代碼對應SNOMED CT</a></p>
+
+<p>此值集優先採用國際標準碼，國際標準碼未能表述之概念，則以普遍被使用的臺灣健保署給藥途徑代碼表述，請實作者留意。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-sct-body-site.html" title="ValueSet/sct-body-site">SNOMEDCT-健保事前審查-身體部位值集</a>
+            </td>
+            <td>
+<p>SNOMEDCT-健保事前審查-身體部位值集，代碼對應請參考<a href="ConceptMap-nhi-sct-body-site.html">臺灣健保署身體部位代碼對應SNOMED CT</a>。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-ucum-units.html" title="ValueSet/ucum-units">UCUM-健保事前審查-UCUM單位值集</a>
+            </td>
+            <td>
+<p>UCUM-健保事前審查-UCUM單位值集</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="7"> </a>
+   <h3>Terminology: Code Systems </h3>
+    <p>These define new code systems used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-inca-osiris.html" title="CodeSystem/inca-osiris">INCa-健保事前審查-基因突變類型</a>
+            </td>
+            <td>
+<p>INCa-健保事前審查-基因突變類型，資料所屬單位：Institut National du Cancer (INCa)，參照至：https://github.com/InstitutNationalduCancer/OSIRIS。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nci-thesaurus.html" title="CodeSystem/nci-thesaurus">NCI 健保事前審查-Thesaurus</a>
+            </td>
+            <td>
+<p>NCI 健保事前審查-Thesaurus，參照至http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl<br />
+代碼出版日期：2022-10-13。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nhi-pdf-type.html" title="CodeSystem/nhi-pdf-type">NHI-健保事前審查-文件類型</a>
+            </td>
+            <td>
+<p>臺灣衛生福利部中央健康保險署「文件類型」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nhi-approve-comment.html"
+                  title="CodeSystem/nhi-approve-comment">NHI-健保事前審查-核定註記</a>
+            </td>
+            <td>
+<p>臺灣衛生福利部中央健康保險署「核定註記」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nhi-acceptance-status.html"
+                  title="CodeSystem/nhi-acceptance-status">NHI-健保事前審查-案件受理狀態</a>
+            </td>
+            <td>
+<p>臺灣衛生福利部中央健康保險署「案件受理狀態」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nhi-tx-ast.html" title="CodeSystem/nhi-tx-ast">NHI-健保事前審查-治療後疾病狀態評估項目</a>
+            </td>
+            <td>
+<p>臺灣衛生福利部中央健康保險署「治療後疾病狀態評估項目」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-organization-identifier-tw.html"
+                  title="CodeSystem/organization-identifier-tw">NHI-健保事前審查-特約醫事機構</a>
+            </td>
+            <td>
+<p>臺灣衛生福利部中央健康保險署「特約醫事機構」代碼，參照至<a href="https://www.nhi.gov.tw/ch/cp-5548-135e8-2931-1.html">衛福部健保署特約醫事機構代碼網路查詢服務</a>中的<a href="https://info.nhi.gov.tw/IODE0000/IODE0000S09?id=1120">健保特約醫療院所名冊</a></p>
+
+<p>代碼出版日期：2024-04-22；資料所屬單位：衛生福利部中央健康保險署。</p>
+
+<p><em>因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。</em></p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nhi-medication.html" title="CodeSystem/nhi-medication">NHI-健保事前審查-用藥品項</a>
+            </td>
+            <td>
+<p>NHI-健保事前審查-用藥品項，參照自<a href="https://www.nhi.gov.tw/ch/lp-2466-1.html">健保用藥品項</a>中的「健保用藥品項114年4月查詢檔(帶走所有壓縮檔114.4.2更新)」。</p>
+
+<p>代碼出版日期：2025-04-30；資料所屬單位：衛生福利部中央健康保險署。</p>
+
+<p><em>因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。</em></p>
+
+<p>因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處僅擷取部分代碼，相關代碼可至<a href="https://info.nhi.gov.tw/INAE3000/INAE3000S01">健保用藥品項網路查詢服務</a>查閱</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nhi-line-of-therapy.html"
+                  title="CodeSystem/nhi-line-of-therapy">NHI-健保事前審查-用藥線別</a>
+            </td>
+            <td>
+<p>臺灣衛生福利部中央健康保險署「用藥線別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nhi-apply-type.html" title="CodeSystem/nhi-apply-type">NHI-健保事前審查-申報類別</a>
+            </td>
+            <td>
+<p>臺灣衛生福利部中央健康保險署「申報類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nhi-tmhb-type.html" title="CodeSystem/nhi-tmhb-type">NHI-健保事前審查-申請案件類別</a>
+            </td>
+            <td>
+<p>臺灣衛生福利部中央健康保險署「申請案件類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nhi-apply-side.html" title="CodeSystem/nhi-apply-side">NHI-健保事前審查-申請部位</a>
+            </td>
+            <td>
+<p>臺灣衛生福利部中央健康保險署「申請部位」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nhi-pat-ast.html" title="CodeSystem/nhi-pat-ast">NHI-健保事前審查-病人狀態評估項目</a>
+            </td>
+            <td>
+<p>臺灣衛生福利部中央健康保險署「病人狀態評估項目」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nhi-apply-reason.html"
+                  title="CodeSystem/nhi-apply-reason">NHI-健保事前審查-給付適應症</a>
+            </td>
+            <td>
+<p>臺灣衛生福利部中央健康保險署「給付適應症」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nhi-continuation-status.html"
+                  title="CodeSystem/nhi-continuation-status">NHI-健保事前審查-續用註記</a>
+            </td>
+            <td>
+<p>臺灣衛生福利部中央健康保險署「續用註記」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-medication-frequency-nhi-tw.html"
+                  title="CodeSystem/medication-frequency-nhi-tw">NHI-健保事前審查-藥品使用頻率</a>
+            </td>
+            <td>
+<p>NHI-健保事前審查-藥品使用頻率，參照至<a href="https://www.nhi.gov.tw/ch/cp-1880-20811-3142-1.html">健保署檔案譯碼簿</a>中的「藥品使用頻率（2022/8/2版本）」。</p>
+
+<p>代碼出版日期：2024-05-27；資料所屬單位：衛生福利部中央健康保險署。</p>
+
+<p><em>因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。</em></p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nhi-drug-category.html"
+                  title="CodeSystem/nhi-drug-category">NHI-健保事前審查-藥物類型</a>
+            </td>
+            <td>
+<p>臺灣衛生福利部中央健康保險署「藥物類型」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nhi-supporting-info-type.html"
+                  title="CodeSystem/nhi-supporting-info-type">NHI-健保事前審查-補充資訊類別</a>
+            </td>
+            <td>
+<p>臺灣衛生福利部中央健康保險署「補充資訊類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nhi-body-site.html" title="CodeSystem/nhi-body-site">NHI-健保事前審查-身體部位</a>
+            </td>
+            <td>
+<p>臺灣衛生福利部中央健康保險署「身體部位」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-nhi-order-type.html" title="CodeSystem/nhi-order-type">NHI-健保事前審查-醫令類別</a>
+            </td>
+            <td>
+<p>臺灣衛生福利部中央健康保險署「醫令類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="8"> </a>
+   <h3>Terminology: Concept Maps </h3>
+    <p>These define transformations to convert between codes by systems conforming with this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-nhi-sct-body-site.html"
+                  title="ConceptMap/nhi-sct-body-site">健保事前審查-臺灣健保署身體部位代碼對應SNOMED CT</a>
+            </td>
+            <td>
+<p>此對應表為臺灣健保署身體部位代碼對應SNOMED CT，供實作者於撰寫程式以自動化對應或轉代碼時使用。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-nhi-loinc.html" title="ConceptMap/nhi-loinc">健保事前審查-臺灣健保署醫療服務給付項目對應LOINC</a>
+            </td>
+            <td>
+<p>此對應表為臺灣健保署醫療服務給付項目對應LOINC，供實作者於撰寫程式以自動化對應或轉代碼時使用。</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="9"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-bun-3.html" title="Bundle/bun-3">事前審查-申復、有共病</a>
+            </td>
+            <td>
+<p>依據事前審查-Bundle TWPAS Profile呈現癌藥事前審查之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Claim-cla-3.html" title="Claim/cla-3">事前審查-申復、有共病</a>
+            </td>
+            <td>
+<p>依據事前審查-Claim TWPAS Profile呈現事前審查之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-bun-uuid-example.html" title="Bundle/bun-uuid-example">事前審查-自主審查報備、多份影像報告（UUID）</a>
+            </td>
+            <td>
+<p>依據事前審查-Bundle TWPAS Profile呈現癌藥事前審查之自主審查報備範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-bun-1.html" title="Bundle/bun-1">事前審查-送核、套組檢驗、多事前審查癌藥品項</a>
+            </td>
+            <td>
+<p>依據事前審查-Bundle TWPAS Profile呈現癌藥事前審查之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Claim-cla-1.html" title="Claim/cla-1">事前審查-送核、套組檢驗、多事前審查癌藥品項</a>
+            </td>
+            <td>
+<p>依據事前審查-Claim TWPAS Profile呈現事前審查之範例，含兩筆檢驗(查)。</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-medReq-apply.html"
+                  title="MedicationRequest/medReq-apply">事前審查品項-多用法</a>
+            </td>
+            <td>
+<p>依據事前審查品項-MedicationRequest Apply TWPAS Profile呈現事前審查品項之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-medReq-apply-2.html"
+                  title="MedicationRequest/medReq-apply-2">事前審查品項-給付適應症特定代碼</a>
+            </td>
+            <td>
+<p>依據事前審查品項-MedicationRequest Apply TWPAS Profile呈現特定事前審查品項代碼之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-bun-response.html" title="Bundle/bun-response">事前審查回覆</a>
+            </td>
+            <td>
+<p>依據事前審查回覆-Bundle Response TWPAS Profile呈現癌藥事前審查回覆之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ClaimResponse-claim-response-example.html"
+                  title="ClaimResponse/claim-response-example">事前審查回覆</a>
+            </td>
+            <td>
+<p>依據事前審查回覆-ClaimResponse TWPAS Profile呈現事前審查回覆之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Coverage-cov-min.html" title="Coverage/cov-min">健保事前審查計畫</a>
+            </td>
+            <td>
+<p>依據健保事前審查計畫-Coverage TWPAS Profile呈現健保事前審查計畫之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DocumentReference-doc-gene-min.html"
+                  title="DocumentReference/doc-gene-min">基因報告</a>
+            </td>
+            <td>
+<p>依據文件參照-DocumentReference TWPAS Profile呈現基因報告之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-org-gene-example.html"
+                  title="Organization/org-gene-example">基因檢測機構</a>
+            </td>
+            <td>
+<p>依據基因檢測機構-Organization Genetic Testing TWPAS Profile呈現基因檢測機構之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-spe-min.html" title="Specimen/spe-min">基因檢測檢體</a>
+            </td>
+            <td>
+<p>依據基因檢測檢體-Specimen TWPAS Profile呈現基因檢測檢體之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-obs-diagnostic-min.html"
+                  title="Observation/obs-diagnostic-min">基因資訊</a>
+            </td>
+            <td>
+<p>依據基因資訊-Observation Diagnostic TWPAS Profile呈現基因資訊之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-enc-min.html" title="Encounter/enc-min">就醫科別</a>
+            </td>
+            <td>
+<p>依據就醫科別-Encounter TWPAS Profile呈現就醫科別之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ImagingStudy-imaStu-min.html" title="ImagingStudy/imaStu-min">影像</a>
+            </td>
+            <td>
+<p>依據DICOM影像-ImagingStudy TWPAS Profile呈現影像之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DiagnosticReport-diaRep-ima-min.html"
+                  title="DiagnosticReport/diaRep-ima-min">影像報告</a>
+            </td>
+            <td>
+<p>依據影像報告-DiagnosticReport Image TWPAS Profile呈現影像報告之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-pro-min.html" title="Procedure/pro-min">放射治療</a>
+            </td>
+            <td>
+<p>依據放射治療-Procedure TWPAS Profile呈現放射治療之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Substance-sub-min.html" title="Substance/sub-min">放射治療總劑量</a>
+            </td>
+            <td>
+<p>依據放射治療總劑量-Substance TWPAS Profile呈現放射治療之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DiagnosticReport-diaRep-min.html"
+                  title="DiagnosticReport/diaRep-min">檢查報告</a>
+            </td>
+            <td>
+<p>依據檢查報告-DiagnosticReport TWPAS Profile呈現檢查報告之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DocumentReference-doc-test-min.html"
+                  title="DocumentReference/doc-test-min">檢驗(查)附件</a>
+            </td>
+            <td>
+<p>依據文件參照-DocumentReference TWPAS Profile呈現檢驗(查)附件之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-obs-lab-min.html" title="Observation/obs-lab-min">檢驗檢查-單項</a>
+            </td>
+            <td>
+<p>依據檢驗檢查-Observation Laboratory Result TWPAS Profile呈現單項檢驗檢查之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-obs-lab-cbc.html" title="Observation/obs-lab-cbc">檢驗檢查-套組(全套血液檢查)</a>
+            </td>
+            <td>
+<p>依據檢驗檢查-Observation Laboratory Result TWPAS Profile呈現套組檢驗檢查之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-obs-tx-min.html" title="Observation/obs-tx-min">治療後疾病狀態評估</a>
+            </td>
+            <td>
+<p>依據治療後疾病狀態評估-Observation Treatment Assessment TWPAS Profile呈現治療後疾病狀態評估之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DocumentReference-doc-careplan-min.html"
+                  title="DocumentReference/doc-careplan-min">治療計畫文件</a>
+            </td>
+            <td>
+<p>依據文件參照-DocumentReference TWPAS Profile呈現治療計畫文件之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-medReq-treat.html"
+                  title="MedicationRequest/medReq-treat">用藥品項</a>
+            </td>
+            <td>
+<p>依據用藥品項-MedicationRequest Treat TWPAS Profile呈現用藥品項之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-obs-pat-nyha.html" title="Observation/obs-pat-nyha">病人狀態評估-NYHA</a>
+            </td>
+            <td>
+<p>依據病人狀態評估-Observation Patient Assessment TWPAS Profile呈現病人狀態評估之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-obs-pat-pdai.html" title="Observation/obs-pat-pdai">病人狀態評估-PDAI</a>
+            </td>
+            <td>
+<p>依據病人狀態評估-Observation Patient Assessment TWPAS Profile呈現病人狀態評估之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-pat-min.html" title="Patient/pat-min">病人資訊</a>
+            </td>
+            <td>
+<p>依據病人資訊-Patient TWPAS Profile呈現病人資訊之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DocumentReference-doc-medicalRecord-min.html"
+                  title="DocumentReference/doc-medicalRecord-min">病歷資料</a>
+            </td>
+            <td>
+<p>依據文件參照-DocumentReference TWPAS Profile呈現病歷資料之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-obs-cancer-cns.html"
+                  title="Observation/obs-cancer-cns">癌症分期量表-CNS</a>
+            </td>
+            <td>
+<p>依據癌症分期量表-Observation Cancer Stage TWPAS Profile呈現癌症分期量表WHO CNS之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-obs-cancer-figo.html"
+                  title="Observation/obs-cancer-figo">癌症分期量表-FIGO</a>
+            </td>
+            <td>
+<p>依據癌症分期量表-Observation Cancer Stage TWPAS Profile呈現癌症分期量表FIGO之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-obs-cancer-tnm.html"
+                  title="Observation/obs-cancer-tnm">癌症分期量表-TNM</a>
+            </td>
+            <td>
+<p>依據癌症分期量表-Observation Cancer Stage TWPAS Profile呈現癌症分期量表之TNM範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="OperationOutcome-error-example.html"
+                  title="OperationOutcome/error-example">系統回應錯誤訊息</a>
+            </td>
+            <td>
+<p>依據系統回應訊息-OperationOutcome TWPAS Profile呈現使用錯誤語法查詢系統時之回應範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ClaimResponse-self-assessment-example.html"
+                  title="ClaimResponse/self-assessment-example">自主審查報備</a>
+            </td>
+            <td>
+<p>依據自主審查報備-ClaimResponse Self Assessment TWPAS Profile呈現自主審查報備之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-org-nhi.html" title="Organization/org-nhi">衛生福利部中央健康保險署</a>
+            </td>
+            <td>
+<p>依據臺灣核心-政府機構（TW Core Organization Government）Profile呈現衛生福利部中央健康保險署</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-pra-min.html" title="Practitioner/pra-min">醫事人員</a>
+            </td>
+            <td>
+<p>依據醫事人員-Practitioner TWPAS Profile呈現醫事人員之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-org-hosp-example.html"
+                  title="Organization/org-hosp-example">醫事機構</a>
+            </td>
+            <td>
+<p>依據機構-Organization TWPAS Profile呈現醫事機構之範例</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Media-med-min.html" title="Media/med-min">非DICOM影像</a>
+            </td>
+            <td>
+<p>依據非DICOM影像-Media TWPAS Profile呈現非DICOM影像之範例</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nhi.gov.tw">衛生福利部中央健康保險署</a>.  Package tw.gov.mohw.nhi.pas#1.0.6 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 30, 2025 10:52+0800">2025-07-30</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="https://nhicore.nhi.gov.tw/pas/history.html">Version History</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

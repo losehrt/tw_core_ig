@@ -1,0 +1,525 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>HL7-AcquisitionModality值集 - JSON Representation - 臺灣健保癌症用藥事前審查實作指引 v1.0.6</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+<link href="assets/css/ig.css" rel="stylesheet" />
+    
+<!-- Google tag (gtag.js) HITSTDIO>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1Y4JEG6RS2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1Y4JEG6RS2');
+</script-->
+
+<!-- Google tag (gtag.js) TWCORE 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60R1T0P9G0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60R1T0P9G0');
+</script>-->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"13.46"}
+    h3,h4,h5,h6{--heading-prefix:"13.46"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div id="hl7-nav">
+  <a id="hl7-logo" no-external="true" href="index.html" style="width: 10px;">
+    <img height="50" alt="TW" src="assets/images/logo-header.png" />
+  </a>
+</div>
+<div id="hl7-search">
+  <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR"
+      src="assets/images/search.png" /></a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">臺灣健保癌症用藥事前審查實作指引</span>
+            <br/>
+            <span style="display:inline-block;">1.0.6 - STU1.0.6
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+	<li><a href="index.html">應用說明</a></li>
+	<li><a href="toc.html">目錄</a></li>
+	<li><a href="vision.html">視覺化邏輯模型</a></li>
+ 	<li class="dropdown">
+		<a href="artifacts.html">規範文件<b class="caret"></b></a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="capabilitystatements.html">能力聲明</a>
+			</li>
+			<li>
+				<a href="searchparameters.html">查詢參數</a>
+			</li>
+			<li>
+				<a href="models.html">邏輯模型</a>
+			</li>
+			<li>
+				<a href="profiles-and-extensions.html">FHIR Profiles及Extensions</a>
+			</li>
+			<li>
+				<a href="terminologies.html">專門術語</a>
+			</li>
+		</ul>
+	</li>
+ 	<li><a href="examples.html">範例</a></li>
+	<li><a href="downloads.html">結構定義與範例檔下載</a></li>
+	<li><a href="security.html">安全性</a></li>
+	<li><a href="validate.html">驗證教學</a></li>
+</ul>      
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>HL7-AcquisitionModality值集</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">臺灣健保癌症用藥事前審查實作指引 - Downloaded Version 1.0.6 See the <a href="https://nhicore.nhi.gov.tw/pas/history.html">Directory of published versions</a></p></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="ValueSet-dicom-cid-29-AcquisitionModality.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-dicom-cid-29-AcquisitionModality.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-dicom-cid-29-AcquisitionModality.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: HL7-AcquisitionModality值集 - JSON Representation</h2>
+
+  <table class="colsi">
+    <tr>
+
+      <td colspan="2">
+        
+          Active
+          
+            as of 2024-03-31
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="ValueSet-dicom-cid-29-AcquisitionModality.json" no-download="true">Raw json</a> | <a href="ValueSet-dicom-cid-29-AcquisitionModality.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet">resourceType</a>" : "ValueSet",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.id">id</a>" : "dicom-cid-29-AcquisitionModality",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ValueSet dicom-cid-29-AcquisitionModality&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;dicom-cid-29-AcquisitionModality\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcdicom-cid-29-AcquisitionModality\&quot;&gt; &lt;/a&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;a href=\&quot;http://dicom.nema.org/resources/ontology/DCM\&quot;&gt;&lt;code&gt;http://dicom.nema.org/resources/ontology/DCM&lt;/code&gt;&lt;/a&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;BMD&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Bone Mineral Densitometry&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs bone mineral densitometry by X-Ray, including dual-energy X-Ray absorptiometry (DXA) and morphometric X-Ray absorptiometry (MXA).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;EOG&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Electrooculography&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs electrooculography.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;SM&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Slide Microscopy&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs slide microscopy.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;OP&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Ophthalmic Photography&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs ophthalmic photography.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;ECG&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Electrocardiography&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs electrocardiography.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;GM&lt;/code&gt;&lt;/td&gt;&lt;td&gt;General Microscopy&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs general microscopy.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;XA&lt;/code&gt;&lt;/td&gt;&lt;td&gt;X-Ray Angiography&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs X-Ray angiography.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;XC&lt;/code&gt;&lt;/td&gt;&lt;td&gt;External-camera Photography&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs photography with an external camera.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;DMS&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Dermoscopy&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs imaging of the surface of the skin using epiluminescence microscopy.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;IVUS&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Intravascular Ultrasound&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs intravascular ultrasound.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;CR&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Computed Radiography&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs computed radiography.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;CT&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Computed Tomography&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs computed tomography.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;OSS&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Optical Surface Scanner&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs optical surface scanning.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;TG&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Thermography&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs thermography.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;LEN&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Lensometry&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs lensometry.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;OPTENF&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Ophthalmic Tomography En Face&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that creates en face tomography images of the eye based on light and optical principles. Tomography based on other principles, such as ultrasound, is excluded.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;HD&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Hemodynamic Waveform&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that records hemodynamic waveforms.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;OCT&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Optical Coherence Tomography&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that uses an interferometric, non-invasive optical tomographic technique to image 2D slices and 3D volumes of tissue using visible and near visible frequencies.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;BDUS&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Ultrasound Bone Densitometry&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs ultrasound bone densitometry.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;DG&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Diaphanography&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs diaphanography.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;PT&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Positron emission tomography&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs positron emission tomography (PET).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;EPS&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Cardiac Electrophysiology&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs cardiac electrophysiology.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;LS&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Laser Scan&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs laser surface scanning.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;PX&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Panoramic X-Ray&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs panoramic X-Rays.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;OPM&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Ophthalmic Mapping&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that measures corneal topography, corneal or retinal thickness, and other similar parameters that are typically displayed as maps.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;OPTBSV&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Ophthalmic Tomography B-scan Volume Analysis&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs B-scan volume analysis of tomography images of the eye based on light and optical principles. Tomography based on other principles, such as ultrasound, is excluded.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;OPV&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Ophthalmic Visual Field&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that measures visual fields and perform visual perimetry.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;DX&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Digital Radiography&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs digital radiography.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;OPT&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Ophthalmic Tomography&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs tomography of the eye that is based on light and optical principles. Tomography based on other principles, such as ultrasound, is excluded.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;MG&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Mammography&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs mammography.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;US&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Ultrasound&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs ultrasound.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;EMG&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Electromyography&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs electromyography.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;IVOCT&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Intravascular Optical Coherence Tomography&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs intravascular optical coherence tomography&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;MR&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Magnetic Resonance&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs magnetic resonance imaging.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;IO&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Intra-oral Radiography&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs intra-oral radiography.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;EEG&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Electroencephalography&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs electroencephalography.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;RTIMAGE&lt;/code&gt;&lt;/td&gt;&lt;td&gt;RT Image&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs radiotherapy imaging; includes portal imaging.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;VA&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Visual Acuity&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that measures visual acuity.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;RESP&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Respiratory Waveform&lt;/td&gt;&lt;td&gt;A device, process or method that produces waveforms of electrical signals from the patient’s respiratory system.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;ES&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Endoscopy&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that records images during endoscopy.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;AR&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Autorefraction&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that measures autorefraction.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;POS&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Position Sensor&lt;/td&gt;&lt;td&gt;A device or sensor measuring the orientation of the patient’s body.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;RG&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Radiographic imaging&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs radiographic imaging (conventional film/screen).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;RF&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Radiofluoroscopy&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs radiofluoroscopy.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;KER&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Keratometry&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs keratometry.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;OAM&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Ophthalmic Axial Measurements&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that measures the axial length of the eye.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;NM&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Nuclear Medicine&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs nuclear medicine imaging.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;BI&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Biomagnetic Imaging&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that performs biomagnetic imaging.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;SRF&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Subjective Refraction&lt;/td&gt;&lt;td&gt;An acquisition device, process or method that records subjective refraction.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a>" : "https://nhicore.nhi.gov.tw/pas/ValueSet/dicom-cid-29-AcquisitionModality",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a>" : "1.0.6",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">name</a>" : "AcquisitionModality",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a>" : "HL7-AcquisitionModality值集",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.experimental">experimental</a>" : false,
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2024-03-31",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a>" : "衛生福利部中央健康保險署",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "衛生福利部中央健康保險署",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "https://www.nhi.gov.tw"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.description">description</a>" : "原值集因總會工具問題無法正常顯示，故先自建值集。",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.copyright">copyright</a>" : "© 2024 NEMA",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose">compose</a>" : {
+    "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include">include</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://dicom.nema.org/resources/ontology/DCM",
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">concept</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "BMD",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bone Mineral Densitometry"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EOG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Electrooculography"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "SM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Slide Microscopy"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "OP",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ophthalmic Photography"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ECG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Electrocardiography"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "GM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "General Microscopy"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "X-Ray Angiography"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XC",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "External-camera Photography"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "DMS",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dermoscopy"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "IVUS",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Intravascular Ultrasound"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "CR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Computed Radiography"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "CT",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Computed Tomography"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "OSS",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Optical Surface Scanner"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "TG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Thermography"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "LEN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Lensometry"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "OPTENF",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ophthalmic Tomography En Face"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "HD",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hemodynamic Waveform"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "OCT",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Optical Coherence Tomography"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "BDUS",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ultrasound Bone Densitometry"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "DG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diaphanography"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "PT",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Positron emission tomography"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EPS",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cardiac Electrophysiology"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "LS",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Laser Scan"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "PX",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Panoramic X-Ray"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "OPM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ophthalmic Mapping"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "OPTBSV",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ophthalmic Tomography B-scan Volume Analysis"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "OPV",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ophthalmic Visual Field"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "DX",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Digital Radiography"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "OPT",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ophthalmic Tomography"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "MG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Mammography"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "US",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ultrasound"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EMG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Electromyography"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "IVOCT",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Intravascular Optical Coherence Tomography"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "MR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Magnetic Resonance"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "IO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Intra-oral Radiography"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "EEG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Electroencephalography"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "RTIMAGE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "RT Image"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "VA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Visual Acuity"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "RESP",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory Waveform"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ES",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Endoscopy"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "AR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Autorefraction"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "POS",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Position Sensor"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "RG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Radiographic imaging"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "RF",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Radiofluoroscopy"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "KER",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Keratometry"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "OAM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ophthalmic Axial Measurements"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "NM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nuclear Medicine"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "BI",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Biomagnetic Imaging"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "SRF",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Subjective Refraction"
+          }
+        ]
+      }
+    ]
+  }
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nhi.gov.tw">衛生福利部中央健康保險署</a>.  Package tw.gov.mohw.nhi.pas#1.0.6 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 30, 2025 10:52+0800">2025-07-30</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="https://nhicore.nhi.gov.tw/pas/history.html">Version History</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

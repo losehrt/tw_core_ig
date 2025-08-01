@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Substance xmlns="http://hl7.org/fhir">
+  <id value="sub-min"/>
+  <meta>
+    <profile value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Substance-twpas"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4;
+        border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-Substance-twpas.html">放射治療總劑量-Substance TWPAS</a></p></div><p><b>放射治療項目</b>：骨髓高溫療法 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">(<a href="https://twcore.mohw.gov.tw/ig/twcore/0.3.2/CodeSystem-icd-10-pcs-2023-tw.html">臺灣2023年中文版ICD-10-PCS</a>#D7Y08ZZ)</span></p><p><b>放射治療總劑量(單位)</b>：5000 (/mg)</p></div>
+  </text>
+  <code>
+    <coding>
+      <system value="https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2023-tw"/>
+      <code value="D7Y08ZZ"/>
+    </coding>
+  </code>
+  <ingredient>
+    <quantity>
+      <numerator>
+        <value value="5000"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </numerator>
+      <denominator>
+        <value value="0"/>
+      </denominator>
+    </quantity>
+    <substanceCodeableConcept>
+      <coding>
+        <system value="https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2023-tw"/>
+        <code value="D7Y08ZZ"/>
+      </coding>
+    </substanceCodeableConcept>
+  </ingredient>
+</Substance>

@@ -1,0 +1,1901 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medication-frequency-nhi-tw"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem medication-frequency-nhi-tw</b></p><a name=\"medication-frequency-nhi-tw\"> </a><a name=\"hcmedication-frequency-nhi-tw\"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">QW(1)<a name=\"medication-frequency-nhi-tw-QW.401.41\"> </a></td><td>每週一使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2)<a name=\"medication-frequency-nhi-tw-QW.402.41\"> </a></td><td>每週二使用</td></tr><tr><td style=\"white-space:nowrap\">QW(3)<a name=\"medication-frequency-nhi-tw-QW.403.41\"> </a></td><td>每週三使用</td></tr><tr><td style=\"white-space:nowrap\">QW(4)<a name=\"medication-frequency-nhi-tw-QW.404.41\"> </a></td><td>每週四使用</td></tr><tr><td style=\"white-space:nowrap\">QW(5)<a name=\"medication-frequency-nhi-tw-QW.405.41\"> </a></td><td>每週五使用</td></tr><tr><td style=\"white-space:nowrap\">QW(6)<a name=\"medication-frequency-nhi-tw-QW.406.41\"> </a></td><td>每週六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(7)<a name=\"medication-frequency-nhi-tw-QW.407.41\"> </a></td><td>每週日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2)<a name=\"medication-frequency-nhi-tw-QW.401.442.41\"> </a></td><td>每週一和週二使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,3)<a name=\"medication-frequency-nhi-tw-QW.401.443.41\"> </a></td><td>每週一和週三使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,4)<a name=\"medication-frequency-nhi-tw-QW.401.444.41\"> </a></td><td>每週一和週四使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,5)<a name=\"medication-frequency-nhi-tw-QW.401.445.41\"> </a></td><td>每週一和週五使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,6)<a name=\"medication-frequency-nhi-tw-QW.401.446.41\"> </a></td><td>每週一和週六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,7)<a name=\"medication-frequency-nhi-tw-QW.401.447.41\"> </a></td><td>每週一和週日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,3)<a name=\"medication-frequency-nhi-tw-QW.402.443.41\"> </a></td><td>每週二和週三使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,4)<a name=\"medication-frequency-nhi-tw-QW.402.444.41\"> </a></td><td>每週二和週四使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,5)<a name=\"medication-frequency-nhi-tw-QW.402.445.41\"> </a></td><td>每週二和週五使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,6)<a name=\"medication-frequency-nhi-tw-QW.402.446.41\"> </a></td><td>每週二和週六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,7)<a name=\"medication-frequency-nhi-tw-QW.402.447.41\"> </a></td><td>每週二和週日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(3,4)<a name=\"medication-frequency-nhi-tw-QW.403.444.41\"> </a></td><td>每週三和週四使用</td></tr><tr><td style=\"white-space:nowrap\">QW(3,5)<a name=\"medication-frequency-nhi-tw-QW.403.445.41\"> </a></td><td>每週三和週五使用</td></tr><tr><td style=\"white-space:nowrap\">QW(3,6)<a name=\"medication-frequency-nhi-tw-QW.403.446.41\"> </a></td><td>每週三和週六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(3,7)<a name=\"medication-frequency-nhi-tw-QW.403.447.41\"> </a></td><td>每週三和週日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(4,5)<a name=\"medication-frequency-nhi-tw-QW.404.445.41\"> </a></td><td>每週四和週五使用</td></tr><tr><td style=\"white-space:nowrap\">QW(4,6)<a name=\"medication-frequency-nhi-tw-QW.404.446.41\"> </a></td><td>每週四和週六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(4,7)<a name=\"medication-frequency-nhi-tw-QW.404.447.41\"> </a></td><td>每週四和週日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(5,6)<a name=\"medication-frequency-nhi-tw-QW.405.446.41\"> </a></td><td>每週五和週六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(5,7)<a name=\"medication-frequency-nhi-tw-QW.405.447.41\"> </a></td><td>每週五和週日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(6,7)<a name=\"medication-frequency-nhi-tw-QW.406.447.41\"> </a></td><td>每週六和週日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,3)<a name=\"medication-frequency-nhi-tw-QW.401.442.443.41\"> </a></td><td>每週一、二和三使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,4)<a name=\"medication-frequency-nhi-tw-QW.401.442.444.41\"> </a></td><td>每週一、二和四使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,5)<a name=\"medication-frequency-nhi-tw-QW.401.442.445.41\"> </a></td><td>每週一、二和五使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,6)<a name=\"medication-frequency-nhi-tw-QW.401.442.446.41\"> </a></td><td>每週一、二和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,7)<a name=\"medication-frequency-nhi-tw-QW.401.442.447.41\"> </a></td><td>每週一、二和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,3,4)<a name=\"medication-frequency-nhi-tw-QW.401.443.444.41\"> </a></td><td>每週一、三和四使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,3,5)<a name=\"medication-frequency-nhi-tw-QW.401.443.445.41\"> </a></td><td>每週一、三和五使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,3,6)<a name=\"medication-frequency-nhi-tw-QW.401.443.446.41\"> </a></td><td>每週一、三和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,3,7)<a name=\"medication-frequency-nhi-tw-QW.401.443.447.41\"> </a></td><td>每週一、三和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,4,5)<a name=\"medication-frequency-nhi-tw-QW.401.444.445.41\"> </a></td><td>每週一、四和五使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,4,6)<a name=\"medication-frequency-nhi-tw-QW.401.444.446.41\"> </a></td><td>每週一、四和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,4,7)<a name=\"medication-frequency-nhi-tw-QW.401.444.447.41\"> </a></td><td>每週一、四和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,5,6)<a name=\"medication-frequency-nhi-tw-QW.401.445.446.41\"> </a></td><td>每週一、五和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,5,7)<a name=\"medication-frequency-nhi-tw-QW.401.445.447.41\"> </a></td><td>每週一、五和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,6,7)<a name=\"medication-frequency-nhi-tw-QW.401.446.447.41\"> </a></td><td>每週一、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,3,4)<a name=\"medication-frequency-nhi-tw-QW.402.443.444.41\"> </a></td><td>每週二、三和四使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,3,5)<a name=\"medication-frequency-nhi-tw-QW.402.443.445.41\"> </a></td><td>每週二、三和五使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,3,6)<a name=\"medication-frequency-nhi-tw-QW.402.443.446.41\"> </a></td><td>每週二、三和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,3,7)<a name=\"medication-frequency-nhi-tw-QW.402.443.447.41\"> </a></td><td>每週二、三和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,4,5)<a name=\"medication-frequency-nhi-tw-QW.402.444.445.41\"> </a></td><td>每週二、四和五使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,4,6)<a name=\"medication-frequency-nhi-tw-QW.402.444.446.41\"> </a></td><td>每週二、四和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,4,7)<a name=\"medication-frequency-nhi-tw-QW.402.444.447.41\"> </a></td><td>每週二、四和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,5,6)<a name=\"medication-frequency-nhi-tw-QW.402.445.446.41\"> </a></td><td>每週二、五和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,5,7)<a name=\"medication-frequency-nhi-tw-QW.402.445.447.41\"> </a></td><td>每週二、五和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,6,7)<a name=\"medication-frequency-nhi-tw-QW.402.446.447.41\"> </a></td><td>每週二、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(3,4,5)<a name=\"medication-frequency-nhi-tw-QW.403.444.445.41\"> </a></td><td>每週三、四和五使用</td></tr><tr><td style=\"white-space:nowrap\">QW(3,4,6)<a name=\"medication-frequency-nhi-tw-QW.403.444.446.41\"> </a></td><td>每週三、四和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(3,4,7)<a name=\"medication-frequency-nhi-tw-QW.403.444.447.41\"> </a></td><td>每週三、四和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(3,5,6)<a name=\"medication-frequency-nhi-tw-QW.403.445.446.41\"> </a></td><td>每週三、五和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(3,5,7)<a name=\"medication-frequency-nhi-tw-QW.403.445.447.41\"> </a></td><td>每週三、五和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(3,6,7)<a name=\"medication-frequency-nhi-tw-QW.403.446.447.41\"> </a></td><td>每週三、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(4,5,6)<a name=\"medication-frequency-nhi-tw-QW.404.445.446.41\"> </a></td><td>每週四、五和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(4,5,7)<a name=\"medication-frequency-nhi-tw-QW.404.445.447.41\"> </a></td><td>每週四、五和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(4,6,7)<a name=\"medication-frequency-nhi-tw-QW.404.446.447.41\"> </a></td><td>每週四、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(5,6,7)<a name=\"medication-frequency-nhi-tw-QW.405.446.447.41\"> </a></td><td>每週五、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,3,4)<a name=\"medication-frequency-nhi-tw-QW.401.442.443.444.41\"> </a></td><td>每週一、二、三和四使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,3,5)<a name=\"medication-frequency-nhi-tw-QW.401.442.443.445.41\"> </a></td><td>每週一、二、三和五使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,3,6)<a name=\"medication-frequency-nhi-tw-QW.401.442.443.446.41\"> </a></td><td>每週一、二、三和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,3,7)<a name=\"medication-frequency-nhi-tw-QW.401.442.443.447.41\"> </a></td><td>每週一、二、三和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,4,5)<a name=\"medication-frequency-nhi-tw-QW.401.442.444.445.41\"> </a></td><td>每週一、二、四和五使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,4,6)<a name=\"medication-frequency-nhi-tw-QW.401.442.444.446.41\"> </a></td><td>每週一、二、四和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,4,7)<a name=\"medication-frequency-nhi-tw-QW.401.442.444.447.41\"> </a></td><td>每週一、二、四和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,5,6)<a name=\"medication-frequency-nhi-tw-QW.401.442.445.446.41\"> </a></td><td>每週一、二、五和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,5,7)<a name=\"medication-frequency-nhi-tw-QW.401.442.445.447.41\"> </a></td><td>每週一、二、五和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,6,7)<a name=\"medication-frequency-nhi-tw-QW.401.442.446.447.41\"> </a></td><td>每週一、二、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,3,4,5)<a name=\"medication-frequency-nhi-tw-QW.401.443.444.445.41\"> </a></td><td>每週一、三、四和五使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,3,4,6)<a name=\"medication-frequency-nhi-tw-QW.401.443.444.446.41\"> </a></td><td>每週一、三、四和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,3,4,7)<a name=\"medication-frequency-nhi-tw-QW.401.443.444.447.41\"> </a></td><td>每週一、三、四和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,3,5,6)<a name=\"medication-frequency-nhi-tw-QW.401.443.445.446.41\"> </a></td><td>每週一、三、五和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,3,5,7)<a name=\"medication-frequency-nhi-tw-QW.401.443.445.447.41\"> </a></td><td>每週一、三、五和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,3,6,7)<a name=\"medication-frequency-nhi-tw-QW.401.443.446.447.41\"> </a></td><td>每週一、三、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,4,5,6)<a name=\"medication-frequency-nhi-tw-QW.401.444.445.446.41\"> </a></td><td>每週一、四、五和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,4,5,7)<a name=\"medication-frequency-nhi-tw-QW.401.444.445.447.41\"> </a></td><td>每週一、四、五和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,4,6,7)<a name=\"medication-frequency-nhi-tw-QW.401.444.446.447.41\"> </a></td><td>每週一、四、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,5,6,7)<a name=\"medication-frequency-nhi-tw-QW.401.445.446.447.41\"> </a></td><td>每週一、五、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,3,4,5)<a name=\"medication-frequency-nhi-tw-QW.402.443.444.445.41\"> </a></td><td>每週二、三、四和五使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,3,4,6)<a name=\"medication-frequency-nhi-tw-QW.402.443.444.446.41\"> </a></td><td>每週二、三、四和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,3,4,7)<a name=\"medication-frequency-nhi-tw-QW.402.443.444.447.41\"> </a></td><td>每週二、三、四和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,3,5,6)<a name=\"medication-frequency-nhi-tw-QW.402.443.445.446.41\"> </a></td><td>每週二、三、五和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,3,5,7)<a name=\"medication-frequency-nhi-tw-QW.402.443.445.447.41\"> </a></td><td>每週二、三、五和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,3,6,7)<a name=\"medication-frequency-nhi-tw-QW.402.443.446.447.41\"> </a></td><td>每週二、三、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,4,5,6)<a name=\"medication-frequency-nhi-tw-QW.402.444.445.446.41\"> </a></td><td>每週二、四、五和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,4,5,7)<a name=\"medication-frequency-nhi-tw-QW.402.444.445.447.41\"> </a></td><td>每週二、四、五和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,4,6,7)<a name=\"medication-frequency-nhi-tw-QW.402.444.446.447.41\"> </a></td><td>每週二、四、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,5,6,7)<a name=\"medication-frequency-nhi-tw-QW.402.445.446.447.41\"> </a></td><td>每週二、五、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(3,4,5,6)<a name=\"medication-frequency-nhi-tw-QW.403.444.445.446.41\"> </a></td><td>每週三、四、五和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(3,4,5,7)<a name=\"medication-frequency-nhi-tw-QW.403.444.445.447.41\"> </a></td><td>每週三、四、五和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(3,4,6,7)<a name=\"medication-frequency-nhi-tw-QW.403.444.446.447.41\"> </a></td><td>每週三、四、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(3,5,6,7)<a name=\"medication-frequency-nhi-tw-QW.403.445.446.447.41\"> </a></td><td>每週三、五、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(4,5,6,7)<a name=\"medication-frequency-nhi-tw-QW.404.445.446.447.41\"> </a></td><td>每週四、五、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,3,4,5)<a name=\"medication-frequency-nhi-tw-QW.401.442.443.444.445.41\"> </a></td><td>每週一、二、三、四和五使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,3,4,6)<a name=\"medication-frequency-nhi-tw-QW.401.442.443.444.446.41\"> </a></td><td>每週一、二、三、四和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,3,4,7)<a name=\"medication-frequency-nhi-tw-QW.401.442.443.444.447.41\"> </a></td><td>每週一、二、三、四和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,3,5,6)<a name=\"medication-frequency-nhi-tw-QW.401.442.443.445.446.41\"> </a></td><td>每週一、二、三、五和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,3,5,7)<a name=\"medication-frequency-nhi-tw-QW.401.442.443.445.447.41\"> </a></td><td>每週一、二、三、五和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,3,6,7)<a name=\"medication-frequency-nhi-tw-QW.401.442.443.446.447.41\"> </a></td><td>每週一、二、三、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,4,5,6)<a name=\"medication-frequency-nhi-tw-QW.401.442.444.445.446.41\"> </a></td><td>每週一、二、四、五和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,4,5,7)<a name=\"medication-frequency-nhi-tw-QW.401.442.444.445.447.41\"> </a></td><td>每週一、二、四、五和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,4,6,7)<a name=\"medication-frequency-nhi-tw-QW.401.442.444.446.447.41\"> </a></td><td>每週一、二、四、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,5,6,7)<a name=\"medication-frequency-nhi-tw-QW.401.442.445.446.447.41\"> </a></td><td>每週一、二、五、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,3,4,5,6)<a name=\"medication-frequency-nhi-tw-QW.401.443.444.445.446.41\"> </a></td><td>每週一、三、四、五和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,3,4,5,7)<a name=\"medication-frequency-nhi-tw-QW.401.443.444.445.447.41\"> </a></td><td>每週一、三、四、五和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,3,4,6,7)<a name=\"medication-frequency-nhi-tw-QW.401.443.444.446.447.41\"> </a></td><td>每週一、三、四、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,3,5,6,7)<a name=\"medication-frequency-nhi-tw-QW.401.443.445.446.447.41\"> </a></td><td>每週一、三、五、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,4,5,6,7)<a name=\"medication-frequency-nhi-tw-QW.401.444.445.446.447.41\"> </a></td><td>每週一、四、五、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,3,4,5,6)<a name=\"medication-frequency-nhi-tw-QW.402.443.444.445.446.41\"> </a></td><td>每週二、三、四、五和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,3,4,5,7)<a name=\"medication-frequency-nhi-tw-QW.402.443.444.445.447.41\"> </a></td><td>每週二、三、四、五和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,3,4,6,7)<a name=\"medication-frequency-nhi-tw-QW.402.443.444.446.447.41\"> </a></td><td>每週二、三、四、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,3,5,6,7)<a name=\"medication-frequency-nhi-tw-QW.402.443.445.446.447.41\"> </a></td><td>每週二、三、五、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,4,5,6,7)<a name=\"medication-frequency-nhi-tw-QW.402.444.445.446.447.41\"> </a></td><td>每週二、四、五、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(3,4,5,6,7)<a name=\"medication-frequency-nhi-tw-QW.403.444.445.446.447.41\"> </a></td><td>每週三、四、五、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,3,4,5,6)<a name=\"medication-frequency-nhi-tw-QW.401.442.443.444.445.446.41\"> </a></td><td>每週一、二、三、四、五和六使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,3,4,5,7)<a name=\"medication-frequency-nhi-tw-QW.401.442.443.444.445.447.41\"> </a></td><td>每週一、二、三、四、五和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,3,4,6,7)<a name=\"medication-frequency-nhi-tw-QW.401.442.443.444.446.447.41\"> </a></td><td>每週一、二、三、四、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,3,5,6,7)<a name=\"medication-frequency-nhi-tw-QW.401.442.443.445.446.447.41\"> </a></td><td>每週一、二、三、五、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,4,5,6,7)<a name=\"medication-frequency-nhi-tw-QW.401.442.444.445.446.447.41\"> </a></td><td>每週一、二、四、五、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,3,4,5,6,7)<a name=\"medication-frequency-nhi-tw-QW.401.443.444.445.446.447.41\"> </a></td><td>每週一、三、四、五、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(2,3,4,5,6,7)<a name=\"medication-frequency-nhi-tw-QW.402.443.444.445.446.447.41\"> </a></td><td>每週二、三、四、五、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">QW(1,2,3,4,5,6,7)<a name=\"medication-frequency-nhi-tw-QW.401.442.443.444.445.446.447.41\"> </a></td><td>每週一、二、三、四、五、六和日使用</td></tr><tr><td style=\"white-space:nowrap\">1W1D<a name=\"medication-frequency-nhi-tw-1W1D\"> </a></td><td>每1週用1天</td></tr><tr><td style=\"white-space:nowrap\">1W2D<a name=\"medication-frequency-nhi-tw-1W2D\"> </a></td><td>每1週用2天</td></tr><tr><td style=\"white-space:nowrap\">1W3D<a name=\"medication-frequency-nhi-tw-1W3D\"> </a></td><td>每1週用3天</td></tr><tr><td style=\"white-space:nowrap\">1W4D<a name=\"medication-frequency-nhi-tw-1W4D\"> </a></td><td>每1週用4天</td></tr><tr><td style=\"white-space:nowrap\">1W5D<a name=\"medication-frequency-nhi-tw-1W5D\"> </a></td><td>每1週用5天</td></tr><tr><td style=\"white-space:nowrap\">1W6D<a name=\"medication-frequency-nhi-tw-1W6D\"> </a></td><td>每1週用6天</td></tr><tr><td style=\"white-space:nowrap\">2W1D<a name=\"medication-frequency-nhi-tw-2W1D\"> </a></td><td>每2週用1天</td></tr><tr><td style=\"white-space:nowrap\">2W2D<a name=\"medication-frequency-nhi-tw-2W2D\"> </a></td><td>每2週用2天</td></tr><tr><td style=\"white-space:nowrap\">2W3D<a name=\"medication-frequency-nhi-tw-2W3D\"> </a></td><td>每2週用3天</td></tr><tr><td style=\"white-space:nowrap\">2W4D<a name=\"medication-frequency-nhi-tw-2W4D\"> </a></td><td>每2週用4天</td></tr><tr><td style=\"white-space:nowrap\">2W5D<a name=\"medication-frequency-nhi-tw-2W5D\"> </a></td><td>每2週用5天</td></tr><tr><td style=\"white-space:nowrap\">2W6D<a name=\"medication-frequency-nhi-tw-2W6D\"> </a></td><td>每2週用6天</td></tr><tr><td style=\"white-space:nowrap\">2W7D<a name=\"medication-frequency-nhi-tw-2W7D\"> </a></td><td>每2週用7天</td></tr><tr><td style=\"white-space:nowrap\">2W8D<a name=\"medication-frequency-nhi-tw-2W8D\"> </a></td><td>每2週用8天</td></tr><tr><td style=\"white-space:nowrap\">2W9D<a name=\"medication-frequency-nhi-tw-2W9D\"> </a></td><td>每2週用9天</td></tr><tr><td style=\"white-space:nowrap\">2W10D<a name=\"medication-frequency-nhi-tw-2W10D\"> </a></td><td>每2週用10天</td></tr><tr><td style=\"white-space:nowrap\">3W1D<a name=\"medication-frequency-nhi-tw-3W1D\"> </a></td><td>每3週用1天</td></tr><tr><td style=\"white-space:nowrap\">3W2D<a name=\"medication-frequency-nhi-tw-3W2D\"> </a></td><td>每3週用2天</td></tr><tr><td style=\"white-space:nowrap\">3W3D<a name=\"medication-frequency-nhi-tw-3W3D\"> </a></td><td>每3週用3天</td></tr><tr><td style=\"white-space:nowrap\">3W4D<a name=\"medication-frequency-nhi-tw-3W4D\"> </a></td><td>每3週用4天</td></tr><tr><td style=\"white-space:nowrap\">3W5D<a name=\"medication-frequency-nhi-tw-3W5D\"> </a></td><td>每3週用5天</td></tr><tr><td style=\"white-space:nowrap\">3W6D<a name=\"medication-frequency-nhi-tw-3W6D\"> </a></td><td>每3週用6天</td></tr><tr><td style=\"white-space:nowrap\">3W7D<a name=\"medication-frequency-nhi-tw-3W7D\"> </a></td><td>每3週用7天</td></tr><tr><td style=\"white-space:nowrap\">3W8D<a name=\"medication-frequency-nhi-tw-3W8D\"> </a></td><td>每3週用8天</td></tr><tr><td style=\"white-space:nowrap\">3W9D<a name=\"medication-frequency-nhi-tw-3W9D\"> </a></td><td>每3週用9天</td></tr><tr><td style=\"white-space:nowrap\">3W10D<a name=\"medication-frequency-nhi-tw-3W10D\"> </a></td><td>每3週用10天</td></tr><tr><td style=\"white-space:nowrap\">4W1D<a name=\"medication-frequency-nhi-tw-4W1D\"> </a></td><td>每4週用1天</td></tr><tr><td style=\"white-space:nowrap\">4W2D<a name=\"medication-frequency-nhi-tw-4W2D\"> </a></td><td>每4週用2天</td></tr><tr><td style=\"white-space:nowrap\">4W3D<a name=\"medication-frequency-nhi-tw-4W3D\"> </a></td><td>每4週用3天</td></tr><tr><td style=\"white-space:nowrap\">4W4D<a name=\"medication-frequency-nhi-tw-4W4D\"> </a></td><td>每4週用4天</td></tr><tr><td style=\"white-space:nowrap\">4W5D<a name=\"medication-frequency-nhi-tw-4W5D\"> </a></td><td>每4週用5天</td></tr><tr><td style=\"white-space:nowrap\">4W6D<a name=\"medication-frequency-nhi-tw-4W6D\"> </a></td><td>每4週用6天</td></tr><tr><td style=\"white-space:nowrap\">4W7D<a name=\"medication-frequency-nhi-tw-4W7D\"> </a></td><td>每4週用7天</td></tr><tr><td style=\"white-space:nowrap\">4W8D<a name=\"medication-frequency-nhi-tw-4W8D\"> </a></td><td>每4週用8天</td></tr><tr><td style=\"white-space:nowrap\">43W9D<a name=\"medication-frequency-nhi-tw-43W9D\"> </a></td><td>每4週用9天</td></tr><tr><td style=\"white-space:nowrap\">4W10D<a name=\"medication-frequency-nhi-tw-4W10D\"> </a></td><td>每4週用10天</td></tr><tr><td style=\"white-space:nowrap\">MCD1D1<a name=\"medication-frequency-nhi-tw-MCD1D1\"> </a></td><td>月經第1天至第1天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD1D2<a name=\"medication-frequency-nhi-tw-MCD1D2\"> </a></td><td>月經第1天至第2天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD1D3<a name=\"medication-frequency-nhi-tw-MCD1D3\"> </a></td><td>月經第1天至第3天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD1D4<a name=\"medication-frequency-nhi-tw-MCD1D4\"> </a></td><td>月經第1天至第4天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD1D5<a name=\"medication-frequency-nhi-tw-MCD1D5\"> </a></td><td>月經第1天至第5天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD1D6<a name=\"medication-frequency-nhi-tw-MCD1D6\"> </a></td><td>月經第1天至第6天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD1D7<a name=\"medication-frequency-nhi-tw-MCD1D7\"> </a></td><td>月經第1天至第7天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD2D2<a name=\"medication-frequency-nhi-tw-MCD2D2\"> </a></td><td>月經第2天至第2天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD2D3<a name=\"medication-frequency-nhi-tw-MCD2D3\"> </a></td><td>月經第2天至第3天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD2D4<a name=\"medication-frequency-nhi-tw-MCD2D4\"> </a></td><td>月經第2天至第4天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD2D5<a name=\"medication-frequency-nhi-tw-MCD2D5\"> </a></td><td>月經第2天至第5天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD2D6<a name=\"medication-frequency-nhi-tw-MCD2D6\"> </a></td><td>月經第2天至第6天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD2D7<a name=\"medication-frequency-nhi-tw-MCD2D7\"> </a></td><td>月經第2天至第7天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD3D3<a name=\"medication-frequency-nhi-tw-MCD3D3\"> </a></td><td>月經第3天至第3天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD3D4<a name=\"medication-frequency-nhi-tw-MCD3D4\"> </a></td><td>月經第3天至第4天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD3D5<a name=\"medication-frequency-nhi-tw-MCD3D5\"> </a></td><td>月經第3天至第5天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD3D6<a name=\"medication-frequency-nhi-tw-MCD3D6\"> </a></td><td>月經第3天至第6天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD3D7<a name=\"medication-frequency-nhi-tw-MCD3D7\"> </a></td><td>月經第3天至第7天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD4D4<a name=\"medication-frequency-nhi-tw-MCD4D4\"> </a></td><td>月經第4天至第4天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD4D5<a name=\"medication-frequency-nhi-tw-MCD4D5\"> </a></td><td>月經第4天至第5天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD4D6<a name=\"medication-frequency-nhi-tw-MCD4D6\"> </a></td><td>月經第4天至第6天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD4D7<a name=\"medication-frequency-nhi-tw-MCD4D7\"> </a></td><td>月經第4天至第7天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD5D5<a name=\"medication-frequency-nhi-tw-MCD5D5\"> </a></td><td>月經第5天至第5天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD5D6<a name=\"medication-frequency-nhi-tw-MCD5D6\"> </a></td><td>月經第5天至第6天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD5D7<a name=\"medication-frequency-nhi-tw-MCD5D7\"> </a></td><td>月經第5天至第7天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD6D6<a name=\"medication-frequency-nhi-tw-MCD6D6\"> </a></td><td>月經第6天至第6天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD6D7<a name=\"medication-frequency-nhi-tw-MCD6D7\"> </a></td><td>月經第6天至第7天使用</td></tr><tr><td style=\"white-space:nowrap\">MCD7D7<a name=\"medication-frequency-nhi-tw-MCD7D7\"> </a></td><td>月經第7天至第7天使用</td></tr><tr><td style=\"white-space:nowrap\">Q2D<a name=\"medication-frequency-nhi-tw-Q2D\"> </a></td><td>每2日一次</td></tr><tr><td style=\"white-space:nowrap\">Q3D<a name=\"medication-frequency-nhi-tw-Q3D\"> </a></td><td>每3日一次</td></tr><tr><td style=\"white-space:nowrap\">Q4D<a name=\"medication-frequency-nhi-tw-Q4D\"> </a></td><td>每4日一次</td></tr><tr><td style=\"white-space:nowrap\">Q5D<a name=\"medication-frequency-nhi-tw-Q5D\"> </a></td><td>每5日一次</td></tr><tr><td style=\"white-space:nowrap\">Q6D<a name=\"medication-frequency-nhi-tw-Q6D\"> </a></td><td>每6日一次</td></tr><tr><td style=\"white-space:nowrap\">Q7D<a name=\"medication-frequency-nhi-tw-Q7D\"> </a></td><td>每7日一次</td></tr><tr><td style=\"white-space:nowrap\">Q8D<a name=\"medication-frequency-nhi-tw-Q8D\"> </a></td><td>每8日一次</td></tr><tr><td style=\"white-space:nowrap\">Q9D<a name=\"medication-frequency-nhi-tw-Q9D\"> </a></td><td>每9日一次</td></tr><tr><td style=\"white-space:nowrap\">Q10D<a name=\"medication-frequency-nhi-tw-Q10D\"> </a></td><td>每10日一次</td></tr><tr><td style=\"white-space:nowrap\">Q11D<a name=\"medication-frequency-nhi-tw-Q11D\"> </a></td><td>每11日一次</td></tr><tr><td style=\"white-space:nowrap\">Q12D<a name=\"medication-frequency-nhi-tw-Q12D\"> </a></td><td>每12日一次</td></tr><tr><td style=\"white-space:nowrap\">Q13D<a name=\"medication-frequency-nhi-tw-Q13D\"> </a></td><td>每13日一次</td></tr><tr><td style=\"white-space:nowrap\">Q14D<a name=\"medication-frequency-nhi-tw-Q14D\"> </a></td><td>每14日一次</td></tr><tr><td style=\"white-space:nowrap\">Q15D<a name=\"medication-frequency-nhi-tw-Q15D\"> </a></td><td>每15日一次</td></tr><tr><td style=\"white-space:nowrap\">Q16D<a name=\"medication-frequency-nhi-tw-Q16D\"> </a></td><td>每16日一次</td></tr><tr><td style=\"white-space:nowrap\">Q17D<a name=\"medication-frequency-nhi-tw-Q17D\"> </a></td><td>每17日一次</td></tr><tr><td style=\"white-space:nowrap\">Q18D<a name=\"medication-frequency-nhi-tw-Q18D\"> </a></td><td>每18日一次</td></tr><tr><td style=\"white-space:nowrap\">Q19D<a name=\"medication-frequency-nhi-tw-Q19D\"> </a></td><td>每19日一次</td></tr><tr><td style=\"white-space:nowrap\">Q20D<a name=\"medication-frequency-nhi-tw-Q20D\"> </a></td><td>每20日一次</td></tr><tr><td style=\"white-space:nowrap\">Q21D<a name=\"medication-frequency-nhi-tw-Q21D\"> </a></td><td>每21日一次</td></tr><tr><td style=\"white-space:nowrap\">Q22D<a name=\"medication-frequency-nhi-tw-Q22D\"> </a></td><td>每22日一次</td></tr><tr><td style=\"white-space:nowrap\">Q23D<a name=\"medication-frequency-nhi-tw-Q23D\"> </a></td><td>每23日一次</td></tr><tr><td style=\"white-space:nowrap\">Q24D<a name=\"medication-frequency-nhi-tw-Q24D\"> </a></td><td>每24日一次</td></tr><tr><td style=\"white-space:nowrap\">Q25D<a name=\"medication-frequency-nhi-tw-Q25D\"> </a></td><td>每25日一次</td></tr><tr><td style=\"white-space:nowrap\">Q26D<a name=\"medication-frequency-nhi-tw-Q26D\"> </a></td><td>每26日一次</td></tr><tr><td style=\"white-space:nowrap\">Q27D<a name=\"medication-frequency-nhi-tw-Q27D\"> </a></td><td>每27日一次</td></tr><tr><td style=\"white-space:nowrap\">Q28D<a name=\"medication-frequency-nhi-tw-Q28D\"> </a></td><td>每28日一次</td></tr><tr><td style=\"white-space:nowrap\">Q29D<a name=\"medication-frequency-nhi-tw-Q29D\"> </a></td><td>每29日一次</td></tr><tr><td style=\"white-space:nowrap\">Q1M<a name=\"medication-frequency-nhi-tw-Q1M\"> </a></td><td>每1月一次</td></tr><tr><td style=\"white-space:nowrap\">Q2M<a name=\"medication-frequency-nhi-tw-Q2M\"> </a></td><td>每2月一次</td></tr><tr><td style=\"white-space:nowrap\">Q3M<a name=\"medication-frequency-nhi-tw-Q3M\"> </a></td><td>每3月一次</td></tr><tr><td style=\"white-space:nowrap\">Q4M<a name=\"medication-frequency-nhi-tw-Q4M\"> </a></td><td>每4月一次</td></tr><tr><td style=\"white-space:nowrap\">Q5M<a name=\"medication-frequency-nhi-tw-Q5M\"> </a></td><td>每5月一次</td></tr><tr><td style=\"white-space:nowrap\">Q6M<a name=\"medication-frequency-nhi-tw-Q6M\"> </a></td><td>每6月一次</td></tr><tr><td style=\"white-space:nowrap\">Q7M<a name=\"medication-frequency-nhi-tw-Q7M\"> </a></td><td>每7月一次</td></tr><tr><td style=\"white-space:nowrap\">Q8M<a name=\"medication-frequency-nhi-tw-Q8M\"> </a></td><td>每8月一次</td></tr><tr><td style=\"white-space:nowrap\">Q9M<a name=\"medication-frequency-nhi-tw-Q9M\"> </a></td><td>每9月一次</td></tr><tr><td style=\"white-space:nowrap\">Q10M<a name=\"medication-frequency-nhi-tw-Q10M\"> </a></td><td>每10月一次</td></tr><tr><td style=\"white-space:nowrap\">Q11M<a name=\"medication-frequency-nhi-tw-Q11M\"> </a></td><td>每11月一次</td></tr><tr><td style=\"white-space:nowrap\">Q1W<a name=\"medication-frequency-nhi-tw-Q1W\"> </a></td><td>每1週一次</td></tr><tr><td style=\"white-space:nowrap\">Q2W<a name=\"medication-frequency-nhi-tw-Q2W\"> </a></td><td>每2週一次</td></tr><tr><td style=\"white-space:nowrap\">Q3W<a name=\"medication-frequency-nhi-tw-Q3W\"> </a></td><td>每3週一次</td></tr><tr><td style=\"white-space:nowrap\">Q4W<a name=\"medication-frequency-nhi-tw-Q4W\"> </a></td><td>每4週一次</td></tr><tr><td style=\"white-space:nowrap\">Q5W<a name=\"medication-frequency-nhi-tw-Q5W\"> </a></td><td>每5週一次</td></tr><tr><td style=\"white-space:nowrap\">Q6W<a name=\"medication-frequency-nhi-tw-Q6W\"> </a></td><td>每6週一次</td></tr><tr><td style=\"white-space:nowrap\">Q7W<a name=\"medication-frequency-nhi-tw-Q7W\"> </a></td><td>每7週一次</td></tr><tr><td style=\"white-space:nowrap\">Q8W<a name=\"medication-frequency-nhi-tw-Q8W\"> </a></td><td>每8週一次</td></tr><tr><td style=\"white-space:nowrap\">Q9W<a name=\"medication-frequency-nhi-tw-Q9W\"> </a></td><td>每9週一次</td></tr><tr><td style=\"white-space:nowrap\">Q10W<a name=\"medication-frequency-nhi-tw-Q10W\"> </a></td><td>每10週一次</td></tr><tr><td style=\"white-space:nowrap\">Q11W<a name=\"medication-frequency-nhi-tw-Q11W\"> </a></td><td>每11週一次</td></tr><tr><td style=\"white-space:nowrap\">Q12W<a name=\"medication-frequency-nhi-tw-Q12W\"> </a></td><td>每12週一次</td></tr><tr><td style=\"white-space:nowrap\">Q13W<a name=\"medication-frequency-nhi-tw-Q13W\"> </a></td><td>每13週一次</td></tr><tr><td style=\"white-space:nowrap\">Q14W<a name=\"medication-frequency-nhi-tw-Q14W\"> </a></td><td>每14週一次</td></tr><tr><td style=\"white-space:nowrap\">Q15W<a name=\"medication-frequency-nhi-tw-Q15W\"> </a></td><td>每15週一次</td></tr><tr><td style=\"white-space:nowrap\">Q16W<a name=\"medication-frequency-nhi-tw-Q16W\"> </a></td><td>每16週一次</td></tr><tr><td style=\"white-space:nowrap\">Q17W<a name=\"medication-frequency-nhi-tw-Q17W\"> </a></td><td>每17週一次</td></tr><tr><td style=\"white-space:nowrap\">Q18W<a name=\"medication-frequency-nhi-tw-Q18W\"> </a></td><td>每18週一次</td></tr><tr><td style=\"white-space:nowrap\">Q19W<a name=\"medication-frequency-nhi-tw-Q19W\"> </a></td><td>每19週一次</td></tr><tr><td style=\"white-space:nowrap\">Q20W<a name=\"medication-frequency-nhi-tw-Q20W\"> </a></td><td>每20週一次</td></tr><tr><td style=\"white-space:nowrap\">Q21W<a name=\"medication-frequency-nhi-tw-Q21W\"> </a></td><td>每21週一次</td></tr><tr><td style=\"white-space:nowrap\">Q22W<a name=\"medication-frequency-nhi-tw-Q22W\"> </a></td><td>每22週一次</td></tr><tr><td style=\"white-space:nowrap\">Q23W<a name=\"medication-frequency-nhi-tw-Q23W\"> </a></td><td>每23週一次</td></tr><tr><td style=\"white-space:nowrap\">Q24W<a name=\"medication-frequency-nhi-tw-Q24W\"> </a></td><td>每24週一次</td></tr><tr><td style=\"white-space:nowrap\">Q25W<a name=\"medication-frequency-nhi-tw-Q25W\"> </a></td><td>每25週一次</td></tr><tr><td style=\"white-space:nowrap\">Q26W<a name=\"medication-frequency-nhi-tw-Q26W\"> </a></td><td>每26週一次</td></tr><tr><td style=\"white-space:nowrap\">Q27W<a name=\"medication-frequency-nhi-tw-Q27W\"> </a></td><td>每27週一次</td></tr><tr><td style=\"white-space:nowrap\">Q28W<a name=\"medication-frequency-nhi-tw-Q28W\"> </a></td><td>每28週一次</td></tr><tr><td style=\"white-space:nowrap\">Q29W<a name=\"medication-frequency-nhi-tw-Q29W\"> </a></td><td>每29週一次</td></tr><tr><td style=\"white-space:nowrap\">Q30W<a name=\"medication-frequency-nhi-tw-Q30W\"> </a></td><td>每30週一次</td></tr><tr><td style=\"white-space:nowrap\">Q31W<a name=\"medication-frequency-nhi-tw-Q31W\"> </a></td><td>每31週一次</td></tr><tr><td style=\"white-space:nowrap\">Q32W<a name=\"medication-frequency-nhi-tw-Q32W\"> </a></td><td>每32週一次</td></tr><tr><td style=\"white-space:nowrap\">Q33W<a name=\"medication-frequency-nhi-tw-Q33W\"> </a></td><td>每33週一次</td></tr><tr><td style=\"white-space:nowrap\">Q34W<a name=\"medication-frequency-nhi-tw-Q34W\"> </a></td><td>每34週一次</td></tr><tr><td style=\"white-space:nowrap\">Q35W<a name=\"medication-frequency-nhi-tw-Q35W\"> </a></td><td>每35週一次</td></tr><tr><td style=\"white-space:nowrap\">Q36W<a name=\"medication-frequency-nhi-tw-Q36W\"> </a></td><td>每36週一次</td></tr><tr><td style=\"white-space:nowrap\">Q37W<a name=\"medication-frequency-nhi-tw-Q37W\"> </a></td><td>每37週一次</td></tr><tr><td style=\"white-space:nowrap\">Q38W<a name=\"medication-frequency-nhi-tw-Q38W\"> </a></td><td>每38週一次</td></tr><tr><td style=\"white-space:nowrap\">Q39W<a name=\"medication-frequency-nhi-tw-Q39W\"> </a></td><td>每39週一次</td></tr><tr><td style=\"white-space:nowrap\">Q40W<a name=\"medication-frequency-nhi-tw-Q40W\"> </a></td><td>每40週一次</td></tr><tr><td style=\"white-space:nowrap\">Q41W<a name=\"medication-frequency-nhi-tw-Q41W\"> </a></td><td>每41週一次</td></tr><tr><td style=\"white-space:nowrap\">Q42W<a name=\"medication-frequency-nhi-tw-Q42W\"> </a></td><td>每42週一次</td></tr><tr><td style=\"white-space:nowrap\">Q43W<a name=\"medication-frequency-nhi-tw-Q43W\"> </a></td><td>每43週一次</td></tr><tr><td style=\"white-space:nowrap\">Q44W<a name=\"medication-frequency-nhi-tw-Q44W\"> </a></td><td>每44週一次</td></tr><tr><td style=\"white-space:nowrap\">Q45W<a name=\"medication-frequency-nhi-tw-Q45W\"> </a></td><td>每45週一次</td></tr><tr><td style=\"white-space:nowrap\">Q46W<a name=\"medication-frequency-nhi-tw-Q46W\"> </a></td><td>每46週一次</td></tr><tr><td style=\"white-space:nowrap\">Q47W<a name=\"medication-frequency-nhi-tw-Q47W\"> </a></td><td>每47週一次</td></tr><tr><td style=\"white-space:nowrap\">Q48W<a name=\"medication-frequency-nhi-tw-Q48W\"> </a></td><td>每48週一次</td></tr><tr><td style=\"white-space:nowrap\">Q49W<a name=\"medication-frequency-nhi-tw-Q49W\"> </a></td><td>每49週一次</td></tr><tr><td style=\"white-space:nowrap\">Q50W<a name=\"medication-frequency-nhi-tw-Q50W\"> </a></td><td>每50週一次</td></tr><tr><td style=\"white-space:nowrap\">Q51W<a name=\"medication-frequency-nhi-tw-Q51W\"> </a></td><td>每51週一次</td></tr><tr><td style=\"white-space:nowrap\">BIW<a name=\"medication-frequency-nhi-tw-BIW\"> </a></td><td>每週二次</td></tr><tr><td style=\"white-space:nowrap\">TIW<a name=\"medication-frequency-nhi-tw-TIW\"> </a></td><td>每週三次</td></tr><tr><td style=\"white-space:nowrap\">STAT<a name=\"medication-frequency-nhi-tw-STAT\"> </a></td><td>立刻使用</td></tr><tr><td style=\"white-space:nowrap\">ASORDER<a name=\"medication-frequency-nhi-tw-ASORDER\"> </a></td><td>依照醫師指示使用</td></tr><tr><td style=\"white-space:nowrap\">Q1H<a name=\"medication-frequency-nhi-tw-Q1H\"> </a></td><td>每1小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q2H<a name=\"medication-frequency-nhi-tw-Q2H\"> </a></td><td>每2小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q3H<a name=\"medication-frequency-nhi-tw-Q3H\"> </a></td><td>每3小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q4H<a name=\"medication-frequency-nhi-tw-Q4H\"> </a></td><td>每4小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q5H<a name=\"medication-frequency-nhi-tw-Q5H\"> </a></td><td>每5小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q6H<a name=\"medication-frequency-nhi-tw-Q6H\"> </a></td><td>每6小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q7H<a name=\"medication-frequency-nhi-tw-Q7H\"> </a></td><td>每7小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q8H<a name=\"medication-frequency-nhi-tw-Q8H\"> </a></td><td>每8小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q9H<a name=\"medication-frequency-nhi-tw-Q9H\"> </a></td><td>每9小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q10H<a name=\"medication-frequency-nhi-tw-Q10H\"> </a></td><td>每10小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q11H<a name=\"medication-frequency-nhi-tw-Q11H\"> </a></td><td>每11小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q12H<a name=\"medication-frequency-nhi-tw-Q12H\"> </a></td><td>每12小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q13H<a name=\"medication-frequency-nhi-tw-Q13H\"> </a></td><td>每13小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q14H<a name=\"medication-frequency-nhi-tw-Q14H\"> </a></td><td>每14小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q15H<a name=\"medication-frequency-nhi-tw-Q15H\"> </a></td><td>每15小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q16H<a name=\"medication-frequency-nhi-tw-Q16H\"> </a></td><td>每16小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q17H<a name=\"medication-frequency-nhi-tw-Q17H\"> </a></td><td>每17小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q18H<a name=\"medication-frequency-nhi-tw-Q18H\"> </a></td><td>每18小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q19H<a name=\"medication-frequency-nhi-tw-Q19H\"> </a></td><td>每19小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q20H<a name=\"medication-frequency-nhi-tw-Q20H\"> </a></td><td>每20小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q21H<a name=\"medication-frequency-nhi-tw-Q21H\"> </a></td><td>每21小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q22H<a name=\"medication-frequency-nhi-tw-Q22H\"> </a></td><td>每22小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q23H<a name=\"medication-frequency-nhi-tw-Q23H\"> </a></td><td>每23小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q24H<a name=\"medication-frequency-nhi-tw-Q24H\"> </a></td><td>每24小時使用1次</td></tr><tr><td style=\"white-space:nowrap\">Q30H<a name=\"medication-frequency-nhi-tw-Q30H\"> </a></td><td>每30小時使用1次</td></tr><tr><td style=\"white-space:nowrap\">Q48H<a name=\"medication-frequency-nhi-tw-Q48H\"> </a></td><td>每48小時使用1次</td></tr><tr><td style=\"white-space:nowrap\">Q1MN<a name=\"medication-frequency-nhi-tw-Q1MN\"> </a></td><td>每1分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q2MN<a name=\"medication-frequency-nhi-tw-Q2MN\"> </a></td><td>每2分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q3MN<a name=\"medication-frequency-nhi-tw-Q3MN\"> </a></td><td>每3分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q4MN<a name=\"medication-frequency-nhi-tw-Q4MN\"> </a></td><td>每4分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q5MN<a name=\"medication-frequency-nhi-tw-Q5MN\"> </a></td><td>每5分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q6MN<a name=\"medication-frequency-nhi-tw-Q6MN\"> </a></td><td>每6分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q7MN<a name=\"medication-frequency-nhi-tw-Q7MN\"> </a></td><td>每7分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q8MN<a name=\"medication-frequency-nhi-tw-Q8MN\"> </a></td><td>每8分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q9MN<a name=\"medication-frequency-nhi-tw-Q9MN\"> </a></td><td>每9分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q10MN<a name=\"medication-frequency-nhi-tw-Q10MN\"> </a></td><td>每10分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q11MN<a name=\"medication-frequency-nhi-tw-Q11MN\"> </a></td><td>每11分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q12MN<a name=\"medication-frequency-nhi-tw-Q12MN\"> </a></td><td>每12分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q13MN<a name=\"medication-frequency-nhi-tw-Q13MN\"> </a></td><td>每13分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q14MN<a name=\"medication-frequency-nhi-tw-Q14MN\"> </a></td><td>每14分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q15MN<a name=\"medication-frequency-nhi-tw-Q15MN\"> </a></td><td>每15分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q16MN<a name=\"medication-frequency-nhi-tw-Q16MN\"> </a></td><td>每16分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q17MN<a name=\"medication-frequency-nhi-tw-Q17MN\"> </a></td><td>每17分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q18MN<a name=\"medication-frequency-nhi-tw-Q18MN\"> </a></td><td>每18分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q19MN<a name=\"medication-frequency-nhi-tw-Q19MN\"> </a></td><td>每19分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q20MN<a name=\"medication-frequency-nhi-tw-Q20MN\"> </a></td><td>每20分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q21MN<a name=\"medication-frequency-nhi-tw-Q21MN\"> </a></td><td>每21分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q22MN<a name=\"medication-frequency-nhi-tw-Q22MN\"> </a></td><td>每22分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q23MN<a name=\"medication-frequency-nhi-tw-Q23MN\"> </a></td><td>每23分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q24MN<a name=\"medication-frequency-nhi-tw-Q24MN\"> </a></td><td>每24分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q25MN<a name=\"medication-frequency-nhi-tw-Q25MN\"> </a></td><td>每25分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q26MN<a name=\"medication-frequency-nhi-tw-Q26MN\"> </a></td><td>每26分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q27MN<a name=\"medication-frequency-nhi-tw-Q27MN\"> </a></td><td>每27分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q28MN<a name=\"medication-frequency-nhi-tw-Q28MN\"> </a></td><td>每28分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q29MN<a name=\"medication-frequency-nhi-tw-Q29MN\"> </a></td><td>每29分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q30MN<a name=\"medication-frequency-nhi-tw-Q30MN\"> </a></td><td>每30分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q31MN<a name=\"medication-frequency-nhi-tw-Q31MN\"> </a></td><td>每31分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q32MN<a name=\"medication-frequency-nhi-tw-Q32MN\"> </a></td><td>每32分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q33MN<a name=\"medication-frequency-nhi-tw-Q33MN\"> </a></td><td>每33分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q34MN<a name=\"medication-frequency-nhi-tw-Q34MN\"> </a></td><td>每34分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q35MN<a name=\"medication-frequency-nhi-tw-Q35MN\"> </a></td><td>每35分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q36MN<a name=\"medication-frequency-nhi-tw-Q36MN\"> </a></td><td>欽36分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q37MN<a name=\"medication-frequency-nhi-tw-Q37MN\"> </a></td><td>每37分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q38MN<a name=\"medication-frequency-nhi-tw-Q38MN\"> </a></td><td>每38分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q39MN<a name=\"medication-frequency-nhi-tw-Q39MN\"> </a></td><td>每39分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q40MN<a name=\"medication-frequency-nhi-tw-Q40MN\"> </a></td><td>每40分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q41MN<a name=\"medication-frequency-nhi-tw-Q41MN\"> </a></td><td>每41分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q42MN<a name=\"medication-frequency-nhi-tw-Q42MN\"> </a></td><td>每42分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q43MN<a name=\"medication-frequency-nhi-tw-Q43MN\"> </a></td><td>每43分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q44MN<a name=\"medication-frequency-nhi-tw-Q44MN\"> </a></td><td>每44分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q45MN<a name=\"medication-frequency-nhi-tw-Q45MN\"> </a></td><td>每45分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q46MN<a name=\"medication-frequency-nhi-tw-Q46MN\"> </a></td><td>每46分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q47MN<a name=\"medication-frequency-nhi-tw-Q47MN\"> </a></td><td>每47分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q48MN<a name=\"medication-frequency-nhi-tw-Q48MN\"> </a></td><td>每48分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q49MN<a name=\"medication-frequency-nhi-tw-Q49MN\"> </a></td><td>每49分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q50MN<a name=\"medication-frequency-nhi-tw-Q50MN\"> </a></td><td>每50分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q51MN<a name=\"medication-frequency-nhi-tw-Q51MN\"> </a></td><td>每51分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q52MN<a name=\"medication-frequency-nhi-tw-Q52MN\"> </a></td><td>每52分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q53MN<a name=\"medication-frequency-nhi-tw-Q53MN\"> </a></td><td>每53分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q54MN<a name=\"medication-frequency-nhi-tw-Q54MN\"> </a></td><td>每54分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q55MN<a name=\"medication-frequency-nhi-tw-Q55MN\"> </a></td><td>每55分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q56MN<a name=\"medication-frequency-nhi-tw-Q56MN\"> </a></td><td>每56分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q57MN<a name=\"medication-frequency-nhi-tw-Q57MN\"> </a></td><td>每57分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q58MN<a name=\"medication-frequency-nhi-tw-Q58MN\"> </a></td><td>每58分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q59MN<a name=\"medication-frequency-nhi-tw-Q59MN\"> </a></td><td>每59分鐘使用一次</td></tr><tr><td style=\"white-space:nowrap\">QN<a name=\"medication-frequency-nhi-tw-QN\"> </a></td><td>每晚使用一次</td></tr><tr><td style=\"white-space:nowrap\">QAM&amp;HS<a name=\"medication-frequency-nhi-tw-QAM.38HS\"> </a></td><td>上午使用一次且睡前一次</td></tr><tr><td style=\"white-space:nowrap\">QPM&amp;HS<a name=\"medication-frequency-nhi-tw-QPM.38HS\"> </a></td><td>下午使用一次且睡前一次</td></tr><tr><td style=\"white-space:nowrap\">QAM&amp;PM<a name=\"medication-frequency-nhi-tw-QAM.38PM\"> </a></td><td>每日上、下午各使用一次</td></tr><tr><td style=\"white-space:nowrap\">TID<a name=\"medication-frequency-nhi-tw-TID\"> </a></td><td>每日三次</td></tr><tr><td style=\"white-space:nowrap\">BID&amp;HS<a name=\"medication-frequency-nhi-tw-BID.38HS\"> </a></td><td>每日二次且睡前一次</td></tr><tr><td style=\"white-space:nowrap\">TID&amp;HS<a name=\"medication-frequency-nhi-tw-TID.38HS\"> </a></td><td>每日三次且睡前一次</td></tr><tr><td style=\"white-space:nowrap\">AC<a name=\"medication-frequency-nhi-tw-AC\"> </a></td><td>飯前</td></tr><tr><td style=\"white-space:nowrap\">AC1H<a name=\"medication-frequency-nhi-tw-AC1H\"> </a></td><td>飯前1小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC2H<a name=\"medication-frequency-nhi-tw-AC2H\"> </a></td><td>飯前2小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC3H<a name=\"medication-frequency-nhi-tw-AC3H\"> </a></td><td>飯前3小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC4H<a name=\"medication-frequency-nhi-tw-AC4H\"> </a></td><td>飯前4小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC5H<a name=\"medication-frequency-nhi-tw-AC5H\"> </a></td><td>飯前5小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC6H<a name=\"medication-frequency-nhi-tw-AC6H\"> </a></td><td>飯前6小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC7H<a name=\"medication-frequency-nhi-tw-AC7H\"> </a></td><td>飯前7小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC8H<a name=\"medication-frequency-nhi-tw-AC8H\"> </a></td><td>飯前8小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC9H<a name=\"medication-frequency-nhi-tw-AC9H\"> </a></td><td>飯前9小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC10H<a name=\"medication-frequency-nhi-tw-AC10H\"> </a></td><td>飯前10小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC11H<a name=\"medication-frequency-nhi-tw-AC11H\"> </a></td><td>飯前11小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC12H<a name=\"medication-frequency-nhi-tw-AC12H\"> </a></td><td>飯前12小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC13H<a name=\"medication-frequency-nhi-tw-AC13H\"> </a></td><td>飯前13小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC14H<a name=\"medication-frequency-nhi-tw-AC14H\"> </a></td><td>飯前14小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC15H<a name=\"medication-frequency-nhi-tw-AC15H\"> </a></td><td>飯前15小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC16H<a name=\"medication-frequency-nhi-tw-AC16H\"> </a></td><td>飯前16小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC17H<a name=\"medication-frequency-nhi-tw-AC17H\"> </a></td><td>飯前17小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC18H<a name=\"medication-frequency-nhi-tw-AC18H\"> </a></td><td>飯前18小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC19H<a name=\"medication-frequency-nhi-tw-AC19H\"> </a></td><td>飯前19小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC20H<a name=\"medication-frequency-nhi-tw-AC20H\"> </a></td><td>飯前20小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC21H<a name=\"medication-frequency-nhi-tw-AC21H\"> </a></td><td>飯前21小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC22H<a name=\"medication-frequency-nhi-tw-AC22H\"> </a></td><td>飯前22小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC23H<a name=\"medication-frequency-nhi-tw-AC23H\"> </a></td><td>飯前23小時使用</td></tr><tr><td style=\"white-space:nowrap\">AC1M<a name=\"medication-frequency-nhi-tw-AC1M\"> </a></td><td>飯前1分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC2M<a name=\"medication-frequency-nhi-tw-AC2M\"> </a></td><td>飯前2分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC3M<a name=\"medication-frequency-nhi-tw-AC3M\"> </a></td><td>飯前3分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC4M<a name=\"medication-frequency-nhi-tw-AC4M\"> </a></td><td>飯前4分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC5M<a name=\"medication-frequency-nhi-tw-AC5M\"> </a></td><td>飯前5分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC6M<a name=\"medication-frequency-nhi-tw-AC6M\"> </a></td><td>飯前6分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC7M<a name=\"medication-frequency-nhi-tw-AC7M\"> </a></td><td>飯前7分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC8M<a name=\"medication-frequency-nhi-tw-AC8M\"> </a></td><td>飯前8分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC9M<a name=\"medication-frequency-nhi-tw-AC9M\"> </a></td><td>飯前9分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC10M<a name=\"medication-frequency-nhi-tw-AC10M\"> </a></td><td>飯前10分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC11M<a name=\"medication-frequency-nhi-tw-AC11M\"> </a></td><td>飯前11分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC12M<a name=\"medication-frequency-nhi-tw-AC12M\"> </a></td><td>飯前12分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC13M<a name=\"medication-frequency-nhi-tw-AC13M\"> </a></td><td>飯前13分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC14M<a name=\"medication-frequency-nhi-tw-AC14M\"> </a></td><td>飯前14分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC15M<a name=\"medication-frequency-nhi-tw-AC15M\"> </a></td><td>飯前15分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC16M<a name=\"medication-frequency-nhi-tw-AC16M\"> </a></td><td>飯前16分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC17M<a name=\"medication-frequency-nhi-tw-AC17M\"> </a></td><td>飯前17分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC18M<a name=\"medication-frequency-nhi-tw-AC18M\"> </a></td><td>飯前18分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC19M<a name=\"medication-frequency-nhi-tw-AC19M\"> </a></td><td>飯前19分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC20M<a name=\"medication-frequency-nhi-tw-AC20M\"> </a></td><td>飯前20分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC21M<a name=\"medication-frequency-nhi-tw-AC21M\"> </a></td><td>飯前21分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC22M<a name=\"medication-frequency-nhi-tw-AC22M\"> </a></td><td>飯前22分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC23M<a name=\"medication-frequency-nhi-tw-AC23M\"> </a></td><td>飯前23分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC24M<a name=\"medication-frequency-nhi-tw-AC24M\"> </a></td><td>飯前24分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC25M<a name=\"medication-frequency-nhi-tw-AC25M\"> </a></td><td>飯前25分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC26M<a name=\"medication-frequency-nhi-tw-AC26M\"> </a></td><td>飯前26分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC27M<a name=\"medication-frequency-nhi-tw-AC27M\"> </a></td><td>飯前27分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC28M<a name=\"medication-frequency-nhi-tw-AC28M\"> </a></td><td>飯前28分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC29M<a name=\"medication-frequency-nhi-tw-AC29M\"> </a></td><td>飯前29分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC30M<a name=\"medication-frequency-nhi-tw-AC30M\"> </a></td><td>飯前30分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC31M<a name=\"medication-frequency-nhi-tw-AC31M\"> </a></td><td>飯前31分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC32M<a name=\"medication-frequency-nhi-tw-AC32M\"> </a></td><td>飯前32分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC33M<a name=\"medication-frequency-nhi-tw-AC33M\"> </a></td><td>飯前33分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC34M<a name=\"medication-frequency-nhi-tw-AC34M\"> </a></td><td>飯前34分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC35M<a name=\"medication-frequency-nhi-tw-AC35M\"> </a></td><td>飯前35分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC36M<a name=\"medication-frequency-nhi-tw-AC36M\"> </a></td><td>飯前36分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC37M<a name=\"medication-frequency-nhi-tw-AC37M\"> </a></td><td>飯前37分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC38M<a name=\"medication-frequency-nhi-tw-AC38M\"> </a></td><td>飯前38分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC39M<a name=\"medication-frequency-nhi-tw-AC39M\"> </a></td><td>飯前39分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC40M<a name=\"medication-frequency-nhi-tw-AC40M\"> </a></td><td>飯前40分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC41M<a name=\"medication-frequency-nhi-tw-AC41M\"> </a></td><td>飯前41分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC42M<a name=\"medication-frequency-nhi-tw-AC42M\"> </a></td><td>飯前42分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC43M<a name=\"medication-frequency-nhi-tw-AC43M\"> </a></td><td>飯前43分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC44M<a name=\"medication-frequency-nhi-tw-AC44M\"> </a></td><td>飯前44分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC45M<a name=\"medication-frequency-nhi-tw-AC45M\"> </a></td><td>飯前45分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC46M<a name=\"medication-frequency-nhi-tw-AC46M\"> </a></td><td>飯前46分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC47M<a name=\"medication-frequency-nhi-tw-AC47M\"> </a></td><td>飯前47分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC48M<a name=\"medication-frequency-nhi-tw-AC48M\"> </a></td><td>飯前48分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC49M<a name=\"medication-frequency-nhi-tw-AC49M\"> </a></td><td>飯前49分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC50M<a name=\"medication-frequency-nhi-tw-AC50M\"> </a></td><td>飯前50分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC51M<a name=\"medication-frequency-nhi-tw-AC51M\"> </a></td><td>飯前51分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC52M<a name=\"medication-frequency-nhi-tw-AC52M\"> </a></td><td>飯前52分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC53M<a name=\"medication-frequency-nhi-tw-AC53M\"> </a></td><td>飯前53分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC54M<a name=\"medication-frequency-nhi-tw-AC54M\"> </a></td><td>飯前54分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC55M<a name=\"medication-frequency-nhi-tw-AC55M\"> </a></td><td>飯前55分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC56M<a name=\"medication-frequency-nhi-tw-AC56M\"> </a></td><td>飯前56分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC57M<a name=\"medication-frequency-nhi-tw-AC57M\"> </a></td><td>飯前57分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC58M<a name=\"medication-frequency-nhi-tw-AC58M\"> </a></td><td>飯前58分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">AC59M<a name=\"medication-frequency-nhi-tw-AC59M\"> </a></td><td>飯前59分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC<a name=\"medication-frequency-nhi-tw-PC\"> </a></td><td>飯後</td></tr><tr><td style=\"white-space:nowrap\">PC1H<a name=\"medication-frequency-nhi-tw-PC1H\"> </a></td><td>飯後1小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC2H<a name=\"medication-frequency-nhi-tw-PC2H\"> </a></td><td>飯後2小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC3H<a name=\"medication-frequency-nhi-tw-PC3H\"> </a></td><td>飯後3小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC4H<a name=\"medication-frequency-nhi-tw-PC4H\"> </a></td><td>飯後4小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC5H<a name=\"medication-frequency-nhi-tw-PC5H\"> </a></td><td>飯後5小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC6H<a name=\"medication-frequency-nhi-tw-PC6H\"> </a></td><td>飯後6小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC7H<a name=\"medication-frequency-nhi-tw-PC7H\"> </a></td><td>飯後7小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC8H<a name=\"medication-frequency-nhi-tw-PC8H\"> </a></td><td>飯後8小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC9H<a name=\"medication-frequency-nhi-tw-PC9H\"> </a></td><td>飯後9小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC10H<a name=\"medication-frequency-nhi-tw-PC10H\"> </a></td><td>飯後10小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC11H<a name=\"medication-frequency-nhi-tw-PC11H\"> </a></td><td>飯後11小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC12H<a name=\"medication-frequency-nhi-tw-PC12H\"> </a></td><td>飯後12小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC13H<a name=\"medication-frequency-nhi-tw-PC13H\"> </a></td><td>飯後13小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC14H<a name=\"medication-frequency-nhi-tw-PC14H\"> </a></td><td>飯後14小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC15H<a name=\"medication-frequency-nhi-tw-PC15H\"> </a></td><td>飯後15小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC16H<a name=\"medication-frequency-nhi-tw-PC16H\"> </a></td><td>飯後16小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC17H<a name=\"medication-frequency-nhi-tw-PC17H\"> </a></td><td>飯後17小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC18H<a name=\"medication-frequency-nhi-tw-PC18H\"> </a></td><td>飯後18小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC19H<a name=\"medication-frequency-nhi-tw-PC19H\"> </a></td><td>飯後19小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC20H<a name=\"medication-frequency-nhi-tw-PC20H\"> </a></td><td>飯後20小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC21H<a name=\"medication-frequency-nhi-tw-PC21H\"> </a></td><td>飯後21小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC22H<a name=\"medication-frequency-nhi-tw-PC22H\"> </a></td><td>飯後22小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC23H<a name=\"medication-frequency-nhi-tw-PC23H\"> </a></td><td>飯後23小時使用</td></tr><tr><td style=\"white-space:nowrap\">PC1M<a name=\"medication-frequency-nhi-tw-PC1M\"> </a></td><td>飯後1分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC2M<a name=\"medication-frequency-nhi-tw-PC2M\"> </a></td><td>飯後2分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC3M<a name=\"medication-frequency-nhi-tw-PC3M\"> </a></td><td>飯後3分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC4M<a name=\"medication-frequency-nhi-tw-PC4M\"> </a></td><td>飯後4分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC5M<a name=\"medication-frequency-nhi-tw-PC5M\"> </a></td><td>飯後5分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC6M<a name=\"medication-frequency-nhi-tw-PC6M\"> </a></td><td>飯後6分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC7M<a name=\"medication-frequency-nhi-tw-PC7M\"> </a></td><td>飯後7分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC8M<a name=\"medication-frequency-nhi-tw-PC8M\"> </a></td><td>飯後8分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC9M<a name=\"medication-frequency-nhi-tw-PC9M\"> </a></td><td>飯後9分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC10M<a name=\"medication-frequency-nhi-tw-PC10M\"> </a></td><td>飯後10分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC11M<a name=\"medication-frequency-nhi-tw-PC11M\"> </a></td><td>飯後11分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC12M<a name=\"medication-frequency-nhi-tw-PC12M\"> </a></td><td>飯後12分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC13M<a name=\"medication-frequency-nhi-tw-PC13M\"> </a></td><td>飯後13分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC14M<a name=\"medication-frequency-nhi-tw-PC14M\"> </a></td><td>飯後14分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC15M<a name=\"medication-frequency-nhi-tw-PC15M\"> </a></td><td>飯後15分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC16M<a name=\"medication-frequency-nhi-tw-PC16M\"> </a></td><td>飯後16分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC17M<a name=\"medication-frequency-nhi-tw-PC17M\"> </a></td><td>飯後17分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC18M<a name=\"medication-frequency-nhi-tw-PC18M\"> </a></td><td>飯後18分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC19M<a name=\"medication-frequency-nhi-tw-PC19M\"> </a></td><td>飯後19分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC20M<a name=\"medication-frequency-nhi-tw-PC20M\"> </a></td><td>飯後20分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC21M<a name=\"medication-frequency-nhi-tw-PC21M\"> </a></td><td>飯後21分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC22M<a name=\"medication-frequency-nhi-tw-PC22M\"> </a></td><td>飯後22分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC23M<a name=\"medication-frequency-nhi-tw-PC23M\"> </a></td><td>飯後23分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC24M<a name=\"medication-frequency-nhi-tw-PC24M\"> </a></td><td>飯後24分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC25M<a name=\"medication-frequency-nhi-tw-PC25M\"> </a></td><td>飯後25分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC26M<a name=\"medication-frequency-nhi-tw-PC26M\"> </a></td><td>飯後26分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC27M<a name=\"medication-frequency-nhi-tw-PC27M\"> </a></td><td>飯後27分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC28M<a name=\"medication-frequency-nhi-tw-PC28M\"> </a></td><td>飯後28分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC29M<a name=\"medication-frequency-nhi-tw-PC29M\"> </a></td><td>飯後29分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC30M<a name=\"medication-frequency-nhi-tw-PC30M\"> </a></td><td>飯後30分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC31M<a name=\"medication-frequency-nhi-tw-PC31M\"> </a></td><td>飯後31分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC32M<a name=\"medication-frequency-nhi-tw-PC32M\"> </a></td><td>飯後32分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC33M<a name=\"medication-frequency-nhi-tw-PC33M\"> </a></td><td>飯後33分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC34M<a name=\"medication-frequency-nhi-tw-PC34M\"> </a></td><td>飯後34分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC35M<a name=\"medication-frequency-nhi-tw-PC35M\"> </a></td><td>飯後35分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC36M<a name=\"medication-frequency-nhi-tw-PC36M\"> </a></td><td>飯後36分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC37M<a name=\"medication-frequency-nhi-tw-PC37M\"> </a></td><td>飯後37分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC38M<a name=\"medication-frequency-nhi-tw-PC38M\"> </a></td><td>飯後38分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC39M<a name=\"medication-frequency-nhi-tw-PC39M\"> </a></td><td>飯後39分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC40M<a name=\"medication-frequency-nhi-tw-PC40M\"> </a></td><td>飯後40分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC41M<a name=\"medication-frequency-nhi-tw-PC41M\"> </a></td><td>飯後41分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC42M<a name=\"medication-frequency-nhi-tw-PC42M\"> </a></td><td>飯後42分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC43M<a name=\"medication-frequency-nhi-tw-PC43M\"> </a></td><td>飯後43分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC44M<a name=\"medication-frequency-nhi-tw-PC44M\"> </a></td><td>飯後44分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC45M<a name=\"medication-frequency-nhi-tw-PC45M\"> </a></td><td>飯後45分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC46M<a name=\"medication-frequency-nhi-tw-PC46M\"> </a></td><td>飯後46分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC47M<a name=\"medication-frequency-nhi-tw-PC47M\"> </a></td><td>飯後47分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC48M<a name=\"medication-frequency-nhi-tw-PC48M\"> </a></td><td>飯後48分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC49M<a name=\"medication-frequency-nhi-tw-PC49M\"> </a></td><td>飯後49分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC50M<a name=\"medication-frequency-nhi-tw-PC50M\"> </a></td><td>飯後50分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC51M<a name=\"medication-frequency-nhi-tw-PC51M\"> </a></td><td>飯後51分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC52M<a name=\"medication-frequency-nhi-tw-PC52M\"> </a></td><td>飯後52分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC53M<a name=\"medication-frequency-nhi-tw-PC53M\"> </a></td><td>飯後53分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC54M<a name=\"medication-frequency-nhi-tw-PC54M\"> </a></td><td>飯後54分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC55M<a name=\"medication-frequency-nhi-tw-PC55M\"> </a></td><td>飯後55分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC56M<a name=\"medication-frequency-nhi-tw-PC56M\"> </a></td><td>飯後56分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC57M<a name=\"medication-frequency-nhi-tw-PC57M\"> </a></td><td>飯後57分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC58M<a name=\"medication-frequency-nhi-tw-PC58M\"> </a></td><td>飯後58分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PC59M<a name=\"medication-frequency-nhi-tw-PC59M\"> </a></td><td>飯後59分鐘使用</td></tr><tr><td style=\"white-space:nowrap\">PRN<a name=\"medication-frequency-nhi-tw-PRN\"> </a></td><td>需要時使用</td></tr><tr><td style=\"white-space:nowrap\">Q1HPRN<a name=\"medication-frequency-nhi-tw-Q1HPRN\"> </a></td><td>需要時每1小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q2HPRN<a name=\"medication-frequency-nhi-tw-Q2HPRN\"> </a></td><td>需要時每2小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q3HPRN<a name=\"medication-frequency-nhi-tw-Q3HPRN\"> </a></td><td>需要時每3小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q4HPRN<a name=\"medication-frequency-nhi-tw-Q4HPRN\"> </a></td><td>需要時每4小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q5HPRN<a name=\"medication-frequency-nhi-tw-Q5HPRN\"> </a></td><td>需要時每5小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q6HPRN<a name=\"medication-frequency-nhi-tw-Q6HPRN\"> </a></td><td>需要時每6小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q7HPRN<a name=\"medication-frequency-nhi-tw-Q7HPRN\"> </a></td><td>需要時每7小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q8HPRN<a name=\"medication-frequency-nhi-tw-Q8HPRN\"> </a></td><td>需要時每8小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q9HPRN<a name=\"medication-frequency-nhi-tw-Q9HPRN\"> </a></td><td>需要時每9小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q10HPRN<a name=\"medication-frequency-nhi-tw-Q10HPRN\"> </a></td><td>需要時每10小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q11HPRN<a name=\"medication-frequency-nhi-tw-Q11HPRN\"> </a></td><td>需要時每11小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q12HPRN<a name=\"medication-frequency-nhi-tw-Q12HPRN\"> </a></td><td>需要時每12小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q13HPRN<a name=\"medication-frequency-nhi-tw-Q13HPRN\"> </a></td><td>需要時每13小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q14HPRN<a name=\"medication-frequency-nhi-tw-Q14HPRN\"> </a></td><td>需要時每14小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q15HPRN<a name=\"medication-frequency-nhi-tw-Q15HPRN\"> </a></td><td>需要時每15小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q16HPRN<a name=\"medication-frequency-nhi-tw-Q16HPRN\"> </a></td><td>需要時每16小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q17HPRN<a name=\"medication-frequency-nhi-tw-Q17HPRN\"> </a></td><td>需要時每17小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q18HPRN<a name=\"medication-frequency-nhi-tw-Q18HPRN\"> </a></td><td>需要時每18小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q19HPRN<a name=\"medication-frequency-nhi-tw-Q19HPRN\"> </a></td><td>需要時每19小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q20HPRN<a name=\"medication-frequency-nhi-tw-Q20HPRN\"> </a></td><td>需要時每20小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q21HPRN<a name=\"medication-frequency-nhi-tw-Q21HPRN\"> </a></td><td>需要時每21小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q22HPRN<a name=\"medication-frequency-nhi-tw-Q22HPRN\"> </a></td><td>需要時每22小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">Q23HPRN<a name=\"medication-frequency-nhi-tw-Q23HPRN\"> </a></td><td>需要時每23小時使用一次</td></tr><tr><td style=\"white-space:nowrap\">ONCE<a name=\"medication-frequency-nhi-tw-ONCE\"> </a></td><td>單次給藥</td></tr><tr><td style=\"white-space:nowrap\">Q4WD1<a name=\"medication-frequency-nhi-tw-Q4WD1\"> </a></td><td>每4週的第1天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD2<a name=\"medication-frequency-nhi-tw-Q4WD2\"> </a></td><td>每4週的第2天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD3<a name=\"medication-frequency-nhi-tw-Q4WD3\"> </a></td><td>每4週的第3天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD4<a name=\"medication-frequency-nhi-tw-Q4WD4\"> </a></td><td>每4週的第4天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD5<a name=\"medication-frequency-nhi-tw-Q4WD5\"> </a></td><td>每4週的第5天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD6<a name=\"medication-frequency-nhi-tw-Q4WD6\"> </a></td><td>每4週的第6天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD7<a name=\"medication-frequency-nhi-tw-Q4WD7\"> </a></td><td>每4週的第7天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD8<a name=\"medication-frequency-nhi-tw-Q4WD8\"> </a></td><td>每4週的第8天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD9<a name=\"medication-frequency-nhi-tw-Q4WD9\"> </a></td><td>每4週的第9天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD10<a name=\"medication-frequency-nhi-tw-Q4WD10\"> </a></td><td>每4週的第10天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD11<a name=\"medication-frequency-nhi-tw-Q4WD11\"> </a></td><td>每4週的第11天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD12<a name=\"medication-frequency-nhi-tw-Q4WD12\"> </a></td><td>每4週的第12天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD13<a name=\"medication-frequency-nhi-tw-Q4WD13\"> </a></td><td>每4週的第13天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD14<a name=\"medication-frequency-nhi-tw-Q4WD14\"> </a></td><td>每4週的第14天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD15<a name=\"medication-frequency-nhi-tw-Q4WD15\"> </a></td><td>每4週的第15天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD16<a name=\"medication-frequency-nhi-tw-Q4WD16\"> </a></td><td>每4週的第16天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD17<a name=\"medication-frequency-nhi-tw-Q4WD17\"> </a></td><td>每4週的第17天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD18<a name=\"medication-frequency-nhi-tw-Q4WD18\"> </a></td><td>每4週的第18天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD19<a name=\"medication-frequency-nhi-tw-Q4WD19\"> </a></td><td>每4週的第19天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD20<a name=\"medication-frequency-nhi-tw-Q4WD20\"> </a></td><td>每4週的第20天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD21<a name=\"medication-frequency-nhi-tw-Q4WD21\"> </a></td><td>每4週的第21天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD22<a name=\"medication-frequency-nhi-tw-Q4WD22\"> </a></td><td>每4週的第22天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD23<a name=\"medication-frequency-nhi-tw-Q4WD23\"> </a></td><td>每4週的第23天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD24<a name=\"medication-frequency-nhi-tw-Q4WD24\"> </a></td><td>每4週的第24天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD25<a name=\"medication-frequency-nhi-tw-Q4WD25\"> </a></td><td>每4週的第25天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD26<a name=\"medication-frequency-nhi-tw-Q4WD26\"> </a></td><td>每4週的第26天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD27<a name=\"medication-frequency-nhi-tw-Q4WD27\"> </a></td><td>每4週的第27天</td></tr><tr><td style=\"white-space:nowrap\">Q4WD28<a name=\"medication-frequency-nhi-tw-Q4WD28\"> </a></td><td>每4週的第28天</td></tr><tr><td style=\"white-space:nowrap\">Q4WW1<a name=\"medication-frequency-nhi-tw-Q4WW1\"> </a></td><td>每4週的第1週每日</td></tr><tr><td style=\"white-space:nowrap\">Q4WW2<a name=\"medication-frequency-nhi-tw-Q4WW2\"> </a></td><td>每4週的第2週每日</td></tr><tr><td style=\"white-space:nowrap\">Q4WW3<a name=\"medication-frequency-nhi-tw-Q4WW3\"> </a></td><td>每4週的第3週每日</td></tr><tr><td style=\"white-space:nowrap\">Q4WW4<a name=\"medication-frequency-nhi-tw-Q4WW4\"> </a></td><td>每4週的第4週每日</td></tr><tr><td style=\"white-space:nowrap\">Q3WD1<a name=\"medication-frequency-nhi-tw-Q3WD1\"> </a></td><td>每3週的第1天</td></tr><tr><td style=\"white-space:nowrap\">Q3WD2<a name=\"medication-frequency-nhi-tw-Q3WD2\"> </a></td><td>每3週的第2天</td></tr><tr><td style=\"white-space:nowrap\">Q3WD3<a name=\"medication-frequency-nhi-tw-Q3WD3\"> </a></td><td>每3週的第3天</td></tr><tr><td style=\"white-space:nowrap\">Q3WD4<a name=\"medication-frequency-nhi-tw-Q3WD4\"> </a></td><td>每3週的第4天</td></tr><tr><td style=\"white-space:nowrap\">Q3WD5<a name=\"medication-frequency-nhi-tw-Q3WD5\"> </a></td><td>每3週的第5天</td></tr><tr><td style=\"white-space:nowrap\">Q3WD6<a name=\"medication-frequency-nhi-tw-Q3WD6\"> </a></td><td>每3週的第6天</td></tr><tr><td style=\"white-space:nowrap\">Q3WD7<a name=\"medication-frequency-nhi-tw-Q3WD7\"> </a></td><td>每3週的第7天</td></tr><tr><td style=\"white-space:nowrap\">Q3WD8<a name=\"medication-frequency-nhi-tw-Q3WD8\"> </a></td><td>每3週的第8天</td></tr><tr><td style=\"white-space:nowrap\">Q3WD9<a name=\"medication-frequency-nhi-tw-Q3WD9\"> </a></td><td>每3週的第9天</td></tr><tr><td style=\"white-space:nowrap\">Q3WD10<a name=\"medication-frequency-nhi-tw-Q3WD10\"> </a></td><td>每3週的第10天</td></tr><tr><td style=\"white-space:nowrap\">Q3WD11<a name=\"medication-frequency-nhi-tw-Q3WD11\"> </a></td><td>每3週的第11天</td></tr><tr><td style=\"white-space:nowrap\">Q3WD12<a name=\"medication-frequency-nhi-tw-Q3WD12\"> </a></td><td>每3週的第12天</td></tr><tr><td style=\"white-space:nowrap\">Q3WD13<a name=\"medication-frequency-nhi-tw-Q3WD13\"> </a></td><td>每3週的第13天</td></tr><tr><td style=\"white-space:nowrap\">Q3WD14<a name=\"medication-frequency-nhi-tw-Q3WD14\"> </a></td><td>每3週的第14天</td></tr><tr><td style=\"white-space:nowrap\">Q3WD15<a name=\"medication-frequency-nhi-tw-Q3WD15\"> </a></td><td>每3週的第15天</td></tr><tr><td style=\"white-space:nowrap\">Q3WD16<a name=\"medication-frequency-nhi-tw-Q3WD16\"> </a></td><td>每3週的第16天</td></tr><tr><td style=\"white-space:nowrap\">Q3WD17<a name=\"medication-frequency-nhi-tw-Q3WD17\"> </a></td><td>每3週的第17天</td></tr><tr><td style=\"white-space:nowrap\">Q3WD18<a name=\"medication-frequency-nhi-tw-Q3WD18\"> </a></td><td>每3週的第18天</td></tr><tr><td style=\"white-space:nowrap\">Q3WD19<a name=\"medication-frequency-nhi-tw-Q3WD19\"> </a></td><td>每3週的第19天</td></tr><tr><td style=\"white-space:nowrap\">Q3WD20<a name=\"medication-frequency-nhi-tw-Q3WD20\"> </a></td><td>每3週的第20天</td></tr><tr><td style=\"white-space:nowrap\">Q3WD21<a name=\"medication-frequency-nhi-tw-Q3WD21\"> </a></td><td>每3週的第21天</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.6"] ; # 
+  fhir:name [ fhir:v "NHIMedicationFrequency"] ; # 
+  fhir:title [ fhir:v "NHI-健保事前審查-藥品使用頻率"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-07-01"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "衛生福利部中央健康保險署"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "衛生福利部中央健康保險署" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.nhi.gov.tw" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "NHI-健保事前審查-藥品使用頻率，參照至[健保署檔案譯碼簿](https://www.nhi.gov.tw/ch/cp-1880-20811-3142-1.html)中的「藥品使用頻率（2022/8/2版本）」。\n\n代碼出版日期：2024-05-27；資料所屬單位：衛生福利部中央健康保險署。\n\n*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*"] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "621"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "QW(1)" ] ;
+     fhir:display [ fhir:v "每週一使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2)" ] ;
+     fhir:display [ fhir:v "每週二使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(3)" ] ;
+     fhir:display [ fhir:v "每週三使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(4)" ] ;
+     fhir:display [ fhir:v "每週四使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(5)" ] ;
+     fhir:display [ fhir:v "每週五使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(6)" ] ;
+     fhir:display [ fhir:v "每週六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(7)" ] ;
+     fhir:display [ fhir:v "每週日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2)" ] ;
+     fhir:display [ fhir:v "每週一和週二使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,3)" ] ;
+     fhir:display [ fhir:v "每週一和週三使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,4)" ] ;
+     fhir:display [ fhir:v "每週一和週四使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,5)" ] ;
+     fhir:display [ fhir:v "每週一和週五使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,6)" ] ;
+     fhir:display [ fhir:v "每週一和週六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,7)" ] ;
+     fhir:display [ fhir:v "每週一和週日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,3)" ] ;
+     fhir:display [ fhir:v "每週二和週三使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,4)" ] ;
+     fhir:display [ fhir:v "每週二和週四使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,5)" ] ;
+     fhir:display [ fhir:v "每週二和週五使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,6)" ] ;
+     fhir:display [ fhir:v "每週二和週六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,7)" ] ;
+     fhir:display [ fhir:v "每週二和週日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(3,4)" ] ;
+     fhir:display [ fhir:v "每週三和週四使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(3,5)" ] ;
+     fhir:display [ fhir:v "每週三和週五使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(3,6)" ] ;
+     fhir:display [ fhir:v "每週三和週六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(3,7)" ] ;
+     fhir:display [ fhir:v "每週三和週日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(4,5)" ] ;
+     fhir:display [ fhir:v "每週四和週五使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(4,6)" ] ;
+     fhir:display [ fhir:v "每週四和週六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(4,7)" ] ;
+     fhir:display [ fhir:v "每週四和週日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(5,6)" ] ;
+     fhir:display [ fhir:v "每週五和週六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(5,7)" ] ;
+     fhir:display [ fhir:v "每週五和週日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(6,7)" ] ;
+     fhir:display [ fhir:v "每週六和週日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,3)" ] ;
+     fhir:display [ fhir:v "每週一、二和三使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,4)" ] ;
+     fhir:display [ fhir:v "每週一、二和四使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,5)" ] ;
+     fhir:display [ fhir:v "每週一、二和五使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,6)" ] ;
+     fhir:display [ fhir:v "每週一、二和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,7)" ] ;
+     fhir:display [ fhir:v "每週一、二和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,3,4)" ] ;
+     fhir:display [ fhir:v "每週一、三和四使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,3,5)" ] ;
+     fhir:display [ fhir:v "每週一、三和五使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,3,6)" ] ;
+     fhir:display [ fhir:v "每週一、三和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,3,7)" ] ;
+     fhir:display [ fhir:v "每週一、三和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,4,5)" ] ;
+     fhir:display [ fhir:v "每週一、四和五使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,4,6)" ] ;
+     fhir:display [ fhir:v "每週一、四和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,4,7)" ] ;
+     fhir:display [ fhir:v "每週一、四和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,5,6)" ] ;
+     fhir:display [ fhir:v "每週一、五和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,5,7)" ] ;
+     fhir:display [ fhir:v "每週一、五和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,6,7)" ] ;
+     fhir:display [ fhir:v "每週一、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,3,4)" ] ;
+     fhir:display [ fhir:v "每週二、三和四使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,3,5)" ] ;
+     fhir:display [ fhir:v "每週二、三和五使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,3,6)" ] ;
+     fhir:display [ fhir:v "每週二、三和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,3,7)" ] ;
+     fhir:display [ fhir:v "每週二、三和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,4,5)" ] ;
+     fhir:display [ fhir:v "每週二、四和五使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,4,6)" ] ;
+     fhir:display [ fhir:v "每週二、四和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,4,7)" ] ;
+     fhir:display [ fhir:v "每週二、四和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,5,6)" ] ;
+     fhir:display [ fhir:v "每週二、五和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,5,7)" ] ;
+     fhir:display [ fhir:v "每週二、五和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,6,7)" ] ;
+     fhir:display [ fhir:v "每週二、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(3,4,5)" ] ;
+     fhir:display [ fhir:v "每週三、四和五使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(3,4,6)" ] ;
+     fhir:display [ fhir:v "每週三、四和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(3,4,7)" ] ;
+     fhir:display [ fhir:v "每週三、四和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(3,5,6)" ] ;
+     fhir:display [ fhir:v "每週三、五和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(3,5,7)" ] ;
+     fhir:display [ fhir:v "每週三、五和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(3,6,7)" ] ;
+     fhir:display [ fhir:v "每週三、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(4,5,6)" ] ;
+     fhir:display [ fhir:v "每週四、五和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(4,5,7)" ] ;
+     fhir:display [ fhir:v "每週四、五和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(4,6,7)" ] ;
+     fhir:display [ fhir:v "每週四、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(5,6,7)" ] ;
+     fhir:display [ fhir:v "每週五、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,3,4)" ] ;
+     fhir:display [ fhir:v "每週一、二、三和四使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,3,5)" ] ;
+     fhir:display [ fhir:v "每週一、二、三和五使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,3,6)" ] ;
+     fhir:display [ fhir:v "每週一、二、三和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,3,7)" ] ;
+     fhir:display [ fhir:v "每週一、二、三和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,4,5)" ] ;
+     fhir:display [ fhir:v "每週一、二、四和五使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,4,6)" ] ;
+     fhir:display [ fhir:v "每週一、二、四和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,4,7)" ] ;
+     fhir:display [ fhir:v "每週一、二、四和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,5,6)" ] ;
+     fhir:display [ fhir:v "每週一、二、五和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,5,7)" ] ;
+     fhir:display [ fhir:v "每週一、二、五和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,6,7)" ] ;
+     fhir:display [ fhir:v "每週一、二、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,3,4,5)" ] ;
+     fhir:display [ fhir:v "每週一、三、四和五使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,3,4,6)" ] ;
+     fhir:display [ fhir:v "每週一、三、四和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,3,4,7)" ] ;
+     fhir:display [ fhir:v "每週一、三、四和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,3,5,6)" ] ;
+     fhir:display [ fhir:v "每週一、三、五和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,3,5,7)" ] ;
+     fhir:display [ fhir:v "每週一、三、五和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,3,6,7)" ] ;
+     fhir:display [ fhir:v "每週一、三、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,4,5,6)" ] ;
+     fhir:display [ fhir:v "每週一、四、五和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,4,5,7)" ] ;
+     fhir:display [ fhir:v "每週一、四、五和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,4,6,7)" ] ;
+     fhir:display [ fhir:v "每週一、四、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,5,6,7)" ] ;
+     fhir:display [ fhir:v "每週一、五、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,3,4,5)" ] ;
+     fhir:display [ fhir:v "每週二、三、四和五使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,3,4,6)" ] ;
+     fhir:display [ fhir:v "每週二、三、四和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,3,4,7)" ] ;
+     fhir:display [ fhir:v "每週二、三、四和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,3,5,6)" ] ;
+     fhir:display [ fhir:v "每週二、三、五和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,3,5,7)" ] ;
+     fhir:display [ fhir:v "每週二、三、五和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,3,6,7)" ] ;
+     fhir:display [ fhir:v "每週二、三、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,4,5,6)" ] ;
+     fhir:display [ fhir:v "每週二、四、五和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,4,5,7)" ] ;
+     fhir:display [ fhir:v "每週二、四、五和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,4,6,7)" ] ;
+     fhir:display [ fhir:v "每週二、四、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,5,6,7)" ] ;
+     fhir:display [ fhir:v "每週二、五、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(3,4,5,6)" ] ;
+     fhir:display [ fhir:v "每週三、四、五和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(3,4,5,7)" ] ;
+     fhir:display [ fhir:v "每週三、四、五和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(3,4,6,7)" ] ;
+     fhir:display [ fhir:v "每週三、四、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(3,5,6,7)" ] ;
+     fhir:display [ fhir:v "每週三、五、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(4,5,6,7)" ] ;
+     fhir:display [ fhir:v "每週四、五、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,3,4,5)" ] ;
+     fhir:display [ fhir:v "每週一、二、三、四和五使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,3,4,6)" ] ;
+     fhir:display [ fhir:v "每週一、二、三、四和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,3,4,7)" ] ;
+     fhir:display [ fhir:v "每週一、二、三、四和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,3,5,6)" ] ;
+     fhir:display [ fhir:v "每週一、二、三、五和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,3,5,7)" ] ;
+     fhir:display [ fhir:v "每週一、二、三、五和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,3,6,7)" ] ;
+     fhir:display [ fhir:v "每週一、二、三、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,4,5,6)" ] ;
+     fhir:display [ fhir:v "每週一、二、四、五和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,4,5,7)" ] ;
+     fhir:display [ fhir:v "每週一、二、四、五和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,4,6,7)" ] ;
+     fhir:display [ fhir:v "每週一、二、四、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,5,6,7)" ] ;
+     fhir:display [ fhir:v "每週一、二、五、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,3,4,5,6)" ] ;
+     fhir:display [ fhir:v "每週一、三、四、五和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,3,4,5,7)" ] ;
+     fhir:display [ fhir:v "每週一、三、四、五和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,3,4,6,7)" ] ;
+     fhir:display [ fhir:v "每週一、三、四、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,3,5,6,7)" ] ;
+     fhir:display [ fhir:v "每週一、三、五、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,4,5,6,7)" ] ;
+     fhir:display [ fhir:v "每週一、四、五、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,3,4,5,6)" ] ;
+     fhir:display [ fhir:v "每週二、三、四、五和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,3,4,5,7)" ] ;
+     fhir:display [ fhir:v "每週二、三、四、五和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,3,4,6,7)" ] ;
+     fhir:display [ fhir:v "每週二、三、四、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,3,5,6,7)" ] ;
+     fhir:display [ fhir:v "每週二、三、五、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,4,5,6,7)" ] ;
+     fhir:display [ fhir:v "每週二、四、五、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(3,4,5,6,7)" ] ;
+     fhir:display [ fhir:v "每週三、四、五、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,3,4,5,6)" ] ;
+     fhir:display [ fhir:v "每週一、二、三、四、五和六使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,3,4,5,7)" ] ;
+     fhir:display [ fhir:v "每週一、二、三、四、五和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,3,4,6,7)" ] ;
+     fhir:display [ fhir:v "每週一、二、三、四、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,3,5,6,7)" ] ;
+     fhir:display [ fhir:v "每週一、二、三、五、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,4,5,6,7)" ] ;
+     fhir:display [ fhir:v "每週一、二、四、五、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,3,4,5,6,7)" ] ;
+     fhir:display [ fhir:v "每週一、三、四、五、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(2,3,4,5,6,7)" ] ;
+     fhir:display [ fhir:v "每週二、三、四、五、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "QW(1,2,3,4,5,6,7)" ] ;
+     fhir:display [ fhir:v "每週一、二、三、四、五、六和日使用" ]
+  ] [
+     fhir:code [ fhir:v "1W1D" ] ;
+     fhir:display [ fhir:v "每1週用1天" ]
+  ] [
+     fhir:code [ fhir:v "1W2D" ] ;
+     fhir:display [ fhir:v "每1週用2天" ]
+  ] [
+     fhir:code [ fhir:v "1W3D" ] ;
+     fhir:display [ fhir:v "每1週用3天" ]
+  ] [
+     fhir:code [ fhir:v "1W4D" ] ;
+     fhir:display [ fhir:v "每1週用4天" ]
+  ] [
+     fhir:code [ fhir:v "1W5D" ] ;
+     fhir:display [ fhir:v "每1週用5天" ]
+  ] [
+     fhir:code [ fhir:v "1W6D" ] ;
+     fhir:display [ fhir:v "每1週用6天" ]
+  ] [
+     fhir:code [ fhir:v "2W1D" ] ;
+     fhir:display [ fhir:v "每2週用1天" ]
+  ] [
+     fhir:code [ fhir:v "2W2D" ] ;
+     fhir:display [ fhir:v "每2週用2天" ]
+  ] [
+     fhir:code [ fhir:v "2W3D" ] ;
+     fhir:display [ fhir:v "每2週用3天" ]
+  ] [
+     fhir:code [ fhir:v "2W4D" ] ;
+     fhir:display [ fhir:v "每2週用4天" ]
+  ] [
+     fhir:code [ fhir:v "2W5D" ] ;
+     fhir:display [ fhir:v "每2週用5天" ]
+  ] [
+     fhir:code [ fhir:v "2W6D" ] ;
+     fhir:display [ fhir:v "每2週用6天" ]
+  ] [
+     fhir:code [ fhir:v "2W7D" ] ;
+     fhir:display [ fhir:v "每2週用7天" ]
+  ] [
+     fhir:code [ fhir:v "2W8D" ] ;
+     fhir:display [ fhir:v "每2週用8天" ]
+  ] [
+     fhir:code [ fhir:v "2W9D" ] ;
+     fhir:display [ fhir:v "每2週用9天" ]
+  ] [
+     fhir:code [ fhir:v "2W10D" ] ;
+     fhir:display [ fhir:v "每2週用10天" ]
+  ] [
+     fhir:code [ fhir:v "3W1D" ] ;
+     fhir:display [ fhir:v "每3週用1天" ]
+  ] [
+     fhir:code [ fhir:v "3W2D" ] ;
+     fhir:display [ fhir:v "每3週用2天" ]
+  ] [
+     fhir:code [ fhir:v "3W3D" ] ;
+     fhir:display [ fhir:v "每3週用3天" ]
+  ] [
+     fhir:code [ fhir:v "3W4D" ] ;
+     fhir:display [ fhir:v "每3週用4天" ]
+  ] [
+     fhir:code [ fhir:v "3W5D" ] ;
+     fhir:display [ fhir:v "每3週用5天" ]
+  ] [
+     fhir:code [ fhir:v "3W6D" ] ;
+     fhir:display [ fhir:v "每3週用6天" ]
+  ] [
+     fhir:code [ fhir:v "3W7D" ] ;
+     fhir:display [ fhir:v "每3週用7天" ]
+  ] [
+     fhir:code [ fhir:v "3W8D" ] ;
+     fhir:display [ fhir:v "每3週用8天" ]
+  ] [
+     fhir:code [ fhir:v "3W9D" ] ;
+     fhir:display [ fhir:v "每3週用9天" ]
+  ] [
+     fhir:code [ fhir:v "3W10D" ] ;
+     fhir:display [ fhir:v "每3週用10天" ]
+  ] [
+     fhir:code [ fhir:v "4W1D" ] ;
+     fhir:display [ fhir:v "每4週用1天" ]
+  ] [
+     fhir:code [ fhir:v "4W2D" ] ;
+     fhir:display [ fhir:v "每4週用2天" ]
+  ] [
+     fhir:code [ fhir:v "4W3D" ] ;
+     fhir:display [ fhir:v "每4週用3天" ]
+  ] [
+     fhir:code [ fhir:v "4W4D" ] ;
+     fhir:display [ fhir:v "每4週用4天" ]
+  ] [
+     fhir:code [ fhir:v "4W5D" ] ;
+     fhir:display [ fhir:v "每4週用5天" ]
+  ] [
+     fhir:code [ fhir:v "4W6D" ] ;
+     fhir:display [ fhir:v "每4週用6天" ]
+  ] [
+     fhir:code [ fhir:v "4W7D" ] ;
+     fhir:display [ fhir:v "每4週用7天" ]
+  ] [
+     fhir:code [ fhir:v "4W8D" ] ;
+     fhir:display [ fhir:v "每4週用8天" ]
+  ] [
+     fhir:code [ fhir:v "43W9D" ] ;
+     fhir:display [ fhir:v "每4週用9天" ]
+  ] [
+     fhir:code [ fhir:v "4W10D" ] ;
+     fhir:display [ fhir:v "每4週用10天" ]
+  ] [
+     fhir:code [ fhir:v "MCD1D1" ] ;
+     fhir:display [ fhir:v "月經第1天至第1天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD1D2" ] ;
+     fhir:display [ fhir:v "月經第1天至第2天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD1D3" ] ;
+     fhir:display [ fhir:v "月經第1天至第3天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD1D4" ] ;
+     fhir:display [ fhir:v "月經第1天至第4天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD1D5" ] ;
+     fhir:display [ fhir:v "月經第1天至第5天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD1D6" ] ;
+     fhir:display [ fhir:v "月經第1天至第6天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD1D7" ] ;
+     fhir:display [ fhir:v "月經第1天至第7天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD2D2" ] ;
+     fhir:display [ fhir:v "月經第2天至第2天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD2D3" ] ;
+     fhir:display [ fhir:v "月經第2天至第3天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD2D4" ] ;
+     fhir:display [ fhir:v "月經第2天至第4天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD2D5" ] ;
+     fhir:display [ fhir:v "月經第2天至第5天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD2D6" ] ;
+     fhir:display [ fhir:v "月經第2天至第6天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD2D7" ] ;
+     fhir:display [ fhir:v "月經第2天至第7天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD3D3" ] ;
+     fhir:display [ fhir:v "月經第3天至第3天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD3D4" ] ;
+     fhir:display [ fhir:v "月經第3天至第4天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD3D5" ] ;
+     fhir:display [ fhir:v "月經第3天至第5天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD3D6" ] ;
+     fhir:display [ fhir:v "月經第3天至第6天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD3D7" ] ;
+     fhir:display [ fhir:v "月經第3天至第7天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD4D4" ] ;
+     fhir:display [ fhir:v "月經第4天至第4天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD4D5" ] ;
+     fhir:display [ fhir:v "月經第4天至第5天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD4D6" ] ;
+     fhir:display [ fhir:v "月經第4天至第6天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD4D7" ] ;
+     fhir:display [ fhir:v "月經第4天至第7天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD5D5" ] ;
+     fhir:display [ fhir:v "月經第5天至第5天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD5D6" ] ;
+     fhir:display [ fhir:v "月經第5天至第6天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD5D7" ] ;
+     fhir:display [ fhir:v "月經第5天至第7天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD6D6" ] ;
+     fhir:display [ fhir:v "月經第6天至第6天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD6D7" ] ;
+     fhir:display [ fhir:v "月經第6天至第7天使用" ]
+  ] [
+     fhir:code [ fhir:v "MCD7D7" ] ;
+     fhir:display [ fhir:v "月經第7天至第7天使用" ]
+  ] [
+     fhir:code [ fhir:v "Q2D" ] ;
+     fhir:display [ fhir:v "每2日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q3D" ] ;
+     fhir:display [ fhir:v "每3日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q4D" ] ;
+     fhir:display [ fhir:v "每4日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q5D" ] ;
+     fhir:display [ fhir:v "每5日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q6D" ] ;
+     fhir:display [ fhir:v "每6日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q7D" ] ;
+     fhir:display [ fhir:v "每7日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q8D" ] ;
+     fhir:display [ fhir:v "每8日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q9D" ] ;
+     fhir:display [ fhir:v "每9日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q10D" ] ;
+     fhir:display [ fhir:v "每10日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q11D" ] ;
+     fhir:display [ fhir:v "每11日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q12D" ] ;
+     fhir:display [ fhir:v "每12日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q13D" ] ;
+     fhir:display [ fhir:v "每13日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q14D" ] ;
+     fhir:display [ fhir:v "每14日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q15D" ] ;
+     fhir:display [ fhir:v "每15日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q16D" ] ;
+     fhir:display [ fhir:v "每16日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q17D" ] ;
+     fhir:display [ fhir:v "每17日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q18D" ] ;
+     fhir:display [ fhir:v "每18日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q19D" ] ;
+     fhir:display [ fhir:v "每19日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q20D" ] ;
+     fhir:display [ fhir:v "每20日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q21D" ] ;
+     fhir:display [ fhir:v "每21日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q22D" ] ;
+     fhir:display [ fhir:v "每22日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q23D" ] ;
+     fhir:display [ fhir:v "每23日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q24D" ] ;
+     fhir:display [ fhir:v "每24日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q25D" ] ;
+     fhir:display [ fhir:v "每25日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q26D" ] ;
+     fhir:display [ fhir:v "每26日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q27D" ] ;
+     fhir:display [ fhir:v "每27日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q28D" ] ;
+     fhir:display [ fhir:v "每28日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q29D" ] ;
+     fhir:display [ fhir:v "每29日一次" ]
+  ] [
+     fhir:code [ fhir:v "Q1M" ] ;
+     fhir:display [ fhir:v "每1月一次" ]
+  ] [
+     fhir:code [ fhir:v "Q2M" ] ;
+     fhir:display [ fhir:v "每2月一次" ]
+  ] [
+     fhir:code [ fhir:v "Q3M" ] ;
+     fhir:display [ fhir:v "每3月一次" ]
+  ] [
+     fhir:code [ fhir:v "Q4M" ] ;
+     fhir:display [ fhir:v "每4月一次" ]
+  ] [
+     fhir:code [ fhir:v "Q5M" ] ;
+     fhir:display [ fhir:v "每5月一次" ]
+  ] [
+     fhir:code [ fhir:v "Q6M" ] ;
+     fhir:display [ fhir:v "每6月一次" ]
+  ] [
+     fhir:code [ fhir:v "Q7M" ] ;
+     fhir:display [ fhir:v "每7月一次" ]
+  ] [
+     fhir:code [ fhir:v "Q8M" ] ;
+     fhir:display [ fhir:v "每8月一次" ]
+  ] [
+     fhir:code [ fhir:v "Q9M" ] ;
+     fhir:display [ fhir:v "每9月一次" ]
+  ] [
+     fhir:code [ fhir:v "Q10M" ] ;
+     fhir:display [ fhir:v "每10月一次" ]
+  ] [
+     fhir:code [ fhir:v "Q11M" ] ;
+     fhir:display [ fhir:v "每11月一次" ]
+  ] [
+     fhir:code [ fhir:v "Q1W" ] ;
+     fhir:display [ fhir:v "每1週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q2W" ] ;
+     fhir:display [ fhir:v "每2週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q3W" ] ;
+     fhir:display [ fhir:v "每3週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q4W" ] ;
+     fhir:display [ fhir:v "每4週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q5W" ] ;
+     fhir:display [ fhir:v "每5週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q6W" ] ;
+     fhir:display [ fhir:v "每6週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q7W" ] ;
+     fhir:display [ fhir:v "每7週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q8W" ] ;
+     fhir:display [ fhir:v "每8週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q9W" ] ;
+     fhir:display [ fhir:v "每9週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q10W" ] ;
+     fhir:display [ fhir:v "每10週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q11W" ] ;
+     fhir:display [ fhir:v "每11週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q12W" ] ;
+     fhir:display [ fhir:v "每12週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q13W" ] ;
+     fhir:display [ fhir:v "每13週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q14W" ] ;
+     fhir:display [ fhir:v "每14週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q15W" ] ;
+     fhir:display [ fhir:v "每15週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q16W" ] ;
+     fhir:display [ fhir:v "每16週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q17W" ] ;
+     fhir:display [ fhir:v "每17週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q18W" ] ;
+     fhir:display [ fhir:v "每18週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q19W" ] ;
+     fhir:display [ fhir:v "每19週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q20W" ] ;
+     fhir:display [ fhir:v "每20週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q21W" ] ;
+     fhir:display [ fhir:v "每21週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q22W" ] ;
+     fhir:display [ fhir:v "每22週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q23W" ] ;
+     fhir:display [ fhir:v "每23週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q24W" ] ;
+     fhir:display [ fhir:v "每24週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q25W" ] ;
+     fhir:display [ fhir:v "每25週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q26W" ] ;
+     fhir:display [ fhir:v "每26週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q27W" ] ;
+     fhir:display [ fhir:v "每27週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q28W" ] ;
+     fhir:display [ fhir:v "每28週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q29W" ] ;
+     fhir:display [ fhir:v "每29週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q30W" ] ;
+     fhir:display [ fhir:v "每30週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q31W" ] ;
+     fhir:display [ fhir:v "每31週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q32W" ] ;
+     fhir:display [ fhir:v "每32週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q33W" ] ;
+     fhir:display [ fhir:v "每33週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q34W" ] ;
+     fhir:display [ fhir:v "每34週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q35W" ] ;
+     fhir:display [ fhir:v "每35週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q36W" ] ;
+     fhir:display [ fhir:v "每36週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q37W" ] ;
+     fhir:display [ fhir:v "每37週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q38W" ] ;
+     fhir:display [ fhir:v "每38週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q39W" ] ;
+     fhir:display [ fhir:v "每39週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q40W" ] ;
+     fhir:display [ fhir:v "每40週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q41W" ] ;
+     fhir:display [ fhir:v "每41週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q42W" ] ;
+     fhir:display [ fhir:v "每42週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q43W" ] ;
+     fhir:display [ fhir:v "每43週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q44W" ] ;
+     fhir:display [ fhir:v "每44週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q45W" ] ;
+     fhir:display [ fhir:v "每45週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q46W" ] ;
+     fhir:display [ fhir:v "每46週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q47W" ] ;
+     fhir:display [ fhir:v "每47週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q48W" ] ;
+     fhir:display [ fhir:v "每48週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q49W" ] ;
+     fhir:display [ fhir:v "每49週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q50W" ] ;
+     fhir:display [ fhir:v "每50週一次" ]
+  ] [
+     fhir:code [ fhir:v "Q51W" ] ;
+     fhir:display [ fhir:v "每51週一次" ]
+  ] [
+     fhir:code [ fhir:v "BIW" ] ;
+     fhir:display [ fhir:v "每週二次" ]
+  ] [
+     fhir:code [ fhir:v "TIW" ] ;
+     fhir:display [ fhir:v "每週三次" ]
+  ] [
+     fhir:code [ fhir:v "STAT" ] ;
+     fhir:display [ fhir:v "立刻使用" ]
+  ] [
+     fhir:code [ fhir:v "ASORDER" ] ;
+     fhir:display [ fhir:v "依照醫師指示使用" ]
+  ] [
+     fhir:code [ fhir:v "Q1H" ] ;
+     fhir:display [ fhir:v "每1小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q2H" ] ;
+     fhir:display [ fhir:v "每2小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q3H" ] ;
+     fhir:display [ fhir:v "每3小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q4H" ] ;
+     fhir:display [ fhir:v "每4小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q5H" ] ;
+     fhir:display [ fhir:v "每5小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q6H" ] ;
+     fhir:display [ fhir:v "每6小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q7H" ] ;
+     fhir:display [ fhir:v "每7小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q8H" ] ;
+     fhir:display [ fhir:v "每8小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q9H" ] ;
+     fhir:display [ fhir:v "每9小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q10H" ] ;
+     fhir:display [ fhir:v "每10小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q11H" ] ;
+     fhir:display [ fhir:v "每11小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q12H" ] ;
+     fhir:display [ fhir:v "每12小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q13H" ] ;
+     fhir:display [ fhir:v "每13小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q14H" ] ;
+     fhir:display [ fhir:v "每14小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q15H" ] ;
+     fhir:display [ fhir:v "每15小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q16H" ] ;
+     fhir:display [ fhir:v "每16小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q17H" ] ;
+     fhir:display [ fhir:v "每17小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q18H" ] ;
+     fhir:display [ fhir:v "每18小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q19H" ] ;
+     fhir:display [ fhir:v "每19小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q20H" ] ;
+     fhir:display [ fhir:v "每20小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q21H" ] ;
+     fhir:display [ fhir:v "每21小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q22H" ] ;
+     fhir:display [ fhir:v "每22小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q23H" ] ;
+     fhir:display [ fhir:v "每23小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q24H" ] ;
+     fhir:display [ fhir:v "每24小時使用1次" ]
+  ] [
+     fhir:code [ fhir:v "Q30H" ] ;
+     fhir:display [ fhir:v "每30小時使用1次" ]
+  ] [
+     fhir:code [ fhir:v "Q48H" ] ;
+     fhir:display [ fhir:v "每48小時使用1次" ]
+  ] [
+     fhir:code [ fhir:v "Q1MN" ] ;
+     fhir:display [ fhir:v "每1分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q2MN" ] ;
+     fhir:display [ fhir:v "每2分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q3MN" ] ;
+     fhir:display [ fhir:v "每3分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q4MN" ] ;
+     fhir:display [ fhir:v "每4分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q5MN" ] ;
+     fhir:display [ fhir:v "每5分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q6MN" ] ;
+     fhir:display [ fhir:v "每6分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q7MN" ] ;
+     fhir:display [ fhir:v "每7分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q8MN" ] ;
+     fhir:display [ fhir:v "每8分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q9MN" ] ;
+     fhir:display [ fhir:v "每9分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q10MN" ] ;
+     fhir:display [ fhir:v "每10分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q11MN" ] ;
+     fhir:display [ fhir:v "每11分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q12MN" ] ;
+     fhir:display [ fhir:v "每12分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q13MN" ] ;
+     fhir:display [ fhir:v "每13分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q14MN" ] ;
+     fhir:display [ fhir:v "每14分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q15MN" ] ;
+     fhir:display [ fhir:v "每15分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q16MN" ] ;
+     fhir:display [ fhir:v "每16分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q17MN" ] ;
+     fhir:display [ fhir:v "每17分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q18MN" ] ;
+     fhir:display [ fhir:v "每18分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q19MN" ] ;
+     fhir:display [ fhir:v "每19分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q20MN" ] ;
+     fhir:display [ fhir:v "每20分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q21MN" ] ;
+     fhir:display [ fhir:v "每21分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q22MN" ] ;
+     fhir:display [ fhir:v "每22分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q23MN" ] ;
+     fhir:display [ fhir:v "每23分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q24MN" ] ;
+     fhir:display [ fhir:v "每24分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q25MN" ] ;
+     fhir:display [ fhir:v "每25分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q26MN" ] ;
+     fhir:display [ fhir:v "每26分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q27MN" ] ;
+     fhir:display [ fhir:v "每27分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q28MN" ] ;
+     fhir:display [ fhir:v "每28分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q29MN" ] ;
+     fhir:display [ fhir:v "每29分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q30MN" ] ;
+     fhir:display [ fhir:v "每30分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q31MN" ] ;
+     fhir:display [ fhir:v "每31分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q32MN" ] ;
+     fhir:display [ fhir:v "每32分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q33MN" ] ;
+     fhir:display [ fhir:v "每33分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q34MN" ] ;
+     fhir:display [ fhir:v "每34分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q35MN" ] ;
+     fhir:display [ fhir:v "每35分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q36MN" ] ;
+     fhir:display [ fhir:v "欽36分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q37MN" ] ;
+     fhir:display [ fhir:v "每37分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q38MN" ] ;
+     fhir:display [ fhir:v "每38分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q39MN" ] ;
+     fhir:display [ fhir:v "每39分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q40MN" ] ;
+     fhir:display [ fhir:v "每40分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q41MN" ] ;
+     fhir:display [ fhir:v "每41分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q42MN" ] ;
+     fhir:display [ fhir:v "每42分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q43MN" ] ;
+     fhir:display [ fhir:v "每43分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q44MN" ] ;
+     fhir:display [ fhir:v "每44分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q45MN" ] ;
+     fhir:display [ fhir:v "每45分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q46MN" ] ;
+     fhir:display [ fhir:v "每46分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q47MN" ] ;
+     fhir:display [ fhir:v "每47分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q48MN" ] ;
+     fhir:display [ fhir:v "每48分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q49MN" ] ;
+     fhir:display [ fhir:v "每49分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q50MN" ] ;
+     fhir:display [ fhir:v "每50分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q51MN" ] ;
+     fhir:display [ fhir:v "每51分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q52MN" ] ;
+     fhir:display [ fhir:v "每52分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q53MN" ] ;
+     fhir:display [ fhir:v "每53分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q54MN" ] ;
+     fhir:display [ fhir:v "每54分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q55MN" ] ;
+     fhir:display [ fhir:v "每55分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q56MN" ] ;
+     fhir:display [ fhir:v "每56分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q57MN" ] ;
+     fhir:display [ fhir:v "每57分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q58MN" ] ;
+     fhir:display [ fhir:v "每58分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q59MN" ] ;
+     fhir:display [ fhir:v "每59分鐘使用一次" ]
+  ] [
+     fhir:code [ fhir:v "QN" ] ;
+     fhir:display [ fhir:v "每晚使用一次" ]
+  ] [
+     fhir:code [ fhir:v "QAM&HS" ] ;
+     fhir:display [ fhir:v "上午使用一次且睡前一次" ]
+  ] [
+     fhir:code [ fhir:v "QPM&HS" ] ;
+     fhir:display [ fhir:v "下午使用一次且睡前一次" ]
+  ] [
+     fhir:code [ fhir:v "QAM&PM" ] ;
+     fhir:display [ fhir:v "每日上、下午各使用一次" ]
+  ] [
+     fhir:code [ fhir:v "TID" ] ;
+     fhir:display [ fhir:v "每日三次" ]
+  ] [
+     fhir:code [ fhir:v "BID&HS" ] ;
+     fhir:display [ fhir:v "每日二次且睡前一次" ]
+  ] [
+     fhir:code [ fhir:v "TID&HS" ] ;
+     fhir:display [ fhir:v "每日三次且睡前一次" ]
+  ] [
+     fhir:code [ fhir:v "AC" ] ;
+     fhir:display [ fhir:v "飯前" ]
+  ] [
+     fhir:code [ fhir:v "AC1H" ] ;
+     fhir:display [ fhir:v "飯前1小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC2H" ] ;
+     fhir:display [ fhir:v "飯前2小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC3H" ] ;
+     fhir:display [ fhir:v "飯前3小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC4H" ] ;
+     fhir:display [ fhir:v "飯前4小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC5H" ] ;
+     fhir:display [ fhir:v "飯前5小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC6H" ] ;
+     fhir:display [ fhir:v "飯前6小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC7H" ] ;
+     fhir:display [ fhir:v "飯前7小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC8H" ] ;
+     fhir:display [ fhir:v "飯前8小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC9H" ] ;
+     fhir:display [ fhir:v "飯前9小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC10H" ] ;
+     fhir:display [ fhir:v "飯前10小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC11H" ] ;
+     fhir:display [ fhir:v "飯前11小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC12H" ] ;
+     fhir:display [ fhir:v "飯前12小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC13H" ] ;
+     fhir:display [ fhir:v "飯前13小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC14H" ] ;
+     fhir:display [ fhir:v "飯前14小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC15H" ] ;
+     fhir:display [ fhir:v "飯前15小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC16H" ] ;
+     fhir:display [ fhir:v "飯前16小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC17H" ] ;
+     fhir:display [ fhir:v "飯前17小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC18H" ] ;
+     fhir:display [ fhir:v "飯前18小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC19H" ] ;
+     fhir:display [ fhir:v "飯前19小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC20H" ] ;
+     fhir:display [ fhir:v "飯前20小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC21H" ] ;
+     fhir:display [ fhir:v "飯前21小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC22H" ] ;
+     fhir:display [ fhir:v "飯前22小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC23H" ] ;
+     fhir:display [ fhir:v "飯前23小時使用" ]
+  ] [
+     fhir:code [ fhir:v "AC1M" ] ;
+     fhir:display [ fhir:v "飯前1分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC2M" ] ;
+     fhir:display [ fhir:v "飯前2分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC3M" ] ;
+     fhir:display [ fhir:v "飯前3分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC4M" ] ;
+     fhir:display [ fhir:v "飯前4分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC5M" ] ;
+     fhir:display [ fhir:v "飯前5分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC6M" ] ;
+     fhir:display [ fhir:v "飯前6分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC7M" ] ;
+     fhir:display [ fhir:v "飯前7分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC8M" ] ;
+     fhir:display [ fhir:v "飯前8分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC9M" ] ;
+     fhir:display [ fhir:v "飯前9分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC10M" ] ;
+     fhir:display [ fhir:v "飯前10分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC11M" ] ;
+     fhir:display [ fhir:v "飯前11分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC12M" ] ;
+     fhir:display [ fhir:v "飯前12分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC13M" ] ;
+     fhir:display [ fhir:v "飯前13分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC14M" ] ;
+     fhir:display [ fhir:v "飯前14分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC15M" ] ;
+     fhir:display [ fhir:v "飯前15分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC16M" ] ;
+     fhir:display [ fhir:v "飯前16分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC17M" ] ;
+     fhir:display [ fhir:v "飯前17分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC18M" ] ;
+     fhir:display [ fhir:v "飯前18分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC19M" ] ;
+     fhir:display [ fhir:v "飯前19分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC20M" ] ;
+     fhir:display [ fhir:v "飯前20分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC21M" ] ;
+     fhir:display [ fhir:v "飯前21分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC22M" ] ;
+     fhir:display [ fhir:v "飯前22分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC23M" ] ;
+     fhir:display [ fhir:v "飯前23分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC24M" ] ;
+     fhir:display [ fhir:v "飯前24分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC25M" ] ;
+     fhir:display [ fhir:v "飯前25分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC26M" ] ;
+     fhir:display [ fhir:v "飯前26分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC27M" ] ;
+     fhir:display [ fhir:v "飯前27分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC28M" ] ;
+     fhir:display [ fhir:v "飯前28分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC29M" ] ;
+     fhir:display [ fhir:v "飯前29分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC30M" ] ;
+     fhir:display [ fhir:v "飯前30分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC31M" ] ;
+     fhir:display [ fhir:v "飯前31分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC32M" ] ;
+     fhir:display [ fhir:v "飯前32分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC33M" ] ;
+     fhir:display [ fhir:v "飯前33分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC34M" ] ;
+     fhir:display [ fhir:v "飯前34分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC35M" ] ;
+     fhir:display [ fhir:v "飯前35分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC36M" ] ;
+     fhir:display [ fhir:v "飯前36分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC37M" ] ;
+     fhir:display [ fhir:v "飯前37分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC38M" ] ;
+     fhir:display [ fhir:v "飯前38分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC39M" ] ;
+     fhir:display [ fhir:v "飯前39分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC40M" ] ;
+     fhir:display [ fhir:v "飯前40分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC41M" ] ;
+     fhir:display [ fhir:v "飯前41分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC42M" ] ;
+     fhir:display [ fhir:v "飯前42分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC43M" ] ;
+     fhir:display [ fhir:v "飯前43分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC44M" ] ;
+     fhir:display [ fhir:v "飯前44分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC45M" ] ;
+     fhir:display [ fhir:v "飯前45分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC46M" ] ;
+     fhir:display [ fhir:v "飯前46分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC47M" ] ;
+     fhir:display [ fhir:v "飯前47分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC48M" ] ;
+     fhir:display [ fhir:v "飯前48分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC49M" ] ;
+     fhir:display [ fhir:v "飯前49分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC50M" ] ;
+     fhir:display [ fhir:v "飯前50分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC51M" ] ;
+     fhir:display [ fhir:v "飯前51分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC52M" ] ;
+     fhir:display [ fhir:v "飯前52分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC53M" ] ;
+     fhir:display [ fhir:v "飯前53分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC54M" ] ;
+     fhir:display [ fhir:v "飯前54分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC55M" ] ;
+     fhir:display [ fhir:v "飯前55分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC56M" ] ;
+     fhir:display [ fhir:v "飯前56分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC57M" ] ;
+     fhir:display [ fhir:v "飯前57分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC58M" ] ;
+     fhir:display [ fhir:v "飯前58分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "AC59M" ] ;
+     fhir:display [ fhir:v "飯前59分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC" ] ;
+     fhir:display [ fhir:v "飯後" ]
+  ] [
+     fhir:code [ fhir:v "PC1H" ] ;
+     fhir:display [ fhir:v "飯後1小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC2H" ] ;
+     fhir:display [ fhir:v "飯後2小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC3H" ] ;
+     fhir:display [ fhir:v "飯後3小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC4H" ] ;
+     fhir:display [ fhir:v "飯後4小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC5H" ] ;
+     fhir:display [ fhir:v "飯後5小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC6H" ] ;
+     fhir:display [ fhir:v "飯後6小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC7H" ] ;
+     fhir:display [ fhir:v "飯後7小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC8H" ] ;
+     fhir:display [ fhir:v "飯後8小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC9H" ] ;
+     fhir:display [ fhir:v "飯後9小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC10H" ] ;
+     fhir:display [ fhir:v "飯後10小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC11H" ] ;
+     fhir:display [ fhir:v "飯後11小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC12H" ] ;
+     fhir:display [ fhir:v "飯後12小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC13H" ] ;
+     fhir:display [ fhir:v "飯後13小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC14H" ] ;
+     fhir:display [ fhir:v "飯後14小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC15H" ] ;
+     fhir:display [ fhir:v "飯後15小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC16H" ] ;
+     fhir:display [ fhir:v "飯後16小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC17H" ] ;
+     fhir:display [ fhir:v "飯後17小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC18H" ] ;
+     fhir:display [ fhir:v "飯後18小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC19H" ] ;
+     fhir:display [ fhir:v "飯後19小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC20H" ] ;
+     fhir:display [ fhir:v "飯後20小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC21H" ] ;
+     fhir:display [ fhir:v "飯後21小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC22H" ] ;
+     fhir:display [ fhir:v "飯後22小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC23H" ] ;
+     fhir:display [ fhir:v "飯後23小時使用" ]
+  ] [
+     fhir:code [ fhir:v "PC1M" ] ;
+     fhir:display [ fhir:v "飯後1分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC2M" ] ;
+     fhir:display [ fhir:v "飯後2分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC3M" ] ;
+     fhir:display [ fhir:v "飯後3分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC4M" ] ;
+     fhir:display [ fhir:v "飯後4分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC5M" ] ;
+     fhir:display [ fhir:v "飯後5分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC6M" ] ;
+     fhir:display [ fhir:v "飯後6分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC7M" ] ;
+     fhir:display [ fhir:v "飯後7分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC8M" ] ;
+     fhir:display [ fhir:v "飯後8分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC9M" ] ;
+     fhir:display [ fhir:v "飯後9分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC10M" ] ;
+     fhir:display [ fhir:v "飯後10分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC11M" ] ;
+     fhir:display [ fhir:v "飯後11分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC12M" ] ;
+     fhir:display [ fhir:v "飯後12分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC13M" ] ;
+     fhir:display [ fhir:v "飯後13分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC14M" ] ;
+     fhir:display [ fhir:v "飯後14分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC15M" ] ;
+     fhir:display [ fhir:v "飯後15分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC16M" ] ;
+     fhir:display [ fhir:v "飯後16分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC17M" ] ;
+     fhir:display [ fhir:v "飯後17分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC18M" ] ;
+     fhir:display [ fhir:v "飯後18分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC19M" ] ;
+     fhir:display [ fhir:v "飯後19分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC20M" ] ;
+     fhir:display [ fhir:v "飯後20分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC21M" ] ;
+     fhir:display [ fhir:v "飯後21分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC22M" ] ;
+     fhir:display [ fhir:v "飯後22分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC23M" ] ;
+     fhir:display [ fhir:v "飯後23分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC24M" ] ;
+     fhir:display [ fhir:v "飯後24分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC25M" ] ;
+     fhir:display [ fhir:v "飯後25分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC26M" ] ;
+     fhir:display [ fhir:v "飯後26分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC27M" ] ;
+     fhir:display [ fhir:v "飯後27分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC28M" ] ;
+     fhir:display [ fhir:v "飯後28分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC29M" ] ;
+     fhir:display [ fhir:v "飯後29分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC30M" ] ;
+     fhir:display [ fhir:v "飯後30分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC31M" ] ;
+     fhir:display [ fhir:v "飯後31分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC32M" ] ;
+     fhir:display [ fhir:v "飯後32分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC33M" ] ;
+     fhir:display [ fhir:v "飯後33分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC34M" ] ;
+     fhir:display [ fhir:v "飯後34分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC35M" ] ;
+     fhir:display [ fhir:v "飯後35分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC36M" ] ;
+     fhir:display [ fhir:v "飯後36分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC37M" ] ;
+     fhir:display [ fhir:v "飯後37分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC38M" ] ;
+     fhir:display [ fhir:v "飯後38分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC39M" ] ;
+     fhir:display [ fhir:v "飯後39分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC40M" ] ;
+     fhir:display [ fhir:v "飯後40分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC41M" ] ;
+     fhir:display [ fhir:v "飯後41分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC42M" ] ;
+     fhir:display [ fhir:v "飯後42分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC43M" ] ;
+     fhir:display [ fhir:v "飯後43分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC44M" ] ;
+     fhir:display [ fhir:v "飯後44分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC45M" ] ;
+     fhir:display [ fhir:v "飯後45分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC46M" ] ;
+     fhir:display [ fhir:v "飯後46分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC47M" ] ;
+     fhir:display [ fhir:v "飯後47分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC48M" ] ;
+     fhir:display [ fhir:v "飯後48分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC49M" ] ;
+     fhir:display [ fhir:v "飯後49分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC50M" ] ;
+     fhir:display [ fhir:v "飯後50分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC51M" ] ;
+     fhir:display [ fhir:v "飯後51分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC52M" ] ;
+     fhir:display [ fhir:v "飯後52分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC53M" ] ;
+     fhir:display [ fhir:v "飯後53分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC54M" ] ;
+     fhir:display [ fhir:v "飯後54分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC55M" ] ;
+     fhir:display [ fhir:v "飯後55分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC56M" ] ;
+     fhir:display [ fhir:v "飯後56分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC57M" ] ;
+     fhir:display [ fhir:v "飯後57分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC58M" ] ;
+     fhir:display [ fhir:v "飯後58分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PC59M" ] ;
+     fhir:display [ fhir:v "飯後59分鐘使用" ]
+  ] [
+     fhir:code [ fhir:v "PRN" ] ;
+     fhir:display [ fhir:v "需要時使用" ]
+  ] [
+     fhir:code [ fhir:v "Q1HPRN" ] ;
+     fhir:display [ fhir:v "需要時每1小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q2HPRN" ] ;
+     fhir:display [ fhir:v "需要時每2小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q3HPRN" ] ;
+     fhir:display [ fhir:v "需要時每3小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q4HPRN" ] ;
+     fhir:display [ fhir:v "需要時每4小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q5HPRN" ] ;
+     fhir:display [ fhir:v "需要時每5小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q6HPRN" ] ;
+     fhir:display [ fhir:v "需要時每6小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q7HPRN" ] ;
+     fhir:display [ fhir:v "需要時每7小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q8HPRN" ] ;
+     fhir:display [ fhir:v "需要時每8小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q9HPRN" ] ;
+     fhir:display [ fhir:v "需要時每9小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q10HPRN" ] ;
+     fhir:display [ fhir:v "需要時每10小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q11HPRN" ] ;
+     fhir:display [ fhir:v "需要時每11小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q12HPRN" ] ;
+     fhir:display [ fhir:v "需要時每12小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q13HPRN" ] ;
+     fhir:display [ fhir:v "需要時每13小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q14HPRN" ] ;
+     fhir:display [ fhir:v "需要時每14小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q15HPRN" ] ;
+     fhir:display [ fhir:v "需要時每15小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q16HPRN" ] ;
+     fhir:display [ fhir:v "需要時每16小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q17HPRN" ] ;
+     fhir:display [ fhir:v "需要時每17小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q18HPRN" ] ;
+     fhir:display [ fhir:v "需要時每18小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q19HPRN" ] ;
+     fhir:display [ fhir:v "需要時每19小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q20HPRN" ] ;
+     fhir:display [ fhir:v "需要時每20小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q21HPRN" ] ;
+     fhir:display [ fhir:v "需要時每21小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q22HPRN" ] ;
+     fhir:display [ fhir:v "需要時每22小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "Q23HPRN" ] ;
+     fhir:display [ fhir:v "需要時每23小時使用一次" ]
+  ] [
+     fhir:code [ fhir:v "ONCE" ] ;
+     fhir:display [ fhir:v "單次給藥" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD1" ] ;
+     fhir:display [ fhir:v "每4週的第1天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD2" ] ;
+     fhir:display [ fhir:v "每4週的第2天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD3" ] ;
+     fhir:display [ fhir:v "每4週的第3天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD4" ] ;
+     fhir:display [ fhir:v "每4週的第4天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD5" ] ;
+     fhir:display [ fhir:v "每4週的第5天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD6" ] ;
+     fhir:display [ fhir:v "每4週的第6天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD7" ] ;
+     fhir:display [ fhir:v "每4週的第7天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD8" ] ;
+     fhir:display [ fhir:v "每4週的第8天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD9" ] ;
+     fhir:display [ fhir:v "每4週的第9天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD10" ] ;
+     fhir:display [ fhir:v "每4週的第10天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD11" ] ;
+     fhir:display [ fhir:v "每4週的第11天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD12" ] ;
+     fhir:display [ fhir:v "每4週的第12天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD13" ] ;
+     fhir:display [ fhir:v "每4週的第13天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD14" ] ;
+     fhir:display [ fhir:v "每4週的第14天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD15" ] ;
+     fhir:display [ fhir:v "每4週的第15天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD16" ] ;
+     fhir:display [ fhir:v "每4週的第16天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD17" ] ;
+     fhir:display [ fhir:v "每4週的第17天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD18" ] ;
+     fhir:display [ fhir:v "每4週的第18天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD19" ] ;
+     fhir:display [ fhir:v "每4週的第19天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD20" ] ;
+     fhir:display [ fhir:v "每4週的第20天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD21" ] ;
+     fhir:display [ fhir:v "每4週的第21天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD22" ] ;
+     fhir:display [ fhir:v "每4週的第22天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD23" ] ;
+     fhir:display [ fhir:v "每4週的第23天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD24" ] ;
+     fhir:display [ fhir:v "每4週的第24天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD25" ] ;
+     fhir:display [ fhir:v "每4週的第25天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD26" ] ;
+     fhir:display [ fhir:v "每4週的第26天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD27" ] ;
+     fhir:display [ fhir:v "每4週的第27天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WD28" ] ;
+     fhir:display [ fhir:v "每4週的第28天" ]
+  ] [
+     fhir:code [ fhir:v "Q4WW1" ] ;
+     fhir:display [ fhir:v "每4週的第1週每日" ]
+  ] [
+     fhir:code [ fhir:v "Q4WW2" ] ;
+     fhir:display [ fhir:v "每4週的第2週每日" ]
+  ] [
+     fhir:code [ fhir:v "Q4WW3" ] ;
+     fhir:display [ fhir:v "每4週的第3週每日" ]
+  ] [
+     fhir:code [ fhir:v "Q4WW4" ] ;
+     fhir:display [ fhir:v "每4週的第4週每日" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD1" ] ;
+     fhir:display [ fhir:v "每3週的第1天" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD2" ] ;
+     fhir:display [ fhir:v "每3週的第2天" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD3" ] ;
+     fhir:display [ fhir:v "每3週的第3天" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD4" ] ;
+     fhir:display [ fhir:v "每3週的第4天" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD5" ] ;
+     fhir:display [ fhir:v "每3週的第5天" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD6" ] ;
+     fhir:display [ fhir:v "每3週的第6天" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD7" ] ;
+     fhir:display [ fhir:v "每3週的第7天" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD8" ] ;
+     fhir:display [ fhir:v "每3週的第8天" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD9" ] ;
+     fhir:display [ fhir:v "每3週的第9天" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD10" ] ;
+     fhir:display [ fhir:v "每3週的第10天" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD11" ] ;
+     fhir:display [ fhir:v "每3週的第11天" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD12" ] ;
+     fhir:display [ fhir:v "每3週的第12天" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD13" ] ;
+     fhir:display [ fhir:v "每3週的第13天" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD14" ] ;
+     fhir:display [ fhir:v "每3週的第14天" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD15" ] ;
+     fhir:display [ fhir:v "每3週的第15天" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD16" ] ;
+     fhir:display [ fhir:v "每3週的第16天" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD17" ] ;
+     fhir:display [ fhir:v "每3週的第17天" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD18" ] ;
+     fhir:display [ fhir:v "每3週的第18天" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD19" ] ;
+     fhir:display [ fhir:v "每3週的第19天" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD20" ] ;
+     fhir:display [ fhir:v "每3週的第20天" ]
+  ] [
+     fhir:code [ fhir:v "Q3WD21" ] ;
+     fhir:display [ fhir:v "每3週的第21天" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

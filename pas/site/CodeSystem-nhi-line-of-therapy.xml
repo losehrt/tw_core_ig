@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="nhi-line-of-therapy"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem nhi-line-of-therapy</b></p><a name="nhi-line-of-therapy"> </a><a name="hcnhi-line-of-therapy"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-line-of-therapy</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">0<a name="nhi-line-of-therapy-0"> </a></td><td>不適用</td></tr><tr><td style="white-space:nowrap">1<a name="nhi-line-of-therapy-1"> </a></td><td>第一線治療</td></tr><tr><td style="white-space:nowrap">2<a name="nhi-line-of-therapy-2"> </a></td><td>第二線治療</td></tr><tr><td style="white-space:nowrap">3<a name="nhi-line-of-therapy-3"> </a></td><td>第三線治療</td></tr><tr><td style="white-space:nowrap">4<a name="nhi-line-of-therapy-4"> </a></td><td>第四線治療</td></tr><tr><td style="white-space:nowrap">5<a name="nhi-line-of-therapy-5"> </a></td><td>第五線治療</td></tr></table></div>
+  </text>
+  <url value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-line-of-therapy"/>
+  <version value="1.0.6"/>
+  <name value="NHILOT"/>
+  <title value="NHI-健保事前審查-用藥線別"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-07-01"/>
+  <publisher value="衛生福利部中央健康保險署"/>
+  <contact>
+    <name value="衛生福利部中央健康保險署"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nhi.gov.tw"/>
+    </telecom>
+  </contact>
+  <description value="臺灣衛生福利部中央健康保險署「用藥線別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="6"/>
+  <concept>
+    <code value="0"/>
+    <display value="不適用"/>
+  </concept>
+  <concept>
+    <code value="1"/>
+    <display value="第一線治療"/>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="第二線治療"/>
+  </concept>
+  <concept>
+    <code value="3"/>
+    <display value="第三線治療"/>
+  </concept>
+  <concept>
+    <code value="4"/>
+    <display value="第四線治療"/>
+  </concept>
+  <concept>
+    <code value="5"/>
+    <display value="第五線治療"/>
+  </concept>
+</CodeSystem>

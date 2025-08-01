@@ -1,0 +1,42 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://nhicore.nhi.gov.tw/pas/Media/med-min> a fhir:Media ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "med-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Media-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Media-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Media-twpas.html\">非DICOM影像-Media TWPAS</a></p></div><p><b>狀態</b>：completed</p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a> \"王大明\"</p><p><b>影像檢查的身體部位</b>：Head and neck structure<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://snomed.info/sct\">SNOMED CT</a>#774007)</span></p><p><b>非DICOM影像</b>：file://US01.jpg（#image/jpeg）</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:bodySite [
+     fhir:coding ( [
+       a sct:774007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "774007" ] ;
+       fhir:display [ fhir:v "Head and neck structure" ]
+     ] )
+  ] ; # 
+  fhir:content [
+     fhir:contentType [ fhir:v "image/jpeg" ] ;
+     fhir:url [ fhir:v "file://US01.jpg"^^xsd:anyURI ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

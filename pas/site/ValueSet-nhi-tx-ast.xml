@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="nhi-tx-ast"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet nhi-tx-ast</b></p><a name="nhi-tx-ast"> </a><a name="hcnhi-tx-ast"> </a><ul><li>Include all codes defined in <a href="CodeSystem-nhi-tx-ast.html"><code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-tx-ast</code></a></li></ul></div>
+  </text>
+  <url value="https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-tx-ast"/>
+  <version value="1.0.6"/>
+  <name value="NHITreatmentAst"/>
+  <title value="NHI-健保事前審查-治療後疾病狀態評估項目值集"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-07-01"/>
+  <publisher value="衛生福利部中央健康保險署"/>
+  <contact>
+    <name value="衛生福利部中央健康保險署"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nhi.gov.tw"/>
+    </telecom>
+  </contact>
+  <description value="NHI-健保事前審查-治療後疾病狀態評估項目值集"/>
+  <compose>
+    <include>
+      <system value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-tx-ast"/>
+    </include>
+  </compose>
+</ValueSet>

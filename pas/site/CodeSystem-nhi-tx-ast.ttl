@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-tx-ast> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "nhi-tx-ast"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem nhi-tx-ast</b></p><a name=\"nhi-tx-ast\"> </a><a name=\"hcnhi-tx-ast\"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-tx-ast</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">ICLL<a name=\"nhi-tx-ast-ICLL\"> </a></td><td>iwCLL (International Workshop on CLL)</td></tr><tr><td style=\"white-space:nowrap\">IREC<a name=\"nhi-tx-ast-IREC\"> </a></td><td>i-RECIST criteria</td></tr><tr><td style=\"white-space:nowrap\">MREC<a name=\"nhi-tx-ast-MREC\"> </a></td><td>mRECIST criteria</td></tr><tr><td style=\"white-space:nowrap\">REC1<a name=\"nhi-tx-ast-REC1\"> </a></td><td>RECIST 1.1 criteria</td></tr><tr><td style=\"white-space:nowrap\">IWGC<a name=\"nhi-tx-ast-IWGC\"> </a></td><td>International Working Group(IWG) Consensus Criteria</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-tx-ast"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.6"] ; # 
+  fhir:name [ fhir:v "NHITreatmentAst"] ; # 
+  fhir:title [ fhir:v "NHI-健保事前審查-治療後疾病狀態評估項目"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-07-01"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "衛生福利部中央健康保險署"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "衛生福利部中央健康保險署" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.nhi.gov.tw" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "臺灣衛生福利部中央健康保險署「治療後疾病狀態評估項目」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "5"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "ICLL" ] ;
+     fhir:display [ fhir:v "iwCLL (International Workshop on CLL)" ]
+  ] [
+     fhir:code [ fhir:v "IREC" ] ;
+     fhir:display [ fhir:v "i-RECIST criteria" ]
+  ] [
+     fhir:code [ fhir:v "MREC" ] ;
+     fhir:display [ fhir:v "mRECIST criteria" ]
+  ] [
+     fhir:code [ fhir:v "REC1" ] ;
+     fhir:display [ fhir:v "RECIST 1.1 criteria" ]
+  ] [
+     fhir:code [ fhir:v "IWGC" ] ;
+     fhir:display [ fhir:v "International Working Group(IWG) Consensus Criteria" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

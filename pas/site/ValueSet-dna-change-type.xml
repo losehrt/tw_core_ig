@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="dna-change-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet dna-change-type</b></p><a name="dna-change-type"> </a><a name="hcdna-change-type"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="https://loinc.org/LA6692-3/">LA6692-3</a></td><td>Deletion</td></tr><tr><td><a href="https://loinc.org/LA6686-5/">LA6686-5</a></td><td>Duplication</td></tr><tr><td><a href="https://loinc.org/LA6687-3/">LA6687-3</a></td><td>Insertion</td></tr><tr><td><a href="https://loinc.org/LA6688-1/">LA6688-1</a></td><td>Insertion/Deletion</td></tr><tr><td><a href="https://loinc.org/LA6689-9/">LA6689-9</a></td><td>Inversion</td></tr><tr><td><a href="https://loinc.org/LA6690-7/">LA6690-7</a></td><td>Substitution</td></tr><tr><td><a href="https://loinc.org/101397-8/">101397-8</a></td><td>Copy number variation analysis Sequencing Doc (Bld/Tiss)</td></tr><tr><td><a href="https://loinc.org/81695-9/">81695-9</a></td><td>MSI Ca spec-Imp</td></tr><tr><td><a href="https://loinc.org/94077-5/">94077-5</a></td><td>TMB Tumor-Imp</td></tr></table></li><li>Include these codes as defined in <a href="CodeSystem-inca-osiris.html"><code>https://nhicore.nhi.gov.tw/pas/CodeSystem/inca-osiris</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="CodeSystem-inca-osiris.html#inca-osiris-O55-2">O55-2</a></td><td>Delins</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://nhicore.nhi.gov.tw/pas/ValueSet/dna-change-type"/>
+  <version value="1.0.6"/>
+  <name value="DNAChangeType"/>
+  <title value="LOINC-健保事前審查-基因突變類型值集"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-07-01"/>
+  <publisher value="衛生福利部中央健康保險署"/>
+  <contact>
+    <name value="衛生福利部中央健康保險署"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nhi.gov.tw"/>
+    </telecom>
+  </contact>
+  <description value="LOINC-健保事前審查-基因突變類型值集"/>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <concept>
+        <code value="LA6692-3"/>
+        <display value="Deletion"/>
+      </concept>
+      <concept>
+        <code value="LA6686-5"/>
+        <display value="Duplication"/>
+      </concept>
+      <concept>
+        <code value="LA6687-3"/>
+        <display value="Insertion"/>
+      </concept>
+      <concept>
+        <code value="LA6688-1"/>
+        <display value="Insertion/Deletion"/>
+      </concept>
+      <concept>
+        <code value="LA6689-9"/>
+        <display value="Inversion"/>
+      </concept>
+      <concept>
+        <code value="LA6690-7"/>
+        <display value="Substitution"/>
+      </concept>
+      <concept>
+        <code value="101397-8"/>
+        <display value="Copy number variation analysis Sequencing Doc (Bld/Tiss)"/>
+      </concept>
+      <concept>
+        <code value="81695-9"/>
+        <display value="MSI Ca spec-Imp"/>
+      </concept>
+      <concept>
+        <code value="94077-5"/>
+        <display value="TMB Tumor-Imp"/>
+      </concept>
+    </include>
+    <include>
+      <system value="https://nhicore.nhi.gov.tw/pas/CodeSystem/inca-osiris"/>
+      <concept>
+        <code value="O55-2"/>
+        <display value="Delins"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

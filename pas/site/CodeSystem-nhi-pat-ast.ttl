@@ -1,0 +1,54 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pat-ast> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "nhi-pat-ast"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem nhi-pat-ast</b></p><a name=\"nhi-pat-ast\"> </a><a name=\"hcnhi-pat-ast\"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pat-ast</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">IPS<a name=\"nhi-pat-ast-IPS\"> </a></td><td>International Prognostic Score</td><td>IPS (International Prognostic Score)</td></tr><tr><td style=\"white-space:nowrap\">PDAI<a name=\"nhi-pat-ast-PDAI\"> </a></td><td>Pemphigus Disease Area Index</td><td>PDAI評估指數</td></tr><tr><td style=\"white-space:nowrap\">CIRS<a name=\"nhi-pat-ast-CIRS\"> </a></td><td>Cumulative illness rating scale</td><td>CIRS (cumulative illness rating scale) score</td></tr><tr><td style=\"white-space:nowrap\">HCTCI<a name=\"nhi-pat-ast-HCTCI\"> </a></td><td>Hematopoietic Cell Transplantation-specific Comorbidity Index</td><td>HCT-CI</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pat-ast"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.6"] ; # 
+  fhir:name [ fhir:v "PatAst"] ; # 
+  fhir:title [ fhir:v "NHI-健保事前審查-病人狀態評估項目"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-07-01"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "衛生福利部中央健康保險署"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "衛生福利部中央健康保險署" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.nhi.gov.tw" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "臺灣衛生福利部中央健康保險署「病人狀態評估項目」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "4"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "IPS" ] ;
+     fhir:display [ fhir:v "International Prognostic Score" ] ;
+     fhir:definition [ fhir:v "IPS (International Prognostic Score)" ]
+  ] [
+     fhir:code [ fhir:v "PDAI" ] ;
+     fhir:display [ fhir:v "Pemphigus Disease Area Index" ] ;
+     fhir:definition [ fhir:v "PDAI評估指數" ]
+  ] [
+     fhir:code [ fhir:v "CIRS" ] ;
+     fhir:display [ fhir:v "Cumulative illness rating scale" ] ;
+     fhir:definition [ fhir:v "CIRS (cumulative illness rating scale) score" ]
+  ] [
+     fhir:code [ fhir:v "HCTCI" ] ;
+     fhir:display [ fhir:v "Hematopoietic Cell Transplantation-specific Comorbidity Index" ] ;
+     fhir:definition [ fhir:v "HCT-CI" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,51 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "nhi-line-of-therapy",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem nhi-line-of-therapy</b></p><a name=\"nhi-line-of-therapy\"> </a><a name=\"hcnhi-line-of-therapy\"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-line-of-therapy</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"nhi-line-of-therapy-0\"> </a></td><td>不適用</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"nhi-line-of-therapy-1\"> </a></td><td>第一線治療</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"nhi-line-of-therapy-2\"> </a></td><td>第二線治療</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"nhi-line-of-therapy-3\"> </a></td><td>第三線治療</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"nhi-line-of-therapy-4\"> </a></td><td>第四線治療</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"nhi-line-of-therapy-5\"> </a></td><td>第五線治療</td></tr></table></div>"
+  },
+  "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-line-of-therapy",
+  "version" : "1.0.6",
+  "name" : "NHILOT",
+  "title" : "NHI-健保事前審查-用藥線別",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-07-01",
+  "publisher" : "衛生福利部中央健康保險署",
+  "contact" : [{
+    "name" : "衛生福利部中央健康保險署",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.nhi.gov.tw"
+    }]
+  }],
+  "description" : "臺灣衛生福利部中央健康保險署「用藥線別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 6,
+  "concept" : [{
+    "code" : "0",
+    "display" : "不適用"
+  },
+  {
+    "code" : "1",
+    "display" : "第一線治療"
+  },
+  {
+    "code" : "2",
+    "display" : "第二線治療"
+  },
+  {
+    "code" : "3",
+    "display" : "第三線治療"
+  },
+  {
+    "code" : "4",
+    "display" : "第四線治療"
+  },
+  {
+    "code" : "5",
+    "display" : "第五線治療"
+  }]
+}

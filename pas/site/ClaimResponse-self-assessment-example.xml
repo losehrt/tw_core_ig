@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClaimResponse xmlns="http://hl7.org/fhir">
+  <id value="self-assessment-example"/>
+  <meta>
+    <profile value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/ClaimResponse-self-assessment-twpas"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ClaimResponse-twpas.html">事前審查結果-ClaimResponse TWPAS</a></p></div><p><b>狀態</b>：Active</p><p><b>類型</b>：<span title="Codes:{http://terminology.hl7.org/CodeSystem/claim-type institutional}">Institutional</span></p><p><b>用途</b>：Preauthorization</p><p><b>病人</b>：<a href="Patient-pat-min.html">Patient/pat-min</a></p><p><b>核定日期</b>：2024-07-30</p><p><b>保險商</b>：<a href="Organization-org-nhi.html">Organization 衛生福利部中央健康保險署</a></p><p><b>處置狀態</b>：Processing Complete</p><blockquote><p><b>item</b></p><p><b>itemSequence</b>：1</p><h3>Adjudications</h3><table class="grid"><tr><td style="display: none">-</td><td><b>類型</b></td><td><b>核定註記</b></td><td><b>核定數量</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/adjudication submitted}">Submitted Amount</span></td><td><span title="Codes:{https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-approve-comment 1}">同意備查</span></td><td>5</td></tr></table></blockquote></div>
+  </text>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type"/>
+      <code value="institutional"/>
+    </coding>
+  </type>
+  <use value="preauthorization"/>
+  <patient>
+    <reference value="Patient/pat-min"/>
+  </patient>
+  <created value="2024-07-30"/>
+  <insurer>
+    <reference value="Organization/org-nhi"/>
+  </insurer>
+  <outcome value="complete"/>
+  <item>
+    <itemSequence value="1"/>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/adjudication"/>
+          <code value="submitted"/>
+        </coding>
+      </category>
+      <reason>
+        <coding>
+          <system value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-approve-comment"/>
+          <code value="1"/>
+        </coding>
+      </reason>
+      <value value="5"/>
+    </adjudication>
+  </item>
+</ClaimResponse>

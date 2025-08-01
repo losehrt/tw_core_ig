@@ -1,0 +1,42 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://nhicore.nhi.gov.tw/pas/DocumentReference/doc-careplan-min> a fhir:DocumentReference ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "doc-careplan-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/DocumentReference-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/DocumentReference-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4;#xA;        border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-DocumentReference-twpas.html\">文件參照-DocumentReference TWPAS</a></p></div><p><b>狀態</b>：current</p><p><b>報告類型</b>：治療計畫文件 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"CodeSystem-nhi-pdf-type.html\">NHI-文件類型</a>#careplan)</span></p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a> \"王大明\"</p><p><b>治療計畫文件名稱</b>：免疫檢查點抑制劑治療計畫</p><p><b>治療計畫文件 (application/pdf)</b>：file://CarePlanReport01.pdf</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pdf-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "careplan" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:content ( [
+     fhir:attachment [
+       fhir:contentType [ fhir:v "application/pdf" ] ;
+       fhir:url [ fhir:v "file://CarePlanReport01.pdf"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "免疫檢查點抑制劑治療計畫" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

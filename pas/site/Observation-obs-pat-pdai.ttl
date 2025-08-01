@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://nhicore.nhi.gov.tw/pas/Observation/obs-pat-pdai> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "obs-pat-pdai"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-pat-assessment-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-pat-assessment-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Observation-pat-assessment-twpas.html\">病人狀態評估-Observation Patient Assessment TWPAS</a></p></div><p><b>狀態</b>：final</p><p><b>病人狀態評估項目代碼</b>：Pemphigus Disease Area Index <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"CodeSystem-nhi-pat-ast.html\">LOINC + NHI-病人狀態評估項目值集 </a>#PDAI)</span></p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a></p><p><b>病人狀態評估日期</b>：2024-01-01</p><p><b>評估項目醫事人員身分證號</b>：<a href=\"Practitioner-pra-min.html\">Practitioner/pra-min</a></p><p><b>病人狀態評估結果</b>：260</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "patientAssessment" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pat-ast"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "PDAI" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-01-01"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Practitioner/pra-min> ;
+     fhir:reference [ fhir:v "Practitioner/pra-min" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:integer ;
+     fhir:v 260
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

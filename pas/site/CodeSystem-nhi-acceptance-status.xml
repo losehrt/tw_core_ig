@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="nhi-acceptance-status"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem nhi-acceptance-status</b></p><a name="nhi-acceptance-status"> </a><a name="hcnhi-acceptance-status"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-acceptance-status</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td></tr><tr><td style="white-space:nowrap">待處理<a name="nhi-acceptance-status-.24453.34389.29702"> </a></td></tr><tr><td style="white-space:nowrap">處理中<a name="nhi-acceptance-status-.34389.29702.20013"> </a></td></tr><tr><td style="white-space:nowrap">處理中(等待附件檔)<a name="nhi-acceptance-status-.34389.29702.20013.40.31561.24453.38468.20214.27284.41"> </a></td></tr><tr><td style="white-space:nowrap">處理中(檔案檢核中)<a name="nhi-acceptance-status-.34389.29702.20013.40.27284.26696.27298.26680.20013.41"> </a></td></tr><tr><td style="white-space:nowrap">處理中(等待檢查申報資料)<a name="nhi-acceptance-status-.34389.29702.20013.40.31561.24453.27298.26597.30003.22577.36039.26009.41"> </a></td></tr><tr><td style="white-space:nowrap">資料檢核失敗<a name="nhi-acceptance-status-.36039.26009.27298.26680.22833.25943"> </a></td></tr><tr><td style="white-space:nowrap">檔案傳送失敗<a name="nhi-acceptance-status-.27284.26696.20659.36865.22833.25943"> </a></td></tr><tr><td style="white-space:nowrap">附件檔轉檔失敗<a name="nhi-acceptance-status-.38468.20214.27284.36681.27284.22833.25943"> </a></td></tr><tr><td style="white-space:nowrap">影像檔轉檔失敗<a name="nhi-acceptance-status-.24433.20687.27284.36681.27284.22833.25943"> </a></td></tr><tr><td style="white-space:nowrap">電子病歷檔轉檔失敗<a name="nhi-acceptance-status-.38651.23376.30149.27511.27284.36681.27284.22833.25943"> </a></td></tr><tr><td style="white-space:nowrap">申請檔案檢核失敗<a name="nhi-acceptance-status-.30003.35531.27284.26696.27298.26680.22833.25943"> </a></td></tr><tr><td style="white-space:nowrap">申請檔案未備齊<a name="nhi-acceptance-status-.30003.35531.27284.26696.26410.20633.40778"> </a></td></tr><tr><td style="white-space:nowrap">已受理<a name="nhi-acceptance-status-.24050.21463.29702"> </a></td></tr><tr><td style="white-space:nowrap">審查中<a name="nhi-acceptance-status-.23529.26597.20013"> </a></td></tr><tr><td style="white-space:nowrap">審畢結果<a name="nhi-acceptance-status-.23529.30050.32080.26524"> </a></td></tr></table></div>
+  </text>
+  <url value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-acceptance-status"/>
+  <version value="1.0.6"/>
+  <name value="NHIAcceptanceStatus"/>
+  <title value="NHI-健保事前審查-案件受理狀態"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-07-01"/>
+  <publisher value="衛生福利部中央健康保險署"/>
+  <contact>
+    <name value="衛生福利部中央健康保險署"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nhi.gov.tw"/>
+    </telecom>
+  </contact>
+  <description value="臺灣衛生福利部中央健康保險署「案件受理狀態」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="15"/>
+  <concept>
+    <code value="待處理"/>
+  </concept>
+  <concept>
+    <code value="處理中"/>
+  </concept>
+  <concept>
+    <code value="處理中(等待附件檔)"/>
+  </concept>
+  <concept>
+    <code value="處理中(檔案檢核中)"/>
+  </concept>
+  <concept>
+    <code value="處理中(等待檢查申報資料)"/>
+  </concept>
+  <concept>
+    <code value="資料檢核失敗"/>
+  </concept>
+  <concept>
+    <code value="檔案傳送失敗"/>
+  </concept>
+  <concept>
+    <code value="附件檔轉檔失敗"/>
+  </concept>
+  <concept>
+    <code value="影像檔轉檔失敗"/>
+  </concept>
+  <concept>
+    <code value="電子病歷檔轉檔失敗"/>
+  </concept>
+  <concept>
+    <code value="申請檔案檢核失敗"/>
+  </concept>
+  <concept>
+    <code value="申請檔案未備齊"/>
+  </concept>
+  <concept>
+    <code value="已受理"/>
+  </concept>
+  <concept>
+    <code value="審查中"/>
+  </concept>
+  <concept>
+    <code value="審畢結果"/>
+  </concept>
+</CodeSystem>

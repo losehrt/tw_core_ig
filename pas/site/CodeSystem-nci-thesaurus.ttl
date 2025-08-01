@@ -1,0 +1,170 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://nhicore.nhi.gov.tw/pas/CodeSystem/nci-thesaurus> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "nci-thesaurus"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem nci-thesaurus</b></p><a name=\"nci-thesaurus\"> </a><a name=\"hcnci-thesaurus\"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nci-thesaurus</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">C96243<a name=\"nci-thesaurus-C96243\"> </a></td><td>FIGO Stage 0</td></tr><tr><td style=\"white-space:nowrap\">C96244<a name=\"nci-thesaurus-C96244\"> </a></td><td>FIGO Stage I</td></tr><tr><td style=\"white-space:nowrap\">C96245<a name=\"nci-thesaurus-C96245\"> </a></td><td>FIGO Stage IA</td></tr><tr><td style=\"white-space:nowrap\">C96246<a name=\"nci-thesaurus-C96246\"> </a></td><td>FIGO Stage IA1</td></tr><tr><td style=\"white-space:nowrap\">C96247<a name=\"nci-thesaurus-C96247\"> </a></td><td>FIGO Stage IA2</td></tr><tr><td style=\"white-space:nowrap\">C96248<a name=\"nci-thesaurus-C96248\"> </a></td><td>FIGO Stage IB</td></tr><tr><td style=\"white-space:nowrap\">C96249<a name=\"nci-thesaurus-C96249\"> </a></td><td>FIGO Stage IB1</td></tr><tr><td style=\"white-space:nowrap\">C96250<a name=\"nci-thesaurus-C96250\"> </a></td><td>FIGO Stage IB2</td></tr><tr><td style=\"white-space:nowrap\">C162222<a name=\"nci-thesaurus-C162222\"> </a></td><td>FIGO Stage IB3</td></tr><tr><td style=\"white-space:nowrap\">C96251<a name=\"nci-thesaurus-C96251\"> </a></td><td>FIGO Stage IC</td></tr><tr><td style=\"white-space:nowrap\">C128099<a name=\"nci-thesaurus-C128099\"> </a></td><td>FIGO Stage IC1</td></tr><tr><td style=\"white-space:nowrap\">C128100<a name=\"nci-thesaurus-C128100\"> </a></td><td>FIGO Stage IC2</td></tr><tr><td style=\"white-space:nowrap\">C128101<a name=\"nci-thesaurus-C128101\"> </a></td><td>FIGO Stage IC3</td></tr><tr><td style=\"white-space:nowrap\">C96252<a name=\"nci-thesaurus-C96252\"> </a></td><td>FIGO Stage II</td></tr><tr><td style=\"white-space:nowrap\">C96253<a name=\"nci-thesaurus-C96253\"> </a></td><td>FIGO Stage IIA</td></tr><tr><td style=\"white-space:nowrap\">C162223<a name=\"nci-thesaurus-C162223\"> </a></td><td>FIGO Stage IIA1</td></tr><tr><td style=\"white-space:nowrap\">C128103<a name=\"nci-thesaurus-C128103\"> </a></td><td>FIGO Stage IIA1(i)</td></tr><tr><td style=\"white-space:nowrap\">C128104<a name=\"nci-thesaurus-C128104\"> </a></td><td>FIGO Stage IIA1(ii)</td></tr><tr><td style=\"white-space:nowrap\">C162224<a name=\"nci-thesaurus-C162224\"> </a></td><td>FIGO Stage IIA2</td></tr><tr><td style=\"white-space:nowrap\">C96254<a name=\"nci-thesaurus-C96254\"> </a></td><td>FIGO Stage IIB</td></tr><tr><td style=\"white-space:nowrap\">C188300<a name=\"nci-thesaurus-C188300\"> </a></td><td>FIGO Stage IIC1</td></tr><tr><td style=\"white-space:nowrap\">C96255<a name=\"nci-thesaurus-C96255\"> </a></td><td>FIGO Stage III</td></tr><tr><td style=\"white-space:nowrap\">C96256<a name=\"nci-thesaurus-C96256\"> </a></td><td>FIGO Stage IIIA</td></tr><tr><td style=\"white-space:nowrap\">C128102<a name=\"nci-thesaurus-C128102\"> </a></td><td>FIGO Stage IIIA1</td></tr><tr><td style=\"white-space:nowrap\">C128105<a name=\"nci-thesaurus-C128105\"> </a></td><td>FIGO Stage IIIA2</td></tr><tr><td style=\"white-space:nowrap\">C96257<a name=\"nci-thesaurus-C96257\"> </a></td><td>FIGO Stage IIIB</td></tr><tr><td style=\"white-space:nowrap\">C96258<a name=\"nci-thesaurus-C96258\"> </a></td><td>FIGO Stage IIIC</td></tr><tr><td style=\"white-space:nowrap\">C96259<a name=\"nci-thesaurus-C96259\"> </a></td><td>FIGO Stage IIIC1</td></tr><tr><td style=\"white-space:nowrap\">C96260<a name=\"nci-thesaurus-C96260\"> </a></td><td>FIGO Stage IIIC2</td></tr><tr><td style=\"white-space:nowrap\">C96261<a name=\"nci-thesaurus-C96261\"> </a></td><td>FIGO Stage IV</td></tr><tr><td style=\"white-space:nowrap\">C96262<a name=\"nci-thesaurus-C96262\"> </a></td><td>FIGO Stage IVA</td></tr><tr><td style=\"white-space:nowrap\">C96263<a name=\"nci-thesaurus-C96263\"> </a></td><td>FIGO Stage IVB</td></tr><tr><td style=\"white-space:nowrap\">C139007<a name=\"nci-thesaurus-C139007\"> </a></td><td>Myeloma ISS Stage</td></tr><tr><td style=\"white-space:nowrap\">C141392<a name=\"nci-thesaurus-C141392\"> </a></td><td>Myeloma RISS Stage</td></tr><tr><td style=\"white-space:nowrap\">C133427<a name=\"nci-thesaurus-C133427\"> </a></td><td>Neuroblastoma INRGSS Stage</td></tr><tr><td style=\"white-space:nowrap\">C115134<a name=\"nci-thesaurus-C115134\"> </a></td><td>BCLC Stage</td></tr><tr><td style=\"white-space:nowrap\">C139006<a name=\"nci-thesaurus-C139006\"> </a></td><td>Durie/Salmon Stage (DSS)</td></tr><tr><td style=\"white-space:nowrap\">C141099<a name=\"nci-thesaurus-C141099\"> </a></td><td>ENSAT Stage</td></tr><tr><td style=\"white-space:nowrap\">C28067<a name=\"nci-thesaurus-C28067\"> </a></td><td>Hepatoblastoma Stage</td></tr><tr><td style=\"white-space:nowrap\">C141147<a name=\"nci-thesaurus-C141147\"> </a></td><td>Lugano Stage</td></tr><tr><td style=\"white-space:nowrap\">C143151<a name=\"nci-thesaurus-C143151\"> </a></td><td>Masaoka-Koga Stage</td></tr><tr><td style=\"white-space:nowrap\">C146847<a name=\"nci-thesaurus-C146847\"> </a></td><td>Mediastinal Malignant Germ Cell Tumor Stage</td></tr><tr><td style=\"white-space:nowrap\">C123333<a name=\"nci-thesaurus-C123333\"> </a></td><td>Reese-Ellsworth Staging System</td></tr><tr><td style=\"white-space:nowrap\">C198826<a name=\"nci-thesaurus-C198826\"> </a></td><td>Modified Chang's Staging of Medulloblastoma</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nci-thesaurus"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.6"] ; # 
+  fhir:name [ fhir:v "NciThesaurus"] ; # 
+  fhir:title [ fhir:v "NCI 健保事前審查-Thesaurus"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-07-01"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "衛生福利部中央健康保險署"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "衛生福利部中央健康保險署" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.nhi.gov.tw" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "NCI 健保事前審查-Thesaurus，參照至http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl  \n代碼出版日期：2022-10-13。"] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "44"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "C96243" ] ;
+     fhir:display [ fhir:v "FIGO Stage 0" ]
+  ] [
+     fhir:code [ fhir:v "C96244" ] ;
+     fhir:display [ fhir:v "FIGO Stage I" ]
+  ] [
+     fhir:code [ fhir:v "C96245" ] ;
+     fhir:display [ fhir:v "FIGO Stage IA" ]
+  ] [
+     fhir:code [ fhir:v "C96246" ] ;
+     fhir:display [ fhir:v "FIGO Stage IA1" ]
+  ] [
+     fhir:code [ fhir:v "C96247" ] ;
+     fhir:display [ fhir:v "FIGO Stage IA2" ]
+  ] [
+     fhir:code [ fhir:v "C96248" ] ;
+     fhir:display [ fhir:v "FIGO Stage IB" ]
+  ] [
+     fhir:code [ fhir:v "C96249" ] ;
+     fhir:display [ fhir:v "FIGO Stage IB1" ]
+  ] [
+     fhir:code [ fhir:v "C96250" ] ;
+     fhir:display [ fhir:v "FIGO Stage IB2" ]
+  ] [
+     fhir:code [ fhir:v "C162222" ] ;
+     fhir:display [ fhir:v "FIGO Stage IB3" ]
+  ] [
+     fhir:code [ fhir:v "C96251" ] ;
+     fhir:display [ fhir:v "FIGO Stage IC" ]
+  ] [
+     fhir:code [ fhir:v "C128099" ] ;
+     fhir:display [ fhir:v "FIGO Stage IC1" ]
+  ] [
+     fhir:code [ fhir:v "C128100" ] ;
+     fhir:display [ fhir:v "FIGO Stage IC2" ]
+  ] [
+     fhir:code [ fhir:v "C128101" ] ;
+     fhir:display [ fhir:v "FIGO Stage IC3" ]
+  ] [
+     fhir:code [ fhir:v "C96252" ] ;
+     fhir:display [ fhir:v "FIGO Stage II" ]
+  ] [
+     fhir:code [ fhir:v "C96253" ] ;
+     fhir:display [ fhir:v "FIGO Stage IIA" ]
+  ] [
+     fhir:code [ fhir:v "C162223" ] ;
+     fhir:display [ fhir:v "FIGO Stage IIA1" ]
+  ] [
+     fhir:code [ fhir:v "C128103" ] ;
+     fhir:display [ fhir:v "FIGO Stage IIA1(i)" ]
+  ] [
+     fhir:code [ fhir:v "C128104" ] ;
+     fhir:display [ fhir:v "FIGO Stage IIA1(ii)" ]
+  ] [
+     fhir:code [ fhir:v "C162224" ] ;
+     fhir:display [ fhir:v "FIGO Stage IIA2" ]
+  ] [
+     fhir:code [ fhir:v "C96254" ] ;
+     fhir:display [ fhir:v "FIGO Stage IIB" ]
+  ] [
+     fhir:code [ fhir:v "C188300" ] ;
+     fhir:display [ fhir:v "FIGO Stage IIC1" ]
+  ] [
+     fhir:code [ fhir:v "C96255" ] ;
+     fhir:display [ fhir:v "FIGO Stage III" ]
+  ] [
+     fhir:code [ fhir:v "C96256" ] ;
+     fhir:display [ fhir:v "FIGO Stage IIIA" ]
+  ] [
+     fhir:code [ fhir:v "C128102" ] ;
+     fhir:display [ fhir:v "FIGO Stage IIIA1" ]
+  ] [
+     fhir:code [ fhir:v "C128105" ] ;
+     fhir:display [ fhir:v "FIGO Stage IIIA2" ]
+  ] [
+     fhir:code [ fhir:v "C96257" ] ;
+     fhir:display [ fhir:v "FIGO Stage IIIB" ]
+  ] [
+     fhir:code [ fhir:v "C96258" ] ;
+     fhir:display [ fhir:v "FIGO Stage IIIC" ]
+  ] [
+     fhir:code [ fhir:v "C96259" ] ;
+     fhir:display [ fhir:v "FIGO Stage IIIC1" ]
+  ] [
+     fhir:code [ fhir:v "C96260" ] ;
+     fhir:display [ fhir:v "FIGO Stage IIIC2" ]
+  ] [
+     fhir:code [ fhir:v "C96261" ] ;
+     fhir:display [ fhir:v "FIGO Stage IV" ]
+  ] [
+     fhir:code [ fhir:v "C96262" ] ;
+     fhir:display [ fhir:v "FIGO Stage IVA" ]
+  ] [
+     fhir:code [ fhir:v "C96263" ] ;
+     fhir:display [ fhir:v "FIGO Stage IVB" ]
+  ] [
+     fhir:code [ fhir:v "C139007" ] ;
+     fhir:display [ fhir:v "Myeloma ISS Stage" ]
+  ] [
+     fhir:code [ fhir:v "C141392" ] ;
+     fhir:display [ fhir:v "Myeloma RISS Stage" ]
+  ] [
+     fhir:code [ fhir:v "C133427" ] ;
+     fhir:display [ fhir:v "Neuroblastoma INRGSS Stage" ]
+  ] [
+     fhir:code [ fhir:v "C115134" ] ;
+     fhir:display [ fhir:v "BCLC Stage" ]
+  ] [
+     fhir:code [ fhir:v "C139006" ] ;
+     fhir:display [ fhir:v "Durie/Salmon Stage (DSS)" ]
+  ] [
+     fhir:code [ fhir:v "C141099" ] ;
+     fhir:display [ fhir:v "ENSAT Stage" ]
+  ] [
+     fhir:code [ fhir:v "C28067" ] ;
+     fhir:display [ fhir:v "Hepatoblastoma Stage" ]
+  ] [
+     fhir:code [ fhir:v "C141147" ] ;
+     fhir:display [ fhir:v "Lugano Stage" ]
+  ] [
+     fhir:code [ fhir:v "C143151" ] ;
+     fhir:display [ fhir:v "Masaoka-Koga Stage" ]
+  ] [
+     fhir:code [ fhir:v "C146847" ] ;
+     fhir:display [ fhir:v "Mediastinal Malignant Germ Cell Tumor Stage" ]
+  ] [
+     fhir:code [ fhir:v "C123333" ] ;
+     fhir:display [ fhir:v "Reese-Ellsworth Staging System" ]
+  ] [
+     fhir:code [ fhir:v "C198826" ] ;
+     fhir:display [ fhir:v "Modified Chang's Staging of Medulloblastoma" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="nhi-apply-side"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem nhi-apply-side</b></p><a name="nhi-apply-side"> </a><a name="hcnhi-apply-side"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-apply-side</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">R<a name="nhi-apply-side-R"> </a></td><td>右側</td></tr><tr><td style="white-space:nowrap">L<a name="nhi-apply-side-L"> </a></td><td>左側</td></tr><tr><td style="white-space:nowrap">B<a name="nhi-apply-side-B"> </a></td><td>兩側</td></tr></table></div>
+  </text>
+  <url value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-apply-side"/>
+  <version value="1.0.6"/>
+  <name value="NHIApplySide"/>
+  <title value="NHI-健保事前審查-申請部位"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-07-01"/>
+  <publisher value="衛生福利部中央健康保險署"/>
+  <contact>
+    <name value="衛生福利部中央健康保險署"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nhi.gov.tw"/>
+    </telecom>
+  </contact>
+  <description value="臺灣衛生福利部中央健康保險署「申請部位」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="R"/>
+    <display value="右側"/>
+  </concept>
+  <concept>
+    <code value="L"/>
+    <display value="左側"/>
+  </concept>
+  <concept>
+    <code value="B"/>
+    <display value="兩側"/>
+  </concept>
+</CodeSystem>

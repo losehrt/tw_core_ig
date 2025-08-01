@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>專門術語 - 臺灣健保癌症用藥事前審查實作指引 v1.0.6</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+<link href="assets/css/ig.css" rel="stylesheet" />
+    
+<!-- Google tag (gtag.js) HITSTDIO>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1Y4JEG6RS2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1Y4JEG6RS2');
+</script-->
+
+<!-- Google tag (gtag.js) TWCORE 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60R1T0P9G0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60R1T0P9G0');
+</script>-->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div id="hl7-nav">
+  <a id="hl7-logo" no-external="true" href="index.html" style="width: 10px;">
+    <img height="50" alt="TW" src="assets/images/logo-header.png" />
+  </a>
+</div>
+<div id="hl7-search">
+  <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR"
+      src="assets/images/search.png" /></a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">臺灣健保癌症用藥事前審查實作指引</span>
+            <br/>
+            <span style="display:inline-block;">1.0.6 - STU1.0.6
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+	<li><a href="index.html">應用說明</a></li>
+	<li><a href="toc.html">目錄</a></li>
+	<li><a href="vision.html">視覺化邏輯模型</a></li>
+ 	<li class="dropdown">
+		<a href="artifacts.html">規範文件<b class="caret"></b></a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="capabilitystatements.html">能力聲明</a>
+			</li>
+			<li>
+				<a href="searchparameters.html">查詢參數</a>
+			</li>
+			<li>
+				<a href="models.html">邏輯模型</a>
+			</li>
+			<li>
+				<a href="profiles-and-extensions.html">FHIR Profiles及Extensions</a>
+			</li>
+			<li>
+				<a href="terminologies.html">專門術語</a>
+			</li>
+		</ul>
+	</li>
+ 	<li><a href="examples.html">範例</a></li>
+	<li><a href="downloads.html">結構定義與範例檔下載</a></li>
+	<li><a href="security.html">安全性</a></li>
+	<li><a href="validate.html">驗證教學</a></li>
+</ul>      
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>專門術語</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">臺灣健保癌症用藥事前審查實作指引 - Downloaded Version 1.0.6 See the <a href="https://nhicore.nhi.gov.tw/pas/history.html">Directory of published versions</a></p></p><!--EndReleaseHeader-->
+  <h2>專門術語</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#值集value-sets" id="markdown-toc-值集value-sets">值集(Value Sets)</a></li>
+  <li><a href="#代碼系統code-systems" id="markdown-toc-代碼系統code-systems">代碼系統(Code Systems)</a></li>
+  <li><a href="#概念對應concept-maps" id="markdown-toc-概念對應concept-maps">概念對應(Concept Maps)</a></li>
+</ul>
+
+</div>
+<p>以下為本IG必須及可能需使用的所有專門術語(terminology)。</p>
+
+<h3 id="值集value-sets">值集(Value Sets)</h3>
+<tr><td><a href="ValueSet-cancer-stage-score.html">NCI-健保事前審查-FIGO癌症分期量表結果值集</a> </td><td><p>NCI-健保事前審查-FIGO癌症分期量表結果值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-cancer-stage.html">SCT + NCI-健保事前審查-癌症分期量表項目值集</a> </td><td><p>SCT + NCI-健保事前審查-癌症分期量表項目值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-dicom-cid-29-AcquisitionModality.html">HL7-AcquisitionModality值集</a> </td><td><p>原值集因總會工具問題無法正常顯示，故先自建值集。</p>
+</td></tr>
+<tr><td><a href="ValueSet-dna-change-type.html">LOINC-健保事前審查-基因突變類型值集</a> </td><td><p>LOINC-健保事前審查-基因突變類型值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-gene-test-code.html">LOINC-健保事前審查-基因檢測代碼值集</a> </td><td><p>LOINC-健保事前審查-基因檢測代碼值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-icd-10-pcs-2014-image.html">NHI-臺灣健保署2014年中文版ICD 10 PCS-影像報告值集</a> </td><td><p>NHI-臺灣健保署2014年中文版ICD 10 PCS-影像報告值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-icd-10-pcs-2014-radiotherapy.html">NHI-臺灣健保署2014年中文版ICD 10 PCS-放射治療項目值集</a> </td><td><p>NHI-臺灣健保署2014年中文版ICD 10 PCS-放射治療項目值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-icd-10-pcs-2023-image.html">NHI-臺灣健保署2023年中文版ICD 10 PCS-影像報告值集</a> </td><td><p>NHI-臺灣健保署2023年中文版ICD 10 PCS-影像報告值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-icd-10-pcs-2023-radiotherapy.html">NHI-臺灣健保署2023年中文版ICD 10 PCS-放射治療項目值集</a> </td><td><p>NHI-臺灣健保署2023年中文版ICD 10 PCS-放射治療項目值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-media-mimetypes.html">HL7-非DICOM影像MimeType值集</a> </td><td><p>HL7-非DICOM影像MimeType值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-medication-frequency-hl7-nhi.html">HL7 TimingAbbreviation + NHI-健保事前審查-藥品使用頻率值集</a> </td><td><p>HL7 TimingAbbreviation + NHI-健保事前審查-藥品使用頻率值集。為配合專案時程，使用暫時性代碼系統，日後將統一使用TW Core IG的臺灣健保署藥品使用頻率。<br />
+代碼對應請參照<a href="https://build.fhir.org/ig/cctwFHIRterm/MOHW_TWCoreIG_Build/ConceptMap-medication-frequency-tw.html">臺灣健保署藥品使用頻率代碼對應對應HL7 TimingAbbreviation</a></p>
+</td></tr>
+<tr><td><a href="ValueSet-medication-path-sct-tw.html">SNOMED CT + 臺灣健保署-健保事前審查-給藥途徑值集</a> </td><td><p>SNOMED CT + 臺灣健保署-健保事前審查-給藥途徑值集。
+代碼對應請參照<a href="https://build.fhir.org/ig/cctwFHIRterm/MOHW_TWCoreIG_Build/ConceptMap-medication-path-tw.html">臺灣健保署給藥途徑代碼對應SNOMED CT</a></p>
+<p>此值集優先採用國際標準碼，國際標準碼未能表述之概念，則以普遍被使用的臺灣健保署給藥途徑代碼表述，請實作者留意。</p>
+</td></tr>
+<tr><td><a href="ValueSet-nhi-acceptance-status.html">NHI-健保事前審查-案件受理狀態值集</a> </td><td><p>NHI-健保事前審查-案件受理狀態值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-nhi-apply-reason.html">NHI-健保事前審查-給付適應症值集</a> </td><td><p>NHI-健保事前審查-給付適應症值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-nhi-apply-side.html">NHI-健保事前審查-申請部位值集</a> </td><td><p>NHI-健保事前審查-申請部位值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-nhi-apply-type.html">NHI-健保事前審查-申報類別值集</a> </td><td><p>NHI-健保事前審查-申報類別值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-nhi-approve-claim-comment.html">NHI-健保事前審查-受理審查案件核定註記值集</a> </td><td><p>NHI-健保事前審查-受理審查案件核定註記值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-nhi-approve-item-comment.html">NHI-健保事前審查-個別醫令核定註記值集</a> </td><td><p>NHI-健保事前審查-個別醫令核定註記值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-nhi-body-site.html">NHI-健保事前審查-身體部位值集</a> </td><td><p>NHI-健保事前審查-身體部位值集，代碼對應請參考<a href="ConceptMap-nhi-sct-body-site.html">臺灣健保署身體部位代碼對應SNOMED CT</a>。</p>
+</td></tr>
+<tr><td><a href="ValueSet-nhi-continuation-status.html">NHI-健保事前審查-續用註記值集</a> </td><td><p>NHI-健保事前審查-續用註記值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-nhi-drug-category.html">NHI-健保事前審查-藥物類型值集</a> </td><td><p>NHI-健保事前審查-藥物類型值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-nhi-line-of-therapy.html">NHI-健保事前審查-用藥線別值集</a> </td><td><p>NHI-健保事前審查-用藥線別值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-nhi-medication.html">NHI-健保事前審查-用藥品項值集</a> </td><td><p>NHI-健保事前審查-用藥品項值集。<br />
+此值集所涵蓋代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至<a href="https://info.nhi.gov.tw/INAE3000/INAE3000S01">健保用藥品項網路查詢服務</a>查閱</p>
+</td></tr>
+<tr><td><a href="ValueSet-nhi-order-type.html">NHI-健保事前審查-醫令類別值集</a> </td><td><p>NHI-健保事前審查-醫令類別值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-nhi-organization.html">NHI-健保事前審查-特約醫事機構值集</a> </td><td><p>NHI-健保事前審查-特約醫事機構值集，參照至<a href="https://www.nhi.gov.tw/ch/cp-5548-135e8-2931-1.html">衛福部健保署特約醫事機構代碼網路查詢服務</a>中的<a href="https://info.nhi.gov.tw/IODE0000/IODE0000S09?id=1120">健保特約醫療院所名冊</a></p>
+<p>代碼出版日期：2024-04-22；資料所屬單位：衛生福利部中央健康保險署。</p>
+<p><em>因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。</em></p>
+</td></tr>
+<tr><td><a href="ValueSet-nhi-pdf-type.html">NHI-健保事前審查-文件類型值集</a> </td><td><p>NHI-健保事前審查-文件類型值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-nhi-supporting-info-type.html">NHI-健保事前審查-補充資訊類別值集</a> </td><td><p>NHI-健保事前審查-補充資訊類別值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-nhi-tmhb-type.html">NHI-健保事前審查-申請案件類別值集</a> </td><td><p>NHI-健保事前審查-申請案件類別值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-nhi-tx-ast.html">NHI-健保事前審查-治療後疾病狀態評估項目值集</a> </td><td><p>NHI-健保事前審查-治療後疾病狀態評估項目值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-pat-ast.html">LOINC + NHI-健保事前審查-病人狀態評估項目值集</a> </td><td><p>LOINC + NHI-病人狀態評估項目值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-report-type.html">LOINC-健保事前審查-報告類型值集</a> </td><td><p>LOINC-健保事前審查-報告類型值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-sct-body-site.html">SNOMEDCT-健保事前審查-身體部位值集</a> </td><td><p>SNOMEDCT-健保事前審查-身體部位值集，代碼對應請參考<a href="ConceptMap-nhi-sct-body-site.html">臺灣健保署身體部位代碼對應SNOMED CT</a>。</p>
+</td></tr>
+<tr><td><a href="ValueSet-specime-type.html">LOINC-健保事前審查-基因檢測檢體類型值集</a> </td><td><p>LOINC-健保事前審查-基因檢測檢體類型值集</p>
+</td></tr>
+<tr><td><a href="ValueSet-ucum-units.html">UCUM-健保事前審查-UCUM單位值集</a> </td><td><p>UCUM-健保事前審查-UCUM單位值集</p>
+</td></tr>
+
+<h3 id="代碼系統code-systems">代碼系統(Code Systems)</h3>
+<tr><td><a href="CodeSystem-inca-osiris.html">INCa-健保事前審查-基因突變類型</a> </td><td><p>INCa-健保事前審查-基因突變類型，資料所屬單位：Institut National du Cancer (INCa)，參照至：https://github.com/InstitutNationalduCancer/OSIRIS。</p>
+</td></tr>
+<tr><td><a href="CodeSystem-medication-frequency-nhi-tw.html">NHI-健保事前審查-藥品使用頻率</a> </td><td><p>NHI-健保事前審查-藥品使用頻率，參照至<a href="https://www.nhi.gov.tw/ch/cp-1880-20811-3142-1.html">健保署檔案譯碼簿</a>中的「藥品使用頻率（2022/8/2版本）」。</p>
+<p>代碼出版日期：2024-05-27；資料所屬單位：衛生福利部中央健康保險署。</p>
+<p><em>因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。</em></p>
+</td></tr>
+<tr><td><a href="CodeSystem-nci-thesaurus.html">NCI 健保事前審查-Thesaurus</a> </td><td><p>NCI 健保事前審查-Thesaurus，參照至http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl<br />
+代碼出版日期：2022-10-13。</p>
+</td></tr>
+<tr><td><a href="CodeSystem-nhi-acceptance-status.html">NHI-健保事前審查-案件受理狀態</a> </td><td><p>臺灣衛生福利部中央健康保險署「案件受理狀態」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td></tr>
+<tr><td><a href="CodeSystem-nhi-apply-reason.html">NHI-健保事前審查-給付適應症</a> </td><td><p>臺灣衛生福利部中央健康保險署「給付適應症」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td></tr>
+<tr><td><a href="CodeSystem-nhi-apply-side.html">NHI-健保事前審查-申請部位</a> </td><td><p>臺灣衛生福利部中央健康保險署「申請部位」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td></tr>
+<tr><td><a href="CodeSystem-nhi-apply-type.html">NHI-健保事前審查-申報類別</a> </td><td><p>臺灣衛生福利部中央健康保險署「申報類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td></tr>
+<tr><td><a href="CodeSystem-nhi-approve-comment.html">NHI-健保事前審查-核定註記</a> </td><td><p>臺灣衛生福利部中央健康保險署「核定註記」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td></tr>
+<tr><td><a href="CodeSystem-nhi-body-site.html">NHI-健保事前審查-身體部位</a> </td><td><p>臺灣衛生福利部中央健康保險署「身體部位」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td></tr>
+<tr><td><a href="CodeSystem-nhi-continuation-status.html">NHI-健保事前審查-續用註記</a> </td><td><p>臺灣衛生福利部中央健康保險署「續用註記」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td></tr>
+<tr><td><a href="CodeSystem-nhi-drug-category.html">NHI-健保事前審查-藥物類型</a> </td><td><p>臺灣衛生福利部中央健康保險署「藥物類型」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td></tr>
+<tr><td><a href="CodeSystem-nhi-line-of-therapy.html">NHI-健保事前審查-用藥線別</a> </td><td><p>臺灣衛生福利部中央健康保險署「用藥線別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td></tr>
+<tr><td><a href="CodeSystem-nhi-medication.html">NHI-健保事前審查-用藥品項</a> </td><td><p>NHI-健保事前審查-用藥品項，參照自<a href="https://www.nhi.gov.tw/ch/lp-2466-1.html">健保用藥品項</a>中的「健保用藥品項114年4月查詢檔(帶走所有壓縮檔114.4.2更新)」。</p>
+<p>代碼出版日期：2025-04-30；資料所屬單位：衛生福利部中央健康保險署。</p>
+<p><em>因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。</em></p>
+<p>因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處僅擷取部分代碼，相關代碼可至<a href="https://info.nhi.gov.tw/INAE3000/INAE3000S01">健保用藥品項網路查詢服務</a>查閱</p>
+</td></tr>
+<tr><td><a href="CodeSystem-nhi-order-type.html">NHI-健保事前審查-醫令類別</a> </td><td><p>臺灣衛生福利部中央健康保險署「醫令類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td></tr>
+<tr><td><a href="CodeSystem-nhi-pat-ast.html">NHI-健保事前審查-病人狀態評估項目</a> </td><td><p>臺灣衛生福利部中央健康保險署「病人狀態評估項目」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td></tr>
+<tr><td><a href="CodeSystem-nhi-pdf-type.html">NHI-健保事前審查-文件類型</a> </td><td><p>臺灣衛生福利部中央健康保險署「文件類型」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td></tr>
+<tr><td><a href="CodeSystem-nhi-supporting-info-type.html">NHI-健保事前審查-補充資訊類別</a> </td><td><p>臺灣衛生福利部中央健康保險署「補充資訊類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td></tr>
+<tr><td><a href="CodeSystem-nhi-tmhb-type.html">NHI-健保事前審查-申請案件類別</a> </td><td><p>臺灣衛生福利部中央健康保險署「申請案件類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td></tr>
+<tr><td><a href="CodeSystem-nhi-tx-ast.html">NHI-健保事前審查-治療後疾病狀態評估項目</a> </td><td><p>臺灣衛生福利部中央健康保險署「治療後疾病狀態評估項目」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。</p>
+</td></tr>
+<tr><td><a href="CodeSystem-organization-identifier-tw.html">NHI-健保事前審查-特約醫事機構</a> </td><td><p>臺灣衛生福利部中央健康保險署「特約醫事機構」代碼，參照至<a href="https://www.nhi.gov.tw/ch/cp-5548-135e8-2931-1.html">衛福部健保署特約醫事機構代碼網路查詢服務</a>中的<a href="https://info.nhi.gov.tw/IODE0000/IODE0000S09?id=1120">健保特約醫療院所名冊</a></p>
+<p>代碼出版日期：2024-04-22；資料所屬單位：衛生福利部中央健康保險署。</p>
+<p><em>因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。</em></p>
+</td></tr>
+
+<h3 id="概念對應concept-maps">概念對應(Concept Maps)</h3>
+<tr><td><a href="ConceptMap-nhi-loinc.html">臺灣健保署醫療服務給付項目對應LOINC</a> </td><td><p>此對應表為臺灣健保署醫療服務給付項目對應LOINC，供實作者於撰寫程式以自動化對應或轉代碼時使用。</p>
+</td></tr>
+<tr><td><a href="ConceptMap-nhi-sct-body-site.html">臺灣健保署身體部位代碼對應SNOMED CT</a> </td><td><p>此對應表為臺灣健保署身體部位代碼對應SNOMED CT，供實作者於撰寫程式以自動化對應或轉代碼時使用。</p>
+</td></tr>
+
+<p><a href="https://build.fhir.org/ig/cctwFHIRterm/MOHW_TWCoreIG_Build/ConceptMap-medical-consultation-department-nhi-tw.html">臺灣健保署就醫科別代碼對應SNOMED CT</a></p>
+
+<p><a href="https://build.fhir.org/ig/cctwFHIRterm/MOHW_TWCoreIG_Build/ConceptMap-medical-treatment-department-nhi-tw.html">臺灣健保署診療科別代碼對應SNOMED CT</a></p>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nhi.gov.tw">衛生福利部中央健康保險署</a>.  Package tw.gov.mohw.nhi.pas#1.0.6 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 30, 2025 10:52+0800">2025-07-30</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="https://nhicore.nhi.gov.tw/pas/history.html">Version History</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>範例 - 臺灣健保癌症用藥事前審查實作指引 v1.0.6</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+<link href="assets/css/ig.css" rel="stylesheet" />
+    
+<!-- Google tag (gtag.js) HITSTDIO>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1Y4JEG6RS2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1Y4JEG6RS2');
+</script-->
+
+<!-- Google tag (gtag.js) TWCORE 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60R1T0P9G0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60R1T0P9G0');
+</script>-->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div id="hl7-nav">
+  <a id="hl7-logo" no-external="true" href="index.html" style="width: 10px;">
+    <img height="50" alt="TW" src="assets/images/logo-header.png" />
+  </a>
+</div>
+<div id="hl7-search">
+  <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR"
+      src="assets/images/search.png" /></a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">臺灣健保癌症用藥事前審查實作指引</span>
+            <br/>
+            <span style="display:inline-block;">1.0.6 - STU1.0.6
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+	<li><a href="index.html">應用說明</a></li>
+	<li><a href="toc.html">目錄</a></li>
+	<li><a href="vision.html">視覺化邏輯模型</a></li>
+ 	<li class="dropdown">
+		<a href="artifacts.html">規範文件<b class="caret"></b></a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="capabilitystatements.html">能力聲明</a>
+			</li>
+			<li>
+				<a href="searchparameters.html">查詢參數</a>
+			</li>
+			<li>
+				<a href="models.html">邏輯模型</a>
+			</li>
+			<li>
+				<a href="profiles-and-extensions.html">FHIR Profiles及Extensions</a>
+			</li>
+			<li>
+				<a href="terminologies.html">專門術語</a>
+			</li>
+		</ul>
+	</li>
+ 	<li><a href="examples.html">範例</a></li>
+	<li><a href="downloads.html">結構定義與範例檔下載</a></li>
+	<li><a href="security.html">安全性</a></li>
+	<li><a href="validate.html">驗證教學</a></li>
+</ul>      
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>範例</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">臺灣健保癌症用藥事前審查實作指引 - Downloaded Version 1.0.6 See the <a href="https://nhicore.nhi.gov.tw/pas/history.html">Directory of published versions</a></p></p><!--EndReleaseHeader-->
+  <h2>範例</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h3 id="profiles範例">Profiles範例</h3>
+<p>以下為本IG使用到的所有Profiles的範例。</p>
+<div class="bg-danger">
+因IG設計工具的限制，在IG中的各範例Resource必填<code>id</code>。但醫療機構端實際依據本IG規格於上傳申請資料時，這些Resource.id並不是必填欄位。   <br /> 
+唯需注意的是「Bundle中的<code>fullUrl</code>必須使用UUID，並且應確保<code>Bundle.entry.fullUrl</code>能與同次所傳送的各Resource關聯。」    <br />
+寫法可參考「<a href="Bundle-bun-uuid-example.html">Bundle：事前審查-自主審查報備、多份影像報告（UUID）範例</a>」。  <br />
+<b>(範例內容僅為參考，實際申報內容請以實際資料為主。)</b>
+</div>
+
+<h4 id="bundle">Bundle</h4>
+<ul>
+  <li><a href="Bundle-bun-1.html">事前審查-送核、套組檢驗、多事前審查癌藥品項</a>：依據事前審查-Bundle TWPAS Profile呈現癌藥事前審查之範例</li>
+  <li><a href="Bundle-bun-3.html">事前審查-申復、有共病</a>：依據事前審查-Bundle TWPAS Profile呈現癌藥事前審查之範例</li>
+  <li><a href="Bundle-bun-uuid-example.html"><span class="bg-success">事前審查-自主審查報備、多份影像報告（UUID）</span></a>：依據事前審查-Bundle TWPAS Profile呈現癌藥事前審查之自主審查報備範例</li>
+  <li><a href="Bundle-bun-response.html">事前審查回覆</a>：依據事前審查回覆-Bundle Response TWPAS Profile呈現癌藥事前審查回覆之範例</li>
+</ul>
+
+<h4 id="claim">Claim</h4>
+<ul>
+  <li><a href="Claim-cla-1.html">事前審查-送核、套組檢驗、多事前審查癌藥品項</a>：依據事前審查-Claim TWPAS Profile呈現事前審查之範例，含兩筆檢驗(查)。</li>
+  <li><a href="Claim-cla-3.html">事前審查-申復、有共病</a>：依據事前審查-Claim TWPAS Profile呈現癌藥事前審查之範例</li>
+</ul>
+
+<h4 id="claimresponse">ClaimResponse</h4>
+<ul>
+  <li><a href="ClaimResponse-self-assessment-example.html">事前審查結果-自主審查報備</a>：依據事前審查結果-ClaimResponse TWPAS Profile呈現事前審查結果之範例</li>
+  <li><a href="ClaimResponse-claim-response-example.html">事前審查回覆</a>：依據事前審查回覆-ClaimResponse TWPAS Profile呈現事前審查回覆之範例</li>
+</ul>
+
+<h4 id="organization">Organization</h4>
+<ul>
+  <li><a href="Organization-org-hosp-example.html">醫事機構</a>：依據機構-Organization TWPAS Profile呈現醫事機構之範例</li>
+  <li><a href="Organization-org-gene-example.html">基因檢測機構</a>：依據基因檢測機構-Organization Genetic Testing TWPAS Profile呈現基因檢測機構之範例</li>
+  <li><a href="Organization-org-nhi.html">衛生福利部中央健康保險署</a>：依據臺灣核心-政府機構（TW Core Organization Government）Profile呈現衛生福利部中央健康保險署</li>
+</ul>
+
+<h4 id="encounter">Encounter</h4>
+<ul>
+  <li><a href="Encounter-enc-min.html">就醫科別</a>：依據就醫科別-Encounter TWPAS Profile呈現就醫科別之範例</li>
+</ul>
+
+<h4 id="patient">Patient</h4>
+<ul>
+  <li><a href="Patient-pat-min.html">病人資訊</a>：依據病人資訊-Patient TWPAS Profile呈現病人資訊之範例</li>
+</ul>
+
+<h4 id="practitioner">Practitioner</h4>
+<ul>
+  <li><a href="Practitioner-pra-min.html">醫事人員</a>：依據醫事人員-Practitioner TWPAS Profile呈現醫事人員之範例</li>
+</ul>
+
+<h4 id="imagingstudy">ImagingStudy</h4>
+<ul>
+  <li><a href="ImagingStudy-imaStu-min.html">影像</a>：依據DICOM影像-ImagingStudy TWPAS Profile呈現影像之範例</li>
+</ul>
+
+<h4 id="media">Media</h4>
+<ul>
+  <li><a href="Media-med-min.html">非DICOM影像</a>：依據非DICOM影像-Media TWPAS Profile呈現非DICOM影像之範例</li>
+</ul>
+
+<h4 id="diagnosticreport">DiagnosticReport</h4>
+<ul>
+  <li><a href="DiagnosticReport-diaRep-ima-min.html">影像報告</a>：依據影像報告-DiagnosticReport Image TWPAS Profile呈現影像報告之範例 (疾病資訊)</li>
+  <li><a href="DiagnosticReport-diaRep-min.html">檢查報告</a>：依據檢查報告-DiagnosticReport TWPAS Profile呈現檢查報告之範例 (疾病資訊)</li>
+</ul>
+
+<h4 id="observation">Observation</h4>
+<ul>
+  <li><a href="Observation-obs-cancer-figo.html">癌症分期量表-FIGO</a>：依據癌症分期量表-Observation Cancer Stage TWPAS Profile呈現癌症分期量表FIGO之範例 (疾病資訊)</li>
+  <li><a href="Observation-obs-cancer-cns.html">癌症分期量表-CNS</a>：依據癌症分期量表-Observation Cancer Stage TWPAS Profile呈現癌症分期量表CNS之範例 (疾病資訊)</li>
+  <li><a href="Observation-obs-cancer-tnm.html"><span class="bg-success">癌症分期量表-TNM</span></a>：依據癌症分期量表-Observation Cancer Stage TWPAS Profile呈現癌症分期量表TNM之範例 (疾病資訊)</li>
+  <li><a href="Observation-obs-diagnostic-min.html">基因資訊</a>：依據基因資訊-Observation Diagnostic TWPAS Profile呈現基因資訊之範例</li>
+  <li><a href="Observation-obs-lab-min.html">檢驗檢查-單項</a>：依據檢驗檢查-Observation Laboratory Result TWPAS Profile呈現單項檢驗檢查之範例 (評估資訊)</li>
+  <li><a href="Observation-obs-lab-cbc.html">檢驗檢查-套組(全套血液檢查)</a>：依據檢驗檢查-Observation Laboratory Result TWPAS Profile呈現套組檢驗檢查之範例 (評估資訊)</li>
+  <li><a href="Observation-obs-pat-nyha.html">病人狀態評估-NYHA</a>：依據病人狀態評估-Observation Patient Assessment TWPAS Profile呈現病人狀態評估之範例 (評估資訊)</li>
+  <li><a href="Observation-obs-pat-pdai.html">病人狀態評估-PDAI</a>：依據病人狀態評估-Observation Patient Assessment TWPAS Profile呈現病人狀態評估之範例 (評估資訊)</li>
+  <li><a href="Observation-obs-tx-min.html">治療後疾病狀態評估</a>：依據治療後疾病狀態評估-Observation Treatment Assessment TWPAS Profile呈現治療後疾病狀態評估之範例 (結果資訊)</li>
+</ul>
+
+<h4 id="medicationrequest">MedicationRequest</h4>
+<ul>
+  <li><a href="MedicationRequest-medReq-treat.html">用藥品項</a>：依據用藥品項-MedicationRequest Treat TWPAS Profile呈現用藥品項之範例 (治療資訊)</li>
+  <li><a href="MedicationRequest-medReq-apply.html">事前審查品項-多用法</a>：依據事前審查品項-MedicationRequest Apply TWPAS Profile呈現事前審查品項之範例 (申請項目)</li>
+  <li><a href="MedicationRequest-medReq-apply-2.html">事前審查品項-給付適應症特定代碼</a>：依據事前審查品項-MedicationRequest Apply TWPAS Profile呈現特定事前審查品項代碼之範例 (申請項目)</li>
+</ul>
+
+<h4 id="procedure">Procedure</h4>
+<ul>
+  <li><a href="Procedure-pro-min.html">放射治療</a>：依據放射治療-Procedure TWPAS Profile呈現放射治療之範例</li>
+</ul>
+
+<h4 id="substance">Substance</h4>
+<ul>
+  <li><a href="Substance-sub-min.html">放射治療總劑量</a>：依據放射治療總劑量-Substance TWPAS Profile呈現放射治療之範例</li>
+</ul>
+
+<h4 id="specimen">Specimen</h4>
+<ul>
+  <li><a href="Specimen-spe-min.html">基因檢測檢體</a>：依據基因檢測檢體-Specimen TWPAS Profile呈現基因檢測檢體之範例</li>
+</ul>
+
+<h4 id="documentreference">DocumentReference</h4>
+<ul>
+  <li><a href="DocumentReference-doc-gene-min.html">基因報告</a>：依據文件參照-DocumentReference TWPAS Profile呈現基因報告之範例</li>
+  <li><a href="DocumentReference-doc-careplan-min.html">治療計畫文件</a>：依據文件參照-DocumentReference TWPAS Profile呈現治療計畫文件之範例</li>
+  <li><a href="DocumentReference-doc-test-min.html">檢驗(查)附件</a>：依據文件參照-DocumentReference TWPAS Profile呈現檢驗(查)附件之範例</li>
+  <li><a href="DocumentReference-doc-medicalRecord-min.html">病歷資料</a>：依據文件參照-DocumentReference TWPAS Profile呈現病歷資料之範例</li>
+</ul>
+
+<h4 id="coverage">Coverage</h4>
+<ul>
+  <li><a href="Coverage-cov-min.html">健保事前審查計畫</a>：依據健保事前審查計畫-Coverage TWPAS Profile呈現健保事前審查計畫之範例</li>
+</ul>
+
+<h4 id="operationoutcome">OperationOutcome</h4>
+<ul>
+  <li><a href="OperationOutcome-error-example.html">系統回應錯誤訊息</a>：依據系統回應訊息-OperationOutcome TWPAS Profile呈現使用錯誤語法查詢系統時之回應範例</li>
+</ul>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nhi.gov.tw">衛生福利部中央健康保險署</a>.  Package tw.gov.mohw.nhi.pas#1.0.6 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 30, 2025 10:52+0800">2025-07-30</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="https://nhicore.nhi.gov.tw/pas/history.html">Version History</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

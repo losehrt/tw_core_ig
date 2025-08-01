@@ -1,0 +1,33 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "medication-frequency-hl7-nhi",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet medication-frequency-hl7-nhi</b></p><a name=\"medication-frequency-hl7-nhi\"> </a><a name=\"hcmedication-frequency-hl7-nhi\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-v3-GTSAbbreviation.html\"><code>http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation</code></a></li><li>Include all codes defined in <a href=\"CodeSystem-medication-frequency-nhi-tw.html\"><code>https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw</code></a></li></ul></div>"
+  },
+  "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/medication-frequency-hl7-nhi",
+  "version" : "1.0.6",
+  "name" : "NHIMedicationFrequencyHL7",
+  "title" : "HL7 TimingAbbreviation + NHI-健保事前審查-藥品使用頻率值集",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-01-16",
+  "publisher" : "衛生福利部中央健康保險署",
+  "contact" : [{
+    "name" : "衛生福利部中央健康保險署",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.nhi.gov.tw"
+    }]
+  }],
+  "description" : "HL7 TimingAbbreviation + NHI-健保事前審查-藥品使用頻率值集。為配合專案時程，使用暫時性代碼系統，日後將統一使用TW Core IG的臺灣健保署藥品使用頻率。  \n代碼對應請參照[臺灣健保署藥品使用頻率代碼對應對應HL7 TimingAbbreviation](https://build.fhir.org/ig/cctwFHIRterm/MOHW_TWCoreIG_Build/ConceptMap-medication-frequency-tw.html)",
+  "copyright" : "衛生福利部",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
+    },
+    {
+      "system" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"
+    }]
+  }
+}

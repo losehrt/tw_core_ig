@@ -1,0 +1,171 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://nhicore.nhi.gov.tw/pas/Observation/obs-lab-cbc> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "obs-lab-cbc"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-laboratory-result-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-laboratory-result-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Observation-laboratory-result-twpas.html\">檢驗檢查-Observation Laboratory Result TWPAS</a></p></div><p><b>狀態</b>：final</p><p><b>類型</b>：檢驗(查)<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-nhi-supporting-info-type.html/\">NHI-補充資訊類別值集</a>#tests)</span></p><p><b>套組代碼</b>：CBC panel - Blood by Automated count <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://loinc.org/\">LOINCCodes</a>#58410-2)</span></p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a></p><p><b>檢驗(查)報告日期</b>：2024-01-01</p><p><b>簽發檢驗(查)報告醫事人員身分證號</b>：<a href=\"Practitioner-pra-min.html\">Practitioner/pra-min</a></p><p><b>檢驗(查)附件</b>：<a href=\"DocumentReference-doc-test-min.html\">DocumentReference/doc-test-min</a></p><blockquote><p><b>檢驗(查)名稱</b>：Leukocytes [#/volume] in Blood by Automated count <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://loinc.org/\">LOINCCodes</a>#6690-2)</span><br/><b>檢驗(查)結果</b>：3.6 × 10^3/μL<br/><b>檢驗(查)結果之參考範圍下限</b>：3.9 × 10^3/μL<br/><b>檢驗(查)結果之參考範圍上限</b>：10.6 × 10^3/μL</p></blockquote><blockquote><p><b>檢驗(查)名稱</b>：Erythrocytes [#/volume] in Blood by Automated count <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://loinc.org/\">LOINCCodes</a>#789-8)</span><br/><b>檢驗(查)結果</b>：4.7 × 10^6/μL<br/><b>檢驗(查)結果之參考範圍下限</b>：4.5 × 10^3/μL<br/><b>檢驗(查)結果之參考範圍上限</b>：5.9 × 10^3/μL</p></blockquote><blockquote><p><b>檢驗(查)名稱</b>：Hemoglobin [Mass/volume] in Blood <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://loinc.org/\">LOINCCodes</a>#718-7)</span><br/><b>檢驗(查)結果</b>：14 g/dL<br/><b>檢驗(查)結果之參考範圍下限</b>：13.5 g/dL<br/><b>檢驗(查)結果之參考範圍上限</b>：17.5 g/dL</p></blockquote><blockquote><p><b>檢驗(查)名稱</b>：Hematocrit [Volume Fraction] of Blood by Automated count <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://loinc.org/\">LOINCCodes</a>#4544-3)</span><br/><b>檢驗(查)結果</b>：45 %<br/><b>檢驗(查)結果之參考範圍下限</b>：41 %<br/><b>檢驗(查)結果之參考範圍上限</b>：53 %</p></blockquote><blockquote><p><b>檢驗(查)名稱</b>：Platelets [#/volume] in Blood by Automated count <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://loinc.org/\">LOINCCodes</a>#777-3)</span><br/><b>檢驗(查)結果</b>：101 × 10^3/μL<br/><b>檢驗(查)結果之參考範圍下限</b>：150 × 10^3/μL<br/><b>檢驗(查)結果之參考範圍上限</b>：400 × 10^3/μL</p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "tests" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:58410-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "58410-2" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-01-01"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Practitioner/pra-min> ;
+     fhir:reference [ fhir:v "Practitioner/pra-min" ]
+  ] ) ; # 
+  fhir:derivedFrom ( [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/DocumentReference/doc-test-min> ;
+     fhir:reference [ fhir:v "DocumentReference/doc-test-min" ]
+  ] ) ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:6690-2 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "6690-2" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v 3.6 ] ;
+       fhir:unit [ fhir:v "10*3/uL" ]
+     ] ;
+     fhir:referenceRange ( [
+       fhir:low [
+         fhir:value [ fhir:v 3.9 ] ;
+         fhir:unit [ fhir:v "10*3/uL" ]
+       ] ;
+       fhir:high [
+         fhir:value [ fhir:v 10.6 ] ;
+         fhir:unit [ fhir:v "10*3/uL" ]
+       ]
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:789-8 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "789-8" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v 4.7 ] ;
+       fhir:unit [ fhir:v "10*6/uL" ]
+     ] ;
+     fhir:referenceRange ( [
+       fhir:low [
+         fhir:value [ fhir:v 4.5 ] ;
+         fhir:unit [ fhir:v "10*6/uL" ]
+       ] ;
+       fhir:high [
+         fhir:value [ fhir:v 5.9 ] ;
+         fhir:unit [ fhir:v "10*6/uL" ]
+       ]
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:718-7 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "718-7" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "14"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "g/dL" ]
+     ] ;
+     fhir:referenceRange ( [
+       fhir:low [
+         fhir:value [ fhir:v 13.5 ] ;
+         fhir:unit [ fhir:v "g/dL" ]
+       ] ;
+       fhir:high [
+         fhir:value [ fhir:v 17.5 ] ;
+         fhir:unit [ fhir:v "g/dL" ]
+       ]
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:4544-3 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "4544-3" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "45"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "%" ]
+     ] ;
+     fhir:referenceRange ( [
+       fhir:low [
+         fhir:value [ fhir:v "41"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "%" ]
+       ] ;
+       fhir:high [
+         fhir:value [ fhir:v "53"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "%" ]
+       ]
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:777-3 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "777-3" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "101"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "10*3/uL" ]
+     ] ;
+     fhir:referenceRange ( [
+       fhir:low [
+         fhir:value [ fhir:v "150"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "10*3/uL" ]
+       ] ;
+       fhir:high [
+         fhir:value [ fhir:v "400"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "10*3/uL" ]
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

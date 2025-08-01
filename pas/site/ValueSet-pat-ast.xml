@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="pat-ast"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet pat-ast</b></p><a name="pat-ast"> </a><a name="hcpat-ast"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="https://loinc.org/88020-3/">88020-3</a></td><td style="color: #cccccc">Functional capacity NYHA</td></tr><tr><td><a href="https://loinc.org/98153-0/">98153-0</a></td><td style="color: #cccccc">Child-Pugh panel</td></tr><tr><td><a href="https://loinc.org/89247-1/">89247-1</a></td><td style="color: #cccccc">ECOG Performance Status score</td></tr><tr><td><a href="https://loinc.org/89243-0/">89243-0</a></td><td style="color: #cccccc">Karnofsky Performance Status score</td></tr><tr><td><a href="https://loinc.org/75633-8/">75633-8</a></td><td style="color: #cccccc">Rheumatoid arthritis disease activity score Calculated by VectraDA</td></tr></table></li><li>Include these codes as defined in <a href="CodeSystem-nhi-pat-ast.html"><code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pat-ast</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-nhi-pat-ast.html#nhi-pat-ast-IPS">IPS</a></td><td style="color: #cccccc">International Prognostic Score</td><td>IPS (International Prognostic Score)</td></tr><tr><td><a href="CodeSystem-nhi-pat-ast.html#nhi-pat-ast-PDAI">PDAI</a></td><td style="color: #cccccc">Pemphigus Disease Area Index</td><td>PDAI評估指數</td></tr><tr><td><a href="CodeSystem-nhi-pat-ast.html#nhi-pat-ast-CIRS">CIRS</a></td><td style="color: #cccccc">Cumulative illness rating scale</td><td>CIRS (cumulative illness rating scale) score</td></tr><tr><td><a href="CodeSystem-nhi-pat-ast.html#nhi-pat-ast-HCTCI">HCTCI</a></td><td style="color: #cccccc">Hematopoietic Cell Transplantation-specific Comorbidity Index</td><td>HCT-CI</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://nhicore.nhi.gov.tw/pas/ValueSet/pat-ast"/>
+  <version value="1.0.6"/>
+  <name value="PatAst"/>
+  <title value="LOINC + NHI-健保事前審查-病人狀態評估項目值集"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-07-01"/>
+  <publisher value="衛生福利部中央健康保險署"/>
+  <contact>
+    <name value="衛生福利部中央健康保險署"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nhi.gov.tw"/>
+    </telecom>
+  </contact>
+  <description value="LOINC + NHI-病人狀態評估項目值集"/>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <concept>
+        <code value="88020-3"/>
+      </concept>
+      <concept>
+        <code value="98153-0"/>
+      </concept>
+      <concept>
+        <code value="89247-1"/>
+      </concept>
+      <concept>
+        <code value="89243-0"/>
+      </concept>
+      <concept>
+        <code value="75633-8"/>
+      </concept>
+    </include>
+    <include>
+      <system value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pat-ast"/>
+      <concept>
+        <code value="IPS"/>
+      </concept>
+      <concept>
+        <code value="PDAI"/>
+      </concept>
+      <concept>
+        <code value="CIRS"/>
+      </concept>
+      <concept>
+        <code value="HCTCI"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

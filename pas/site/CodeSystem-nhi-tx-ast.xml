@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="nhi-tx-ast"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem nhi-tx-ast</b></p><a name="nhi-tx-ast"> </a><a name="hcnhi-tx-ast"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-tx-ast</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">ICLL<a name="nhi-tx-ast-ICLL"> </a></td><td>iwCLL (International Workshop on CLL)</td></tr><tr><td style="white-space:nowrap">IREC<a name="nhi-tx-ast-IREC"> </a></td><td>i-RECIST criteria</td></tr><tr><td style="white-space:nowrap">MREC<a name="nhi-tx-ast-MREC"> </a></td><td>mRECIST criteria</td></tr><tr><td style="white-space:nowrap">REC1<a name="nhi-tx-ast-REC1"> </a></td><td>RECIST 1.1 criteria</td></tr><tr><td style="white-space:nowrap">IWGC<a name="nhi-tx-ast-IWGC"> </a></td><td>International Working Group(IWG) Consensus Criteria</td></tr></table></div>
+  </text>
+  <url value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-tx-ast"/>
+  <version value="1.0.6"/>
+  <name value="NHITreatmentAst"/>
+  <title value="NHI-健保事前審查-治療後疾病狀態評估項目"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-07-01"/>
+  <publisher value="衛生福利部中央健康保險署"/>
+  <contact>
+    <name value="衛生福利部中央健康保險署"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nhi.gov.tw"/>
+    </telecom>
+  </contact>
+  <description value="臺灣衛生福利部中央健康保險署「治療後疾病狀態評估項目」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="5"/>
+  <concept>
+    <code value="ICLL"/>
+    <display value="iwCLL (International Workshop on CLL)"/>
+  </concept>
+  <concept>
+    <code value="IREC"/>
+    <display value="i-RECIST criteria"/>
+  </concept>
+  <concept>
+    <code value="MREC"/>
+    <display value="mRECIST criteria"/>
+  </concept>
+  <concept>
+    <code value="REC1"/>
+    <display value="RECIST 1.1 criteria"/>
+  </concept>
+  <concept>
+    <code value="IWGC"/>
+    <display value="International Working Group(IWG) Consensus Criteria"/>
+  </concept>
+</CodeSystem>

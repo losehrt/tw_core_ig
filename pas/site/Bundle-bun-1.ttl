@@ -1,0 +1,1759 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://nhicore.nhi.gov.tw/pas/Bundle/bun-1> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "bun-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Bundle-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Bundle-twpas>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/Claim/cla-1"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/Claim/cla-1> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/Encounter/enc-min"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/Encounter/enc-min> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/Patient/pat-min"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/Practitioner/pra-min"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/Practitioner/pra-min> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/Organization/org-hosp-example"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/Organization/org-hosp-example> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/DiagnosticReport/diaRep-ima-min"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/DiagnosticReport/diaRep-ima-min> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/ImagingStudy/imaStu-min"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/ImagingStudy/imaStu-min> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/Media/med-min"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/Media/med-min> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/Observation/obs-cancer-figo"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/Observation/obs-cancer-figo> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/DiagnosticReport/diaRep-min"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/DiagnosticReport/diaRep-min> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/Observation/obs-diagnostic-min"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/Observation/obs-diagnostic-min> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/Specimen/spe-min"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/Specimen/spe-min> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/DocumentReference/doc-gene-min"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/DocumentReference/doc-gene-min> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/Observation/obs-lab-min"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/Observation/obs-lab-min> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/Observation/obs-lab-cbc"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/Observation/obs-lab-cbc> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/DocumentReference/doc-test-min"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/DocumentReference/doc-test-min> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/Observation/obs-pat-nyha"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/Observation/obs-pat-nyha> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/MedicationRequest/medReq-treat"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/MedicationRequest/medReq-treat> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/Procedure/pro-min"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/Procedure/pro-min> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/Substance/sub-min"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/Substance/sub-min> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/DocumentReference/doc-careplan-min"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/DocumentReference/doc-careplan-min> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/Observation/obs-tx-min"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/Observation/obs-tx-min> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/MedicationRequest/medReq-apply"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/MedicationRequest/medReq-apply> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/MedicationRequest/medReq-apply-2"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/MedicationRequest/medReq-apply-2> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/Coverage/cov-min"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/Coverage/cov-min> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/Organization/org-nhi"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/Organization/org-nhi> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/Organization/org-gene-example"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/Organization/org-gene-example> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://nhicore.nhi.gov.tw/pas/DocumentReference/doc-medicalRecord-min"^^xsd:anyURI ] ;
+     fhir:resource ( <https://nhicore.nhi.gov.tw/pas/DocumentReference/doc-medicalRecord-min> )
+  ] ) . # 
+
+<https://nhicore.nhi.gov.tw/pas/Claim/cla-1> a fhir:Claim ;
+  fhir:id [ fhir:v "cla-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Claim-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Claim-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><a name=\"Claim_cla-1\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Claim-twpas.html\">事前審查-Claim TWPAS</a></p></div><p><b>狀態</b>：Active</p><p><b>類型</b>：Institutional<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/CodeSystem/claim-type\">ClaimTypeCodes</a>#institutional)</span></p><p><b>就醫科別</b>：<a href=\"Encounter-enc-min.html\">Encounter/enc-min</a> \"胸腔暨重症加護\"</p><p><b>申報類別</b>：送核<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-nhi-apply-type.html\">NHI-申報類別值集</a>#1)</span></p><p><b>目的</b>：Preauthorization</p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a> \"王大明\"</p><p><b>申請日期</b>：2024-05-30</p><p><b>申請醫師</b>：<a href=\"Practitioner-pra-min.html\">Practitioner/pra-min</a></p><p><b>醫事機構代碼</b>：<a href=\"Organization-org-hosp-example.html\">Organization/org-hosp-example</a></p><p><b>申請案件類別</b>：一般事前審查申請<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-nhi-tmhb-type.html\">NHI-申請案件類別值集</a>#1)</span></p><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>：1</p><p><b>category</b>：<span title=\"Codes:{https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type weight}\">病人體重</span></p><p><b>value</b>：59.65 kg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM codekg = 'kg')</span></p></blockquote><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>：2</p><p><b>category</b>：<span title=\"Codes:{https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type height}\">病人身高</span></p><p><b>value</b>：170 cm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM codecm = 'cm')</span></p></blockquote><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>：3</p><p><b>category</b>：<span title=\"Codes:{https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type pregnancyBreastfeedingStatus}\">是否懷孕或哺乳</span></p><p><b>value</b>：false</p></blockquote><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>：4</p><p><b>category</b>：<span title=\"Codes:{https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type imagingReport}\">影像報告</span></p><p><b>value</b>：<a href=\"DiagnosticReport-diaRep-ima-min.html\">DiagnosticReport/diaRep-ima-min</a></p></blockquote><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>：5</p><p><b>category</b>：<span title=\"Codes:{https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type cancerStage}\">癌症分期量表</span></p><p><b>value</b>：<a href=\"Observation-obs-cancer-figo.html\">Observation/obs-cancer-figo</a></p></blockquote><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>：6</p><p><b>category</b>：<span title=\"Codes:{https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type examinationReport}\">檢查報告</span></p><p><b>value</b>：<a href=\"DiagnosticReport-diaRep-min.html\">DiagnosticReport/diaRep-min</a></p></blockquote><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>：7</p><p><b>category</b>：<span title=\"Codes:{https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type geneInfo}\">基因資訊</span></p><p><b>value</b>：<a href=\"Observation-obs-diagnostic-min.html\">Observation/obs-diagnostic-min</a></p></blockquote><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>：8</p><p><b>category</b>：<span title=\"Codes:{https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type tests}\">檢驗檢查-單項</span></p><p><b>value</b>：<a href=\"Observation-obs-lab-min.html\">Observation/obs-lab-min</a></p></blockquote><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>：9</p><p><b>category</b>：<span title=\"Codes:{https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type tests}\">檢驗檢查-套組(全套血液檢查)</span></p><p><b>value</b>：<a href=\"Observation-obs-lab-cbc.html\">Observation/obs-lab-cbc</a></p></blockquote><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>：10</p><p><b>category</b>：<span title=\"Codes:{https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type patientAssessment}\">病人狀態評估</span></p><p><b>value</b>：<a href=\"Observation-obs-pat-nyha.html\">Observation/obs-pat-nyha</a></p></blockquote><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>：11</p><p><b>category</b>：<span title=\"Codes:{https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type medicationRequest}\">用藥品項</span></p><p><b>value</b>：<a href=\"MedicationRequest-medReq-treat.html\">MedicationRequest/medReq-treat</a></p></blockquote><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>：12</p><p><b>category</b>：<span title=\"Codes:{https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type radiotherapy}\">放射治療</span></p><p><b>value</b>：<a href=\"Procedure-pro-min.html\">Procedure/pro-min</a></p></blockquote><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>：13</p><p><b>category</b>：<span title=\"Codes:{https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type carePlanDocument}\">治療計畫文件</span></p><p><b>value</b>：<a href=\"DocumentReference-doc-careplan-min.html\">DocumentReference/doc-careplan-min</a></p></blockquote><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>：14</p><p><b>category</b>：<span title=\"Codes:{https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type medicalRecord}\">病歷資料</span></p><p><b>value</b>：<a href=\"DocumentReference-doc-medicalRecord-min.html\">DocumentReference/doc-medicalRecord-min</a></p></blockquote><blockquote><p><b>supportingInfo</b></p><p><b>sequence</b>：15</p><p><b>category</b>：<span title=\"Codes:{https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type treatmentAssessment}\">結果資訊</span></p><p><b>value</b>：<a href=\"Observation-obs-tx-min.html\">Observation/obs-tx-min</a></p></blockquote><h3>Diagnoses</h3><p><b>診斷日期</b>：2024-01-01</p><p><b>國際疾病分類代碼</b>：慢性右心臟衰竭<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-cm-2023-tw\">臺灣健保署2023年中文版ICD-10-CM值集</a>#I50.812)</span></p><p><b>簡要病摘</b>：Adenocarcinoma, descending colon, cT3N2M1a, cStage IVA, KRAS G12V, with multiple liver metastases, status post FOLFIRI</p><h3>Procedures</h3><p><b>手術(或其他處置)日期</b>：2024-01-01</p><p><b>手術(或其他處置)項目</b>：經由自體開口或人工造口心包腔近接放射性同位素抗腫瘤液態藥劑輸入<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2023-tw\">臺灣健保署2023年中文版ICD-10-PCS值集</a>#3E0Y704)</span></p><h3>Insurances</h3><p><b>sequence</b>：1</p><p><b>coverage</b>：<a href=\"Coverage-cov-min.html\">Coverage/cov-min</a></p><h3>申請項目</h3><blockquote><p><b>事前審查品項</b>：<a href=\"MedicationRequest-medReq-apply.html\">MedicationRequest/medReq-apply</a></p><p><b>事前審查申請數量(單位)</b>：52 (tablets <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"https://hl7.org/fhir/R4/valueset-ucum-common.html\">Common UCUM units</a>#{tbl})</span>)</p><p><b>醫令類別</b>：藥品<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-nhi-order-type.html\">NHI-健保事前審查-醫令類別值集</a>#1)</span></p><p><b>續用註記</b>：初次使用<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-nhi-continuation-status.html\">NHI-續用註記值集</a>#1)</span></p><p><b>用藥線別</b>：第一線治療<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-nhi-line-of-therapy.html\">NHI-用藥線別值集</a>#1)</span></p><p><b>給付適應症</b>：ALK陽性的晚期非小細胞肺癌第一線治療</p></blockquote><blockquote><p><b>事前審查品項</b>：<a href=\"MedicationRequest-medReq-apply-2.html\">MedicationRequest/medReq-apply-2</a></p><p><b>事前審查申請數量(單位)</b>：70 (tablets <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"https://hl7.org/fhir/R4/valueset-ucum-common.html\">Common UCUM units</a>#{tbl})</span>)</p><p><b>醫令類別</b>：藥品<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-nhi-order-type.html\">NHI-健保事前審查-醫令類別值集</a>#1)</span></p><p><b>續用註記</b>：初次使用<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-nhi-continuation-status.html\">NHI-續用註記值集</a>#1)</span></p><p><b>用藥線別</b>：第一線治療<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-nhi-line-of-therapy.html\">NHI-用藥線別值集</a>#1)</span></p><p><b>給付適應症</b>：C50P1<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-nhi-apply-reason.html\">NHI-給付適應症值集</a>#C50P1)</span></p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/extension-claim-encounter"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/Encounter/enc-min> ;
+       fhir:reference [ fhir:v "Encounter/enc-min" ]
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/claim-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "institutional" ]
+     ] )
+  ] ; # 
+  fhir:subType [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-apply-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "1" ] ;
+       fhir:display [ fhir:v "送核" ]
+     ] )
+  ] ; # 
+  fhir:use [ fhir:v "preauthorization"] ; # 
+  fhir:patient [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:created [ fhir:v "2024-05-30"^^xsd:date] ; # 
+  fhir:enterer [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Practitioner/pra-min> ;
+     fhir:reference [ fhir:v "Practitioner/pra-min" ]
+  ] ; # 
+  fhir:provider [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Organization/org-hosp-example> ;
+     fhir:reference [ fhir:v "Organization/org-hosp-example" ]
+  ] ; # 
+  fhir:priority [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-tmhb-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "1" ] ;
+       fhir:display [ fhir:v "一般事前審查申請" ]
+     ] )
+  ] ; # 
+  fhir:supportingInfo ( [
+     fhir:sequence [ fhir:v "1"^^xsd:positiveInteger ] ;
+     fhir:category [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "weight" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v 59.65 ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "kg" ]
+     ]
+  ] [
+     fhir:sequence [ fhir:v "2"^^xsd:positiveInteger ] ;
+     fhir:category [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "height" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "170"^^xsd:decimal ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "cm" ]
+     ]
+  ] [
+     fhir:sequence [ fhir:v "3"^^xsd:positiveInteger ] ;
+     fhir:category [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "pregnancyBreastfeedingStatus" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v false
+     ]
+  ] [
+     fhir:sequence [ fhir:v "4"^^xsd:positiveInteger ] ;
+     fhir:category [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "imagingReport" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/DiagnosticReport/diaRep-ima-min> ;
+       fhir:reference [ fhir:v "DiagnosticReport/diaRep-ima-min" ]
+     ]
+  ] [
+     fhir:sequence [ fhir:v "5"^^xsd:positiveInteger ] ;
+     fhir:category [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "cancerStage" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/Observation/obs-cancer-figo> ;
+       fhir:reference [ fhir:v "Observation/obs-cancer-figo" ]
+     ]
+  ] [
+     fhir:sequence [ fhir:v "6"^^xsd:positiveInteger ] ;
+     fhir:category [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "examinationReport" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/DiagnosticReport/diaRep-min> ;
+       fhir:reference [ fhir:v "DiagnosticReport/diaRep-min" ]
+     ]
+  ] [
+     fhir:sequence [ fhir:v "7"^^xsd:positiveInteger ] ;
+     fhir:category [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "geneInfo" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/Observation/obs-diagnostic-min> ;
+       fhir:reference [ fhir:v "Observation/obs-diagnostic-min" ]
+     ]
+  ] [
+     fhir:sequence [ fhir:v "8"^^xsd:positiveInteger ] ;
+     fhir:category [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "tests" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/Observation/obs-lab-min> ;
+       fhir:reference [ fhir:v "Observation/obs-lab-min" ]
+     ]
+  ] [
+     fhir:sequence [ fhir:v "9"^^xsd:positiveInteger ] ;
+     fhir:category [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "tests" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/Observation/obs-lab-cbc> ;
+       fhir:reference [ fhir:v "Observation/obs-lab-cbc" ]
+     ]
+  ] [
+     fhir:sequence [ fhir:v "10"^^xsd:positiveInteger ] ;
+     fhir:category [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "patientAssessment" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/Observation/obs-pat-nyha> ;
+       fhir:reference [ fhir:v "Observation/obs-pat-nyha" ]
+     ]
+  ] [
+     fhir:sequence [ fhir:v "11"^^xsd:positiveInteger ] ;
+     fhir:category [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "medicationRequest" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/MedicationRequest/medReq-treat> ;
+       fhir:reference [ fhir:v "MedicationRequest/medReq-treat" ]
+     ]
+  ] [
+     fhir:sequence [ fhir:v "12"^^xsd:positiveInteger ] ;
+     fhir:category [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "radiotherapy" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/Procedure/pro-min> ;
+       fhir:reference [ fhir:v "Procedure/pro-min" ]
+     ]
+  ] [
+     fhir:sequence [ fhir:v "13"^^xsd:positiveInteger ] ;
+     fhir:category [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "carePlanDocument" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/DocumentReference/doc-careplan-min> ;
+       fhir:reference [ fhir:v "DocumentReference/doc-careplan-min" ]
+     ]
+  ] [
+     fhir:sequence [ fhir:v "14"^^xsd:positiveInteger ] ;
+     fhir:category [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "medicalRecord" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/DocumentReference/doc-medicalRecord-min> ;
+       fhir:reference [ fhir:v "DocumentReference/doc-medicalRecord-min" ]
+     ]
+  ] [
+     fhir:sequence [ fhir:v "15"^^xsd:positiveInteger ] ;
+     fhir:category [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "treatmentAssessment" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/Observation/obs-tx-min> ;
+       fhir:reference [ fhir:v "Observation/obs-tx-min" ]
+     ]
+  ] ) ; # 
+  fhir:diagnosis ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/us/davinci-pas/StructureDefinition/extension-diagnosisRecordedDate"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:date ;
+         fhir:v "2024-01-01"^^xsd:date
+       ]
+     ] ) ;
+     fhir:sequence [ fhir:v "1"^^xsd:positiveInteger ] ;
+     fhir:diagnosis [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-cm-2023-tw"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "I50.812" ]
+       ] )
+     ] ;
+     fhir:type ( [
+       fhir:text [ fhir:v "Adenocarcinoma, descending colon, cT3N2M1a, cStage IVA, KRAS G12V, with multiple liver metastases, status post FOLFIRI" ]
+     ] )
+  ] ) ; # 
+  fhir:procedure ( [
+     fhir:sequence [ fhir:v "1"^^xsd:positiveInteger ] ;
+     fhir:date [ fhir:v "2024-01-01"^^xsd:date ] ;
+     fhir:procedure [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2023-tw"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "3E0Y704" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:insurance ( [
+     fhir:sequence [ fhir:v "1"^^xsd:positiveInteger ] ;
+     fhir:focal [ fhir:v true ] ;
+     fhir:coverage [
+       fhir:link <https://nhicore.nhi.gov.tw/pas/Coverage/cov-min> ;
+       fhir:reference [ fhir:v "Coverage/cov-min" ]
+     ]
+  ] ) ; # 
+  fhir:item ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/extension-requestedService"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:link <https://nhicore.nhi.gov.tw/pas/MedicationRequest/medReq-apply> ;
+         fhir:reference [ fhir:v "MedicationRequest/medReq-apply" ]
+       ]
+     ] ) ;
+     fhir:sequence [ fhir:v "1"^^xsd:positiveInteger ] ;
+     fhir:productOrService [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-order-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "1" ] ;
+         fhir:display [ fhir:v "藥品" ]
+       ] )
+     ] ;
+     fhir:modifier ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-continuation-status"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "1" ] ;
+         fhir:display [ fhir:v "初次使用" ]
+       ] )
+     ] [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-line-of-therapy"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "1" ] ;
+         fhir:display [ fhir:v "第一線治療" ]
+       ] )
+     ] ) ;
+     fhir:programCode ( [
+       fhir:text [ fhir:v "ALK陽性的晚期非小細胞肺癌第一線治療" ]
+     ] ) ;
+     fhir:quantity [
+       fhir:value [ fhir:v "52"^^xsd:decimal ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "{tbl}" ]
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/extension-requestedService"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:link <https://nhicore.nhi.gov.tw/pas/MedicationRequest/medReq-apply-2> ;
+         fhir:reference [ fhir:v "MedicationRequest/medReq-apply-2" ]
+       ]
+     ] ) ;
+     fhir:sequence [ fhir:v "2"^^xsd:positiveInteger ] ;
+     fhir:productOrService [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-order-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "1" ] ;
+         fhir:display [ fhir:v "藥品" ]
+       ] )
+     ] ;
+     fhir:modifier ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-continuation-status"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "1" ] ;
+         fhir:display [ fhir:v "初次使用" ]
+       ] )
+     ] [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-line-of-therapy"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "1" ] ;
+         fhir:display [ fhir:v "第一線治療" ]
+       ] )
+     ] ) ;
+     fhir:programCode ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-apply-reason"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "C50P1" ]
+       ] )
+     ] ) ;
+     fhir:quantity [
+       fhir:value [ fhir:v "70"^^xsd:decimal ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "{tbl}" ]
+     ]
+  ] ) . # 
+
+<https://nhicore.nhi.gov.tw/pas/Encounter/enc-min> a fhir:Encounter ;
+  fhir:id [ fhir:v "enc-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Encounter-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Encounter-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4;#xA;        border-radius: 5px; line-height: 60%\"><a name=\"Encounter_enc-min\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Encounter-twpas.html\">就醫科別-Encounter TWPAS</a></p></div><p><b>就醫現況</b>：Planned <span style=\"background: LightGoldenRodYellow; margin:#xA;            4px; border: 1px solid khaki\">(<a href=\"https://hl7.org/fhir/R4/codesystem-encounter-status.html\">EncounterStatus</a>#planned)</span></p><p><b>就醫分類</b>：ambulatory <span style=\"background: LightGoldenRodYellow; margin:#xA;            4px; border: 1px solid khaki\">(<a href=\"https://terminology.hl7.org/5.5.0/CodeSystem-v3-ActCode.html\">ActEncounterCode CT</a>#AMB)</span></p><p><b>就醫科別</b>：胸腔暨重症加護 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/medical-consultation-department-nhi-tw/\">臺灣健保署就醫科別</a>#AJ)</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "planned"] ; # 
+  fhir:class [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "AMB" ]
+  ] ; # 
+  fhir:serviceType [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/medical-consultation-department-nhi-tw"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "AJ" ]
+     ] )
+  ] . # 
+
+<https://nhicore.nhi.gov.tw/pas/Patient/pat-min> a fhir:Patient ;
+  fhir:id [ fhir:v "pat-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Patient-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Patient-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><a name=\"Patient_pat-min\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Patient-twpas.html\">病人資訊-Patient TWPAS</a></p></div><blockquote><p><b>識別碼型別</b>：National Person Identifier <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">（ <a href=\"http://terminology.hl7.org/CodeSystem/v2-0203\">Identifier Type Codes</a>#NNxxx）</span><br/><b>身分證字號（official）</b>：A123456789 （http://www.moi.gov.tw）</p></blockquote><blockquote><p><b>識別碼型別</b>：Medical record number <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">（ <a href=\"http://terminology.hl7.org/CodeSystem/v2-0203\">Identifier Type Codes</a>#MR）</span><br/><b>病歷號（official）</b>：123456 （https://tpech.gov.taipei）</p></blockquote><p><b>姓名（usual）</b>：王大明</p><p><b>性別</b>：男</p><p><b>出生日期</b>：2001-01-01</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NNxxx" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://www.moi.gov.tw"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "A123456789" ]
+  ] [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "MR" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "https://tpech.gov.taipei"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "123456" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:text [ fhir:v "王大明" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "2001-01-01"^^xsd:date] . # 
+
+<https://nhicore.nhi.gov.tw/pas/Practitioner/pra-min> a fhir:Practitioner ;
+  fhir:id [ fhir:v "pra-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Practitioner-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Practitioner-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><a name=\"Practitioner_pra-min\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Practitioner-twpas.html\">醫事人員-Practitioner TWPAS</a></p></div><p><b>識別碼型別</b>：National Person Identifier <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">（ <a href=\"http://terminology.hl7.org/CodeSystem/v2-0203\">Identifier Type Codes</a>#NNxxx）</span></p><p><b>身分證字號（official）</b>：F123456789 （http://www.moi.gov.tw）</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NNxxx" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://www.moi.gov.tw"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "F123456789" ]
+  ] ) . # 
+
+<https://nhicore.nhi.gov.tw/pas/Organization/org-hosp-example> a fhir:Organization ;
+  fhir:id [ fhir:v "org-hosp-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Organization-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Organization-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_org-hosp-example\"> </a><h3><b>醫事機構</b></h3><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Organization-twpas.html\">機構-Organization TWPAS</a></p></div><p><b>機構名稱</b>：臺北市立聯合醫院</p><p><b>識別碼型別</b>：Provider number<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">（ <a href=\"http://terminology.hl7.org/CodeSystem/v2-0203\">IdentifierType</a>#PRN）</span><br/><b>機構代碼（official）</b>：0101090517 (https://nhicore.nhi.gov.tw/pas/CodeSystem/organization-identifier-tw)</p><p><b>機構種類</b>：Healthcare Provider <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"http://hl7.org/fhir/R4/codesystem-organization-type.html\">OrganizationType</a>#prov)</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PRN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/organization-identifier-tw"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "0101090517" ]
+  ] ) ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/organization-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "prov" ]
+     ] )
+  ] ) ; # 
+  fhir:name [ fhir:v "臺北市立聯合醫院"] . # 
+
+<https://nhicore.nhi.gov.tw/pas/DiagnosticReport/diaRep-ima-min> a fhir:DiagnosticReport ;
+  fhir:id [ fhir:v "diaRep-ima-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/DiagnosticReport-image-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/DiagnosticReport-image-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><a name=\"DiagnosticReport_diaRep-ima-min\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-DiagnosticReport-image-twpas.html\">影像報告-DiagnosticReport Image TWPAS</a></p></div><p><b>狀態</b>：final</p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a> \"王大明\"</p><p><b>影像報告</b>：左上肢動脈血管內超音波 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2023-tw\">臺灣健保署2023年中文版ICD-10-PCS值集</a>#B34JZZ3)</span></p><p><b>影像報告日期</b>：2024-05-07</p><p><b>簽發影像報告醫師</b>：<a href=\"Practitioner-pra-min.html\">Practitioner/pra-min</a></p><p><b>影像檢查的身體部位／DICOM影像</b>：<a href=\"ImagingStudy-imaStu-min.html\">ImagingStudy/imaStu-min</a></p><p><b>影像報告結果</b>：影像報告結果</p><blockquote><p><b>影像報告名稱</b>：影像報告01</p><p><b>影像報告</b>：file://ImagingDiagnosticReport01.pdf</p></blockquote><blockquote><p><b>影像報告名稱</b>：影像報告02</p><p><b>影像報告</b>：file://ImagingDiagnosticReport02.pdf</p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2023-tw"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "B34JZZ3" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-05-07"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Practitioner/pra-min> ;
+     fhir:reference [ fhir:v "Practitioner/pra-min" ]
+  ] ) ; # 
+  fhir:imagingStudy ( [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/ImagingStudy/imaStu-min> ;
+     fhir:reference [ fhir:v "ImagingStudy/imaStu-min" ]
+  ] ) ; # 
+  fhir:conclusion [ fhir:v "影像報告結果"] ; # 
+  fhir:presentedForm ( [
+     fhir:contentType [ fhir:v "application/pdf" ] ;
+     fhir:url [ fhir:v "file://ImagingDiagnosticReport01.pdf"^^xsd:anyURI ] ;
+     fhir:title [ fhir:v "影像報告" ]
+  ] [
+     fhir:contentType [ fhir:v "application/pdf" ] ;
+     fhir:url [ fhir:v "file://ImagingDiagnosticReport02.pdf"^^xsd:anyURI ] ;
+     fhir:title [ fhir:v "影像報告" ]
+  ] ) . # 
+
+<https://nhicore.nhi.gov.tw/pas/ImagingStudy/imaStu-min> a fhir:ImagingStudy ;
+  fhir:id [ fhir:v "imaStu-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/ImagingStudy-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/ImagingStudy-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><a name=\"ImagingStudy_imaStu-min\"> </a><p style=\"margin-bottom: 0px\">Profile：<a href=\"StructureDefinition-ImagingStudy-twpas.html\">DICOM影像-ImagingStudy TWPAS</a></p></div><p><b>狀態</b>：registered</p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a> \"王大明\"</p><p><b>Study UID</b>：urn:oid:2.16.886.2102.54.4546465747.465465465</p><p><b>Series Instance UID</b>：2.16.886.2102.54.4546465747.465465466</p><p><b>SOP Instance UIDs</b>：2.25.88017001449189502323411118737039844241, 2.25.88017001449189502323411118737039844242</p><p><b>影像檢查的身體部位</b>：Head and neck structure<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://snomed.info/sct\">SNOMED CT</a>#774007)</span></p><p><b>儀器</b>：CT Image Storage<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html\">DICOM</a>#CT)</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:dicom:uid"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.886.2102.54.4546465747.465465465" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "registered"] ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:series ( [
+     fhir:uid [ fhir:v "2.16.886.2102.54.4546465747.465465466" ] ;
+     fhir:modality [
+       fhir:system [ fhir:v "http://dicom.nema.org/resources/ontology/DCM"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CT" ]
+     ] ;
+     fhir:bodySite [
+       a sct:774007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "774007" ] ;
+       fhir:display [ fhir:v "Head and neck structure" ]
+     ] ;
+     fhir:instance ( [
+       fhir:uid [ fhir:v "2.25.88017001449189502323411118737039844241" ] ;
+       fhir:sopClass [
+         fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "urn:oid:1.2.840.10008.5.1.4.1.1.2" ]
+       ]
+     ] [
+       fhir:uid [ fhir:v "2.25.88017001449189502323411118737039844242" ] ;
+       fhir:sopClass [
+         fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "urn:oid:1.2.840.10008.5.1.4.1.1.2" ]
+       ]
+     ] )
+  ] ) . # 
+
+<https://nhicore.nhi.gov.tw/pas/Media/med-min> a fhir:Media ;
+  fhir:id [ fhir:v "med-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Media-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Media-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><a name=\"Media_med-min\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Media-twpas.html\">非DICOM影像-Media TWPAS</a></p></div><p><b>狀態</b>：completed</p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a> \"王大明\"</p><p><b>影像檢查的身體部位</b>：Head and neck structure<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://snomed.info/sct\">SNOMED CT</a>#774007)</span></p><p><b>非DICOM影像</b>：file://US01.jpg（#image/jpeg）</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:bodySite [
+     fhir:coding ( [
+       a sct:774007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "774007" ] ;
+       fhir:display [ fhir:v "Head and neck structure" ]
+     ] )
+  ] ; # 
+  fhir:content [
+     fhir:contentType [ fhir:v "image/jpeg" ] ;
+     fhir:url [ fhir:v "file://US01.jpg"^^xsd:anyURI ]
+  ] . # 
+
+<https://nhicore.nhi.gov.tw/pas/Observation/obs-cancer-figo> a fhir:Observation ;
+  fhir:id [ fhir:v "obs-cancer-figo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-cancer-stage-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-cancer-stage-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><a name=\"Observation_obs-cancer-figo\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Observation-cancer-stage-twpas.html\">癌症分期量表-Observation Cancer Stage TWPAS</a></p></div><p><b>狀態</b>：final</p><p><b>癌症分期量表項目</b>：FIGO stage for gynaecological malignancy <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://snomed.info/sct/\">SCT + NHI-癌症分期量表項目值集</a>#385361009)</span></p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a></p><p><b>癌症分期量表評估日期</b>：2024-05-07</p><p><b>簽發癌症分期報告醫師</b>：<a href=\"Practitioner-pra-min.html\">Practitioner/pra-min</a></p><p><b>癌症分期分數或結果</b>：FIGO Stage I <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"CodeSystem-nci-thesaurus.html\">NCI Thesaurus</a>#C96244)</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "cancerStage" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:385361009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "385361009" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-05-07"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Practitioner/pra-min> ;
+     fhir:reference [ fhir:v "Practitioner/pra-min" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nci-thesaurus"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "C96244" ]
+     ] )
+  ] . # 
+
+<https://nhicore.nhi.gov.tw/pas/DiagnosticReport/diaRep-min> a fhir:DiagnosticReport ;
+  fhir:id [ fhir:v "diaRep-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/DiagnosticReport-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/DiagnosticReport-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><a name=\"DiagnosticReport_diaRep-min\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-DiagnosticReport-twpas.html\">檢查報告-DiagnosticReport TWPAS</a></p></div><p><b>狀態</b>：final</p><p><b>報告類型</b>：Prostate Pathology biopsy report <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://loinc.org\">EncounterStatus</a>#66117-3)</span></p><p><b>檢體種類</b>：Prostate</p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a> \"王大明\"</p><p><b>報告日期</b>：2024-05-07</p><p><b>檢查報告醫師</b>：<a href=\"Practitioner-pra-min.html\">Practitioner/pra-min</a></p><p><b>報告結果-文數字</b>：細胞檢查報告結果</p><blockquote><p><b>檢查報告名稱</b>：PathologyReport01</p><p><b>檢查報告</b>：file://PathologyReport01.pdf</p></blockquote><blockquote><p><b>檢查報告名稱</b>：PathologyReport02</p><p><b>檢查報告</b>：file://PathologyReport02.pdf</p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:66117-3 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "66117-3" ]
+     ] ) ;
+     fhir:text [ fhir:v "Prostate" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-05-07"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Practitioner/pra-min> ;
+     fhir:reference [ fhir:v "Practitioner/pra-min" ]
+  ] ) ; # 
+  fhir:conclusion [ fhir:v "細胞檢查報告結果"] ; # 
+  fhir:presentedForm ( [
+     fhir:contentType [ fhir:v "application/pdf" ] ;
+     fhir:url [ fhir:v "file://PathologyReport01.pdf"^^xsd:anyURI ] ;
+     fhir:title [ fhir:v "PathologyReport01" ]
+  ] [
+     fhir:contentType [ fhir:v "application/pdf" ] ;
+     fhir:url [ fhir:v "file://PathologyReport02.pdf"^^xsd:anyURI ] ;
+     fhir:title [ fhir:v "PathologyReport02" ]
+  ] ) . # 
+
+<https://nhicore.nhi.gov.tw/pas/Observation/obs-diagnostic-min> a fhir:Observation ;
+  fhir:id [ fhir:v "obs-diagnostic-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-diagnostic-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-diagnostic-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><a name=\"Observation_obs-diagnostic-min\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Observation-diagnostic-twpas.html\">基因資訊-Observation Diagnostic TWPAS</a></p></div><p><b>狀態</b>：final</p><p><b>類型</b>：基因資訊<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-nhi-supporting-info-type.html/\">NHI-補充資訊類別值集</a>#geneInfo)</span></p><p><b>code</b>：Genetic variant assessment<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://loinc.org/\">LOINC</a>#69548-6)</span></p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a></p><p><b>基因檢測日期</b>：2024-05-07</p><blockquote><p><b>基因檢測代碼</b>：BRCA1 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">（ <a href=\"http://loinc.org/\">LOINC-基因檢測代碼值集</a>#21636-6）</span><br/><b>基因突變類型</b>：Deletion <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">（ <a href=\"http://loinc.org/\">LOINC-基因突變類型值集</a>#LA6692-3）</span></p></blockquote><p><b>基因檢測機構</b>：<a href=\"Organization-org-gene-example.html\">Organization 2023LDTB0002</a></p><p><b>基因檢測分析結果</b>：基因檢測報告結果</p><p><b>基因臨床判讀結果</b>：Positive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation/\">ObservationInterpretationCodes </a>#POS)</span></p><p><b>基因檢測方法</b>：PCR <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://loinc.org/\">LOINC Answer List LL4048-6 </a>#LA26418-6)</span></p><p><b>基因檢測檢體類型</b>：<a href=\"Specimen-spe-min.html\">Specimen/spe-min</a></p><p><b>基因報告</b>：<a href=\"DocumentReference-doc-gene-min.html\">DocumentReference/doc-gene-min</a></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "geneInfo" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:69548-6 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "69548-6" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-05-07"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Organization/org-gene-example> ;
+     fhir:reference [ fhir:v "Organization/org-gene-example" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:string ;
+     fhir:v "基因檢測報告結果"
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "POS" ]
+     ] )
+  ] ) ; # 
+  fhir:method [
+     fhir:coding ( [
+       a loinc:LA26418-6 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "LA26418-6" ]
+     ] )
+  ] ; # 
+  fhir:specimen [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Specimen/spe-min> ;
+     fhir:reference [ fhir:v "Specimen/spe-min" ]
+  ] ; # 
+  fhir:derivedFrom ( [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/DocumentReference/doc-gene-min> ;
+     fhir:reference [ fhir:v "DocumentReference/doc-gene-min" ]
+  ] ) ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:21636-6 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "21636-6" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         a loinc:LA6692-3 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "LA6692-3" ]
+       ] )
+     ] ;
+     fhir:interpretation ( [
+       fhir:coding ( [
+         a loinc:LA6692-3 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "LA6692-3" ]
+       ] )
+     ] )
+  ] ) . # 
+
+<https://nhicore.nhi.gov.tw/pas/Specimen/spe-min> a fhir:Specimen ;
+  fhir:id [ fhir:v "spe-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Specimen-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Specimen-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><a name=\"Specimen_spe-min\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Specimen-twpas.html\">基因檢測檢體-Specimen TWPAS</a></p></div><p><b>類型</b>：基因資訊<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://loinc.org/\">LOINC-基因檢測檢體類型值集</a>#LP7057-5)</span></p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a></p><p><b>基因檢測日期</b>：2024-05-06T09:00:00.000Z</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:LP7057-5 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "LP7057-5" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:receivedTime [ fhir:v "2024-05-06T09:00:00.000Z"^^xsd:dateTime] . # 
+
+<https://nhicore.nhi.gov.tw/pas/DocumentReference/doc-gene-min> a fhir:DocumentReference ;
+  fhir:id [ fhir:v "doc-gene-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/DocumentReference-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/DocumentReference-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4;#xA;        border-radius: 5px; line-height: 60%\"><a name=\"DocumentReference_doc-gene-min\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-DocumentReference-twpas.html\">文件參照-DocumentReference TWPAS</a></p></div><p><b>狀態</b>：current</p><p><b>報告類型</b>：基因報告 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"CodeSystem-nhi-pdf-type.html\">NHI-文件類型</a>#gene)</span></p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a> \"王大明\"</p><p><b>基因報告(application/pdf)</b>：file://GenReport01.pdf</p><p><b>基因報告名稱</b>：GenReport01</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pdf-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "gene" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:content ( [
+     fhir:attachment [
+       fhir:contentType [ fhir:v "application/pdf" ] ;
+       fhir:url [ fhir:v "file://GenReport01.pdf"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "GenReport01" ]
+     ]
+  ] ) . # 
+
+<https://nhicore.nhi.gov.tw/pas/Observation/obs-lab-min> a fhir:Observation ;
+  fhir:id [ fhir:v "obs-lab-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-laboratory-result-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-laboratory-result-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><a name=\"Observation_obs-lab-min\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Observation-laboratory-result-twpas.html\">檢驗檢查-Observation Laboratory Result TWPAS</a></p></div><p><b>狀態</b>：final</p><p><b>類型</b>：檢驗(查)<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-nhi-supporting-info-type.html/\">NHI-補充資訊類別值集</a>#tests)</span></p><p><b>檢驗(查)名稱</b>：Platelets [#/volume] in Blood by Automated count <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://loinc.org/\">LOINCCodes</a>#777-3)</span></p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a></p><p><b>檢驗(查)報告日期</b>：2024-01-01</p><p><b>簽發檢驗(查)報告醫事人員身分證號</b>：<a href=\"Practitioner-pra-min.html\">Practitioner/pra-min</a></p><p><b>檢驗(查)結果</b>：5.1 mmol/l</p><p><b>檢驗(查)結果判讀</b>：高，High <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation/\">ObservationInterpretationCodes </a>#H)</span></p><p><b>檢驗(查)結果之參考範圍下限</b>：2.9 mmol/L</p><p><b>檢驗(查)結果之參考範圍上限</b>：4.9 mmol/L</p><p><b>檢驗(查)附件</b>：<a href=\"DocumentReference-doc-test-min.html\">DocumentReference/doc-test-min</a></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "tests" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:777-3 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "777-3" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-01-01"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Practitioner/pra-min> ;
+     fhir:reference [ fhir:v "Practitioner/pra-min" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 5.1 ] ;
+     fhir:unit [ fhir:v "mmol/l" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "H" ]
+     ] ) ;
+     fhir:text [ fhir:v "高" ]
+  ] ) ; # 
+  fhir:referenceRange ( [
+     fhir:low [
+       fhir:value [ fhir:v 2.9 ] ;
+       fhir:unit [ fhir:v "mmol/l" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "mmol/L" ]
+     ] ;
+     fhir:high [
+       fhir:value [ fhir:v 4.9 ] ;
+       fhir:unit [ fhir:v "mmol/l" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "mmol/L" ]
+     ]
+  ] ) ; # 
+  fhir:derivedFrom ( [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/DocumentReference/doc-test-min> ;
+     fhir:reference [ fhir:v "DocumentReference/doc-test-min" ]
+  ] ) . # 
+
+<https://nhicore.nhi.gov.tw/pas/Observation/obs-lab-cbc> a fhir:Observation ;
+  fhir:id [ fhir:v "obs-lab-cbc"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-laboratory-result-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-laboratory-result-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><a name=\"Observation_obs-lab-cbc\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Observation-laboratory-result-twpas.html\">檢驗檢查-Observation Laboratory Result TWPAS</a></p></div><p><b>狀態</b>：final</p><p><b>類型</b>：檢驗(查)<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-nhi-supporting-info-type.html/\">NHI-補充資訊類別值集</a>#tests)</span></p><p><b>套組代碼</b>：CBC panel - Blood by Automated count <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://loinc.org/\">LOINCCodes</a>#58410-2)</span></p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a></p><p><b>檢驗(查)報告日期</b>：2024-01-01</p><p><b>簽發檢驗(查)報告醫事人員身分證號</b>：<a href=\"Practitioner-pra-min.html\">Practitioner/pra-min</a></p><p><b>檢驗(查)附件</b>：<a href=\"DocumentReference-doc-test-min.html\">DocumentReference/doc-test-min</a></p><blockquote><p><b>檢驗(查)名稱</b>：Leukocytes [#/volume] in Blood by Automated count <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://loinc.org/\">LOINCCodes</a>#6690-2)</span><br/><b>檢驗(查)結果</b>：3.6 × 10^3/μL<br/><b>檢驗(查)結果之參考範圍下限</b>：3.9 × 10^3/μL<br/><b>檢驗(查)結果之參考範圍上限</b>：10.6 × 10^3/μL</p></blockquote><blockquote><p><b>檢驗(查)名稱</b>：Erythrocytes [#/volume] in Blood by Automated count <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://loinc.org/\">LOINCCodes</a>#789-8)</span><br/><b>檢驗(查)結果</b>：4.7 × 10^6/μL<br/><b>檢驗(查)結果之參考範圍下限</b>：4.5 × 10^3/μL<br/><b>檢驗(查)結果之參考範圍上限</b>：5.9 × 10^3/μL</p></blockquote><blockquote><p><b>檢驗(查)名稱</b>：Hemoglobin [Mass/volume] in Blood <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://loinc.org/\">LOINCCodes</a>#718-7)</span><br/><b>檢驗(查)結果</b>：14 g/dL<br/><b>檢驗(查)結果之參考範圍下限</b>：13.5 g/dL<br/><b>檢驗(查)結果之參考範圍上限</b>：17.5 g/dL</p></blockquote><blockquote><p><b>檢驗(查)名稱</b>：Hematocrit [Volume Fraction] of Blood by Automated count <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://loinc.org/\">LOINCCodes</a>#4544-3)</span><br/><b>檢驗(查)結果</b>：45 %<br/><b>檢驗(查)結果之參考範圍下限</b>：41 %<br/><b>檢驗(查)結果之參考範圍上限</b>：53 %</p></blockquote><blockquote><p><b>檢驗(查)名稱</b>：Platelets [#/volume] in Blood by Automated count <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://loinc.org/\">LOINCCodes</a>#777-3)</span><br/><b>檢驗(查)結果</b>：101 × 10^3/μL<br/><b>檢驗(查)結果之參考範圍下限</b>：150 × 10^3/μL<br/><b>檢驗(查)結果之參考範圍上限</b>：400 × 10^3/μL</p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "tests" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:58410-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "58410-2" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-01-01"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Practitioner/pra-min> ;
+     fhir:reference [ fhir:v "Practitioner/pra-min" ]
+  ] ) ; # 
+  fhir:derivedFrom ( [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/DocumentReference/doc-test-min> ;
+     fhir:reference [ fhir:v "DocumentReference/doc-test-min" ]
+  ] ) ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:6690-2 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "6690-2" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v 3.6 ] ;
+       fhir:unit [ fhir:v "10*3/uL" ]
+     ] ;
+     fhir:referenceRange ( [
+       fhir:low [
+         fhir:value [ fhir:v 3.9 ] ;
+         fhir:unit [ fhir:v "10*3/uL" ]
+       ] ;
+       fhir:high [
+         fhir:value [ fhir:v 10.6 ] ;
+         fhir:unit [ fhir:v "10*3/uL" ]
+       ]
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:789-8 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "789-8" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v 4.7 ] ;
+       fhir:unit [ fhir:v "10*6/uL" ]
+     ] ;
+     fhir:referenceRange ( [
+       fhir:low [
+         fhir:value [ fhir:v 4.5 ] ;
+         fhir:unit [ fhir:v "10*6/uL" ]
+       ] ;
+       fhir:high [
+         fhir:value [ fhir:v 5.9 ] ;
+         fhir:unit [ fhir:v "10*6/uL" ]
+       ]
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:718-7 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "718-7" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "14"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "g/dL" ]
+     ] ;
+     fhir:referenceRange ( [
+       fhir:low [
+         fhir:value [ fhir:v 13.5 ] ;
+         fhir:unit [ fhir:v "g/dL" ]
+       ] ;
+       fhir:high [
+         fhir:value [ fhir:v 17.5 ] ;
+         fhir:unit [ fhir:v "g/dL" ]
+       ]
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:4544-3 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "4544-3" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "45"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "%" ]
+     ] ;
+     fhir:referenceRange ( [
+       fhir:low [
+         fhir:value [ fhir:v "41"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "%" ]
+       ] ;
+       fhir:high [
+         fhir:value [ fhir:v "53"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "%" ]
+       ]
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:777-3 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "777-3" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "101"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "10*3/uL" ]
+     ] ;
+     fhir:referenceRange ( [
+       fhir:low [
+         fhir:value [ fhir:v "150"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "10*3/uL" ]
+       ] ;
+       fhir:high [
+         fhir:value [ fhir:v "400"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "10*3/uL" ]
+       ]
+     ] )
+  ] ) . # 
+
+<https://nhicore.nhi.gov.tw/pas/DocumentReference/doc-test-min> a fhir:DocumentReference ;
+  fhir:id [ fhir:v "doc-test-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/DocumentReference-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/DocumentReference-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4;#xA;        border-radius: 5px; line-height: 60%\"><a name=\"DocumentReference_doc-test-min\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-DocumentReference-twpas.html\">文件參照-DocumentReference TWPAS</a></p></div><p><b>狀態</b>：current</p><p><b>報告類型</b>：檢驗(查)附件 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"CodeSystem-nhi-pdf-type.html\">NHI-文件類型</a>#test)</span></p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a> \"王大明\"</p><blockquote><p><b>檢驗(查)附件 (application/pdf)</b>：file://TestReport01.pdf</p><p><b>檢驗(查)附件名稱</b>：TestReport01</p></blockquote><blockquote><p><b>檢驗(查)附件 (application/pdf)</b>：file://TestReport02.pdf</p><p><b>檢驗(查)附件名稱</b>：TestReport02</p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pdf-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "test" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:content ( [
+     fhir:attachment [
+       fhir:contentType [ fhir:v "application/pdf" ] ;
+       fhir:url [ fhir:v "file://TestReport01.pdf"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "TestReport01" ]
+     ]
+  ] [
+     fhir:attachment [
+       fhir:contentType [ fhir:v "application/pdf" ] ;
+       fhir:url [ fhir:v "file://TestReport02.pdf"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "TestReport02" ]
+     ]
+  ] ) . # 
+
+<https://nhicore.nhi.gov.tw/pas/Observation/obs-pat-nyha> a fhir:Observation ;
+  fhir:id [ fhir:v "obs-pat-nyha"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-pat-assessment-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-pat-assessment-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><a name=\"Observation_obs-pat-nyha\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Observation-pat-assessment-twpas.html\">病人狀態評估-Observation Patient Assessment TWPAS</a></p></div><p><b>狀態</b>：final</p><p><b>病人狀態評估項目代碼</b>：Functional capacity NYHA <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://loinc.org\">LOINC + NHI-病人狀態評估項目值集 </a>#88020-3)</span></p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a></p><p><b>病人狀態評估日期</b>：2024-01-01</p><p><b>評估項目醫事人員身分證號</b>：<a href=\"Practitioner-pra-min.html\">Practitioner/pra-min</a></p><p><b>病人狀態評估結果</b>：class1</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "patientAssessment" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:88020-3 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "88020-3" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-01-01"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Practitioner/pra-min> ;
+     fhir:reference [ fhir:v "Practitioner/pra-min" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:string ;
+     fhir:v "class1"
+  ] . # 
+
+<https://nhicore.nhi.gov.tw/pas/MedicationRequest/medReq-treat> a fhir:MedicationRequest ;
+  fhir:id [ fhir:v "medReq-treat"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/MedicationRequest-treat-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/MedicationRequest-treat-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4;#xA;        border-radius: 5px; line-height: 60%\"><a name=\"MedicationRequest_medReq-treat\"> </a><p style=\"margin-bottom: 0px\">Profile：<a href=\"StructureDefinition-MedicationRequest-treat-twpas.html\">用藥品項-MedicationRequest Treat TWPAS</a></p></div><p><b>藥物使用狀態</b>：completed</p><p><b>藥物處方終止原因</b>：Try another treatment first <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"https://hl7.org/fhir/R4/codesystem-medicationrequest-status-reason.html\">MedicationRequest Status Reason Codes</a>#altchoice)</span></p><p><b>意圖</b>：Order <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"http://hl7.org/fhir/CodeSystem/medicationrequest-intent\">medicationRequest Intent</a>#order)</span></p><p><b>自費註記</b>：健保 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"CodeSystem-nhi-drug-category.html\">NHI-藥物類型</a>#nhi)</span></p><p><b>藥品代碼</b>：ANTI-CUGH SYRUP 60ML <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"CodeSystem-nhi-medication.html\">NHI-健保事前審查-用藥品項值集</a>#A000755151)</span></p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a> \"\"</p><p><b>藥品使用頻率及服用時間</b>：1W3D</p><p><b>藥物每次處方劑量(單位)</b>：4 (tablets <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"https://hl7.org/fhir/R4/valueset-ucum-common.html\">Common UCUM units</a>#{tbl})</span>)</p><p><b>藥物處方起始日期</b>：2024-05-01</p><p><b>藥物處方終止日期</b>：2024-05-07</p><p><b>給藥途徑／作用部位</b>：Oral use <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://snomed.info/sct/\">SNOMED CT + 臺灣健保署給藥途徑值集</a>#26643006)</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:statusReason [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "altchoice" ]
+     ] )
+  ] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-drug-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "nhi" ]
+     ] )
+  ] ) ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-medication"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "A000755151" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:dosageInstruction ( [
+     fhir:timing [
+       fhir:repeat [
+         fhir:bounds [
+           a fhir:Period ;
+           fhir:start [ fhir:v "2024-05-01"^^xsd:date ] ;
+           fhir:end [ fhir:v "2024-05-07"^^xsd:date ]
+         ]
+       ] ;
+       fhir:code [
+         fhir:text [ fhir:v "1W3D" ]
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         a sct:26643006 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "26643006" ]
+       ] )
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "4"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "tablets" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "{tbl}" ]
+       ]
+     ] )
+  ] ) . # 
+
+<https://nhicore.nhi.gov.tw/pas/Procedure/pro-min> a fhir:Procedure ;
+  fhir:id [ fhir:v "pro-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Procedure-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Procedure-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4;#xA;        border-radius: 5px; line-height: 60%\"><a name=\"Procedure_pro-min\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Procedure-twpas.html\">放射治療-Procedure TWPAS</a></p></div><p><b>放射治療狀態</b>：completed</p><p><b>放射治療項目</b>：骨髓高溫療法 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"https://twcore.mohw.gov.tw/ig/twcore/0.3.2/CodeSystem-icd-10-pcs-2023-tw.html\">臺灣2023年中文版ICD-10-PCS</a>#D7Y08ZZ)</span></p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a> \"王大明\"</p><p><b>放射治療日期</b>：2024-05-06 09:00:00+0000</p><p><b>放射治療總劑量</b>：<a href=\"Substance-sub-min.html\">Substance/sub-min</a> 5000 mg</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2023-tw"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "D7Y08ZZ" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:performed [
+     a fhir:dateTime ;
+     fhir:v "2024-05-06T09:00:00.000Z"^^xsd:dateTime
+  ] ; # 
+  fhir:usedReference ( [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Substance/sub-min> ;
+     fhir:reference [ fhir:v "Substance/sub-min" ]
+  ] ) . # 
+
+<https://nhicore.nhi.gov.tw/pas/Substance/sub-min> a fhir:Substance ;
+  fhir:id [ fhir:v "sub-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Substance-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Substance-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4;#xA;        border-radius: 5px; line-height: 60%\"><a name=\"Substance_sub-min\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Substance-twpas.html\">放射治療總劑量-Substance TWPAS</a></p></div><p><b>放射治療項目</b>：骨髓高溫療法 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"https://twcore.mohw.gov.tw/ig/twcore/0.3.2/CodeSystem-icd-10-pcs-2023-tw.html\">臺灣2023年中文版ICD-10-PCS</a>#D7Y08ZZ)</span></p><p><b>放射治療總劑量(單位)</b>：5000 (/mg)</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2023-tw"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "D7Y08ZZ" ]
+     ] )
+  ] ; # 
+  fhir:ingredient ( [
+     fhir:quantity [
+       fhir:numerator [
+         fhir:value [ fhir:v "5000"^^xsd:decimal ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "mg" ]
+       ] ;
+       fhir:denominator [
+         fhir:value [ fhir:v "0"^^xsd:decimal ]
+       ]
+     ] ;
+     fhir:substance [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2023-tw"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "D7Y08ZZ" ]
+       ] )
+     ]
+  ] ) . # 
+
+<https://nhicore.nhi.gov.tw/pas/DocumentReference/doc-careplan-min> a fhir:DocumentReference ;
+  fhir:id [ fhir:v "doc-careplan-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/DocumentReference-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/DocumentReference-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4;#xA;        border-radius: 5px; line-height: 60%\"><a name=\"DocumentReference_doc-careplan-min\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-DocumentReference-twpas.html\">文件參照-DocumentReference TWPAS</a></p></div><p><b>狀態</b>：current</p><p><b>報告類型</b>：治療計畫文件 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"CodeSystem-nhi-pdf-type.html\">NHI-文件類型</a>#careplan)</span></p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a> \"王大明\"</p><p><b>治療計畫文件名稱</b>：免疫檢查點抑制劑治療計畫</p><p><b>治療計畫文件 (application/pdf)</b>：file://CarePlanReport01.pdf</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pdf-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "careplan" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:content ( [
+     fhir:attachment [
+       fhir:contentType [ fhir:v "application/pdf" ] ;
+       fhir:url [ fhir:v "file://CarePlanReport01.pdf"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "免疫檢查點抑制劑治療計畫" ]
+     ]
+  ] ) . # 
+
+<https://nhicore.nhi.gov.tw/pas/Observation/obs-tx-min> a fhir:Observation ;
+  fhir:id [ fhir:v "obs-tx-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-tx-assessment-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-tx-assessment-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><a name=\"Observation_obs-tx-min\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Observation-tx-assessment-twpas.html\">治療後疾病狀態評估-Observation Treatment Assessment TWPAS</a></p></div><p><b>狀態</b>：final</p><p><b>治療後疾病狀態評估項目</b>：International Working Group(IWG) Consensus Criteria<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-nhi-tx-ast.html\">NHI-治療後疾病狀態評估項目值集</a>#IWGC)</span></p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a></p><p><b>治療後疾病狀態評估日期</b>：2024-01-01</p><p><b>治療後疾病狀態評估結果</b>：Partial remission (PR)</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-tx-ast"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "IWGC" ] ;
+       fhir:display [ fhir:v "International Working Group(IWG) Consensus Criteria" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-05-07"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Practitioner/pra-min> ;
+     fhir:reference [ fhir:v "Practitioner/pra-min" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:string ;
+     fhir:v "Partial remission (PR)"
+  ] . # 
+
+<https://nhicore.nhi.gov.tw/pas/MedicationRequest/medReq-apply> a fhir:MedicationRequest ;
+  fhir:id [ fhir:v "medReq-apply"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/MedicationRequest-apply-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/MedicationRequest-apply-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><a name=\"MedicationRequest_medReq-apply\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-MedicationRequest-apply-twpas.html\">事前審查品項-MedicationRequest Apply TWPAS</a></p></div><p><b>狀態</b>：On Hold</p><p><b>目的</b>：Plan</p><p><b>事前審查品項代碼</b>：Alunbrig film-coated tablets 30mgL<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-nhi-medication.html\">NHI-健保事前審查-用藥品項值集</a>#BC27730100)</span></p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a> \"王大明\"</p><blockquote><p><b>事前審查藥物預定處方起始日期</b>：2024-01-01</p><p><b>事前審查藥物預定處方終止日期</b>：2024-02-11</p><p><b>事前審查藥品使用頻率及服用時間</b>：Every day at institution specified times.、飯前1小時使用<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"ValueSet-medication-frequency-hl7-nhi.html\">HL7 TimingAbbreviation + 臺灣健保署藥品使用頻率值集</a>#BIW、#AC1H)</span></p><p><b>事前審查藥品每次處方劑量</b>：75 mg/m2</p><p><b>事前審查藥品療程／週期數</b>：42</p><p><b>給藥途徑／作用部位</b>：Oral use <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://snomed.info/sct/\">SNOMED CT + 臺灣健保署給藥途徑值集</a>#26643006)</span></p></blockquote><blockquote><p><b>事前審查藥物預定處方起始日期</b>：2024-02-12</p><p><b>事前審查藥物預定處方終止日期</b>：2024-03-10</p><p><b>事前審查藥品使用頻率及服用時間</b>：每4週的第1天、每4週的第2天、每4週的第3天、每4週的第4天、每4週的第5天、飯前1小時使用<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"ValueSet-medication-frequency-hl7-nhi.html\">HL7 TimingAbbreviation + 臺灣健保署藥品使用頻率值集</a>#Q4WD1、#Q4WD2、#Q4WD3、#Q4WD4、#Q4WD5、#AC1H)</span></p><p><b>事前審查藥品每次處方劑量</b>：150 mg/m2</p><p><b>事前審查藥品療程／週期數</b>：1</p><p><b>給藥途徑／作用部位</b>：Oral use <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://snomed.info/sct/\">SNOMED CT + 臺灣健保署給藥途徑值集</a>#26643006)</span></p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "on-hold"] ; # 
+  fhir:intent [ fhir:v "plan"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-medication"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "BC27730100" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:dosageInstruction ( [
+     fhir:timing [
+       fhir:repeat [
+         fhir:bounds [
+           a fhir:Period ;
+           fhir:start [ fhir:v "2024-01-01"^^xsd:date ] ;
+           fhir:end [ fhir:v "2024-02-11"^^xsd:date ]
+         ] ;
+         fhir:count [ fhir:v "42"^^xsd:positiveInteger ]
+       ] ;
+       fhir:code [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "QD" ]
+         ] [
+           fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "AC1H" ]
+         ] )
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         a sct:26643006 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "26643006" ]
+       ] )
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "75"^^xsd:decimal ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "mg/m2" ]
+       ]
+     ] )
+  ] [
+     fhir:timing [
+       fhir:repeat [
+         fhir:bounds [
+           a fhir:Period ;
+           fhir:start [ fhir:v "2024-02-12"^^xsd:date ] ;
+           fhir:end [ fhir:v "2024-03-10"^^xsd:date ]
+         ] ;
+         fhir:count [ fhir:v "1"^^xsd:positiveInteger ]
+       ] ;
+       fhir:code [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "Q4WD1" ]
+         ] [
+           fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "Q4WD2" ]
+         ] [
+           fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "Q4WD3" ]
+         ] [
+           fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "Q4WD4" ]
+         ] [
+           fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "Q4WD5" ]
+         ] [
+           fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "AC1H" ]
+         ] )
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         a sct:26643006 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "26643006" ]
+       ] )
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "150"^^xsd:decimal ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "mg/m2" ]
+       ]
+     ] )
+  ] ) . # 
+
+<https://nhicore.nhi.gov.tw/pas/MedicationRequest/medReq-apply-2> a fhir:MedicationRequest ;
+  fhir:id [ fhir:v "medReq-apply-2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/MedicationRequest-apply-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/MedicationRequest-apply-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><a name=\"MedicationRequest_medReq-apply-2\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-MedicationRequest-apply-twpas.html\">事前審查品項-MedicationRequest Apply TWPAS</a></p></div><p><b>狀態</b>：On Hold</p><p><b>目的</b>：Plan</p><p><b>事前審查品項代碼</b>：Herzuma Inj. 440mg <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"CodeSystem-nhi-medication.html\">NHI-健保事前審查-用藥品項值集</a>#KC011162B5)</span></p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a> \"王大明\"</p><p><b>事前審查藥物預定處方起始日期</b>：2024-03-11</p><p><b>事前審查藥物預定處方終止日期</b>：2024-07-28</p><p><b>事前審查藥品使用頻率及服用時間</b>：每4週的第1天、每4週的第2天、每4週的第3天、每4週的第4天、每4週的第5天、飯前1小時使用<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"ValueSet-medication-frequency-hl7-nhi.html\">HL7 TimingAbbreviation + 臺灣健保署藥品使用頻率值集</a>#Q4WD1、#Q4WD2、#Q4WD3、#Q4WD4、#Q4WD5、#AC1H)</span></p><p><b>事前審查藥品每次處方劑量</b>：200 mg/m2</p><p><b>事前審查藥品療程／週期數</b>：1</p><p><b>給藥途徑／作用部位</b>：Oral use <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://snomed.info/sct/\">SNOMED CT + 臺灣健保署給藥途徑值集</a>#26643006)</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "on-hold"] ; # 
+  fhir:intent [ fhir:v "plan"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-medication"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "KC011162B5" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:dosageInstruction ( [
+     fhir:timing [
+       fhir:repeat [
+         fhir:bounds [
+           a fhir:Period ;
+           fhir:start [ fhir:v "2024-03-11"^^xsd:date ] ;
+           fhir:end [ fhir:v "2024-07-28"^^xsd:date ]
+         ] ;
+         fhir:count [ fhir:v "1"^^xsd:positiveInteger ]
+       ] ;
+       fhir:code [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "Q4WD1" ]
+         ] [
+           fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "Q4WD2" ]
+         ] [
+           fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "Q4WD3" ]
+         ] [
+           fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "Q4WD4" ]
+         ] [
+           fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "Q4WD5" ]
+         ] [
+           fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "AC1H" ]
+         ] )
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         a sct:26643006 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "26643006" ]
+       ] )
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "200"^^xsd:decimal ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "mg/m2" ]
+       ]
+     ] )
+  ] ) ; # 
+  fhir:dispenseRequest [
+     fhir:quantity [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"^^xsd:anyURI ]
+     ]
+  ] . # 
+
+<https://nhicore.nhi.gov.tw/pas/Coverage/cov-min> a fhir:Coverage ;
+  fhir:id [ fhir:v "cov-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Coverage-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Coverage-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><a name=\"Coverage_cov-min\"> </a><p style=\"margin-bottom: 0px\">Profile：<a href=\"StructureDefinition-Coverage-twpas.html\">健保事前審查計畫-Coverage TWPAS</a></p></div><p><b>狀態</b>：active</p><p><b>受益人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a> \"王大明\"</p><p><b>保險人</b>：<a href=\"Organization-org-nhi.html\">Organization/org-nhi</a> \"衛生福利部中央健康保險署\"</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:beneficiary [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:payor ( [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Organization/org-nhi> ;
+     fhir:reference [ fhir:v "Organization/org-nhi" ]
+  ] ) . # 
+
+<https://nhicore.nhi.gov.tw/pas/Organization/org-nhi> a fhir:Organization ;
+  fhir:id [ fhir:v "org-nhi"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Organization-govt-twcore"^^xsd:anyURI ;
+       fhir:link <https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Organization-govt-twcore>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><a name=\"Organization_org-nhi\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://twcore.mohw.gov.tw/ig/twcore/0.3.2/StructureDefinition-Organization-govt-twcore.html\">臺灣核心-政府機構（TW Core Organization Government）</a></p></div><p><b>機構名稱</b>：衛生福利部中央健康保險署</p><p><b>識別碼型別</b>：Government Organization Identifier<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">（ <a href=\"https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/v2-0203\">臺灣識別碼類型值集</a>#GOI）</span><br/><b>機關代號（official）</b>：A21030000I (https://oid.nat.gov.tw/)</p><p><b>機構種類</b>：Government <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"http://hl7.org/fhir/R4/codesystem-organization-type.html\">OrganizationType</a>#govt)</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "GOI" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "https://oid.nat.gov.tw/"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "A21030000I" ]
+  ] ) ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/organization-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "govt" ]
+     ] )
+  ] ) ; # 
+  fhir:name [ fhir:v "衛生福利部中央健康保險署"] . # 
+
+<https://nhicore.nhi.gov.tw/pas/Organization/org-gene-example> a fhir:Organization ;
+  fhir:id [ fhir:v "org-gene-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Organization-genetic-testing-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Organization-genetic-testing-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_org-gene-example\"> </a><h3><b>基因檢測機構</b></h3><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Organization-genetic-testing-twpas.html\">基因檢測機構-Organization Genetic Testing TWPAS</a></p></div><p><b>機構代碼</b>：2023LDTB0002 (https://dep.mohw.gov.tw)</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "https://dep.mohw.gov.tw"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2023LDTB0002" ]
+  ] ) . # 
+
+<https://nhicore.nhi.gov.tw/pas/DocumentReference/doc-medicalRecord-min> a fhir:DocumentReference ;
+  fhir:id [ fhir:v "doc-medicalRecord-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/DocumentReference-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/DocumentReference-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4;#xA;        border-radius: 5px; line-height: 60%\"><a name=\"DocumentReference_doc-medicalRecord-min\"> </a><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-DocumentReference-twpas.html\">文件參照-DocumentReference TWPAS</a></p></div><p><b>狀態</b>：current</p><p><b>報告類型</b>：病歷資料 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"CodeSystem-nhi-pdf-type.html\">NHI-文件類型</a>#medrec)</span></p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a> \"王大明\"</p><p><b>病歷資料 (application/pdf)</b>：file://王大明病歷.pdf</p><p><b>病歷資料名稱</b>：王大明病歷</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pdf-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "medrec" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:content ( [
+     fhir:attachment [
+       fhir:contentType [ fhir:v "application/pdf" ] ;
+       fhir:url [ fhir:v "file://王大明病歷.pdf"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "王大明病歷" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

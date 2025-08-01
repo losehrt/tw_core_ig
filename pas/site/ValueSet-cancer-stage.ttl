@@ -1,0 +1,113 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://nhicore.nhi.gov.tw/pas/ValueSet/cancer-stage> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cancer-stage"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet cancer-stage</b></p><a name=\"cancer-stage\"> </a><a name=\"hccancer-stage\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/385377005\">385377005</a></td><td style=\"color: #cccccc\">Gleason grade finding for prostatic cancer (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/1149131009\">1149131009</a></td><td style=\"color: #cccccc\">Rai staging system for chronic lymphocytic leukaemia</td></tr><tr><td><a href=\"http://snomed.info/id/385361009\">385361009</a></td><td style=\"color: #cccccc\">FIGO stage for gynaecological malignancy</td></tr><tr><td><a href=\"http://snomed.info/id/1149099005\">1149099005</a></td><td style=\"color: #cccccc\">Binet staging classification for chronic lymphocytic leukaemia</td></tr><tr><td><a href=\"http://snomed.info/id/106243009\">106243009</a></td><td style=\"color: #cccccc\">Thickness of malignant melanoma of skin</td></tr><tr><td><a href=\"http://snomed.info/id/103419001\">103419001</a></td><td style=\"color: #cccccc\">Clark's melanoma level</td></tr><tr><td><a href=\"http://snomed.info/id/409720004\">409720004</a></td><td style=\"color: #cccccc\">International neuroblastoma staging system stage (observable entity)</td></tr><tr><td><a href=\"http://snomed.info/id/405916000\">405916000</a></td><td style=\"color: #cccccc\">Intergroup rhabdomyosarcoma study post-surgical clinical group (observable entity)</td></tr><tr><td><a href=\"http://snomed.info/id/405931009\">405931009</a></td><td style=\"color: #cccccc\">National Wilms Tumor Study Group Stage (observable entity)</td></tr><tr><td><a href=\"http://snomed.info/id/385357003\">385357003</a></td><td style=\"color: #cccccc\">Dukes stage (observable entity)</td></tr><tr><td><a href=\"http://snomed.info/id/426757001\">426757001</a></td><td style=\"color: #cccccc\">French Federation of Cancer Centers Sarcoma Group (FNCLCC) grading system</td></tr><tr><td><a href=\"http://snomed.info/id/396192007\">396192007</a></td><td style=\"color: #cccccc\">Fuhrman nuclear grading system (staging scale)</td></tr><tr><td><a href=\"http://snomed.info/id/277460003\">277460003</a></td><td style=\"color: #cccccc\">WHO CNS tumour grading system</td></tr><tr><td><a href=\"http://snomed.info/id/1812481000004109\">1812481000004109</a></td><td style=\"color: #cccccc\">ISUP (International Society of Urological Pathology) prostate cancer staging system</td></tr><tr><td><a href=\"http://snomed.info/id/449205006\">449205006</a></td><td style=\"color: #cccccc\">Nottingham histologic grading system (staging scale)</td></tr><tr><td><a href=\"http://snomed.info/id/254362000\">254362000</a></td><td style=\"color: #cccccc\">Modified Astler-Coller staging system</td></tr><tr><td><a href=\"http://snomed.info/id/1342413004\">1342413004</a></td><td style=\"color: #cccccc\">IIRC - International Intraocular Retinoblastoma Classification</td></tr><tr><td><a href=\"http://snomed.info/id/1149164009\">1149164009</a></td><td style=\"color: #cccccc\">ACPS (Australian Clinico-pathological Staging) System for colorectal cancer</td></tr><tr><td><a href=\"http://snomed.info/id/278159002\">278159002</a></td><td style=\"color: #cccccc\">FAB type values</td></tr><tr><td><a href=\"http://snomed.info/id/254363005\">254363005</a></td><td style=\"color: #cccccc\">International neuroblastoma staging system</td></tr><tr><td><a href=\"http://snomed.info/id/1149163003\">1149163003</a></td><td style=\"color: #cccccc\">Revised International Staging System for multiple myeloma (staging scale)</td></tr><tr><td><a href=\"http://snomed.info/id/399390009\">399390009</a></td><td style=\"color: #cccccc\">TNM stage grouping</td></tr><tr><td><a href=\"http://snomed.info/id/254372002\">254372002</a></td><td style=\"color: #cccccc\">Ann Arbor lymphoma staging system</td></tr></table></li><li>Include these codes as defined in <a href=\"CodeSystem-nci-thesaurus.html\"><code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nci-thesaurus</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-nci-thesaurus.html#nci-thesaurus-C139007\">C139007</a></td><td style=\"color: #cccccc\">Myeloma ISS Stage</td></tr><tr><td><a href=\"CodeSystem-nci-thesaurus.html#nci-thesaurus-C141392\">C141392</a></td><td style=\"color: #cccccc\">Myeloma RISS Stage</td></tr><tr><td><a href=\"CodeSystem-nci-thesaurus.html#nci-thesaurus-C133427\">C133427</a></td><td style=\"color: #cccccc\">Neuroblastoma INRGSS Stage</td></tr><tr><td><a href=\"CodeSystem-nci-thesaurus.html#nci-thesaurus-C115134\">C115134</a></td><td style=\"color: #cccccc\">BCLC Stage</td></tr><tr><td><a href=\"CodeSystem-nci-thesaurus.html#nci-thesaurus-C139006\">C139006</a></td><td style=\"color: #cccccc\">Durie/Salmon Stage (DSS)</td></tr><tr><td><a href=\"CodeSystem-nci-thesaurus.html#nci-thesaurus-C141099\">C141099</a></td><td style=\"color: #cccccc\">ENSAT Stage</td></tr><tr><td><a href=\"CodeSystem-nci-thesaurus.html#nci-thesaurus-C28067\">C28067</a></td><td style=\"color: #cccccc\">Hepatoblastoma Stage</td></tr><tr><td><a href=\"CodeSystem-nci-thesaurus.html#nci-thesaurus-C141147\">C141147</a></td><td style=\"color: #cccccc\">Lugano Stage</td></tr><tr><td><a href=\"CodeSystem-nci-thesaurus.html#nci-thesaurus-C143151\">C143151</a></td><td style=\"color: #cccccc\">Masaoka-Koga Stage</td></tr><tr><td><a href=\"CodeSystem-nci-thesaurus.html#nci-thesaurus-C146847\">C146847</a></td><td style=\"color: #cccccc\">Mediastinal Malignant Germ Cell Tumor Stage</td></tr><tr><td><a href=\"CodeSystem-nci-thesaurus.html#nci-thesaurus-C123333\">C123333</a></td><td style=\"color: #cccccc\">Reese-Ellsworth Staging System</td></tr><tr><td><a href=\"CodeSystem-nci-thesaurus.html#nci-thesaurus-C198826\">C198826</a></td><td style=\"color: #cccccc\">Modified Chang's Staging of Medulloblastoma</td></tr></table></li></ul></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://nhicore.nhi.gov.tw/pas/ValueSet/cancer-stage"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.6"] ; # 
+  fhir:name [ fhir:v "CancerStage"] ; # 
+  fhir:title [ fhir:v "SCT + NCI-健保事前審查-癌症分期量表項目值集"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-07-01"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "衛生福利部中央健康保險署"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "衛生福利部中央健康保險署" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.nhi.gov.tw" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "SCT + NCI-健保事前審查-癌症分期量表項目值集"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "385377005" ]
+       ] [
+         fhir:code [ fhir:v "1149131009" ]
+       ] [
+         fhir:code [ fhir:v "385361009" ]
+       ] [
+         fhir:code [ fhir:v "1149099005" ]
+       ] [
+         fhir:code [ fhir:v "106243009" ]
+       ] [
+         fhir:code [ fhir:v "103419001" ]
+       ] [
+         fhir:code [ fhir:v "409720004" ]
+       ] [
+         fhir:code [ fhir:v "405916000" ]
+       ] [
+         fhir:code [ fhir:v "405931009" ]
+       ] [
+         fhir:code [ fhir:v "385357003" ]
+       ] [
+         fhir:code [ fhir:v "426757001" ]
+       ] [
+         fhir:code [ fhir:v "396192007" ]
+       ] [
+         fhir:code [ fhir:v "277460003" ]
+       ] [
+         fhir:code [ fhir:v "1812481000004109" ]
+       ] [
+         fhir:code [ fhir:v "449205006" ]
+       ] [
+         fhir:code [ fhir:v "254362000" ]
+       ] [
+         fhir:code [ fhir:v "1342413004" ]
+       ] [
+         fhir:code [ fhir:v "1149164009" ]
+       ] [
+         fhir:code [ fhir:v "278159002" ]
+       ] [
+         fhir:code [ fhir:v "254363005" ]
+       ] [
+         fhir:code [ fhir:v "1149163003" ]
+       ] [
+         fhir:code [ fhir:v "399390009" ]
+       ] [
+         fhir:code [ fhir:v "254372002" ]
+       ] )
+     ] [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nci-thesaurus"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "C139007" ]
+       ] [
+         fhir:code [ fhir:v "C141392" ]
+       ] [
+         fhir:code [ fhir:v "C133427" ]
+       ] [
+         fhir:code [ fhir:v "C115134" ]
+       ] [
+         fhir:code [ fhir:v "C139006" ]
+       ] [
+         fhir:code [ fhir:v "C141099" ]
+       ] [
+         fhir:code [ fhir:v "C28067" ]
+       ] [
+         fhir:code [ fhir:v "C141147" ]
+       ] [
+         fhir:code [ fhir:v "C143151" ]
+       ] [
+         fhir:code [ fhir:v "C146847" ]
+       ] [
+         fhir:code [ fhir:v "C123333" ]
+       ] [
+         fhir:code [ fhir:v "C198826" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

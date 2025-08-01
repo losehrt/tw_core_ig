@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="nhi-body-site"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet nhi-body-site</b></p><a name="nhi-body-site"> </a><a name="hcnhi-body-site"> </a><ul><li>Include all codes defined in <a href="CodeSystem-nhi-body-site.html"><code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-body-site</code></a></li></ul></div>
+  </text>
+  <url value="https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-body-site"/>
+  <version value="1.0.6"/>
+  <name value="NHIBodySite"/>
+  <title value="NHI-健保事前審查-身體部位值集"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-07-01"/>
+  <publisher value="衛生福利部中央健康保險署"/>
+  <contact>
+    <name value="衛生福利部中央健康保險署"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nhi.gov.tw"/>
+    </telecom>
+  </contact>
+  <description value="NHI-健保事前審查-身體部位值集，代碼對應請參考[臺灣健保署身體部位代碼對應SNOMED CT](ConceptMap-nhi-sct-body-site.html)。"/>
+  <compose>
+    <include>
+      <system value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-body-site"/>
+    </include>
+  </compose>
+</ValueSet>

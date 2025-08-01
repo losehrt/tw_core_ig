@@ -1,0 +1,77 @@
+{
+  "resourceType" : "MedicationRequest",
+  "id" : "medReq-apply-2",
+  "meta" : {
+    "profile" : ["https://nhicore.nhi.gov.tw/pas/StructureDefinition/MedicationRequest-apply-twpas"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-MedicationRequest-apply-twpas.html\">事前審查品項-MedicationRequest Apply TWPAS</a></p></div><p><b>狀態</b>：On Hold</p><p><b>目的</b>：Plan</p><p><b>事前審查品項代碼</b>：Herzuma Inj. 440mg <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"CodeSystem-nhi-medication.html\">NHI-健保事前審查-用藥品項值集</a>#KC011162B5)</span></p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a> &quot;王大明&quot;</p><p><b>事前審查藥物預定處方起始日期</b>：2024-03-11</p><p><b>事前審查藥物預定處方終止日期</b>：2024-07-28</p><p><b>事前審查藥品使用頻率及服用時間</b>：每4週的第1天、每4週的第2天、每4週的第3天、每4週的第4天、每4週的第5天、飯前1小時使用<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"ValueSet-medication-frequency-hl7-nhi.html\">HL7 TimingAbbreviation + 臺灣健保署藥品使用頻率值集</a>#Q4WD1、#Q4WD2、#Q4WD3、#Q4WD4、#Q4WD5、#AC1H)</span></p><p><b>事前審查藥品每次處方劑量</b>：200 mg/m2</p><p><b>事前審查藥品療程／週期數</b>：1</p><p><b>給藥途徑／作用部位</b>：Oral use <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://snomed.info/sct/\">SNOMED CT + 臺灣健保署給藥途徑值集</a>#26643006)</span></p></div>"
+  },
+  "status" : "on-hold",
+  "intent" : "plan",
+  "medicationCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-medication",
+      "code" : "KC011162B5"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/pat-min"
+  },
+  "dosageInstruction" : [{
+    "timing" : {
+      "repeat" : {
+        "boundsPeriod" : {
+          "start" : "2024-03-11",
+          "end" : "2024-07-28"
+        },
+        "count" : 1
+      },
+      "code" : {
+        "coding" : [{
+          "system" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw",
+          "code" : "Q4WD1"
+        },
+        {
+          "system" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw",
+          "code" : "Q4WD2"
+        },
+        {
+          "system" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw",
+          "code" : "Q4WD3"
+        },
+        {
+          "system" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw",
+          "code" : "Q4WD4"
+        },
+        {
+          "system" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw",
+          "code" : "Q4WD5"
+        },
+        {
+          "system" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw",
+          "code" : "AC1H"
+        }]
+      }
+    },
+    "route" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "26643006"
+      }]
+    },
+    "doseAndRate" : [{
+      "doseQuantity" : {
+        "value" : 200,
+        "system" : "http://unitsofmeasure.org",
+        "code" : "mg/m2"
+      }
+    }]
+  }],
+  "dispenseRequest" : {
+    "quantity" : {
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"
+    }
+  }
+}

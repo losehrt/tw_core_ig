@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>驗證教學 - 臺灣健保癌症用藥事前審查實作指引 v1.0.6</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+<link href="assets/css/ig.css" rel="stylesheet" />
+    
+<!-- Google tag (gtag.js) HITSTDIO>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1Y4JEG6RS2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1Y4JEG6RS2');
+</script-->
+
+<!-- Google tag (gtag.js) TWCORE 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60R1T0P9G0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60R1T0P9G0');
+</script>-->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"12"}
+    h3,h4,h5,h6{--heading-prefix:"12"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div id="hl7-nav">
+  <a id="hl7-logo" no-external="true" href="index.html" style="width: 10px;">
+    <img height="50" alt="TW" src="assets/images/logo-header.png" />
+  </a>
+</div>
+<div id="hl7-search">
+  <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR"
+      src="assets/images/search.png" /></a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">臺灣健保癌症用藥事前審查實作指引</span>
+            <br/>
+            <span style="display:inline-block;">1.0.6 - STU1.0.6
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+	<li><a href="index.html">應用說明</a></li>
+	<li><a href="toc.html">目錄</a></li>
+	<li><a href="vision.html">視覺化邏輯模型</a></li>
+ 	<li class="dropdown">
+		<a href="artifacts.html">規範文件<b class="caret"></b></a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="capabilitystatements.html">能力聲明</a>
+			</li>
+			<li>
+				<a href="searchparameters.html">查詢參數</a>
+			</li>
+			<li>
+				<a href="models.html">邏輯模型</a>
+			</li>
+			<li>
+				<a href="profiles-and-extensions.html">FHIR Profiles及Extensions</a>
+			</li>
+			<li>
+				<a href="terminologies.html">專門術語</a>
+			</li>
+		</ul>
+	</li>
+ 	<li><a href="examples.html">範例</a></li>
+	<li><a href="downloads.html">結構定義與範例檔下載</a></li>
+	<li><a href="security.html">安全性</a></li>
+	<li><a href="validate.html">驗證教學</a></li>
+</ul>      
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>驗證教學</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">臺灣健保癌症用藥事前審查實作指引 - Downloaded Version 1.0.6 See the <a href="https://nhicore.nhi.gov.tw/pas/history.html">Directory of published versions</a></p></p><!--EndReleaseHeader-->
+  <h2>驗證教學</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#ig驗證公開資源參考" id="markdown-toc-ig驗證公開資源參考">IG驗證公開資源參考</a></li>
+  <li><a href="#使用國際hl7提供的公開免費驗證器validator_clijar檔以命令提示字元測試驗證" id="markdown-toc-使用國際hl7提供的公開免費驗證器validator_clijar檔以命令提示字元測試驗證">使用國際HL7提供的公開免費驗證器validator_cli.jar檔，以命令提示字元測試驗證。</a></li>
+</ul>
+
+</div>
+<style>
+body{font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !important;}
+</style>
+
+<p>本頁將說明如何驗證實作檔是否符合TWPAS IG規範。</p>
+
+<h3 id="ig驗證公開資源參考">IG驗證公開資源參考</h3>
+<ul>
+  <li>HL7總會線上驗證工具：<a href="https://validator.fhir.org/" target="_blank">https://validator.fhir.org/</a> (需等本IG於衛生福利部註冊過後才能使用)</li>
+  <li>FHIR一站式驗證工具：<a href="https://validator.dicom.tw/app/" target="_blank">https://validator.dicom.tw/app/</a>
+    <ul>
+      <li>使用方式可參考：<a href="https://www.nhi.gov.tw/ch/dl-73487-76c892dbc278458ca07b63efa5ffd853-1.pdf">https://www.nhi.gov.tw/ch/dl-73487-76c892dbc278458ca07b63efa5ffd853-1.pdf</a></li>
+      <li>HapiFhir Instance Validator: 驗證FHIR資料是否符合指定的FHIR Profile規格</li>
+      <li>fhir-validator-must-support: 驗證FHIR資料是否有Must Support欄位 (使用驗證器gitHub)<br />
+• 注意: 目前只能驗單一Resource</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="使用國際hl7提供的公開免費驗證器validator_clijar檔以命令提示字元測試驗證">使用國際HL7提供的公開免費驗證器validator_cli.jar檔，以命令提示字元測試驗證。</h3>
+
+<p>若IG已註冊可直接跳至Step 3，但目前因尚未註冊，須從Step 1開始。</p>
+
+<h4 id="step-1手動下載ig-package">Step 1：手動下載IG Package</h4>
+<div style="padding-left: 10px;">
+<p>於「<a href="downloads.html">結構定義與範例檔案下載</a>」頁下載<a href="package.tgz">整個 TWPAS IG 的 Package</a>。</p>
+<img src="validate/1-1.png" alt="Downloading the Pacakge" style="display: block;margin-left: auto;margin-right: auto;width: 80%;margin-bottom: 15px;" class="figure-img img-responsive img-rounded center-block" />
+<div class="bg-warning">
+<p><b>下載下來的package.tgz檔案，請先解壓縮成package資料夾檔案！<br />
+  解壓縮第一次還是package.tar壓縮檔案，解壓縮第二次才是package資料夾。</b></p>
+
+<img src="validate/1-2.gif" alt="Unzip the Pacakge" style="display: block;margin-left: auto;margin-right: auto;width: 70%;" class="figure-img img-responsive img-rounded center-block" />
+<br />
+</div>
+<div style="clear:both;"></div>
+</div>
+
+<h4 id="step-2放置-ig-package檔案">Step 2：放置 IG Package檔案</h4>
+<div style="padding-left: 10px;"> 
+<p>Package Cache檔案路徑如下：</p>
+<li>Windows：c:\users\&lt;username&gt;\.fhir\packages</li>
+<li>Unix/Linux：/~/.fhir/packages</li>
+<p>在packages路徑下創建一個資料夾並命名為「tw.gov.mohw.nhi.pas#1.0.6」，將package.tgz解壓縮後的package資料夾放置於「tw.gov.mohw.nhi.pas#1.0.6」中。</p>
+<div class="bg-warning"><p><b>若是第一次執行，須自行新增「.fhir」資料夾及其項下的「packages」資料夾。</b></p></div>
+<img src="validate/2.png" alt="Put the Pacakge" style="display: block;margin-left: auto;margin-right: auto;width: 60%;" class="figure-img img-responsive img-rounded center-block" />
+<div style="clear:both;"></div>
+</div>
+
+<h4 id="step-3下載validator_clijar檔">Step 3：下載validator_cli.jar檔</h4>
+<div style="padding-left: 10px;"> 
+<p>進入HL7驗證說明官網(<a href="https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator#UsingtheFHIRValidator-Downloadingthevalidator">Confluence Pages of Health Level 7 (HL7) International</a>)後尋找「Downloading the validator」項目，下載「<a href="https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar">validator_cli.jar</a>」檔。</p>
+<img src="validate/3.png" alt="download validator_cli.jar" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" class="figure-img img-responsive img-rounded center-block" />
+<div style="clear:both;"></div>
+</div>
+
+<h4 id="step-4使用您的實例json檔或下載範例json檔">Step 4：使用您的實例JSON檔或下載範例JSON檔</h4>
+<div style="padding-left: 10px;"> 
+<p>如果您手邊已經有一個依據TWPAS IG實作的JSON檔，您可以使用您的實例檔案，如果您尚未有這樣的檔案，可以下載如下圖所示的TWPAS IG的「<a href="Bundle-bun-1.json">Bundle 事前審查-送核</a>」範例。如下圖所示，請於TWPAS IG網站上，找到<a href="examples.html">範例</a>頁面中「Bundle」的「<a href="Bundle-bun-1.html">事前審查-送核</a>」，點選「JSON」頁籤中的「<a href="Bundle-bun-1.json">Download</a>」，若沒有自動下載，請按右鍵，選擇「另存新檔...」。</p>
+<div class="bg-warning"><p style="color: firebrick;"><b>最終完整檔為Bundle，但實作中通常會先驗證Bundle.entry的各Resource，例如：Patient、Practitioner及Organization等，各Profile的範例亦可於<a href="examples.html">範例</a>頁面中下載。</b></p></div>
+<img src="validate/4-1.png" alt="download example json" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" class="figure-img img-responsive img-rounded center-block" />
+<div style="clear:both;"></div>
+<img src="validate/4-2.png" alt="download example json" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" class="figure-img img-responsive img-rounded center-block" />
+<div style="clear:both;"></div>
+<img src="validate/4-3.png" alt="download example json" style="display: block;margin-left: auto;margin-right: auto;width: 70%;" class="figure-img img-responsive img-rounded center-block" />
+<div style="clear:both;"></div>
+</div>
+
+<h4 id="step-5放置validator_clijar檔與範例檔">Step 5：放置validator_cli.jar檔與範例檔</h4>
+<div style="padding-left: 10px;"> 
+<p>請將Step 4下載之範例JSON檔(或您自己的實例JSON檔)及Step 3 validator_cli.jar檔，放置於「C:\」目錄中。</p>
+<div class="bg-warning"><p style="color: firebrick;"><b>這邊只是為了方便驗證時簡化語法及避免太複雜的說明，而將上述兩個檔案放在相同目錄，使用者/實作者可視情況放在不同的目錄，但後續驗證語法也要自行做相對應的調整。</b></p></div>
+<img src="validate/5.png" alt="put the files" style="display: block;margin-left: auto;margin-right: auto;width: 70%;" class="figure-img img-responsive img-rounded center-block" />
+<div style="clear:both;"></div>
+</div>
+
+<h4 id="step-6驗證檔案是否符合profiles格式">Step 6：驗證檔案是否符合Profiles格式</h4>
+<div style="padding-left: 10px;"> 
+<p>請開啟「命令提示字元」，將檔案路徑指向至「C:\」目錄。</p>
+<li>方式①：在C:\目錄的檔案路徑中直接輸入「cmd」並按Enter鍵。</li>
+<li>方式②：打開命令提示字元，輸入「cd C:/」將檔案路徑指向C:\目錄</li>
+<img src="validate/6-1.png" alt="cmd" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" class="figure-img img-responsive center-block" />
+<div class="bg-warning"><p style="color: firebrick;"><b>若執行失敗，請以系統管理員身分執行命令提示字元。</b></p></div>
+<p>請於「命令提示字元」依序輸入以下語法：<br />
+　1. FHIR提供的驗證程式－<b style="color: red;">紅色①</b>『<code>java -jar validator_cli.jar</code>』<br />
+　2. 要驗證的Profile實例(即JSON檔)－<b style="color: #4D82B8;">藍色②</b>『<code>Bundle-bun-1.json</code>』(即為您於Step5所放置於C:\的JSON檔案名稱)<br />
+　3. 驗證的IG及其版本號－<b style="color: #E78E46;">橘色③</b>『<code>-ig tw.gov.mohw.nhi.pas#1.0.6</code>』，鍵入Enter，即可查看驗證結果<br />
+　<b style="color: red;">①</b>、<b style="color: #4D82B8;">②</b>、<b style="color: #E78E46;">③</b>之間需有空格，完整語法即：<code>java -jar validator_cli.jar Bundle-bun-1.json -ig tw.gov.mohw.nhi.pas#1.0.6</code></p>
+  <img src="validate/6-2.png" alt="validate" style="display: block;margin-left: auto;margin-right: auto;width: 80%;margin-bottom: 15px;" class="figure-img img-responsive img-rounded center-block" />
+  <div style="clear:both;"></div>
+<p>若驗證「通過」，可看到「Success: 0 errors, 0 warnings, 3 notes」，原則上看到0 errors即代表通過驗證，warning及note可參考就好，不影響實作。後續的更版可能會解決其中幾個notes (即Information)。</p>
+<img src="validate/6-3.png" alt="validate success" style="display: block;margin-left: auto;margin-right: auto;width: 80%;margin-bottom: 15px;" class="figure-img img-responsive center-block" />
+<p>若驗證「不通過」，可看到「*FAILURE*: ...」，可看出第35行的代碼為錯誤代碼。再依據錯誤訊息修改實例後重新驗證，直到驗證成功為止，即表示實例符合Profile定義。</p>
+<img src="validate/6-4.png" alt="validate failure" style="display: block;margin-left: auto;margin-right: auto;width: 80%;margin-bottom: 15px;" class="figure-img img-responsive center-block" />
+<div style="clear:both;"></div>
+</div>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nhi.gov.tw">衛生福利部中央健康保險署</a>.  Package tw.gov.mohw.nhi.pas#1.0.6 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 30, 2025 10:52+0800">2025-07-30</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="https://nhicore.nhi.gov.tw/pas/history.html">Version History</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

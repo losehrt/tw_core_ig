@@ -1,0 +1,51 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://nhicore.nhi.gov.tw/pas/Patient/pat-min> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pat-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Patient-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Patient-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Patient-twpas.html\">病人資訊-Patient TWPAS</a></p></div><blockquote><p><b>識別碼型別</b>：National Person Identifier <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">（ <a href=\"http://terminology.hl7.org/CodeSystem/v2-0203\">Identifier Type Codes</a>#NNxxx）</span><br/><b>身分證字號（official）</b>：A123456789 （http://www.moi.gov.tw）</p></blockquote><blockquote><p><b>識別碼型別</b>：Medical record number <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">（ <a href=\"http://terminology.hl7.org/CodeSystem/v2-0203\">Identifier Type Codes</a>#MR）</span><br/><b>病歷號（official）</b>：123456 （https://tpech.gov.taipei）</p></blockquote><p><b>姓名（usual）</b>：王大明</p><p><b>性別</b>：男</p><p><b>出生日期</b>：2001-01-01</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NNxxx" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://www.moi.gov.tw"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "A123456789" ]
+  ] [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "MR" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "https://tpech.gov.taipei"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "123456" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:text [ fhir:v "王大明" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "2001-01-01"^^xsd:date] . # 
+
+# -------------------------------------------------------------------------------------
+

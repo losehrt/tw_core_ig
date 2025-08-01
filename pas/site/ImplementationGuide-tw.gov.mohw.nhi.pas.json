@@ -1,0 +1,2459 @@
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "tw.gov.mohw.nhi.pas",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide tw.gov.mohw.nhi.pas</b></p><a name=\"tw.gov.mohw.nhi.pas\"> </a><a name=\"hctw.gov.mohw.nhi.pas\"> </a><h2>TWPAS</h2><p>The official URL for this implementation guide is: </p><pre>https://nhicore.nhi.gov.tw/pas/ImplementationGuide/tw.gov.mohw.nhi.pas</pre><div><p>臺灣健保癌症用藥事前審查實作指引(Taiwan NHI Cancer Prior Authorization Support Implementation Guide，TWPAS IG)</p>\n</div></div>"
+  },
+  "url" : "https://nhicore.nhi.gov.tw/pas/ImplementationGuide/tw.gov.mohw.nhi.pas",
+  "version" : "1.0.6",
+  "name" : "TWPAS",
+  "title" : "臺灣健保癌症用藥事前審查實作指引",
+  "status" : "active",
+  "date" : "2025-07-30T10:48:03+08:00",
+  "publisher" : "衛生福利部中央健康保險署",
+  "contact" : [{
+    "name" : "衛生福利部中央健康保險署",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.nhi.gov.tw"
+    }]
+  }],
+  "description" : "臺灣健保癌症用藥事前審查實作指引(Taiwan NHI Cancer Prior Authorization Support Implementation Guide，TWPAS IG)",
+  "packageId" : "tw.gov.mohw.nhi.pas",
+  "license" : "CC0-1.0",
+  "fhirVersion" : ["4.0.1"],
+  "dependsOn" : [{
+    "id" : "hl7tx",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+    }],
+    "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
+    "packageId" : "hl7.terminology.r4",
+    "version" : "6.5.0"
+  },
+  {
+    "id" : "hl7ext",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+    }],
+    "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+    "packageId" : "hl7.fhir.uv.extensions.r4",
+    "version" : "5.2.0"
+  },
+  {
+    "id" : "TWCore",
+    "uri" : "https://twcore.mohw.gov.tw/ig/twcore/ImplementationGuide/tw.gov.mohw.twcore",
+    "packageId" : "tw.gov.mohw.twcore",
+    "version" : "0.3.2"
+  },
+  {
+    "id" : "DaVinciPriorAuthorizationSupport",
+    "uri" : "http://hl7.org/fhir/us/davinci-pas/ImplementationGuide/hl7.fhir.us.davinci-pas",
+    "packageId" : "hl7.fhir.us.davinci-pas",
+    "version" : "2.1.0"
+  }],
+  "definition" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2024+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "STU1.0.6"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "https://nhicore.nhi.gov.tw/pas/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
+      "valueCode" : "hl7.fhir.uv.tools.r4#0.7.1"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2024+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "STU1.0.6"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "https://nhicore.nhi.gov.tw/pas/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    }],
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "SearchParameter"
+      }],
+      "reference" : {
+        "reference" : "SearchParameter/Bundle-id"
+      },
+      "name" : "Bundle-id",
+      "description" : "事前審查(Bundle)的邏輯性ID",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "SearchParameter"
+      }],
+      "reference" : {
+        "reference" : "SearchParameter/Claim-func-type"
+      },
+      "name" : "Claim-func-type",
+      "description" : "事前審查(Claim)的就醫科別(extension: encounter)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "SearchParameter"
+      }],
+      "reference" : {
+        "reference" : "SearchParameter/Claim-identifier"
+      },
+      "name" : "Claim-identifier",
+      "description" : "事前審查(Claim)的受理編號(identifier)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "SearchParameter"
+      }],
+      "reference" : {
+        "reference" : "SearchParameter/Claim-patient"
+      },
+      "name" : "Claim-patient",
+      "description" : "事前審查(Claim)的病人資訊(patient)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/extension-claim-encounter"
+      },
+      "name" : "ClaimEncounter",
+      "description" : "就醫科別",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "SearchParameter"
+      }],
+      "reference" : {
+        "reference" : "SearchParameter/ClaimResponse-adjudication-reason"
+      },
+      "name" : "ClaimResponse-adjudication-reason",
+      "description" : "事前審查回覆(ClaimResponse)的核定註記(item.adjudication.reason)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "SearchParameter"
+      }],
+      "reference" : {
+        "reference" : "SearchParameter/ClaimResponse-created"
+      },
+      "name" : "ClaimResponse-created",
+      "description" : "事前審查回覆(ClaimResponse)的受理日期或核定日期(Claim)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "SearchParameter"
+      }],
+      "reference" : {
+        "reference" : "SearchParameter/ClaimResponse-disposition"
+      },
+      "name" : "ClaimResponse-disposition",
+      "description" : "事前審查回覆(ClaimResponse)的案件受理狀態(disposition)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "SearchParameter"
+      }],
+      "reference" : {
+        "reference" : "SearchParameter/ClaimResponse-request"
+      },
+      "name" : "ClaimResponse-request",
+      "description" : "事前審查回覆(ClaimResponse)關聯的事前審查(Claim)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ImagingStudy-twpas"
+      },
+      "name" : "DICOM影像-ImagingStudy TWPAS",
+      "description" : "此DICOM影像-ImagingStudy TWPAS Profile說明本IG如何進一步定義臺灣核心-影像檢查(TW Core ImagingStudy) Profile以呈現癌藥事前審查中疾病資訊之影像報告的影像檢查的身體部位及DICOM影像",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "SearchParameter"
+      }],
+      "reference" : {
+        "reference" : "SearchParameter/Encounter-service-type"
+      },
+      "name" : "Encounter-service-type",
+      "description" : "就醫科別(serviceType)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/medication-frequency-hl7-nhi"
+      },
+      "name" : "HL7 TimingAbbreviation + NHI-健保事前審查-藥品使用頻率值集",
+      "description" : "HL7 TimingAbbreviation + NHI-健保事前審查-藥品使用頻率值集。為配合專案時程，使用暫時性代碼系統，日後將統一使用TW Core IG的臺灣健保署藥品使用頻率。  \n代碼對應請參照[臺灣健保署藥品使用頻率代碼對應對應HL7 TimingAbbreviation](https://build.fhir.org/ig/cctwFHIRterm/MOHW_TWCoreIG_Build/ConceptMap-medication-frequency-tw.html)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/dicom-cid-29-AcquisitionModality"
+      },
+      "name" : "HL7-AcquisitionModality值集",
+      "description" : "原值集因總會工具問題無法正常顯示，故先自建值集。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/media-mimetypes"
+      },
+      "name" : "HL7-非DICOM影像MimeType值集",
+      "description" : "HL7-非DICOM影像MimeType值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/inca-osiris"
+      },
+      "name" : "INCa-健保事前審查-基因突變類型",
+      "description" : "INCa-健保事前審查-基因突變類型，資料所屬單位：Institut National du Cancer (INCa)，參照至：https://github.com/InstitutNationalduCancer/OSIRIS。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/pat-ast"
+      },
+      "name" : "LOINC + NHI-健保事前審查-病人狀態評估項目值集",
+      "description" : "LOINC + NHI-病人狀態評估項目值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/gene-test-code"
+      },
+      "name" : "LOINC-健保事前審查-基因檢測代碼值集",
+      "description" : "LOINC-健保事前審查-基因檢測代碼值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/specime-type"
+      },
+      "name" : "LOINC-健保事前審查-基因檢測檢體類型值集",
+      "description" : "LOINC-健保事前審查-基因檢測檢體類型值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/dna-change-type"
+      },
+      "name" : "LOINC-健保事前審查-基因突變類型值集",
+      "description" : "LOINC-健保事前審查-基因突變類型值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/report-type"
+      },
+      "name" : "LOINC-健保事前審查-報告類型值集",
+      "description" : "LOINC-健保事前審查-報告類型值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nci-thesaurus"
+      },
+      "name" : "NCI 健保事前審查-Thesaurus",
+      "description" : "NCI 健保事前審查-Thesaurus，參照至http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl  \n代碼出版日期：2022-10-13。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/cancer-stage-score"
+      },
+      "name" : "NCI-健保事前審查-FIGO癌症分期量表結果值集",
+      "description" : "NCI-健保事前審查-FIGO癌症分期量表結果值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nhi-approve-item-comment"
+      },
+      "name" : "NHI-健保事前審查-個別醫令核定註記值集",
+      "description" : "NHI-健保事前審查-個別醫令核定註記值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nhi-approve-claim-comment"
+      },
+      "name" : "NHI-健保事前審查-受理審查案件核定註記值集",
+      "description" : "NHI-健保事前審查-受理審查案件核定註記值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nhi-pdf-type"
+      },
+      "name" : "NHI-健保事前審查-文件類型",
+      "description" : "臺灣衛生福利部中央健康保險署「文件類型」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nhi-pdf-type"
+      },
+      "name" : "NHI-健保事前審查-文件類型值集",
+      "description" : "NHI-健保事前審查-文件類型值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nhi-approve-comment"
+      },
+      "name" : "NHI-健保事前審查-核定註記",
+      "description" : "臺灣衛生福利部中央健康保險署「核定註記」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nhi-acceptance-status"
+      },
+      "name" : "NHI-健保事前審查-案件受理狀態",
+      "description" : "臺灣衛生福利部中央健康保險署「案件受理狀態」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nhi-acceptance-status"
+      },
+      "name" : "NHI-健保事前審查-案件受理狀態值集",
+      "description" : "NHI-健保事前審查-案件受理狀態值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nhi-tx-ast"
+      },
+      "name" : "NHI-健保事前審查-治療後疾病狀態評估項目",
+      "description" : "臺灣衛生福利部中央健康保險署「治療後疾病狀態評估項目」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nhi-tx-ast"
+      },
+      "name" : "NHI-健保事前審查-治療後疾病狀態評估項目值集",
+      "description" : "NHI-健保事前審查-治療後疾病狀態評估項目值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/organization-identifier-tw"
+      },
+      "name" : "NHI-健保事前審查-特約醫事機構",
+      "description" : "臺灣衛生福利部中央健康保險署「特約醫事機構」代碼，參照至[衛福部健保署特約醫事機構代碼網路查詢服務](https://www.nhi.gov.tw/ch/cp-5548-135e8-2931-1.html)中的[健保特約醫療院所名冊](https://info.nhi.gov.tw/IODE0000/IODE0000S09?id=1120)\n\n代碼出版日期：2024-04-22；資料所屬單位：衛生福利部中央健康保險署。\n\n*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nhi-organization"
+      },
+      "name" : "NHI-健保事前審查-特約醫事機構值集",
+      "description" : "NHI-健保事前審查-特約醫事機構值集，參照至[衛福部健保署特約醫事機構代碼網路查詢服務](https://www.nhi.gov.tw/ch/cp-5548-135e8-2931-1.html)中的[健保特約醫療院所名冊](https://info.nhi.gov.tw/IODE0000/IODE0000S09?id=1120)\n\n代碼出版日期：2024-04-22；資料所屬單位：衛生福利部中央健康保險署。\n\n*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nhi-medication"
+      },
+      "name" : "NHI-健保事前審查-用藥品項",
+      "description" : "NHI-健保事前審查-用藥品項，參照自[健保用藥品項](https://www.nhi.gov.tw/ch/lp-2466-1.html)中的「健保用藥品項114年4月查詢檔(帶走所有壓縮檔114.4.2更新)」。  \n\n代碼出版日期：2025-04-30；資料所屬單位：衛生福利部中央健康保險署。\n\n*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*  \n\n因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處僅擷取部分代碼，相關代碼可至[健保用藥品項網路查詢服務](https://info.nhi.gov.tw/INAE3000/INAE3000S01)查閱",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nhi-medication"
+      },
+      "name" : "NHI-健保事前審查-用藥品項值集",
+      "description" : "NHI-健保事前審查-用藥品項值集。  \n此值集所涵蓋代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[健保用藥品項網路查詢服務](https://info.nhi.gov.tw/INAE3000/INAE3000S01)查閱",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nhi-line-of-therapy"
+      },
+      "name" : "NHI-健保事前審查-用藥線別",
+      "description" : "臺灣衛生福利部中央健康保險署「用藥線別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nhi-line-of-therapy"
+      },
+      "name" : "NHI-健保事前審查-用藥線別值集",
+      "description" : "NHI-健保事前審查-用藥線別值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nhi-apply-type"
+      },
+      "name" : "NHI-健保事前審查-申報類別",
+      "description" : "臺灣衛生福利部中央健康保險署「申報類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nhi-apply-type"
+      },
+      "name" : "NHI-健保事前審查-申報類別值集",
+      "description" : "NHI-健保事前審查-申報類別值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nhi-tmhb-type"
+      },
+      "name" : "NHI-健保事前審查-申請案件類別",
+      "description" : "臺灣衛生福利部中央健康保險署「申請案件類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nhi-tmhb-type"
+      },
+      "name" : "NHI-健保事前審查-申請案件類別值集",
+      "description" : "NHI-健保事前審查-申請案件類別值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nhi-apply-side"
+      },
+      "name" : "NHI-健保事前審查-申請部位",
+      "description" : "臺灣衛生福利部中央健康保險署「申請部位」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nhi-apply-side"
+      },
+      "name" : "NHI-健保事前審查-申請部位值集",
+      "description" : "NHI-健保事前審查-申請部位值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nhi-pat-ast"
+      },
+      "name" : "NHI-健保事前審查-病人狀態評估項目",
+      "description" : "臺灣衛生福利部中央健康保險署「病人狀態評估項目」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nhi-apply-reason"
+      },
+      "name" : "NHI-健保事前審查-給付適應症",
+      "description" : "臺灣衛生福利部中央健康保險署「給付適應症」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nhi-apply-reason"
+      },
+      "name" : "NHI-健保事前審查-給付適應症值集",
+      "description" : "NHI-健保事前審查-給付適應症值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nhi-continuation-status"
+      },
+      "name" : "NHI-健保事前審查-續用註記",
+      "description" : "臺灣衛生福利部中央健康保險署「續用註記」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nhi-continuation-status"
+      },
+      "name" : "NHI-健保事前審查-續用註記值集",
+      "description" : "NHI-健保事前審查-續用註記值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/medication-frequency-nhi-tw"
+      },
+      "name" : "NHI-健保事前審查-藥品使用頻率",
+      "description" : "NHI-健保事前審查-藥品使用頻率，參照至[健保署檔案譯碼簿](https://www.nhi.gov.tw/ch/cp-1880-20811-3142-1.html)中的「藥品使用頻率（2022/8/2版本）」。\n\n代碼出版日期：2024-05-27；資料所屬單位：衛生福利部中央健康保險署。\n\n*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nhi-drug-category"
+      },
+      "name" : "NHI-健保事前審查-藥物類型",
+      "description" : "臺灣衛生福利部中央健康保險署「藥物類型」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nhi-drug-category"
+      },
+      "name" : "NHI-健保事前審查-藥物類型值集",
+      "description" : "NHI-健保事前審查-藥物類型值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nhi-supporting-info-type"
+      },
+      "name" : "NHI-健保事前審查-補充資訊類別",
+      "description" : "臺灣衛生福利部中央健康保險署「補充資訊類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nhi-supporting-info-type"
+      },
+      "name" : "NHI-健保事前審查-補充資訊類別值集",
+      "description" : "NHI-健保事前審查-補充資訊類別值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nhi-body-site"
+      },
+      "name" : "NHI-健保事前審查-身體部位",
+      "description" : "臺灣衛生福利部中央健康保險署「身體部位」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nhi-body-site"
+      },
+      "name" : "NHI-健保事前審查-身體部位值集",
+      "description" : "NHI-健保事前審查-身體部位值集，代碼對應請參考[臺灣健保署身體部位代碼對應SNOMED CT](ConceptMap-nhi-sct-body-site.html)。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/nhi-order-type"
+      },
+      "name" : "NHI-健保事前審查-醫令類別",
+      "description" : "臺灣衛生福利部中央健康保險署「醫令類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/nhi-order-type"
+      },
+      "name" : "NHI-健保事前審查-醫令類別值集",
+      "description" : "NHI-健保事前審查-醫令類別值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/icd-10-pcs-2014-image"
+      },
+      "name" : "NHI-臺灣健保署2014年中文版ICD 10 PCS-影像報告值集",
+      "description" : "NHI-臺灣健保署2014年中文版ICD 10 PCS-影像報告值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/icd-10-pcs-2014-radiotherapy"
+      },
+      "name" : "NHI-臺灣健保署2014年中文版ICD 10 PCS-放射治療項目值集",
+      "description" : "NHI-臺灣健保署2014年中文版ICD 10 PCS-放射治療項目值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/icd-10-pcs-2023-image"
+      },
+      "name" : "NHI-臺灣健保署2023年中文版ICD 10 PCS-影像報告值集",
+      "description" : "NHI-臺灣健保署2023年中文版ICD 10 PCS-影像報告值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/icd-10-pcs-2023-radiotherapy"
+      },
+      "name" : "NHI-臺灣健保署2023年中文版ICD 10 PCS-放射治療項目值集",
+      "description" : "NHI-臺灣健保署2023年中文版ICD 10 PCS-放射治療項目值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "SearchParameter"
+      }],
+      "reference" : {
+        "reference" : "SearchParameter/Patient-identifier"
+      },
+      "name" : "Patient-identifier",
+      "description" : "病人的身分證號(identifier)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "SearchParameter"
+      }],
+      "reference" : {
+        "reference" : "SearchParameter/Patient-name"
+      },
+      "name" : "Patient-name",
+      "description" : "病人的姓名(name)，該查詢可能與 HumanName 中的任何字串匹配，包括完整的中文姓名(text)、英文姓(family)、英文名(given)、姓名前面的頭銜(prefix)、姓名後面的稱謂(suffix)。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/extension-requestedService"
+      },
+      "name" : "RequestedService",
+      "description" : "事前審查品項",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/cancer-stage"
+      },
+      "name" : "SCT + NCI-健保事前審查-癌症分期量表項目值集",
+      "description" : "SCT + NCI-健保事前審查-癌症分期量表項目值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/medication-path-sct-tw"
+      },
+      "name" : "SNOMED CT + 臺灣健保署-健保事前審查-給藥途徑值集",
+      "description" : "SNOMED CT + 臺灣健保署-健保事前審查-給藥途徑值集。\n代碼對應請參照[臺灣健保署給藥途徑代碼對應SNOMED CT](https://build.fhir.org/ig/cctwFHIRterm/MOHW_TWCoreIG_Build/ConceptMap-medication-path-tw.html)\n\n此值集優先採用國際標準碼，國際標準碼未能表述之概念，則以普遍被使用的臺灣健保署給藥途徑代碼表述，請實作者留意。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/sct-body-site"
+      },
+      "name" : "SNOMEDCT-健保事前審查-身體部位值集",
+      "description" : "SNOMEDCT-健保事前審查-身體部位值集，代碼對應請參考[臺灣健保署身體部位代碼對應SNOMED CT](ConceptMap-nhi-sct-body-site.html)。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/ucum-units"
+      },
+      "name" : "UCUM-健保事前審查-UCUM單位值集",
+      "description" : "UCUM-健保事前審查-UCUM單位值集",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Bundle-twpas"
+      },
+      "name" : "事前審查-Bundle TWPAS",
+      "description" : "此事前審查-Bundle TWPAS Profile說明本IG如何進一步定義資料交換基本單位(TW Core Bundle) Profile以呈現癌藥事前審查之內容",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Claim-twpas"
+      },
+      "name" : "事前審查-Claim TWPAS",
+      "description" : "此事前審查-Claim TWPAS Profile說明本IG如何進一步定義FHIR的Claim Resource以呈現癌藥事前審查之內容",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Claim"
+      }],
+      "reference" : {
+        "reference" : "Claim/cla-3"
+      },
+      "name" : "事前審查-申復、有共病",
+      "description" : "依據事前審查-Claim TWPAS Profile呈現事前審查之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Claim-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/bun-3"
+      },
+      "name" : "事前審查-申復、有共病",
+      "description" : "依據事前審查-Bundle TWPAS Profile呈現癌藥事前審查之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Bundle-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/bun-uuid-example"
+      },
+      "name" : "事前審查-自主審查報備、多份影像報告（UUID）",
+      "description" : "依據事前審查-Bundle TWPAS Profile呈現癌藥事前審查之自主審查報備範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Bundle-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Claim"
+      }],
+      "reference" : {
+        "reference" : "Claim/cla-1"
+      },
+      "name" : "事前審查-送核、套組檢驗、多事前審查癌藥品項",
+      "description" : "依據事前審查-Claim TWPAS Profile呈現事前審查之範例，含兩筆檢驗(查)。",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Claim-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/bun-1"
+      },
+      "name" : "事前審查-送核、套組檢驗、多事前審查癌藥品項",
+      "description" : "依據事前審查-Bundle TWPAS Profile呈現癌藥事前審查之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Bundle-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/MedicationRequest-apply-twpas"
+      },
+      "name" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "description" : "此事前審查品項-MedicationRequest Apply TWPAS Profile說明本IG如何進一步定義臺灣核心-藥品請求(TW Core MedicationRequest) Profile以呈現癌藥事前審查中申請項目之事前審查品項",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/medReq-apply"
+      },
+      "name" : "事前審查品項-多用法",
+      "description" : "依據事前審查品項-MedicationRequest Apply TWPAS Profile呈現事前審查品項之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/MedicationRequest-apply-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/medReq-apply-2"
+      },
+      "name" : "事前審查品項-給付適應症特定代碼",
+      "description" : "依據事前審查品項-MedicationRequest Apply TWPAS Profile呈現特定事前審查品項代碼之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/MedicationRequest-apply-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ClaimResponse"
+      }],
+      "reference" : {
+        "reference" : "ClaimResponse/claim-response-example"
+      },
+      "name" : "事前審查回覆",
+      "description" : "依據事前審查回覆-ClaimResponse TWPAS Profile呈現事前審查回覆之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/ClaimResponse-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/bun-response"
+      },
+      "name" : "事前審查回覆",
+      "description" : "依據事前審查回覆-Bundle Response TWPAS Profile呈現癌藥事前審查回覆之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Bundle-response-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Bundle-response-twpas"
+      },
+      "name" : "事前審查回覆-Bundle Response TWPAS",
+      "description" : "此事前審查回覆-Bundle Response TWPAS Profile說明本IG如何進一步定義資料交換基本單位(TW Core Bundle) Profile以呈現回覆癌藥事前審查之內容",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ClaimResponse-twpas"
+      },
+      "name" : "事前審查回覆-ClaimResponse TWPAS",
+      "description" : "此事前審查回覆-ClaimResponse TWPAS Profile說明本IG如何進一步定義FHIR的ClaimResponse Resource以呈現癌藥事前審查回覆之內容",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/nhi-sct-body-site"
+      },
+      "name" : "健保事前審查-臺灣健保署身體部位代碼對應SNOMED CT",
+      "description" : "此對應表為臺灣健保署身體部位代碼對應SNOMED CT，供實作者於撰寫程式以自動化對應或轉代碼時使用。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/nhi-loinc"
+      },
+      "name" : "健保事前審查-臺灣健保署醫療服務給付項目對應LOINC",
+      "description" : "此對應表為臺灣健保署醫療服務給付項目對應LOINC，供實作者於撰寫程式以自動化對應或轉代碼時使用。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Coverage"
+      }],
+      "reference" : {
+        "reference" : "Coverage/cov-min"
+      },
+      "name" : "健保事前審查計畫",
+      "description" : "依據健保事前審查計畫-Coverage TWPAS Profile呈現健保事前審查計畫之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Coverage-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Coverage-twpas"
+      },
+      "name" : "健保事前審查計畫-Coverage TWPAS",
+      "description" : "此健保事前審查計畫-Coverage TWPAS Profile說明本IG如何進一步定義FHIR的Coverage Resource以呈現癌藥事前審查之健保事前審查計畫",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ResponseModel"
+      },
+      "name" : "回覆(Response)癌症用藥癌藥事前審查之資料模型",
+      "description" : "回覆(Response)癌症用藥癌藥事前審查之資料模型，此邏輯模型為定義癌症用藥事前審查情境下使用的所有資料欄位。  \n為了便於實作者快速理解，資料欄位會使用易於理解的命名，實作者再透過邏輯模型中的功能頁籤「Mappings」瞭解各資料欄位實際使用本IG的哪個Profiles的哪個資料項目（element）。亦可配合[視覺化邏輯模型圖](vision.html#bundle%E6%9E%B6%E6%A7%8B%E5%9C%96)進行欄位對應",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DocumentReference"
+      }],
+      "reference" : {
+        "reference" : "DocumentReference/doc-gene-min"
+      },
+      "name" : "基因報告",
+      "description" : "依據文件參照-DocumentReference TWPAS Profile呈現基因報告之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/DocumentReference-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/org-gene-example"
+      },
+      "name" : "基因檢測機構",
+      "description" : "依據基因檢測機構-Organization Genetic Testing TWPAS Profile呈現基因檢測機構之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Organization-genetic-testing-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Organization-genetic-testing-twpas"
+      },
+      "name" : "基因檢測機構-Organization Genetic Testing TWPAS",
+      "description" : "此基因檢測機構-Organization Genetic Testing TWPAS Profile說明本IG如何進一步定義臺灣核心-機構(TW Core Organization) Profile以呈現癌藥事前審查之基因檢測機構基本資料",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/spe-min"
+      },
+      "name" : "基因檢測檢體",
+      "description" : "依據基因檢測檢體-Specimen TWPAS Profile呈現基因檢測檢體之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Specimen-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Specimen-twpas"
+      },
+      "name" : "基因檢測檢體-Specimen TWPAS",
+      "description" : "此基因檢測檢體-Specimen TWPAS Profile說明本IG如何進一步定義臺灣核心-檢體(TW Core Specimen) Profile以呈現癌藥事前審查中基因資訊之檢測檢體相關內容",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-diagnostic-min"
+      },
+      "name" : "基因資訊",
+      "description" : "依據基因資訊-Observation Diagnostic TWPAS Profile呈現基因資訊之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-diagnostic-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Observation-diagnostic-twpas"
+      },
+      "name" : "基因資訊-Observation Diagnostic TWPAS",
+      "description" : "此基因資訊-Observation Diagnostic TWPAS Profile說明本IG如何進一步定義FHIR的Observation Resource以呈現癌藥事前審查之基因資訊",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/enc-min"
+      },
+      "name" : "就醫科別",
+      "description" : "依據就醫科別-Encounter TWPAS Profile呈現就醫科別之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Encounter-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Encounter-twpas"
+      },
+      "name" : "就醫科別-Encounter TWPAS",
+      "description" : "此就醫科別-Encounter TWPAS Profile說明本IG如何進一步定義臺灣核心-就醫事件(TW Core Encounter) Profile以呈現癌藥事前審查中院所資訊之就醫科別",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ImagingStudy"
+      }],
+      "reference" : {
+        "reference" : "ImagingStudy/imaStu-min"
+      },
+      "name" : "影像",
+      "description" : "依據DICOM影像-ImagingStudy TWPAS Profile呈現影像之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/ImagingStudy-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DiagnosticReport"
+      }],
+      "reference" : {
+        "reference" : "DiagnosticReport/diaRep-ima-min"
+      },
+      "name" : "影像報告",
+      "description" : "依據影像報告-DiagnosticReport Image TWPAS Profile呈現影像報告之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/DiagnosticReport-image-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/DiagnosticReport-image-twpas"
+      },
+      "name" : "影像報告-DiagnosticReport Image TWPAS",
+      "description" : "此影像報告-DiagnosticReport Image TWPAS Profile說明本IG如何進一步定義臺灣核心-診斷報告(TW Core DiagnosticReport) Profile以呈現癌藥事前審查之影像報告",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Procedure"
+      }],
+      "reference" : {
+        "reference" : "Procedure/pro-min"
+      },
+      "name" : "放射治療",
+      "description" : "依據放射治療-Procedure TWPAS Profile呈現放射治療之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Procedure-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Procedure-twpas"
+      },
+      "name" : "放射治療-Procedure TWPAS",
+      "description" : "此放射治療-Procedure TWPAS Profile說明本IG如何進一步定義FHIR的Procedure Resource以呈現癌藥事前審查中治療資訊之放射治療",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Substance"
+      }],
+      "reference" : {
+        "reference" : "Substance/sub-min"
+      },
+      "name" : "放射治療總劑量",
+      "description" : "依據放射治療總劑量-Substance TWPAS Profile呈現放射治療之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Substance-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Substance-twpas"
+      },
+      "name" : "放射治療總劑量-Substance TWPAS",
+      "description" : "此放射治療總劑量-Substance TWPAS Profile說明本IG如何進一步定義FHIR的Substance Resource以呈現癌藥事前審查中治療資訊之放射治療總劑量",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/DocumentReference-twpas"
+      },
+      "name" : "文件參照-DocumentReference TWPAS",
+      "description" : "此文件參照-DocumentReference TWPAS Profile說明本IG如何進一步定義臺灣核心-文件參照(TW Core DocumentReference) Profile以呈現癌藥事前審查之治療計畫文件及基因報告",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DiagnosticReport"
+      }],
+      "reference" : {
+        "reference" : "DiagnosticReport/diaRep-min"
+      },
+      "name" : "檢查報告",
+      "description" : "依據檢查報告-DiagnosticReport TWPAS Profile呈現檢查報告之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/DiagnosticReport-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/DiagnosticReport-twpas"
+      },
+      "name" : "檢查報告-DiagnosticReport TWPAS",
+      "description" : "此檢查報告-DiagnosticReport TWPAS Profile說明本IG如何進一步定義臺灣核心-診斷報告(TW Core DiagnosticReport) Profile以呈現癌藥事前審查中疾病資訊之檢查報告",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DocumentReference"
+      }],
+      "reference" : {
+        "reference" : "DocumentReference/doc-test-min"
+      },
+      "name" : "檢驗(查)附件",
+      "description" : "依據文件參照-DocumentReference TWPAS Profile呈現檢驗(查)附件之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/DocumentReference-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Observation-laboratory-result-twpas"
+      },
+      "name" : "檢驗檢查-Observation Laboratory Result TWPAS",
+      "description" : "此檢驗檢查-Observation Laboratory Result TWPAS Profile說明本IG如何進一步定義臺灣核心-檢驗檢查(TW Core Observation Laboratory Result) Profile以呈現癌藥事前審查中評估資訊之檢驗(查)相關資料",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-lab-min"
+      },
+      "name" : "檢驗檢查-單項",
+      "description" : "依據檢驗檢查-Observation Laboratory Result TWPAS Profile呈現單項檢驗檢查之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-laboratory-result-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-lab-cbc"
+      },
+      "name" : "檢驗檢查-套組(全套血液檢查)",
+      "description" : "依據檢驗檢查-Observation Laboratory Result TWPAS Profile呈現套組檢驗檢查之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-laboratory-result-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-tx-min"
+      },
+      "name" : "治療後疾病狀態評估",
+      "description" : "依據治療後疾病狀態評估-Observation Treatment Assessment TWPAS Profile呈現治療後疾病狀態評估之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-tx-assessment-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Observation-tx-assessment-twpas"
+      },
+      "name" : "治療後疾病狀態評估-Observation Treatment Assessment TWPAS",
+      "description" : "此治療後疾病狀態評估-Observation Treatment Assessment TWPAS Profile說明本IG如何進一步定義FHIR的Observation Resource以呈現癌藥事前審查中結果資訊之治療後疾病狀態評估",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DocumentReference"
+      }],
+      "reference" : {
+        "reference" : "DocumentReference/doc-careplan-min"
+      },
+      "name" : "治療計畫文件",
+      "description" : "依據文件參照-DocumentReference TWPAS Profile呈現治療計畫文件之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/DocumentReference-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/medReq-treat"
+      },
+      "name" : "用藥品項",
+      "description" : "依據用藥品項-MedicationRequest Treat TWPAS Profile呈現用藥品項之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/MedicationRequest-treat-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/MedicationRequest-treat-twpas"
+      },
+      "name" : "用藥品項-MedicationRequest Treat TWPAS",
+      "description" : "此用藥品項-MedicationRequest Treat TWPAS Profile說明本IG如何進一步定義臺灣核心-藥品請求(TW Core MedicationRequest) Profile以呈現癌藥事前審查中治療資訊之用藥品項",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ApplyModel"
+      },
+      "name" : "申請(Apply)癌症用藥癌藥事前審查之資料模型",
+      "description" : "申請(Apply)癌症用藥癌藥事前審查之資料模型，此邏輯模型為定義癌症用藥事前審查情境下使用的所有資料欄位。  \n為了便於實作者快速理解，資料欄位會使用易於理解的命名，實作者再透過邏輯模型中的功能頁籤「Mappings」瞭解各資料欄位實際使用本IG的哪個Profiles的哪個資料項目（element）。亦可配合[視覺化邏輯模型圖](vision.html#bundle%E6%9E%B6%E6%A7%8B%E5%9C%96)進行欄位對應",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-pat-nyha"
+      },
+      "name" : "病人狀態評估-NYHA",
+      "description" : "依據病人狀態評估-Observation Patient Assessment TWPAS Profile呈現病人狀態評估之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-pat-assessment-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Observation-pat-assessment-twpas"
+      },
+      "name" : "病人狀態評估-Observation Patient Assessment TWPAS",
+      "description" : "此病人狀態評估-Observation Patient Assessment TWPAS Profile說明本IG如何進一步定義FHIR的Observation Resource以呈現癌藥事前審查中評估資訊之病人狀態評估",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-pat-pdai"
+      },
+      "name" : "病人狀態評估-PDAI",
+      "description" : "依據病人狀態評估-Observation Patient Assessment TWPAS Profile呈現病人狀態評估之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-pat-assessment-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/pat-min"
+      },
+      "name" : "病人資訊",
+      "description" : "依據病人資訊-Patient TWPAS Profile呈現病人資訊之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Patient-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Patient-twpas"
+      },
+      "name" : "病人資訊-Patient TWPAS",
+      "description" : "此病人資訊-Patient TWPAS Profile說明本IG如何進一步定義臺灣核心-病人(TW Core Patient) Profile以呈現癌藥事前審查之病人基本資料",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DocumentReference"
+      }],
+      "reference" : {
+        "reference" : "DocumentReference/doc-medicalRecord-min"
+      },
+      "name" : "病歷資料",
+      "description" : "依據文件參照-DocumentReference TWPAS Profile呈現病歷資料之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/DocumentReference-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-cancer-cns"
+      },
+      "name" : "癌症分期量表-CNS",
+      "description" : "依據癌症分期量表-Observation Cancer Stage TWPAS Profile呈現癌症分期量表WHO CNS之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-cancer-stage-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-cancer-figo"
+      },
+      "name" : "癌症分期量表-FIGO",
+      "description" : "依據癌症分期量表-Observation Cancer Stage TWPAS Profile呈現癌症分期量表FIGO之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-cancer-stage-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Observation-cancer-stage-twpas"
+      },
+      "name" : "癌症分期量表-Observation Cancer Stage TWPAS",
+      "description" : "此癌症分期量表-Observation Cancer Stage TWPAS Profile說明本IG如何進一步定義FHIR的Observation Resource以呈現癌藥事前審查中疾病資訊之癌症分期量表相關資料",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-cancer-tnm"
+      },
+      "name" : "癌症分期量表-TNM",
+      "description" : "依據癌症分期量表-Observation Cancer Stage TWPAS Profile呈現癌症分期量表之TNM範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-cancer-stage-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Operationoutcome-twpas"
+      },
+      "name" : "系統回應訊息-OperationOutcome TWPAS",
+      "description" : "此系統回應訊-OperationOutcome TWPAS Profile說明本IG如何進一步定義FHIR的OperationOutcome Resource以呈現系統回應訊息之內容",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "OperationOutcome"
+      }],
+      "reference" : {
+        "reference" : "OperationOutcome/error-example"
+      },
+      "name" : "系統回應錯誤訊息",
+      "description" : "依據系統回應訊息-OperationOutcome TWPAS Profile呈現使用錯誤語法查詢系統時之回應範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Operationoutcome-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ClaimResponse"
+      }],
+      "reference" : {
+        "reference" : "ClaimResponse/self-assessment-example"
+      },
+      "name" : "自主審查報備",
+      "description" : "依據自主審查報備-ClaimResponse Self Assessment TWPAS Profile呈現自主審查報備之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/ClaimResponse-self-assessment-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ClaimResponse-self-assessment-twpas"
+      },
+      "name" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "description" : "此自主審查報備-ClaimResponse TWPAS Profile說明本IG如何進一步定義FHIR的ClaimResponse Resource以呈現自主審查報備之內容。 \n  \n現行開放自主事前審查項目僅有心臟及肝臟移植，若醫院要自主事前審查需向健保署申請，通過後，健保署會於署內系統維護，具有此資格之院所才可填報自主審查報備。",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CapabilityStatement"
+      }],
+      "reference" : {
+        "reference" : "CapabilityStatement/CapabilityStatementTWPASServer"
+      },
+      "name" : "臺灣癌藥事前審查-伺服端(TWPAS Server)",
+      "description" : "臺灣健保癌症用藥事前審查實作指引(TWPAS IG)伺服端(Server)之能力聲明",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CapabilityStatement"
+      }],
+      "reference" : {
+        "reference" : "CapabilityStatement/CapabilityStatementTWPASClient"
+      },
+      "name" : "臺灣癌藥事前審查-用戶端(TWPAS Client)",
+      "description" : "臺灣健保癌症用藥事前審查實作指引(TWPAS IG)用戶端(Client)之能力聲明",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/org-nhi"
+      },
+      "name" : "衛生福利部中央健康保險署",
+      "description" : "依據臺灣核心-政府機構（TW Core Organization Government）Profile呈現衛生福利部中央健康保險署",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/pra-min"
+      },
+      "name" : "醫事人員",
+      "description" : "依據醫事人員-Practitioner TWPAS Profile呈現醫事人員之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Practitioner-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Practitioner-twpas"
+      },
+      "name" : "醫事人員-Practitioner TWPAS",
+      "description" : "此醫事人員-Practitioner TWPAS Profile說明本IG如何進一步定義臺灣核心-健康照護服務提供者(TW Core Practitioner) Profile以呈現癌藥事前審查之申請醫師、簽發影像報告醫師、簽發癌症分期報告醫師、檢查報告醫師、簽發檢驗(查)報告醫事人員及評估項目醫事人員基本資料",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/org-hosp-example"
+      },
+      "name" : "醫事機構",
+      "description" : "依據機構-Organization TWPAS Profile呈現醫事機構之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Organization-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Organization-twpas"
+      },
+      "name" : "醫事機構-Organization TWPAS",
+      "description" : "此醫事機構-Organization TWPAS Profile說明本IG如何進一步定義臺灣核心-機構(TW Core Organization) Profile以呈現癌藥事前審查之醫事機構基本資料",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Media"
+      }],
+      "reference" : {
+        "reference" : "Media/med-min"
+      },
+      "name" : "非DICOM影像",
+      "description" : "依據非DICOM影像-Media TWPAS Profile呈現非DICOM影像之範例",
+      "exampleCanonical" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Media-twpas"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Media-twpas"
+      },
+      "name" : "非DICOM影像-Media TWPAS",
+      "description" : "此非DICOM影像-Media TWPAS Profile說明本IG如何進一步定義臺灣核心-多媒體(TW Core Media) Profile以呈現癌藥事前審查中疾病資訊之影像報告的非DICOM影像",
+      "exampleBoolean" : false
+    }],
+    "page" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+        "valueUrl" : "toc.html"
+      }],
+      "nameUrl" : "toc.html",
+      "title" : "Table of Contents",
+      "generation" : "html",
+      "page" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "index.html"
+        }],
+        "nameUrl" : "index.html",
+        "title" : "應用說明",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "capabilitystatements.html"
+        }],
+        "nameUrl" : "capabilitystatements.html",
+        "title" : "能力聲明",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "searchparameters.html"
+        }],
+        "nameUrl" : "searchparameters.html",
+        "title" : "查詢參數",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "models.html"
+        }],
+        "nameUrl" : "models.html",
+        "title" : "邏輯模型",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "profiles-and-extensions.html"
+        }],
+        "nameUrl" : "profiles-and-extensions.html",
+        "title" : "FHIR Profiles及Extensions",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "terminologies.html"
+        }],
+        "nameUrl" : "terminologies.html",
+        "title" : "專門術語",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "examples.html"
+        }],
+        "nameUrl" : "examples.html",
+        "title" : "範例",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "downloads.html"
+        }],
+        "nameUrl" : "downloads.html",
+        "title" : "結構定義與範例檔下載",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "security.html"
+        }],
+        "nameUrl" : "security.html",
+        "title" : "安全性",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "vision.html"
+        }],
+        "nameUrl" : "vision.html",
+        "title" : "視覺化邏輯模型",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "ImplementationGuide-tw.gov.mohw.nhi.pas.html"
+        }],
+        "nameUrl" : "ImplementationGuide-tw.gov.mohw.nhi.pas.html",
+        "title" : "TWPAS ImplementationGuide Resource",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "validate.html"
+        }],
+        "nameUrl" : "validate.html",
+        "title" : "驗證教學",
+        "generation" : "markdown"
+      }]
+    },
+    "parameter" : [{
+      "code" : "path-resource",
+      "value" : "input/capabilities"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/examples"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/extensions"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/models"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/operations"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/profiles"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/resources"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/vocabulary"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/maps"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/testing"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/history"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "fsh-generated/resources"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "template/config"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "input/images"
+    },
+    {
+      "code" : "path-tx-cache",
+      "value" : "input-cache/txcache"
+    }]
+  }
+}

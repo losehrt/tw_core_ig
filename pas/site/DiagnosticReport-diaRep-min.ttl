@@ -1,0 +1,56 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://nhicore.nhi.gov.tw/pas/DiagnosticReport/diaRep-min> a fhir:DiagnosticReport ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "diaRep-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/DiagnosticReport-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/DiagnosticReport-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-DiagnosticReport-twpas.html\">檢查報告-DiagnosticReport TWPAS</a></p></div><p><b>狀態</b>：final</p><p><b>報告類型</b>：Prostate Pathology biopsy report <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://loinc.org\">EncounterStatus</a>#66117-3)</span></p><p><b>檢體種類</b>：Prostate</p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a> \"王大明\"</p><p><b>報告日期</b>：2024-05-07</p><p><b>檢查報告醫師</b>：<a href=\"Practitioner-pra-min.html\">Practitioner/pra-min</a></p><p><b>報告結果-文數字</b>：細胞檢查報告結果</p><blockquote><p><b>檢查報告名稱</b>：PathologyReport01</p><p><b>檢查報告</b>：file://PathologyReport01.pdf</p></blockquote><blockquote><p><b>檢查報告名稱</b>：PathologyReport02</p><p><b>檢查報告</b>：file://PathologyReport02.pdf</p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:66117-3 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "66117-3" ]
+     ] ) ;
+     fhir:text [ fhir:v "Prostate" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-05-07"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Practitioner/pra-min> ;
+     fhir:reference [ fhir:v "Practitioner/pra-min" ]
+  ] ) ; # 
+  fhir:conclusion [ fhir:v "細胞檢查報告結果"] ; # 
+  fhir:presentedForm ( [
+     fhir:contentType [ fhir:v "application/pdf" ] ;
+     fhir:url [ fhir:v "file://PathologyReport01.pdf"^^xsd:anyURI ] ;
+     fhir:title [ fhir:v "PathologyReport01" ]
+  ] [
+     fhir:contentType [ fhir:v "application/pdf" ] ;
+     fhir:url [ fhir:v "file://PathologyReport02.pdf"^^xsd:anyURI ] ;
+     fhir:title [ fhir:v "PathologyReport02" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

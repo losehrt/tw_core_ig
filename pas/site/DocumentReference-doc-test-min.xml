@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DocumentReference xmlns="http://hl7.org/fhir">
+  <id value="doc-test-min"/>
+  <meta>
+    <profile value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/DocumentReference-twpas"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4;
+        border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-DocumentReference-twpas.html">文件參照-DocumentReference TWPAS</a></p></div><p><b>狀態</b>：current</p><p><b>報告類型</b>：檢驗(查)附件 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">(<a href="CodeSystem-nhi-pdf-type.html">NHI-文件類型</a>#test)</span></p><p><b>病人</b>：<a href="Patient-pat-min.html">Patient/pat-min</a> &quot;王大明&quot;</p><blockquote><p><b>檢驗(查)附件 (application/pdf)</b>：file://TestReport01.pdf</p><p><b>檢驗(查)附件名稱</b>：TestReport01</p></blockquote><blockquote><p><b>檢驗(查)附件 (application/pdf)</b>：file://TestReport02.pdf</p><p><b>檢驗(查)附件名稱</b>：TestReport02</p></blockquote></div>
+  </text>
+  <status value="current"/>
+  <category>
+    <coding>
+      <system value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pdf-type"/>
+      <code value="test"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/pat-min"/>
+  </subject>
+  <content>
+    <attachment>
+      <contentType value="application/pdf"/>
+      <url value="file://TestReport01.pdf"/>
+      <title value="TestReport01"/>
+    </attachment>
+  </content>
+  <content>
+    <attachment>
+      <contentType value="application/pdf"/>
+      <url value="file://TestReport02.pdf"/>
+      <title value="TestReport02"/>
+    </attachment>
+  </content>
+</DocumentReference>

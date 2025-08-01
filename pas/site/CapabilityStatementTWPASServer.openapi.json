@@ -1,0 +1,4691 @@
+﻿{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "臺灣癌藥事前審查-伺服端(TWPAS Server)",
+    "description": "臺灣健保癌症用藥事前審查實作指引(TWPAS IG)伺服端(Server)之能力聲明",
+    "license": {
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "http://spdx.org/licenses/CC0-1.0.html"
+    },
+    "version": "1.0.6",
+    "contact": {
+      "name": "衛生福利部中央健康保險署",
+      "url": "https://www.nhi.gov.tw"
+    }
+  },
+  "externalDocs": {
+    "url": "https://nhicore.nhi.gov.tw/pas/CapabilityStatement/CapabilityStatementTWPASServer",
+    "description": "FHIR CapabilityStatement"
+  },
+  "paths": {
+    "/metadata": {
+      "summary": "Access to the Server\u0027s Capability Statement",
+      "description": "All FHIR Servers return a CapabilityStatement that describes what services they perform",
+      "get": {
+        "summary": "Return the server\u0027s capability statement",
+        "operationId": "metadata",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the capbility statement",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/CapabilityStatement"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/CapabilityStatement.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Bundle/{rid}": {
+      "summary": "Read/Write/etc resource instance of type Bundle",
+      "description": "Access to services to manage the state of a single resource of type Bundle",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readBundle",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Bundle"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Bundle.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete the resource so that it no exists (no read, search etc)",
+        "operationId": "deleteBundle",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "If the resource is deleted - no content is returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          }
+        ]
+      }
+    },
+    "/Bundle": {
+      "summary": "Manager for resources of type Bundle",
+      "description": "The Manager for resources of type Bundle: provides services to manage the collection of all the Bundle instances",
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createBundle",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Bundle"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/Bundle.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Bundle"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Bundle.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Bundle/{rid}/_history/{hid}": {
+      "summary": "Read a past version of resource instance of type Bundle",
+      "description": "Access a to specified previous version of a single resource of type Bundle",
+      "get": {
+        "summary": "Read a past state of the resource",
+        "operationId": "vreadBundle",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag for that version",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Bundle"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Bundle.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/hid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Claim/{rid}": {
+      "summary": "Read/Write/etc resource instance of type Claim",
+      "description": "Access to services to manage the state of a single resource of type Claim",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readClaim",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Claim"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Claim.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete the resource so that it no exists (no read, search etc)",
+        "operationId": "deleteClaim",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "If the resource is deleted - no content is returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          }
+        ]
+      }
+    },
+    "/Claim": {
+      "summary": "Manager for resources of type Claim",
+      "description": "The Manager for resources of type Claim: provides services to manage the collection of all the Claim instances",
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createClaim",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Claim"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/Claim.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Claim"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Claim.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Claim/{rid}/_history/{hid}": {
+      "summary": "Read a past version of resource instance of type Claim",
+      "description": "Access a to specified previous version of a single resource of type Claim",
+      "get": {
+        "summary": "Read a past state of the resource",
+        "operationId": "vreadClaim",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag for that version",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Claim"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Claim.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/hid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/ClaimResponse/{rid}": {
+      "summary": "Read/Write/etc resource instance of type ClaimResponse",
+      "description": "Access to services to manage the state of a single resource of type ClaimResponse",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readClaimResponse",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/ClaimResponse"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/ClaimResponse.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete the resource so that it no exists (no read, search etc)",
+        "operationId": "deleteClaimResponse",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "If the resource is deleted - no content is returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          }
+        ]
+      }
+    },
+    "/ClaimResponse": {
+      "summary": "Manager for resources of type ClaimResponse",
+      "description": "The Manager for resources of type ClaimResponse: provides services to manage the collection of all the ClaimResponse instances",
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createClaimResponse",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/ClaimResponse"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/ClaimResponse.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/ClaimResponse"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/ClaimResponse.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/ClaimResponse/{rid}/_history/{hid}": {
+      "summary": "Read a past version of resource instance of type ClaimResponse",
+      "description": "Access a to specified previous version of a single resource of type ClaimResponse",
+      "get": {
+        "summary": "Read a past state of the resource",
+        "operationId": "vreadClaimResponse",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag for that version",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/ClaimResponse"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/ClaimResponse.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/hid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Organization/{rid}": {
+      "summary": "Read/Write/etc resource instance of type Organization",
+      "description": "Access to services to manage the state of a single resource of type Organization",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readOrganization",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Organization"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Organization.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete the resource so that it no exists (no read, search etc)",
+        "operationId": "deleteOrganization",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "If the resource is deleted - no content is returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          }
+        ]
+      }
+    },
+    "/Organization": {
+      "summary": "Manager for resources of type Organization",
+      "description": "The Manager for resources of type Organization: provides services to manage the collection of all the Organization instances",
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createOrganization",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Organization"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/Organization.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Organization"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Organization.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Organization/{rid}/_history/{hid}": {
+      "summary": "Read a past version of resource instance of type Organization",
+      "description": "Access a to specified previous version of a single resource of type Organization",
+      "get": {
+        "summary": "Read a past state of the resource",
+        "operationId": "vreadOrganization",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag for that version",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Organization"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Organization.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/hid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Encounter/{rid}": {
+      "summary": "Read/Write/etc resource instance of type Encounter",
+      "description": "Access to services to manage the state of a single resource of type Encounter",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readEncounter",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Encounter"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Encounter.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete the resource so that it no exists (no read, search etc)",
+        "operationId": "deleteEncounter",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "If the resource is deleted - no content is returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          }
+        ]
+      }
+    },
+    "/Encounter": {
+      "summary": "Manager for resources of type Encounter",
+      "description": "The Manager for resources of type Encounter: provides services to manage the collection of all the Encounter instances",
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createEncounter",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Encounter"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/Encounter.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Encounter"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Encounter.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Encounter/{rid}/_history/{hid}": {
+      "summary": "Read a past version of resource instance of type Encounter",
+      "description": "Access a to specified previous version of a single resource of type Encounter",
+      "get": {
+        "summary": "Read a past state of the resource",
+        "operationId": "vreadEncounter",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag for that version",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Encounter"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Encounter.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/hid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Patient/{rid}": {
+      "summary": "Read/Write/etc resource instance of type Patient",
+      "description": "Access to services to manage the state of a single resource of type Patient",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readPatient",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Patient"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Patient.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete the resource so that it no exists (no read, search etc)",
+        "operationId": "deletePatient",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "If the resource is deleted - no content is returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          }
+        ]
+      }
+    },
+    "/Patient": {
+      "summary": "Manager for resources of type Patient",
+      "description": "The Manager for resources of type Patient: provides services to manage the collection of all the Patient instances",
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createPatient",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Patient"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/Patient.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Patient"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Patient.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Patient/{rid}/_history/{hid}": {
+      "summary": "Read a past version of resource instance of type Patient",
+      "description": "Access a to specified previous version of a single resource of type Patient",
+      "get": {
+        "summary": "Read a past state of the resource",
+        "operationId": "vreadPatient",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag for that version",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Patient"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Patient.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/hid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Practitioner/{rid}": {
+      "summary": "Read/Write/etc resource instance of type Practitioner",
+      "description": "Access to services to manage the state of a single resource of type Practitioner",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readPractitioner",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Practitioner"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Practitioner.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete the resource so that it no exists (no read, search etc)",
+        "operationId": "deletePractitioner",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "If the resource is deleted - no content is returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          }
+        ]
+      }
+    },
+    "/Practitioner": {
+      "summary": "Manager for resources of type Practitioner",
+      "description": "The Manager for resources of type Practitioner: provides services to manage the collection of all the Practitioner instances",
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createPractitioner",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Practitioner"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/Practitioner.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Practitioner"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Practitioner.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Practitioner/{rid}/_history/{hid}": {
+      "summary": "Read a past version of resource instance of type Practitioner",
+      "description": "Access a to specified previous version of a single resource of type Practitioner",
+      "get": {
+        "summary": "Read a past state of the resource",
+        "operationId": "vreadPractitioner",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag for that version",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Practitioner"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Practitioner.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/hid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/ImagingStudy/{rid}": {
+      "summary": "Read/Write/etc resource instance of type ImagingStudy",
+      "description": "Access to services to manage the state of a single resource of type ImagingStudy",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readImagingStudy",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/ImagingStudy"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/ImagingStudy.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete the resource so that it no exists (no read, search etc)",
+        "operationId": "deleteImagingStudy",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "If the resource is deleted - no content is returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          }
+        ]
+      }
+    },
+    "/ImagingStudy": {
+      "summary": "Manager for resources of type ImagingStudy",
+      "description": "The Manager for resources of type ImagingStudy: provides services to manage the collection of all the ImagingStudy instances",
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createImagingStudy",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/ImagingStudy"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/ImagingStudy.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/ImagingStudy"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/ImagingStudy.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/ImagingStudy/{rid}/_history/{hid}": {
+      "summary": "Read a past version of resource instance of type ImagingStudy",
+      "description": "Access a to specified previous version of a single resource of type ImagingStudy",
+      "get": {
+        "summary": "Read a past state of the resource",
+        "operationId": "vreadImagingStudy",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag for that version",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/ImagingStudy"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/ImagingStudy.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/hid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Media/{rid}": {
+      "summary": "Read/Write/etc resource instance of type Media",
+      "description": "Access to services to manage the state of a single resource of type Media",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readMedia",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Media"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Media.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete the resource so that it no exists (no read, search etc)",
+        "operationId": "deleteMedia",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "If the resource is deleted - no content is returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          }
+        ]
+      }
+    },
+    "/Media": {
+      "summary": "Manager for resources of type Media",
+      "description": "The Manager for resources of type Media: provides services to manage the collection of all the Media instances",
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createMedia",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Media"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/Media.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Media"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Media.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Media/{rid}/_history/{hid}": {
+      "summary": "Read a past version of resource instance of type Media",
+      "description": "Access a to specified previous version of a single resource of type Media",
+      "get": {
+        "summary": "Read a past state of the resource",
+        "operationId": "vreadMedia",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag for that version",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Media"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Media.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/hid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/DiagnosticReport/{rid}": {
+      "summary": "Read/Write/etc resource instance of type DiagnosticReport",
+      "description": "Access to services to manage the state of a single resource of type DiagnosticReport",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readDiagnosticReport",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/DiagnosticReport"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/DiagnosticReport.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete the resource so that it no exists (no read, search etc)",
+        "operationId": "deleteDiagnosticReport",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "If the resource is deleted - no content is returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          }
+        ]
+      }
+    },
+    "/DiagnosticReport": {
+      "summary": "Manager for resources of type DiagnosticReport",
+      "description": "The Manager for resources of type DiagnosticReport: provides services to manage the collection of all the DiagnosticReport instances",
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createDiagnosticReport",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/DiagnosticReport"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/DiagnosticReport.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/DiagnosticReport"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/DiagnosticReport.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/DiagnosticReport/{rid}/_history/{hid}": {
+      "summary": "Read a past version of resource instance of type DiagnosticReport",
+      "description": "Access a to specified previous version of a single resource of type DiagnosticReport",
+      "get": {
+        "summary": "Read a past state of the resource",
+        "operationId": "vreadDiagnosticReport",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag for that version",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/DiagnosticReport"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/DiagnosticReport.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/hid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Observation/{rid}": {
+      "summary": "Read/Write/etc resource instance of type Observation",
+      "description": "Access to services to manage the state of a single resource of type Observation",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readObservation",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Observation"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Observation.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete the resource so that it no exists (no read, search etc)",
+        "operationId": "deleteObservation",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "If the resource is deleted - no content is returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          }
+        ]
+      }
+    },
+    "/Observation": {
+      "summary": "Manager for resources of type Observation",
+      "description": "The Manager for resources of type Observation: provides services to manage the collection of all the Observation instances",
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createObservation",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Observation"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/Observation.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Observation"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Observation.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Observation/{rid}/_history/{hid}": {
+      "summary": "Read a past version of resource instance of type Observation",
+      "description": "Access a to specified previous version of a single resource of type Observation",
+      "get": {
+        "summary": "Read a past state of the resource",
+        "operationId": "vreadObservation",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag for that version",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Observation"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Observation.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/hid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/MedicationRequest/{rid}": {
+      "summary": "Read/Write/etc resource instance of type MedicationRequest",
+      "description": "Access to services to manage the state of a single resource of type MedicationRequest",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readMedicationRequest",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/MedicationRequest"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/MedicationRequest.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete the resource so that it no exists (no read, search etc)",
+        "operationId": "deleteMedicationRequest",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "If the resource is deleted - no content is returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          }
+        ]
+      }
+    },
+    "/MedicationRequest": {
+      "summary": "Manager for resources of type MedicationRequest",
+      "description": "The Manager for resources of type MedicationRequest: provides services to manage the collection of all the MedicationRequest instances",
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createMedicationRequest",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/MedicationRequest"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/MedicationRequest.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/MedicationRequest"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/MedicationRequest.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/MedicationRequest/{rid}/_history/{hid}": {
+      "summary": "Read a past version of resource instance of type MedicationRequest",
+      "description": "Access a to specified previous version of a single resource of type MedicationRequest",
+      "get": {
+        "summary": "Read a past state of the resource",
+        "operationId": "vreadMedicationRequest",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag for that version",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/MedicationRequest"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/MedicationRequest.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/hid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Procedure/{rid}": {
+      "summary": "Read/Write/etc resource instance of type Procedure",
+      "description": "Access to services to manage the state of a single resource of type Procedure",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readProcedure",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Procedure"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Procedure.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete the resource so that it no exists (no read, search etc)",
+        "operationId": "deleteProcedure",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "If the resource is deleted - no content is returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          }
+        ]
+      }
+    },
+    "/Procedure": {
+      "summary": "Manager for resources of type Procedure",
+      "description": "The Manager for resources of type Procedure: provides services to manage the collection of all the Procedure instances",
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createProcedure",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Procedure"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/Procedure.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Procedure"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Procedure.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Procedure/{rid}/_history/{hid}": {
+      "summary": "Read a past version of resource instance of type Procedure",
+      "description": "Access a to specified previous version of a single resource of type Procedure",
+      "get": {
+        "summary": "Read a past state of the resource",
+        "operationId": "vreadProcedure",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag for that version",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Procedure"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Procedure.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/hid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Substance/{rid}": {
+      "summary": "Read/Write/etc resource instance of type Substance",
+      "description": "Access to services to manage the state of a single resource of type Substance",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readSubstance",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Substance"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Substance.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete the resource so that it no exists (no read, search etc)",
+        "operationId": "deleteSubstance",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "If the resource is deleted - no content is returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          }
+        ]
+      }
+    },
+    "/Substance": {
+      "summary": "Manager for resources of type Substance",
+      "description": "The Manager for resources of type Substance: provides services to manage the collection of all the Substance instances",
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createSubstance",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Substance"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/Substance.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Substance"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Substance.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Substance/{rid}/_history/{hid}": {
+      "summary": "Read a past version of resource instance of type Substance",
+      "description": "Access a to specified previous version of a single resource of type Substance",
+      "get": {
+        "summary": "Read a past state of the resource",
+        "operationId": "vreadSubstance",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag for that version",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Substance"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Substance.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/hid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Specimen/{rid}": {
+      "summary": "Read/Write/etc resource instance of type Specimen",
+      "description": "Access to services to manage the state of a single resource of type Specimen",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readSpecimen",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Specimen"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Specimen.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete the resource so that it no exists (no read, search etc)",
+        "operationId": "deleteSpecimen",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "If the resource is deleted - no content is returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          }
+        ]
+      }
+    },
+    "/Specimen": {
+      "summary": "Manager for resources of type Specimen",
+      "description": "The Manager for resources of type Specimen: provides services to manage the collection of all the Specimen instances",
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createSpecimen",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Specimen"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/Specimen.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Specimen"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Specimen.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Specimen/{rid}/_history/{hid}": {
+      "summary": "Read a past version of resource instance of type Specimen",
+      "description": "Access a to specified previous version of a single resource of type Specimen",
+      "get": {
+        "summary": "Read a past state of the resource",
+        "operationId": "vreadSpecimen",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag for that version",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Specimen"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Specimen.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/hid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/DocumentReference/{rid}": {
+      "summary": "Read/Write/etc resource instance of type DocumentReference",
+      "description": "Access to services to manage the state of a single resource of type DocumentReference",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readDocumentReference",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/DocumentReference"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/DocumentReference.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete the resource so that it no exists (no read, search etc)",
+        "operationId": "deleteDocumentReference",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "If the resource is deleted - no content is returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          }
+        ]
+      }
+    },
+    "/DocumentReference": {
+      "summary": "Manager for resources of type DocumentReference",
+      "description": "The Manager for resources of type DocumentReference: provides services to manage the collection of all the DocumentReference instances",
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createDocumentReference",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/DocumentReference"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/DocumentReference.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/DocumentReference"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/DocumentReference.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/DocumentReference/{rid}/_history/{hid}": {
+      "summary": "Read a past version of resource instance of type DocumentReference",
+      "description": "Access a to specified previous version of a single resource of type DocumentReference",
+      "get": {
+        "summary": "Read a past state of the resource",
+        "operationId": "vreadDocumentReference",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag for that version",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/DocumentReference"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/DocumentReference.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/hid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Coverage/{rid}": {
+      "summary": "Read/Write/etc resource instance of type Coverage",
+      "description": "Access to services to manage the state of a single resource of type Coverage",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readCoverage",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Coverage"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Coverage.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete the resource so that it no exists (no read, search etc)",
+        "operationId": "deleteCoverage",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "If the resource is deleted - no content is returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          }
+        ]
+      }
+    },
+    "/Coverage": {
+      "summary": "Manager for resources of type Coverage",
+      "description": "The Manager for resources of type Coverage: provides services to manage the collection of all the Coverage instances",
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createCoverage",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Coverage"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/Coverage.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Coverage"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Coverage.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Coverage/{rid}/_history/{hid}": {
+      "summary": "Read a past version of resource instance of type Coverage",
+      "description": "Access a to specified previous version of a single resource of type Coverage",
+      "get": {
+        "summary": "Read a past state of the resource",
+        "operationId": "vreadCoverage",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag for that version",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Coverage"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Coverage.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/hid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/OperationOutcome/{rid}": {
+      "summary": "Read/Write/etc resource instance of type OperationOutcome",
+      "description": "Access to services to manage the state of a single resource of type OperationOutcome",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readOperationOutcome",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete the resource so that it no exists (no read, search etc)",
+        "operationId": "deleteOperationOutcome",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "If the resource is deleted - no content is returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          }
+        ]
+      }
+    },
+    "/OperationOutcome": {
+      "summary": "Manager for resources of type OperationOutcome",
+      "description": "The Manager for resources of type OperationOutcome: provides services to manage the collection of all the OperationOutcome instances",
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createOperationOutcome",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/OperationOutcome/{rid}/_history/{hid}": {
+      "summary": "Read a past version of resource instance of type OperationOutcome",
+      "description": "Access a to specified previous version of a single resource of type OperationOutcome",
+      "get": {
+        "summary": "Read a past state of the resource",
+        "operationId": "vreadOperationOutcome",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag for that version",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/hid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/": {
+      "summary": "System level operations",
+      "description": "System level operations",
+      "put": {
+        "summary": "Batch or Transaction",
+        "operationId": "transaction",
+        "requestBody": {
+          "description": "The batch or transaction",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Bundle"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/Bundle.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Batch or Transaction response",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Bundle"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/Bundle.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "rid": {
+        "name": "rid",
+        "in": "path",
+        "description": "id of the resource (\u003dResource.id)",
+        "required": true,
+        "allowEmptyValue": false,
+        "style": "simple",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "hid": {
+        "name": "hid",
+        "in": "path",
+        "description": "id of the history entry (\u003dResource.meta.versionId)",
+        "required": true,
+        "allowEmptyValue": false,
+        "style": "simple",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "summary": {
+        "name": "_summary",
+        "in": "query",
+        "description": "Requests the server to return a designated subset of the resource",
+        "allowEmptyValue": true,
+        "style": "form",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "true",
+            "text",
+            "data",
+            "count",
+            "false"
+          ]
+        }
+      },
+      "format": {
+        "name": "_format",
+        "in": "query",
+        "description": "Specify alternative response formats by their MIME-types (when a client is unable acccess accept: header)",
+        "allowEmptyValue": true,
+        "style": "form",
+        "schema": {
+          "type": "string",
+          "format": "mime-type"
+        }
+      },
+      "pretty": {
+        "name": "_pretty",
+        "in": "query",
+        "description": "Ask for a pretty printed response for human convenience",
+        "allowEmptyValue": true,
+        "style": "form",
+        "schema": {
+          "type": "boolean"
+        }
+      },
+      "elements": {
+        "name": "_elements",
+        "in": "query",
+        "description": "Requests the server to return a collection of elements from the resource",
+        "allowEmptyValue": true,
+        "style": "form",
+        "explode": false,
+        "schema": {
+          "type": "array",
+          "format": "string",
+          "items": {
+            "format": "string"
+          }
+        }
+      },
+      "count": {
+        "name": "_count",
+        "in": "query",
+        "description": "The maximum number of search results on a page. The server is not bound to return the number requested, but cannot return more",
+        "schema": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}

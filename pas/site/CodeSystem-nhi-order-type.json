@@ -1,0 +1,39 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "nhi-order-type",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem nhi-order-type</b></p><a name=\"nhi-order-type\"> </a><a name=\"hcnhi-order-type\"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-order-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"nhi-order-type-1\"> </a></td><td>藥品</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"nhi-order-type-2\"> </a></td><td>醫療服務</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"nhi-order-type-3\"> </a></td><td>特材</td></tr></table></div>"
+  },
+  "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-order-type",
+  "version" : "1.0.6",
+  "name" : "NHIOrderType",
+  "title" : "NHI-健保事前審查-醫令類別",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-07-01",
+  "publisher" : "衛生福利部中央健康保險署",
+  "contact" : [{
+    "name" : "衛生福利部中央健康保險署",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.nhi.gov.tw"
+    }]
+  }],
+  "description" : "臺灣衛生福利部中央健康保險署「醫令類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "1",
+    "display" : "藥品"
+  },
+  {
+    "code" : "2",
+    "display" : "醫療服務"
+  },
+  {
+    "code" : "3",
+    "display" : "特材"
+  }]
+}

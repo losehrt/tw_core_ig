@@ -1,0 +1,2822 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/additional-instruction-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTAdditionalDosageInstructions",
+      "title" : "SNOMED CT Additional Dosage Instructions",
+      "description" : "This value set includes all SNOMED CT Additional Dosage Instructions.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.95"],
+      "sources" : ["2.16.840.1.113883.4.642.3.95"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/adjudication",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AdjudicationValueCodes",
+      "title" : "Adjudication Value Codes",
+      "description" : "This value set includes a smattering of Adjudication Value codes which includes codes to indicate the amounts eligible under the plan, the amount of benefit, copays etc.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/adjudication"],
+      "oids" : ["2.16.840.1.113883.4.642.3.596"],
+      "sources" : ["2.16.840.1.113883.4.642.3.596"],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/adjudication-error",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Adjudication Error Codes",
+      "title" : "AdjudicationError",
+      "description" : "This value set includes a smattering of adjudication codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/adjudication-error"],
+      "oids" : ["2.16.840.1.113883.4.642.3.39"],
+      "sources" : ["2.16.840.1.113883.4.642.3.39"],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/administration-method-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTAdministrationMethodCodes",
+      "title" : "SNOMED CT Administration Method Codes",
+      "description" : "This value set includes some method codes from SNOMED CT - provided as an exemplar",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.97"],
+      "sources" : ["2.16.840.1.113883.4.642.3.97"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "AdministrativeGender",
+      "title" : "AdministrativeGender",
+      "description" : "The gender of a person used for administrative purposes.",
+      "systems" : ["http://hl7.org/fhir/administrative-gender"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1"],
+      "uses" : {
+      },
+      "StructureDefinition-Patient-twpas.html" : "病人資訊-Patient TWPAS",
+      "StructureDefinition-Practitioner-twpas.html" : "醫事人員-Practitioner TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/approach-site-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTAnatomicalStructureForAdministrationSiteCodes",
+      "title" : "SNOMED CT Anatomical Structure for Administration Site Codes",
+      "description" : "This value set includes Anatomical Structure codes from SNOMED CT - provided as an exemplar.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.346"],
+      "sources" : ["2.16.840.1.113883.4.642.3.346"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/body-site",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTBodyStructures",
+      "title" : "SNOMED CT Body Structures",
+      "description" : "This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.141"],
+      "sources" : ["2.16.840.1.113883.4.642.3.141"],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-twpas.html" : "基因檢測檢體-Specimen TWPAS",
+      "StructureDefinition-Procedure-twpas.html" : "放射治療-Procedure TWPAS",
+      "StructureDefinition-Observation-diagnostic-twpas.html" : "基因資訊-Observation Diagnostic TWPAS",
+      "StructureDefinition-Observation-laboratory-result-twpas.html" : "檢驗檢查-Observation Laboratory Result TWPAS",
+      "StructureDefinition-Observation-pat-assessment-twpas.html" : "病人狀態評估-Observation Patient Assessment TWPAS",
+      "StructureDefinition-Observation-cancer-stage-twpas.html" : "癌症分期量表-Observation Cancer Stage TWPAS",
+      "StructureDefinition-Observation-tx-assessment-twpas.html" : "治療後疾病狀態評估-Observation Treatment Assessment TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/bodysite-laterality",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Laterality",
+      "title" : "Laterality",
+      "description" : "Laterality: SNOMED-CT concepts for 'left', 'right', and 'bilateral'",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.287"],
+      "sources" : ["2.16.840.1.113883.4.642.3.287"],
+      "uses" : {
+      },
+      "StructureDefinition-ImagingStudy-twpas.html" : "DICOM影像-ImagingStudy TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/bundle-type",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "BundleType",
+      "title" : "BundleType",
+      "description" : "Indicates the purpose of a bundle - how it is intended to be used.",
+      "systems" : ["http://hl7.org/fhir/bundle-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.620"],
+      "sources" : ["2.16.840.1.113883.4.642.3.620"],
+      "uses" : {
+      },
+      "StructureDefinition-Bundle-twpas.html" : "事前審查-Bundle TWPAS",
+      "StructureDefinition-Bundle-response-twpas.html" : "事前審查回覆-Bundle Response TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/c80-facilitycodes",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "FacilityTypeCodeValueSet",
+      "title" : "Facility Type Code Value Set",
+      "description" : "This is the code representing the type of organizational setting where the clinical encounter, service, interaction, or treatment occurred. The value set used for Healthcare Facility Type has been defined by HITSP to be the value set reproduced from HITSP C80 Table 2-147.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.3.88.12.80.67"],
+      "sources" : ["2.16.840.1.113883.3.88.12.80.67"],
+      "uses" : {
+      },
+      "StructureDefinition-DocumentReference-twpas.html" : "文件參照-DocumentReference TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/c80-practice-codes",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "PracticeSettingCodeValueSet",
+      "title" : "Practice Setting Code Value Set",
+      "description" : "This is the code representing the clinical specialty of the clinician or provider who interacted with, treated, or provided a service to/for the patient. The value set used for clinical specialty has been limited by HITSP to the value set reproduced from HITSP C80 Table 2-149 Clinical Specialty Value Set Definition.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.3.88.12.80.72"],
+      "sources" : ["2.16.840.1.113883.3.88.12.80.72"],
+      "uses" : {
+      },
+      "StructureDefinition-DocumentReference-twpas.html" : "文件參照-DocumentReference TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/claim-careteamrole",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ClaimCareTeamRoleCodes",
+      "title" : "Claim Care Team Role Codes",
+      "description" : "This value set includes sample Claim Care Team Role codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/claimcareteamrole"],
+      "oids" : ["2.16.840.1.113883.4.642.3.586"],
+      "sources" : ["2.16.840.1.113883.4.642.3.586"],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/claim-exception",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ExceptionCodes",
+      "title" : "Exception Codes",
+      "description" : "This value set includes sample Exception codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/claim-exception"],
+      "oids" : ["2.16.840.1.113883.4.642.3.580"],
+      "sources" : ["2.16.840.1.113883.4.642.3.580"],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/claim-modifiers",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ModifierTypeCodes",
+      "title" : "Modifier type Codes",
+      "description" : "This value set includes sample Modifier type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/modifiers"],
+      "oids" : ["2.16.840.1.113883.4.642.3.536"],
+      "sources" : ["2.16.840.1.113883.4.642.3.536"],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/claim-subtype",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ExampleClaimSubTypeCodes",
+      "title" : "Example Claim SubType Codes",
+      "description" : "This value set includes sample Claim SubType codes which are used to distinguish the claim types for example within type institutional there may be subtypes for emergency services, bed stay and transportation.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/ex-claimsubtype"],
+      "oids" : ["2.16.840.1.113883.4.642.3.566"],
+      "sources" : ["2.16.840.1.113883.4.642.3.566"],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/claim-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ClaimTypeCodes",
+      "title" : "Claim Type Codes",
+      "description" : "This value set includes Claim Type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/claim-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.558"],
+      "sources" : ["2.16.840.1.113883.4.642.3.558"],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/claim-use",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Use",
+      "title" : "Use",
+      "description" : "The purpose of the Claim: predetermination, preauthorization, claim.",
+      "systems" : ["http://hl7.org/fhir/claim-use"],
+      "oids" : ["2.16.840.1.113883.4.642.3.544"],
+      "sources" : ["2.16.840.1.113883.4.642.3.544"],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTClinicalFindings",
+      "title" : "SNOMED CT Clinical Findings",
+      "description" : "This value set includes all the \"Clinical finding\" [SNOMED CT](http://snomed.info/sct) codes - concepts where concept is-a 404684003 (Clinical finding (finding)).",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.232"],
+      "sources" : ["2.16.840.1.113883.4.642.3.232"],
+      "uses" : {
+      },
+      "StructureDefinition-DiagnosticReport-image-twpas.html" : "影像報告-DiagnosticReport Image TWPAS",
+      "StructureDefinition-DiagnosticReport-twpas.html" : "檢查報告-DiagnosticReport TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/composition-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CompositionStatus",
+      "title" : "CompositionStatus",
+      "description" : "The workflow/clinical status of the composition.",
+      "systems" : ["http://hl7.org/fhir/composition-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.241"],
+      "sources" : ["2.16.840.1.113883.4.642.3.241"],
+      "uses" : {
+      },
+      "StructureDefinition-DocumentReference-twpas.html" : "文件參照-DocumentReference TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/condition-code",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Condition/Problem/DiagnosisCodes",
+      "title" : "Condition/Problem/Diagnosis Codes",
+      "description" : "Example value set for Condition/Problem/Diagnosis codes.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.161"],
+      "sources" : ["2.16.840.1.113883.4.642.3.161"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-Procedure-twpas.html" : "放射治療-Procedure TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contact-point-system",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ContactPointSystem",
+      "title" : "ContactPointSystem",
+      "description" : "Telecommunications form for contact point.",
+      "systems" : ["http://hl7.org/fhir/contact-point-system"],
+      "oids" : ["2.16.840.1.113883.4.642.3.71"],
+      "sources" : ["2.16.840.1.113883.4.642.3.71"],
+      "uses" : {
+      },
+      "StructureDefinition-Organization-genetic-testing-twpas.html" : "基因檢測機構-Organization Genetic Testing TWPAS",
+      "StructureDefinition-Patient-twpas.html" : "病人資訊-Patient TWPAS",
+      "StructureDefinition-Organization-twpas.html" : "醫事機構-Organization TWPAS",
+      "StructureDefinition-Practitioner-twpas.html" : "醫事人員-Practitioner TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contact-point-use",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ContactPointUse",
+      "title" : "ContactPointUse",
+      "description" : "Use of contact point.",
+      "systems" : ["http://hl7.org/fhir/contact-point-use"],
+      "oids" : ["2.16.840.1.113883.4.642.3.73"],
+      "sources" : ["2.16.840.1.113883.4.642.3.73"],
+      "uses" : {
+      },
+      "StructureDefinition-Organization-genetic-testing-twpas.html" : "基因檢測機構-Organization Genetic Testing TWPAS",
+      "StructureDefinition-Patient-twpas.html" : "病人資訊-Patient TWPAS",
+      "StructureDefinition-Organization-twpas.html" : "醫事機構-Organization TWPAS",
+      "StructureDefinition-Practitioner-twpas.html" : "醫事人員-Practitioner TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contactentity-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ContactEntityType",
+      "title" : "Contact entity type",
+      "description" : "This example value set defines a set of codes that can be used to indicate the purpose for which you would contact a contact party.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/contactentity-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.416"],
+      "sources" : ["2.16.840.1.113883.4.642.3.416"],
+      "uses" : {
+      },
+      "StructureDefinition-Organization-genetic-testing-twpas.html" : "基因檢測機構-Organization Genetic Testing TWPAS",
+      "StructureDefinition-Organization-twpas.html" : "醫事機構-Organization TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/coverage-class",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CoverageClassCodes",
+      "title" : "Coverage Class Codes",
+      "description" : "This value set includes Coverage Class codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/coverage-class"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1009"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1009"],
+      "uses" : {
+      },
+      "StructureDefinition-Coverage-twpas.html" : "健保事前審查計畫-Coverage TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/coverage-copay-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CoverageCopayTypeCodes",
+      "title" : "Coverage Copay Type Codes",
+      "description" : "This value set includes sample Coverage Copayment Type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/coverage-copay-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.527"],
+      "sources" : ["2.16.840.1.113883.4.642.3.527"],
+      "uses" : {
+      },
+      "StructureDefinition-Coverage-twpas.html" : "健保事前審查計畫-Coverage TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/coverage-financial-exception",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ExampleCoverageFinancialExceptionCodes",
+      "title" : "Example Coverage Financial Exception Codes",
+      "description" : "This value set includes Example Coverage Financial Exception Codes.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/ex-coverage-financial-exception"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1328"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1328"],
+      "uses" : {
+      },
+      "StructureDefinition-Coverage-twpas.html" : "健保事前審查計畫-Coverage TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/coverage-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CoverageTypeAndSelf-PayCodes",
+      "title" : "Coverage Type and Self-Pay Codes",
+      "description" : "This value set includes Coverage Type codes.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/coverage-selfpay",
+        "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.520"],
+      "sources" : ["2.16.840.1.113883.4.642.3.520"],
+      "uses" : {
+      },
+      "StructureDefinition-Coverage-twpas.html" : "健保事前審查計畫-Coverage TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/data-absent-reason",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "DataAbsentReason",
+      "title" : "DataAbsentReason",
+      "description" : "Used to specify why the normally expected content of the data element is missing.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/data-absent-reason"],
+      "oids" : ["2.16.840.1.113883.4.642.3.5"],
+      "sources" : ["2.16.840.1.113883.4.642.3.5"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-diagnostic-twpas.html" : "基因資訊-Observation Diagnostic TWPAS",
+      "StructureDefinition-Observation-laboratory-result-twpas.html" : "檢驗檢查-Observation Laboratory Result TWPAS",
+      "StructureDefinition-Observation-pat-assessment-twpas.html" : "病人狀態評估-Observation Patient Assessment TWPAS",
+      "StructureDefinition-Observation-cancer-stage-twpas.html" : "癌症分期量表-Observation Cancer Stage TWPAS",
+      "StructureDefinition-Observation-tx-assessment-twpas.html" : "治療後疾病狀態評估-Observation Treatment Assessment TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/days-of-week",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "DaysOfWeek",
+      "title" : "DaysOfWeek",
+      "description" : "The days of the week.",
+      "systems" : ["http://hl7.org/fhir/days-of-week"],
+      "oids" : ["2.16.840.1.113883.4.642.3.512"],
+      "sources" : ["2.16.840.1.113883.4.642.3.512"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/device-action",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ProcedureDeviceActionCodes",
+      "title" : "Procedure Device Action Codes",
+      "description" : "Example codes indicating the change that happened to the device during the procedure.  Note that these are in no way complete and might not even be appropriate for some uses.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.425"],
+      "sources" : ["2.16.840.1.113883.4.642.3.425"],
+      "uses" : {
+      },
+      "StructureDefinition-Procedure-twpas.html" : "放射治療-Procedure TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/device-kind",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "FHIRDeviceTypes",
+      "title" : "FHIR Device Types",
+      "description" : "Codes used to identify medical devices. Includes concepts from SNOMED CT (http://www.snomed.org/) where concept is-a 49062001 (Device)  and is provided as a suggestive example.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.208"],
+      "sources" : ["2.16.840.1.113883.4.642.3.208"],
+      "uses" : {
+      },
+      "StructureDefinition-Procedure-twpas.html" : "放射治療-Procedure TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/diagnosis-role",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DiagnosisRole",
+      "title" : "DiagnosisRole",
+      "description" : "This value set defines a set of codes that can be used to express the role of a diagnosis on the Encounter or EpisodeOfCare record.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/diagnosis-role"],
+      "oids" : ["2.16.840.1.113883.4.642.3.49"],
+      "sources" : ["2.16.840.1.113883.4.642.3.49"],
+      "uses" : {
+      },
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/diagnostic-report-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DiagnosticReportStatus",
+      "title" : "DiagnosticReportStatus",
+      "description" : "The status of the diagnostic report.",
+      "systems" : ["http://hl7.org/fhir/diagnostic-report-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.235"],
+      "sources" : ["2.16.840.1.113883.4.642.3.235"],
+      "uses" : {
+      },
+      "StructureDefinition-DiagnosticReport-image-twpas.html" : "影像報告-DiagnosticReport Image TWPAS",
+      "StructureDefinition-DiagnosticReport-twpas.html" : "檢查報告-DiagnosticReport TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/diagnostic-service-sections",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DiagnosticServiceSectionCodes",
+      "title" : "Diagnostic Service Section Codes",
+      "description" : "This value set includes all the codes in HL7 V2 table 0074.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0074"],
+      "oids" : ["2.16.840.1.113883.4.642.3.234"],
+      "sources" : ["2.16.840.1.113883.4.642.3.234"],
+      "uses" : {
+      },
+      "StructureDefinition-DiagnosticReport-image-twpas.html" : "影像報告-DiagnosticReport Image TWPAS",
+      "StructureDefinition-DiagnosticReport-twpas.html" : "檢查報告-DiagnosticReport TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/document-reference-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DocumentReferenceStatus",
+      "title" : "DocumentReferenceStatus",
+      "description" : "The status of the document reference.",
+      "systems" : ["http://hl7.org/fhir/document-reference-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.7"],
+      "sources" : ["2.16.840.1.113883.4.642.3.7"],
+      "uses" : {
+      },
+      "StructureDefinition-DocumentReference-twpas.html" : "文件參照-DocumentReference TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/document-relationship-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DocumentRelationshipType",
+      "title" : "DocumentRelationshipType",
+      "description" : "The type of relationship between documents.",
+      "systems" : ["http://hl7.org/fhir/document-relationship-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.244"],
+      "sources" : ["2.16.840.1.113883.4.642.3.244"],
+      "uses" : {
+      },
+      "StructureDefinition-DocumentReference-twpas.html" : "文件參照-DocumentReference TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/dose-rate-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DoseAndRateType",
+      "title" : "DoseAndRateType",
+      "description" : "The kind of dose or rate specified.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/dose-rate-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.981"],
+      "sources" : ["2.16.840.1.113883.4.642.3.981"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-admit-source",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AdmitSource",
+      "title" : "Admit source",
+      "description" : "This value set defines a set of codes that can be used to indicate from where the patient came in.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/admit-source"],
+      "oids" : ["2.16.840.1.113883.4.642.3.257"],
+      "sources" : ["2.16.840.1.113883.4.642.3.257"],
+      "uses" : {
+      },
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-diet",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Diet",
+      "title" : "Diet",
+      "description" : "This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/diet"],
+      "oids" : ["2.16.840.1.113883.4.642.3.255"],
+      "sources" : ["2.16.840.1.113883.4.642.3.255"],
+      "uses" : {
+      },
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-discharge-disposition",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DischargeDisposition",
+      "title" : "Discharge disposition",
+      "description" : "This value set defines a set of codes that can be used to where the patient left the hospital.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/discharge-disposition"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.259"],
+      "sources" : ["2.16.840.1.113883.4.642.3.259"],
+      "uses" : {
+      },
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-location-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "EncounterLocationStatus",
+      "title" : "EncounterLocationStatus",
+      "description" : "The status of the location.",
+      "systems" : ["http://hl7.org/fhir/encounter-location-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.262"],
+      "sources" : ["2.16.840.1.113883.4.642.3.262"],
+      "uses" : {
+      },
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-participant-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ParticipantType",
+      "title" : "Participant type",
+      "description" : "This value set defines a set of codes that can be used to indicate how an individual participates in an encounter.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/participant-type",
+        "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.250"],
+      "sources" : ["2.16.840.1.113883.4.642.3.250"],
+      "uses" : {
+      },
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "EncounterReasonCodes",
+      "title" : "Encounter Reason Codes",
+      "description" : "This examples value set defines the set of codes that can be used to indicate reasons for an encounter.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.261"],
+      "sources" : ["2.16.840.1.113883.4.642.3.261"],
+      "uses" : {
+      },
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-special-arrangements",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SpecialArrangements",
+      "title" : "Special arrangements",
+      "description" : "This value set defines a set of codes that can be used to indicate the kinds of special arrangements in place for a patients visit.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/encounter-special-arrangements"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.253"],
+      "sources" : ["2.16.840.1.113883.4.642.3.253"],
+      "uses" : {
+      },
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-special-courtesy",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SpecialCourtesy",
+      "title" : "Special courtesy",
+      "description" : "This value set defines a set of codes that can be used to indicate special courtesies provided to the patient.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.252"],
+      "sources" : ["2.16.840.1.113883.4.642.3.252"],
+      "uses" : {
+      },
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "EncounterStatus",
+      "title" : "EncounterStatus",
+      "description" : "Current state of the encounter.",
+      "systems" : ["http://hl7.org/fhir/encounter-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.246"],
+      "sources" : ["2.16.840.1.113883.4.642.3.246"],
+      "uses" : {
+      },
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "EncounterType",
+      "title" : "Encounter type",
+      "description" : "This example value set defines a set of codes that can be used to indicate the type of encounter: a specific code indicating type of service provided.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/encounter-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.248"],
+      "sources" : ["2.16.840.1.113883.4.642.3.248"],
+      "uses" : {
+      },
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/event-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "EventStatus",
+      "title" : "EventStatus",
+      "description" : "Codes identifying the lifecycle stage of an event.",
+      "systems" : ["http://hl7.org/fhir/event-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.109"],
+      "sources" : ["2.16.840.1.113883.4.642.3.109"],
+      "uses" : {
+      },
+      "StructureDefinition-Media-twpas.html" : "非DICOM影像-Media TWPAS",
+      "StructureDefinition-Procedure-twpas.html" : "放射治療-Procedure TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/event-timing",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "EventTiming",
+      "title" : "EventTiming",
+      "description" : "Real world event relating to the schedule.",
+      "systems" : [
+        "http://hl7.org/fhir/event-timing",
+        "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.75"],
+      "sources" : ["2.16.840.1.113883.4.642.3.75"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ex-benefitcategory",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "BenefitCategoryCodes",
+      "title" : "Benefit Category Codes",
+      "description" : "This value set includes examples of Benefit Category codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/ex-benefitcategory"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1174"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1174"],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ex-diagnosis-on-admission",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ExampleDiagnosisOnAdmissionCodes",
+      "title" : "Example Diagnosis on Admission Codes",
+      "description" : "This value set includes example Diagnosis on Admission codes.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1169"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1169"],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ex-diagnosisrelatedgroup",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ExampleDiagnosisRelatedGroupCodes",
+      "title" : "Example Diagnosis Related Group Codes",
+      "description" : "This value set includes example Diagnosis Related Group codes.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/ex-diagnosisrelatedgroup"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.588"],
+      "sources" : ["2.16.840.1.113883.4.642.3.588"],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ex-diagnosistype",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ExampleDiagnosisTypeCodes",
+      "title" : "Example Diagnosis Type Codes",
+      "description" : "This value set includes example Diagnosis Type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/ex-diagnosistype"],
+      "oids" : ["2.16.840.1.113883.4.642.3.590"],
+      "sources" : ["2.16.840.1.113883.4.642.3.590"],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ex-paymenttype",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ExamplePaymentTypeCodes",
+      "title" : "Example Payment Type Codes",
+      "description" : "This value set includes example Payment Type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/ex-paymenttype"],
+      "oids" : ["2.16.840.1.113883.4.642.3.616"],
+      "sources" : ["2.16.840.1.113883.4.642.3.616"],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ex-procedure-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ExampleProcedureTypeCodes",
+      "title" : "Example Procedure Type Codes",
+      "description" : "This value set includes example Procedure Type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/ex-procedure-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1387"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1387"],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ex-program-code",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ExampleProgramReasonCodes",
+      "title" : "Example Program Reason Codes",
+      "description" : "This value set includes sample Program Reason Span codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/ex-programcode"],
+      "oids" : ["2.16.840.1.113883.4.642.3.576"],
+      "sources" : ["2.16.840.1.113883.4.642.3.576"],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ex-revenue-center",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ExampleRevenueCenterCodes",
+      "title" : "Example Revenue Center Codes",
+      "description" : "This value set includes sample Revenue Center codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/ex-revenue-center"],
+      "oids" : ["2.16.840.1.113883.4.642.3.594"],
+      "sources" : ["2.16.840.1.113883.4.642.3.594"],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/fm-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "FinancialResourceStatusCodes",
+      "title" : "Financial Resource Status Codes",
+      "description" : "This value set includes Status codes.",
+      "systems" : ["http://hl7.org/fhir/fm-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.592"],
+      "sources" : ["2.16.840.1.113883.4.642.3.592"],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-Coverage-twpas.html" : "健保事前審查計畫-Coverage TWPAS",
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/formatcodes",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "DocumentReferenceFormatCodeSet",
+      "title" : "DocumentReference Format Code Set",
+      "description" : "The value set is defined to be the set of format codes defined by the IHE Technical Framework, and also including additional format codes defined by the    HL7. The value set is listed in HITSP C80 Table 2-153 Format Code Value Set Definition,    with additions published later by IHE as published    at http://wiki.ihe.net/index.php?title=IHE_Format_Codes   and with additions published later by HL7 as published at https://confluence.hl7.org/display/SD/Format+Codes+for+IHE+XDS.   This is the code specifying the technical format of the document. Along with the typeCode,    it should provide sufficient information to allow any potential document consumer to know    if it will be able to process the document. The code shall be sufficiently specific to    ensure processing/display by identifying a document encoding, structure and template. The actual list of codes here is incomplete",
+      "systems" : ["http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem"],
+      "oids" : ["1.3.6.1.4.1.19376.1.2.7.1"],
+      "sources" : ["1.3.6.1.4.1.19376.1.2.7.1"],
+      "uses" : {
+      },
+      "StructureDefinition-DocumentReference-twpas.html" : "文件參照-DocumentReference TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/forms",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Form Codes",
+      "title" : "Forms",
+      "description" : "This value set includes a sample set of Forms codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/forms-codes"],
+      "oids" : ["2.16.840.1.113883.4.642.3.37"],
+      "sources" : ["2.16.840.1.113883.4.642.3.37"],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/fundsreserve",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Funds Reservation Codes",
+      "title" : "FundsReserve",
+      "description" : "This value set includes sample funds reservation type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/fundsreserve"],
+      "oids" : ["2.16.840.1.113883.4.642.3.33"],
+      "sources" : ["2.16.840.1.113883.4.642.3.33"],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/http-verb",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "HTTPVerb",
+      "title" : "HTTPVerb",
+      "description" : "HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.",
+      "systems" : ["http://hl7.org/fhir/http-verb"],
+      "oids" : ["2.16.840.1.113883.4.642.3.624"],
+      "sources" : ["2.16.840.1.113883.4.642.3.624"],
+      "uses" : {
+      },
+      "StructureDefinition-Bundle-twpas.html" : "事前審查-Bundle TWPAS",
+      "StructureDefinition-Bundle-response-twpas.html" : "事前審查回覆-Bundle Response TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/identifier-type",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "Identifier Type Codes",
+      "title" : "IdentifierType",
+      "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0203"],
+      "oids" : ["2.16.840.1.113883.4.642.3.45"],
+      "sources" : ["2.16.840.1.113883.4.642.3.45"],
+      "uses" : {
+      },
+      "StructureDefinition-ImagingStudy-twpas.html" : "DICOM影像-ImagingStudy TWPAS",
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "IdentifierUse",
+      "title" : "IdentifierUse",
+      "description" : "Identifies the purpose for this identifier, if known .",
+      "systems" : ["http://hl7.org/fhir/identifier-use"],
+      "oids" : ["2.16.840.1.113883.4.642.3.57"],
+      "sources" : ["2.16.840.1.113883.4.642.3.57"],
+      "uses" : {
+      },
+      "StructureDefinition-Organization-genetic-testing-twpas.html" : "基因檢測機構-Organization Genetic Testing TWPAS",
+      "StructureDefinition-ImagingStudy-twpas.html" : "DICOM影像-ImagingStudy TWPAS",
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS",
+      "StructureDefinition-Patient-twpas.html" : "病人資訊-Patient TWPAS",
+      "StructureDefinition-Organization-twpas.html" : "醫事機構-Organization TWPAS",
+      "StructureDefinition-Practitioner-twpas.html" : "醫事人員-Practitioner TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/imagingstudy-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ImagingStudyStatus",
+      "title" : "ImagingStudyStatus",
+      "description" : "The status of the ImagingStudy.",
+      "systems" : ["http://hl7.org/fhir/imagingstudy-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.990"],
+      "sources" : ["2.16.840.1.113883.4.642.3.990"],
+      "uses" : {
+      },
+      "StructureDefinition-ImagingStudy-twpas.html" : "DICOM影像-ImagingStudy TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/issue-severity",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "IssueSeverity",
+      "title" : "IssueSeverity",
+      "description" : "How the issue affects the success of the action.",
+      "systems" : ["http://hl7.org/fhir/issue-severity"],
+      "oids" : ["2.16.840.1.113883.4.642.3.408"],
+      "sources" : ["2.16.840.1.113883.4.642.3.408"],
+      "uses" : {
+      },
+      "StructureDefinition-Operationoutcome-twpas.html" : "系統回應訊息-OperationOutcome TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/issue-type",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "IssueType",
+      "title" : "IssueType",
+      "description" : "A code that describes the type of issue.",
+      "systems" : ["http://hl7.org/fhir/issue-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.410"],
+      "sources" : ["2.16.840.1.113883.4.642.3.410"],
+      "uses" : {
+      },
+      "StructureDefinition-Operationoutcome-twpas.html" : "系統回應訊息-OperationOutcome TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/languages",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CommonLanguages",
+      "title" : "Common Languages",
+      "description" : "This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47)",
+      "systems" : ["urn:ietf:bcp:47"],
+      "oids" : ["2.16.840.1.113883.4.642.3.20"],
+      "sources" : ["2.16.840.1.113883.4.642.3.20"],
+      "uses" : {
+      },
+      "StructureDefinition-DiagnosticReport-image-twpas.html" : "影像報告-DiagnosticReport Image TWPAS",
+      "StructureDefinition-Organization-genetic-testing-twpas.html" : "基因檢測機構-Organization Genetic Testing TWPAS",
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-DiagnosticReport-twpas.html" : "檢查報告-DiagnosticReport TWPAS",
+      "StructureDefinition-Coverage-twpas.html" : "健保事前審查計畫-Coverage TWPAS",
+      "StructureDefinition-ImagingStudy-twpas.html" : "DICOM影像-ImagingStudy TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS",
+      "StructureDefinition-Observation-tx-assessment-twpas.html" : "治療後疾病狀態評估-Observation Treatment Assessment TWPAS",
+      "StructureDefinition-Procedure-twpas.html" : "放射治療-Procedure TWPAS",
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS",
+      "StructureDefinition-Operationoutcome-twpas.html" : "系統回應訊息-OperationOutcome TWPAS",
+      "StructureDefinition-Patient-twpas.html" : "病人資訊-Patient TWPAS",
+      "StructureDefinition-Organization-twpas.html" : "醫事機構-Organization TWPAS",
+      "StructureDefinition-Practitioner-twpas.html" : "醫事人員-Practitioner TWPAS",
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-Substance-twpas.html" : "放射治療總劑量-Substance TWPAS",
+      "StructureDefinition-Observation-pat-assessment-twpas.html" : "病人狀態評估-Observation Patient Assessment TWPAS",
+      "StructureDefinition-Observation-cancer-stage-twpas.html" : "癌症分期量表-Observation Cancer Stage TWPAS",
+      "StructureDefinition-DocumentReference-twpas.html" : "文件參照-DocumentReference TWPAS",
+      "StructureDefinition-Bundle-twpas.html" : "事前審查-Bundle TWPAS",
+      "StructureDefinition-Specimen-twpas.html" : "基因檢測檢體-Specimen TWPAS",
+      "StructureDefinition-Media-twpas.html" : "非DICOM影像-Media TWPAS",
+      "StructureDefinition-Observation-diagnostic-twpas.html" : "基因資訊-Observation Diagnostic TWPAS",
+      "StructureDefinition-Bundle-response-twpas.html" : "事前審查回覆-Bundle Response TWPAS",
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS",
+      "StructureDefinition-Observation-laboratory-result-twpas.html" : "檢驗檢查-Observation Laboratory Result TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/link-type",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "LinkType",
+      "title" : "LinkType",
+      "description" : "The type of link between this patient resource and another patient resource.",
+      "systems" : ["http://hl7.org/fhir/link-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.423"],
+      "sources" : ["2.16.840.1.113883.4.642.3.423"],
+      "uses" : {
+      },
+      "StructureDefinition-Patient-twpas.html" : "病人資訊-Patient TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/location-physical-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "LocationType",
+      "title" : "Location type",
+      "description" : "This example value set defines a set of codes that can be used to indicate the physical form of the Location.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/location-physical-type"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.328"],
+      "sources" : ["2.16.840.1.113883.4.642.3.328"],
+      "uses" : {
+      },
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/marital-status",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "Marital Status Codes",
+      "title" : "MaritalStatus",
+      "description" : "This value set defines the set of codes that can be used to indicate the marital status of a person.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.29"],
+      "sources" : ["2.16.840.1.113883.4.642.3.29"],
+      "uses" : {
+      },
+      "StructureDefinition-Patient-twpas.html" : "病人資訊-Patient TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/media-modality",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "MediaModality",
+      "title" : "Media Modality",
+      "description" : "Detailed information about the type of the image - its kind, purpose, or the kind of equipment used to generate it.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/media-modality"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1001"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1001"],
+      "uses" : {
+      },
+      "StructureDefinition-Media-twpas.html" : "非DICOM影像-Media TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/media-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "MediaType",
+      "title" : "Media Type",
+      "description" : "Codes for high level media categories.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/media-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1000"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1000"],
+      "uses" : {
+      },
+      "StructureDefinition-Media-twpas.html" : "非DICOM影像-Media TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/media-view",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "MediaCollectionView/Projection",
+      "title" : "Media Collection View/Projection",
+      "description" : "Codes defined in SNOMED CT that can be used to record Media Recording views.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.337"],
+      "sources" : ["2.16.840.1.113883.4.642.3.337"],
+      "uses" : {
+      },
+      "StructureDefinition-Media-twpas.html" : "非DICOM影像-Media TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-as-needed-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTMedicationAsNeededReasonCodes",
+      "title" : "SNOMED CT Medication As Needed Reason Codes",
+      "description" : "This value set includes all clinical findings from SNOMED CT - provided as an exemplar value set.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.96"],
+      "sources" : ["2.16.840.1.113883.4.642.3.96"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTMedicationCodes",
+      "title" : "SNOMED CT Medication Codes",
+      "description" : "This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from SNOMED CT - provided as an exemplar value set.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.375"],
+      "sources" : ["2.16.840.1.113883.4.642.3.375"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "medicationRequest Category Codes",
+      "title" : "Medication request  category  codes",
+      "description" : "MedicationRequest Category Codes",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/medicationrequest-category"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1322"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1322"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-course-of-therapy",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "medicationRequest Course of Therapy Codes",
+      "title" : "Medication request  course of  therapy  codes",
+      "description" : "MedicationRequest Course of Therapy Codes",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1326"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1326"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-intent",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "medicationRequest Intent",
+      "title" : "Medication request  intent",
+      "description" : "MedicationRequest Intent Codes",
+      "systems" : ["http://hl7.org/fhir/CodeSystem/medicationrequest-intent"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1321"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1321"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "medicationrequest Status",
+      "title" : "Medicationrequest  status",
+      "description" : "MedicationRequest Status Codes",
+      "systems" : ["http://hl7.org/fhir/CodeSystem/medicationrequest-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1320"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1320"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-status-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "medicationRequest Status Reason Codes",
+      "title" : "Medication request  status  reason  codes",
+      "description" : "MedicationRequest Status Reason Codes",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1324"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1324"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/mimetypes",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "Mime Types",
+      "title" : "MimeType",
+      "description" : "This value set includes all possible codes from BCP-13 (http://tools.ietf.org/html/bcp13)",
+      "systems" : ["urn:ietf:bcp:13"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1024"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1024"],
+      "uses" : {
+      },
+      "StructureDefinition-DiagnosticReport-image-twpas.html" : "影像報告-DiagnosticReport Image TWPAS",
+      "StructureDefinition-DocumentReference-twpas.html" : "文件參照-DocumentReference TWPAS",
+      "StructureDefinition-DiagnosticReport-twpas.html" : "檢查報告-DiagnosticReport TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/missing-tooth-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "MissingToothReasonCodes",
+      "title" : "Missing Tooth Reason Codes",
+      "description" : "This value set includes sample Missing Tooth Reason codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/missingtoothreason"],
+      "oids" : ["2.16.840.1.113883.4.642.3.534"],
+      "sources" : ["2.16.840.1.113883.4.642.3.534"],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/name-use",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "NameUse",
+      "title" : "NameUse",
+      "description" : "The use of a human name.",
+      "systems" : ["http://hl7.org/fhir/name-use"],
+      "oids" : ["2.16.840.1.113883.4.642.3.65"],
+      "sources" : ["2.16.840.1.113883.4.642.3.65"],
+      "uses" : {
+      },
+      "StructureDefinition-Patient-twpas.html" : "病人資訊-Patient TWPAS",
+      "StructureDefinition-Practitioner-twpas.html" : "醫事人員-Practitioner TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/note-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "NoteType",
+      "title" : "NoteType",
+      "description" : "The presentation types of notes.",
+      "systems" : ["http://hl7.org/fhir/note-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.15"],
+      "sources" : ["2.16.840.1.113883.4.642.3.15"],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ObservationCategoryCodes",
+      "title" : "Observation Category Codes",
+      "description" : "Observation Category codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/observation-category"],
+      "oids" : ["2.16.840.1.113883.4.642.3.403"],
+      "sources" : ["2.16.840.1.113883.4.642.3.403"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-diagnostic-twpas.html" : "基因資訊-Observation Diagnostic TWPAS",
+      "StructureDefinition-Observation-laboratory-result-twpas.html" : "檢驗檢查-Observation Laboratory Result TWPAS",
+      "StructureDefinition-Observation-pat-assessment-twpas.html" : "病人狀態評估-Observation Patient Assessment TWPAS",
+      "StructureDefinition-Observation-cancer-stage-twpas.html" : "癌症分期量表-Observation Cancer Stage TWPAS",
+      "StructureDefinition-Observation-tx-assessment-twpas.html" : "治療後疾病狀態評估-Observation Treatment Assessment TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "LOINCCodes",
+      "title" : "LOINC Codes",
+      "description" : "This value set includes all LOINC codes",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.396"],
+      "sources" : ["2.16.840.1.113883.4.642.3.396"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-diagnostic-twpas.html" : "基因資訊-Observation Diagnostic TWPAS",
+      "ConceptMap-nhi-loinc.html" : "臺灣健保署醫療服務給付項目對應LOINC",
+      "StructureDefinition-Observation-laboratory-result-twpas.html" : "檢驗檢查-Observation Laboratory Result TWPAS",
+      "StructureDefinition-Observation-pat-assessment-twpas.html" : "病人狀態評估-Observation Patient Assessment TWPAS",
+      "StructureDefinition-Observation-cancer-stage-twpas.html" : "癌症分期量表-Observation Cancer Stage TWPAS",
+      "StructureDefinition-Observation-tx-assessment-twpas.html" : "治療後疾病狀態評估-Observation Treatment Assessment TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ObservationInterpretationCodes",
+      "title" : "Observation Interpretation Codes",
+      "description" : "A categorical assessment, providing a rough qualitative interpretation of the observation value,    such as “normal”/ “abnormal”,”low” / “high”, “better” / “worse”, “susceptible” / “resistant”, “expected”/ “not expected”.    The value set is intended to be for ANY use where coded representation of an interpretation is needed.   \r\n   \r\n   Notes:\r\n   \r\n   This is being communicated in v2.x in OBX-8 (Observation Interpretation), in v3 in ObservationInterpretation (CWE) in R1 (Representative Realm) and in FHIR in    Observation.interpretation. Historically these values come from the laboratory domain, and these codes are extensively    used. The value set binding is extensible, so codes outside the value set that are needed for interpretation concepts    (i.e. particular meanings) that are not included in the value set can be used, and these new codes may also be added to    the value set and published in a future version.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.399"],
+      "sources" : ["2.16.840.1.113883.4.642.3.399"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-diagnostic-twpas.html" : "基因資訊-Observation Diagnostic TWPAS",
+      "StructureDefinition-Observation-laboratory-result-twpas.html" : "檢驗檢查-Observation Laboratory Result TWPAS",
+      "StructureDefinition-Observation-pat-assessment-twpas.html" : "病人狀態評估-Observation Patient Assessment TWPAS",
+      "StructureDefinition-Observation-cancer-stage-twpas.html" : "癌症分期量表-Observation Cancer Stage TWPAS",
+      "StructureDefinition-Observation-tx-assessment-twpas.html" : "治療後疾病狀態評估-Observation Treatment Assessment TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-methods",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ObservationMethods",
+      "title" : "Observation Methods",
+      "description" : "Observation Method codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 272394005 (Technique (qualifier value)) or is-a 129264002 (Action (qualifier value)) or is-a 386053000 (Evaluation procedure(procedure))",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.395"],
+      "sources" : ["2.16.840.1.113883.4.642.3.395"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-laboratory-result-twpas.html" : "檢驗檢查-Observation Laboratory Result TWPAS",
+      "StructureDefinition-Observation-pat-assessment-twpas.html" : "病人狀態評估-Observation Patient Assessment TWPAS",
+      "StructureDefinition-Observation-cancer-stage-twpas.html" : "癌症分期量表-Observation Cancer Stage TWPAS",
+      "StructureDefinition-Observation-tx-assessment-twpas.html" : "治療後疾病狀態評估-Observation Treatment Assessment TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-status",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ObservationStatus",
+      "title" : "ObservationStatus",
+      "description" : "Codes providing the status of an observation.",
+      "systems" : ["http://hl7.org/fhir/observation-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.400"],
+      "sources" : ["2.16.840.1.113883.4.642.3.400"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-diagnostic-twpas.html" : "基因資訊-Observation Diagnostic TWPAS",
+      "StructureDefinition-Observation-laboratory-result-twpas.html" : "檢驗檢查-Observation Laboratory Result TWPAS",
+      "StructureDefinition-Observation-pat-assessment-twpas.html" : "病人狀態評估-Observation Patient Assessment TWPAS",
+      "StructureDefinition-Observation-cancer-stage-twpas.html" : "癌症分期量表-Observation Cancer Stage TWPAS",
+      "StructureDefinition-Observation-tx-assessment-twpas.html" : "治療後疾病狀態評估-Observation Treatment Assessment TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/operation-outcome",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "OperationOutcomeCodes",
+      "title" : "Operation Outcome Codes",
+      "description" : "Operation Outcome codes used by FHIR test servers (see Implementation file translations.xml)",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/operation-outcome"],
+      "oids" : ["2.16.840.1.113883.4.642.3.412"],
+      "sources" : ["2.16.840.1.113883.4.642.3.412"],
+      "uses" : {
+      },
+      "StructureDefinition-Operationoutcome-twpas.html" : "系統回應訊息-OperationOutcome TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/organization-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "OrganizationType",
+      "title" : "Organization type",
+      "description" : "This example value set defines a set of codes that can be used to indicate a type of organization.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/organization-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.414"],
+      "sources" : ["2.16.840.1.113883.4.642.3.414"],
+      "uses" : {
+      },
+      "StructureDefinition-Organization-genetic-testing-twpas.html" : "基因檢測機構-Organization Genetic Testing TWPAS",
+      "StructureDefinition-Organization-twpas.html" : "醫事機構-Organization TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/payeetype",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Claim Payee Type Codes",
+      "title" : "PayeeType",
+      "description" : "This value set includes sample Payee Type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/payeetype"],
+      "oids" : ["2.16.840.1.113883.4.642.3.31"],
+      "sources" : ["2.16.840.1.113883.4.642.3.31"],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/payment-adjustment-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "PaymentAdjustmentReasonCodes",
+      "title" : "Payment Adjustment Reason Codes",
+      "description" : "This value set includes smattering of Payment Adjustment Reason codes.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/payment-adjustment-reason"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.600"],
+      "sources" : ["2.16.840.1.113883.4.642.3.600"],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/performer-role",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ProcedurePerformerRoleCodes",
+      "title" : "Procedure Performer Role Codes",
+      "description" : "This example value set defines the set of codes that can be used to indicate a role of a procedure performer.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.433"],
+      "sources" : ["2.16.840.1.113883.4.642.3.433"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-Procedure-twpas.html" : "放射治療-Procedure TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/procedure-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ProcedureCategoryCodes(SNOMEDCT)",
+      "title" : "Procedure Category Codes (SNOMED CT)",
+      "description" : "Procedure Category code: A selection of relevant SNOMED CT codes.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.430"],
+      "sources" : ["2.16.840.1.113883.4.642.3.430"],
+      "uses" : {
+      },
+      "StructureDefinition-Procedure-twpas.html" : "放射治療-Procedure TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/procedure-followup",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ProcedureFollowUpCodes(SNOMEDCT)",
+      "title" : "Procedure Follow up Codes (SNOMED CT)",
+      "description" : "Procedure follow up codes: A selection of SNOMED CT codes relevant to procedure follow up.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.429"],
+      "sources" : ["2.16.840.1.113883.4.642.3.429"],
+      "uses" : {
+      },
+      "StructureDefinition-Procedure-twpas.html" : "放射治療-Procedure TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/procedure-not-performed-reason",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ProcedureNotPerformedReason(SNOMED-CT)",
+      "title" : "Procedure Not Performed Reason (SNOMED-CT)",
+      "description" : "Situation codes describing the reason that a procedure, which might otherwise be expected, was not performed, or a procedure that was started and was not completed. Consists of SNOMED CT codes, children of procedure contraindicated (183932001), procedure discontinued (416406003), procedure not done (416237000), procedure not indicated (428119001), procedure not offered (416064006), procedure not wanted (416432009), procedure refused (183944003), and procedure stopped (394908001).",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.431"],
+      "sources" : ["2.16.840.1.113883.4.642.3.431"],
+      "uses" : {
+      },
+      "StructureDefinition-Procedure-twpas.html" : "放射治療-Procedure TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/procedure-outcome",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ProcedureOutcomeCodes(SNOMEDCT)",
+      "title" : "Procedure Outcome Codes (SNOMED CT)",
+      "description" : "Procedure Outcome code: A selection of relevant SNOMED CT codes.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.428"],
+      "sources" : ["2.16.840.1.113883.4.642.3.428"],
+      "uses" : {
+      },
+      "StructureDefinition-Procedure-twpas.html" : "放射治療-Procedure TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/procedure-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ProcedureReasonCodes",
+      "title" : "Procedure Reason Codes",
+      "description" : "This example value set defines the set of codes that can be used to indicate a reason for a procedure.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.432"],
+      "sources" : ["2.16.840.1.113883.4.642.3.432"],
+      "uses" : {
+      },
+      "StructureDefinition-Media-twpas.html" : "非DICOM影像-Media TWPAS",
+      "StructureDefinition-Procedure-twpas.html" : "放射治療-Procedure TWPAS",
+      "StructureDefinition-ImagingStudy-twpas.html" : "DICOM影像-ImagingStudy TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/provider-qualification",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ExampleProviderQualificationCodes",
+      "title" : "Example Provider Qualification Codes",
+      "description" : "This value set includes sample Provider Qualification codes.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/ex-providerqualification"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.570"],
+      "sources" : ["2.16.840.1.113883.4.642.3.570"],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/quantity-comparator",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "QuantityComparator",
+      "title" : "QuantityComparator",
+      "description" : "How the Quantity should be understood and represented.",
+      "systems" : ["http://hl7.org/fhir/quantity-comparator"],
+      "oids" : ["2.16.840.1.113883.4.642.3.59"],
+      "sources" : ["2.16.840.1.113883.4.642.3.59"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-Substance-twpas.html" : "放射治療總劑量-Substance TWPAS",
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/referencerange-appliesto",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ObservationReferenceRangeAppliesToCodes",
+      "title" : "Observation Reference Range Applies To Codes",
+      "description" : "This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-Race",
+        "http://snomed.info/sct"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.407"],
+      "sources" : ["2.16.840.1.113883.4.642.3.407"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-diagnostic-twpas.html" : "基因資訊-Observation Diagnostic TWPAS",
+      "StructureDefinition-Observation-laboratory-result-twpas.html" : "檢驗檢查-Observation Laboratory Result TWPAS",
+      "StructureDefinition-Observation-pat-assessment-twpas.html" : "病人狀態評估-Observation Patient Assessment TWPAS",
+      "StructureDefinition-Observation-cancer-stage-twpas.html" : "癌症分期量表-Observation Cancer Stage TWPAS",
+      "StructureDefinition-Observation-tx-assessment-twpas.html" : "治療後疾病狀態評估-Observation Treatment Assessment TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/referencerange-meaning",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ObservationReferenceRangeMeaningCodes",
+      "title" : "Observation Reference Range Meaning Codes",
+      "description" : "This value set defines a set of codes that can be used to indicate the meaning/use of a reference range for a particular target population.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.397"],
+      "sources" : ["2.16.840.1.113883.4.642.3.397"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-diagnostic-twpas.html" : "基因資訊-Observation Diagnostic TWPAS",
+      "StructureDefinition-Observation-laboratory-result-twpas.html" : "檢驗檢查-Observation Laboratory Result TWPAS",
+      "StructureDefinition-Observation-pat-assessment-twpas.html" : "病人狀態評估-Observation Patient Assessment TWPAS",
+      "StructureDefinition-Observation-cancer-stage-twpas.html" : "癌症分期量表-Observation Cancer Stage TWPAS",
+      "StructureDefinition-Observation-tx-assessment-twpas.html" : "治療後疾病狀態評估-Observation Treatment Assessment TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/related-claim-relationship",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ExampleRelatedClaimRelationshipCodes",
+      "title" : "Example Related Claim Relationship Codes",
+      "description" : "This value set includes sample Related Claim Relationship codes.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.568"],
+      "sources" : ["2.16.840.1.113883.4.642.3.568"],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "PatientRelationshipType",
+      "title" : "Patient relationship type",
+      "description" : "A set of codes that can be used to indicate the relationship between a Patient and a Related Person.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+        "http://terminology.hl7.org/CodeSystem/v2-0131"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.449"],
+      "sources" : ["2.16.840.1.113883.4.642.3.449"],
+      "uses" : {
+      },
+      "StructureDefinition-Patient-twpas.html" : "病人資訊-Patient TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/remittance-outcome",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ClaimProcessingCodes",
+      "title" : "Claim Processing Codes",
+      "description" : "This value set includes Claim Processing Outcome codes.",
+      "systems" : ["http://hl7.org/fhir/remittance-outcome"],
+      "oids" : ["2.16.840.1.113883.4.642.3.13"],
+      "sources" : ["2.16.840.1.113883.4.642.3.13"],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/report-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "LOINCDiagnosticReportCodes",
+      "title" : "LOINC Diagnostic Report Codes",
+      "description" : "This value set includes LOINC codes that relate to Diagnostic Observations.",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.233"],
+      "sources" : ["2.16.840.1.113883.4.642.3.233"],
+      "uses" : {
+      },
+      "StructureDefinition-DiagnosticReport-image-twpas.html" : "影像報告-DiagnosticReport Image TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/request-priority",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "RequestPriority",
+      "title" : "Request priority",
+      "description" : "The clinical priority of a diagnostic order.",
+      "systems" : ["http://hl7.org/fhir/request-priority"],
+      "oids" : ["2.16.840.1.113883.4.642.3.115"],
+      "sources" : ["2.16.840.1.113883.4.642.3.115"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/search-entry-mode",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "SearchEntryMode",
+      "title" : "SearchEntryMode",
+      "description" : "Why an entry is in the result set - whether it's included as a match or because of an _include requirement, or to convey information or warning information about the search process.",
+      "systems" : ["http://hl7.org/fhir/search-entry-mode"],
+      "oids" : ["2.16.840.1.113883.4.642.3.622"],
+      "sources" : ["2.16.840.1.113883.4.642.3.622"],
+      "uses" : {
+      },
+      "StructureDefinition-Bundle-twpas.html" : "事前審查-Bundle TWPAS",
+      "StructureDefinition-Bundle-response-twpas.html" : "事前審查回覆-Bundle Response TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/security-labels",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "All Security Labels",
+      "title" : "SecurityLabels",
+      "description" : "A single value set for all security labels defined by FHIR.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "http://terminology.hl7.org/CodeSystem/v3-ActUSPrivacyLaw",
+        "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.47"],
+      "sources" : ["2.16.840.1.113883.4.642.3.47"],
+      "uses" : {
+      },
+      "StructureDefinition-DocumentReference-twpas.html" : "文件參照-DocumentReference TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/series-performer-function",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ImagingStudySeriesPerformerFunction",
+      "title" : "ImagingStudy series performer function",
+      "description" : "Performer function of an agent in an imaging study series",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+      "oids" : ["2.16.840.1.113883.4.642.3.989"],
+      "sources" : ["2.16.840.1.113883.4.642.3.989"],
+      "uses" : {
+      },
+      "StructureDefinition-ImagingStudy-twpas.html" : "DICOM影像-ImagingStudy TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/service-place",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ExampleServicePlaceCodes",
+      "title" : "Example Service Place Codes",
+      "description" : "This value set includes a smattering of Service Place codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/ex-serviceplace"],
+      "oids" : ["2.16.840.1.113883.4.642.3.564"],
+      "sources" : ["2.16.840.1.113883.4.642.3.564"],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/service-uscls",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "USCLSCodes",
+      "title" : "USCLS Codes",
+      "description" : "This value set includes a smattering of USCLS codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/ex-USCLS"],
+      "oids" : ["2.16.840.1.113883.4.642.3.542"],
+      "sources" : ["2.16.840.1.113883.4.642.3.542"],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/specimen-collection-method",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "FHIRSpecimenCollectionMethod",
+      "title" : "FHIR Specimen Collection Method",
+      "description" : " This example value set defines a set of codes that can be used to indicate the method by which a specimen was collected.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.468"],
+      "sources" : ["2.16.840.1.113883.4.642.3.468"],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-twpas.html" : "基因檢測檢體-Specimen TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/specimen-container-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SpecimenContainerType",
+      "title" : "Specimen Container Type",
+      "description" : "Checks on the patient prior specimen collection. All SNOMED CT concepts descendants of 706041008 |Device for body fluid and tissue collection/transfer/processing (physical object)|",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.470"],
+      "sources" : ["2.16.840.1.113883.4.642.3.470"],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-twpas.html" : "基因檢測檢體-Specimen TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/specimen-processing-procedure",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SpecimenProcessingProcedure",
+      "title" : "Specimen processing procedure",
+      "description" : "The technique that is used to perform the process or preserve the specimen.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0373"],
+      "oids" : ["2.16.840.1.113883.4.642.3.469"],
+      "sources" : ["2.16.840.1.113883.4.642.3.469"],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-twpas.html" : "基因檢測檢體-Specimen TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/specimen-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SpecimenStatus",
+      "title" : "SpecimenStatus",
+      "description" : "Codes providing the status/availability of a specimen.",
+      "systems" : ["http://hl7.org/fhir/specimen-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.471"],
+      "sources" : ["2.16.840.1.113883.4.642.3.471"],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-twpas.html" : "基因檢測檢體-Specimen TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/subscriber-relationship",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SubscriberRelationshipCodes",
+      "title" : "SubscriberPolicyholder Relationship Codes",
+      "description" : "This value set includes codes for the relationship between the Subscriber and the Beneficiary (insured/covered party/patient).",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1385"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1385"],
+      "uses" : {
+      },
+      "StructureDefinition-Coverage-twpas.html" : "健保事前審查計畫-Coverage TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/substance-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SubstanceCategoryCodes",
+      "title" : "Substance Category Codes",
+      "description" : "Substance category codes",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/substance-category"],
+      "oids" : ["2.16.840.1.113883.4.642.3.476"],
+      "sources" : ["2.16.840.1.113883.4.642.3.476"],
+      "uses" : {
+      },
+      "StructureDefinition-Substance-twpas.html" : "放射治療總劑量-Substance TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/substance-code",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SubstanceCode",
+      "title" : "Substance Code",
+      "description" : "This value set contains concept codes for specific substances. It includes codes from [SNOMED](http://snomed.info/sct) where concept is-a 105590001 (Substance (substance)) and where concept is-a 373873005 (Pharmaceutical / biologic product (product))",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.473"],
+      "sources" : ["2.16.840.1.113883.4.642.3.473"],
+      "uses" : {
+      },
+      "StructureDefinition-Substance-twpas.html" : "放射治療總劑量-Substance TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/substance-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "FHIRSubstanceStatus",
+      "title" : "FHIRSubstanceStatus",
+      "description" : "A code to indicate if the substance is actively used.",
+      "systems" : ["http://hl7.org/fhir/substance-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.474"],
+      "sources" : ["2.16.840.1.113883.4.642.3.474"],
+      "uses" : {
+      },
+      "StructureDefinition-Substance-twpas.html" : "放射治療總劑量-Substance TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/surface",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SurfaceCodes",
+      "title" : "Surface Codes",
+      "description" : "This value set includes a smattering of FDI tooth surface codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/FDI-surface"],
+      "oids" : ["2.16.840.1.113883.4.642.3.546"],
+      "sources" : ["2.16.840.1.113883.4.642.3.546"],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/tooth",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "OralSiteCodes",
+      "title" : "Oral Site Codes",
+      "description" : "This value set includes a smattering of FDI oral site codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/ex-tooth"],
+      "oids" : ["2.16.840.1.113883.4.642.3.540"],
+      "sources" : ["2.16.840.1.113883.4.642.3.540"],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/units-of-time",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "UnitsOfTime",
+      "title" : "UnitsOfTime",
+      "description" : "A unit of time (units from UCUM).",
+      "systems" : ["http://unitsofmeasure.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.77"],
+      "sources" : ["2.16.840.1.113883.4.642.3.77"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "http://loinc.org/vs/LL4048-6",
+      "version" : null,
+      "status" : "active",
+      "name" : "LOINCAnswersLL4048-6",
+      "title" : "LOINC Answer Codes for LL4048-6",
+      "description" : "",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-diagnostic-twpas.html" : "基因資訊-Observation Diagnostic TWPAS"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0092",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSReAdmissionIndicator",
+      "title" : "hl7VS-re-admissionIndicator",
+      "description" : "Value Set of codes which are used to specify that a patient is being re-admitted to a healthcare facility from which they were discharged, and indicates the circumstances around such re-admission.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0092"],
+      "oids" : ["2.16.840.1.113883.21.40"],
+      "sources" : ["2.16.840.1.113883.21.40"],
+      "uses" : {
+      },
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0371",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSAdditivePreservative",
+      "title" : "hl7VS-additivePreservative",
+      "description" : "Concepts specifying any additive introduced to the specimen before or at the time of collection.  These additives may be introduced in order to preserve, maintain or enhance the particular nature or component of the specimen.  Used in Version 2 messaging in the SPM segment.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0371"],
+      "oids" : ["2.16.840.1.113883.21.245"],
+      "sources" : ["2.16.840.1.113883.21.245"],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-twpas.html" : "基因檢測檢體-Specimen TWPAS"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0493",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSSpecimenCondition",
+      "title" : "hl7VS-specimenCondition",
+      "description" : "Concepts of modes or states of being that describe the nature of a specimen.  Used in Version 2 messaging in the SPM segment.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0493"],
+      "oids" : ["2.16.840.1.113883.21.333"],
+      "sources" : ["2.16.840.1.113883.21.333"],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-twpas.html" : "基因檢測檢體-Specimen TWPAS"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0916",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSRelevantClincialInformation",
+      "title" : "hl7VS-relevantClincialInformation",
+      "description" : "Value Set of codes that specify additional clinical information about the patient or specimen to report the supporting and/or suspected diagnosis and clinical findings on requests for interpreted diagnostic studies.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0916"],
+      "oids" : ["2.16.840.1.113883.21.440"],
+      "sources" : ["2.16.840.1.113883.21.440"],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-twpas.html" : "基因檢測檢體-Specimen TWPAS"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActCode",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActCode",
+      "title" : "v3 Code System ActCode",
+      "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.  Constraints:\r\nThe kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems.  The coding system will depend on the class of Act, such as LOINC for observations, etc. Conceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure. Act.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+      "uses" : {
+      },
+      "StructureDefinition-DocumentReference-twpas.html" : "文件參照-DocumentReference TWPAS"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActEncounterCode",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActEncounterCode",
+      "title" : "ActEncounterCode",
+      "description" : "Domain provides codes that qualify the ActEncounterClass (ENC)",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+      "oids" : ["2.16.840.1.113883.1.11.13955"],
+      "sources" : ["2.16.840.1.113883.1.11.13955"],
+      "uses" : {
+      },
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActIncidentCode",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActIncidentCode",
+      "title" : "ActIncidentCode",
+      "description" : "Set of codes indicating the type of incident or accident.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+      "oids" : ["2.16.840.1.113883.1.11.16508"],
+      "sources" : ["2.16.840.1.113883.1.11.16508"],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActPriority",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActPriority",
+      "title" : "ActPriority",
+      "description" : "A code or set of codes (e.g., for routine, emergency,) specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.\r\n\r\n*Discussion:* This attribute is used in orders to indicate the ordered priority, and in event documentation it indicates the actual priority used to perform the act. In definition mood it indicates the available priorities.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActPriority"],
+      "oids" : ["2.16.840.1.113883.1.11.16866"],
+      "sources" : ["2.16.840.1.113883.1.11.16866"],
+      "uses" : {
+      },
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActSubstanceAdminSubstitutionCode",
+      "title" : "ActSubstanceAdminSubstitutionCode",
+      "description" : "***No description***",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"
+      ],
+      "oids" : ["2.16.840.1.113883.1.11.16621"],
+      "sources" : ["2.16.840.1.113883.1.11.16621"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "SubstanceAdminSubstitutionReason",
+      "title" : "SubstanceAdminSubstitutionReason",
+      "description" : "***No description***",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActReason"],
+      "oids" : ["2.16.840.1.113883.1.11.19377"],
+      "sources" : ["2.16.840.1.113883.1.11.19377"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/cancer-stage",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "CancerStage",
+      "title" : "SCT + NCI-健保事前審查-癌症分期量表項目值集",
+      "description" : "SCT + NCI-健保事前審查-癌症分期量表項目值集",
+      "systems" : [
+        "https://nhicore.nhi.gov.tw/pas/CodeSystem/nci-thesaurus",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-cancer-stage-twpas.html" : "癌症分期量表-Observation Cancer Stage TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/cancer-stage-score",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "CancerStageScore",
+      "title" : "NCI-健保事前審查-FIGO癌症分期量表結果值集",
+      "description" : "NCI-健保事前審查-FIGO癌症分期量表結果值集",
+      "systems" : ["https://nhicore.nhi.gov.tw/pas/CodeSystem/nci-thesaurus"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-cancer-stage-twpas.html" : "癌症分期量表-Observation Cancer Stage TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/dicom-cid-29-AcquisitionModality",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "AcquisitionModality",
+      "title" : "HL7-AcquisitionModality值集",
+      "description" : "原值集因總會工具問題無法正常顯示，故先自建值集。",
+      "systems" : ["http://dicom.nema.org/resources/ontology/DCM"],
+      "uses" : {
+      },
+      "StructureDefinition-ImagingStudy-twpas.html" : "DICOM影像-ImagingStudy TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/dna-change-type",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "DNAChangeType",
+      "title" : "LOINC-健保事前審查-基因突變類型值集",
+      "description" : "LOINC-健保事前審查-基因突變類型值集",
+      "systems" : [
+        "http://loinc.org",
+        "https://nhicore.nhi.gov.tw/pas/CodeSystem/inca-osiris"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-diagnostic-twpas.html" : "基因資訊-Observation Diagnostic TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/gene-test-code",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "GeneTestCode",
+      "title" : "LOINC-健保事前審查-基因檢測代碼值集",
+      "description" : "LOINC-健保事前審查-基因檢測代碼值集",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-diagnostic-twpas.html" : "基因資訊-Observation Diagnostic TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/icd-10-pcs-2014-image",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "ICD10PCSImage",
+      "title" : "NHI-臺灣健保署2014年中文版ICD 10 PCS-影像報告值集",
+      "description" : "NHI-臺灣健保署2014年中文版ICD 10 PCS-影像報告值集",
+      "systems" : [
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2014-tw"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-DiagnosticReport-image-twpas.html" : "影像報告-DiagnosticReport Image TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/icd-10-pcs-2014-radiotherapy",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "ICD10PCSRadiotherapy",
+      "title" : "NHI-臺灣健保署2014年中文版ICD 10 PCS-放射治療項目值集",
+      "description" : "NHI-臺灣健保署2014年中文版ICD 10 PCS-放射治療項目值集",
+      "systems" : [
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2014-tw"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Procedure-twpas.html" : "放射治療-Procedure TWPAS",
+      "StructureDefinition-Substance-twpas.html" : "放射治療總劑量-Substance TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/icd-10-pcs-2023-image",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "ICD10PCS2023Image",
+      "title" : "NHI-臺灣健保署2023年中文版ICD 10 PCS-影像報告值集",
+      "description" : "NHI-臺灣健保署2023年中文版ICD 10 PCS-影像報告值集",
+      "systems" : [
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2023-tw"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-DiagnosticReport-image-twpas.html" : "影像報告-DiagnosticReport Image TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/icd-10-pcs-2023-radiotherapy",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "ICD10PCS2023Radiotherapy",
+      "title" : "NHI-臺灣健保署2023年中文版ICD 10 PCS-放射治療項目值集",
+      "description" : "NHI-臺灣健保署2023年中文版ICD 10 PCS-放射治療項目值集",
+      "systems" : [
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2023-tw"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Procedure-twpas.html" : "放射治療-Procedure TWPAS",
+      "StructureDefinition-Substance-twpas.html" : "放射治療總劑量-Substance TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/media-mimetypes",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "MediaMimeTypes",
+      "title" : "HL7-非DICOM影像MimeType值集",
+      "description" : "HL7-非DICOM影像MimeType值集",
+      "systems" : ["urn:ietf:bcp:13"],
+      "uses" : {
+      },
+      "StructureDefinition-Media-twpas.html" : "非DICOM影像-Media TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/medication-frequency-hl7-nhi",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIMedicationFrequencyHL7",
+      "title" : "HL7 TimingAbbreviation + NHI-健保事前審查-藥品使用頻率值集",
+      "description" : "HL7 TimingAbbreviation + NHI-健保事前審查-藥品使用頻率值集。為配合專案時程，使用暫時性代碼系統，日後將統一使用TW Core IG的臺灣健保署藥品使用頻率。  \n代碼對應請參照[臺灣健保署藥品使用頻率代碼對應對應HL7 TimingAbbreviation](https://build.fhir.org/ig/cctwFHIRterm/MOHW_TWCoreIG_Build/ConceptMap-medication-frequency-tw.html)",
+      "systems" : [
+        "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw",
+        "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/medication-path-sct-tw",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "TWPCSMedicationPathSCT",
+      "title" : "SNOMED CT + 臺灣健保署-健保事前審查-給藥途徑值集",
+      "description" : "SNOMED CT + 臺灣健保署-健保事前審查-給藥途徑值集。\n代碼對應請參照[臺灣健保署給藥途徑代碼對應SNOMED CT](https://build.fhir.org/ig/cctwFHIRterm/MOHW_TWCoreIG_Build/ConceptMap-medication-path-tw.html)\n\n此值集優先採用國際標準碼，國際標準碼未能表述之概念，則以普遍被使用的臺灣健保署給藥途徑代碼表述，請實作者留意。",
+      "systems" : [
+        "http://snomed.info/sct",
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/medication-path-tw"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-acceptance-status",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIAcceptanceStatus",
+      "title" : "NHI-健保事前審查-案件受理狀態值集",
+      "description" : "NHI-健保事前審查-案件受理狀態值集",
+      "systems" : [
+        "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-acceptance-status"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-apply-reason",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIApplyReason",
+      "title" : "NHI-健保事前審查-給付適應症值集",
+      "description" : "NHI-健保事前審查-給付適應症值集",
+      "systems" : ["https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-apply-reason"],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-apply-side",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIApplySide",
+      "title" : "NHI-健保事前審查-申請部位值集",
+      "description" : "NHI-健保事前審查-申請部位值集",
+      "systems" : ["https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-apply-side"],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-apply-type",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIApplyType",
+      "title" : "NHI-健保事前審查-申報類別值集",
+      "description" : "NHI-健保事前審查-申報類別值集",
+      "systems" : ["https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-apply-type"],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-approve-claim-comment",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIApproveClaimComment",
+      "title" : "NHI-健保事前審查-受理審查案件核定註記值集",
+      "description" : "NHI-健保事前審查-受理審查案件核定註記值集",
+      "systems" : [
+        "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-approve-comment"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-approve-item-comment",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIApproveItemComment",
+      "title" : "NHI-健保事前審查-個別醫令核定註記值集",
+      "description" : "NHI-健保事前審查-個別醫令核定註記值集",
+      "systems" : [
+        "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-approve-comment"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ClaimResponse-self-assessment-twpas.html" : "自主審查報備-ClaimResponse Self Assessment TWPAS",
+      "StructureDefinition-ClaimResponse-twpas.html" : "事前審查回覆-ClaimResponse TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-body-site",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIBodySite",
+      "title" : "NHI-健保事前審查-身體部位值集",
+      "description" : "NHI-健保事前審查-身體部位值集，代碼對應請參考[臺灣健保署身體部位代碼對應SNOMED CT](ConceptMap-nhi-sct-body-site.html)。",
+      "systems" : ["https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-body-site"],
+      "uses" : {
+      },
+      "ConceptMap-nhi-sct-body-site.html" : "臺灣健保署身體部位代碼對應SNOMED CT"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-continuation-status",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIContinuationStatus",
+      "title" : "NHI-健保事前審查-續用註記值集",
+      "description" : "NHI-健保事前審查-續用註記值集",
+      "systems" : [
+        "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-continuation-status"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-drug-category",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIDrugCategory",
+      "title" : "NHI-健保事前審查-藥物類型值集",
+      "description" : "NHI-健保事前審查-藥物類型值集",
+      "systems" : [
+        "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-drug-category"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-line-of-therapy",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHILOT",
+      "title" : "NHI-健保事前審查-用藥線別值集",
+      "description" : "NHI-健保事前審查-用藥線別值集",
+      "systems" : [
+        "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-line-of-therapy"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-medication",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIMedication",
+      "title" : "NHI-健保事前審查-用藥品項值集",
+      "description" : "NHI-健保事前審查-用藥品項值集。  \n此值集所涵蓋代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[健保用藥品項網路查詢服務](https://info.nhi.gov.tw/INAE3000/INAE3000S01)查閱",
+      "systems" : ["https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-medication"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-order-type",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIOrderType",
+      "title" : "NHI-健保事前審查-醫令類別值集",
+      "description" : "NHI-健保事前審查-醫令類別值集",
+      "systems" : ["https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-order-type"],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-organization",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIOrganization",
+      "title" : "NHI-健保事前審查-特約醫事機構值集",
+      "description" : "NHI-健保事前審查-特約醫事機構值集，參照至[衛福部健保署特約醫事機構代碼網路查詢服務](https://www.nhi.gov.tw/ch/cp-5548-135e8-2931-1.html)中的[健保特約醫療院所名冊](https://info.nhi.gov.tw/IODE0000/IODE0000S09?id=1120)\n\n代碼出版日期：2024-04-22；資料所屬單位：衛生福利部中央健康保險署。\n\n*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*",
+      "systems" : [
+        "https://nhicore.nhi.gov.tw/pas/CodeSystem/organization-identifier-tw"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Organization-twpas.html" : "醫事機構-Organization TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-pdf-type",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIPDFType",
+      "title" : "NHI-健保事前審查-文件類型值集",
+      "description" : "NHI-健保事前審查-文件類型值集",
+      "systems" : ["https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pdf-type"],
+      "uses" : {
+      },
+      "StructureDefinition-DocumentReference-twpas.html" : "文件參照-DocumentReference TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-supporting-info-type",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHIPASSupportingInfoType",
+      "title" : "NHI-健保事前審查-補充資訊類別值集",
+      "description" : "NHI-健保事前審查-補充資訊類別值集",
+      "systems" : [
+        "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-tmhb-type",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHITMHBType",
+      "title" : "NHI-健保事前審查-申請案件類別值集",
+      "description" : "NHI-健保事前審查-申請案件類別值集",
+      "systems" : ["https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-tmhb-type"],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-tx-ast",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "NHITreatmentAst",
+      "title" : "NHI-健保事前審查-治療後疾病狀態評估項目值集",
+      "description" : "NHI-健保事前審查-治療後疾病狀態評估項目值集",
+      "systems" : ["https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-tx-ast"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-tx-assessment-twpas.html" : "治療後疾病狀態評估-Observation Treatment Assessment TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/pat-ast",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "PatAst",
+      "title" : "LOINC + NHI-健保事前審查-病人狀態評估項目值集",
+      "description" : "LOINC + NHI-病人狀態評估項目值集",
+      "systems" : [
+        "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pat-ast",
+        "http://loinc.org"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-pat-assessment-twpas.html" : "病人狀態評估-Observation Patient Assessment TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/report-type",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "ReportType",
+      "title" : "LOINC-健保事前審查-報告類型值集",
+      "description" : "LOINC-健保事前審查-報告類型值集",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-DiagnosticReport-twpas.html" : "檢查報告-DiagnosticReport TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/sct-body-site",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "SNOMEDCTBodySite",
+      "title" : "SNOMEDCT-健保事前審查-身體部位值集",
+      "description" : "SNOMEDCT-健保事前審查-身體部位值集，代碼對應請參考[臺灣健保署身體部位代碼對應SNOMED CT](ConceptMap-nhi-sct-body-site.html)。",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "ConceptMap-nhi-sct-body-site.html" : "臺灣健保署身體部位代碼對應SNOMED CT",
+      "StructureDefinition-Media-twpas.html" : "非DICOM影像-Media TWPAS",
+      "StructureDefinition-ImagingStudy-twpas.html" : "DICOM影像-ImagingStudy TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/specime-type",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "SpecimenType",
+      "title" : "LOINC-健保事前審查-基因檢測檢體類型值集",
+      "description" : "LOINC-健保事前審查-基因檢測檢體類型值集",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-twpas.html" : "基因檢測檢體-Specimen TWPAS"
+    },
+    {
+      "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/ucum-units",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "UCUMUnits",
+      "title" : "UCUM-健保事前審查-UCUM單位值集",
+      "description" : "UCUM-健保事前審查-UCUM單位值集",
+      "systems" : ["http://unitsofmeasure.org"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-Substance-twpas.html" : "放射治療總劑量-Substance TWPAS",
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/health-professional-sct-tw",
+      "version" : "0.3.0",
+      "status" : "active",
+      "name" : "TWHealthProfessionalSCT",
+      "title" : "SNOMED CT + 臺灣醫事司醫事人員類別值集",
+      "description" : "SNOMED CT + 臺灣醫事司醫事人員類別值集。\n\n此值集優先採用國際標準碼，國際標準碼未能表述之概念則以普遍被使用的臺灣醫事司醫事人員類別標準碼表述，請實作者留意。",
+      "systems" : [
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/health-professional-tw",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Practitioner-twpas.html" : "醫事人員-Practitioner TWPAS"
+    },
+    {
+      "url" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/icd-10-cm-2014-tw",
+      "version" : "2017-07-19",
+      "status" : "active",
+      "name" : "TW2014ICD10CM",
+      "title" : "臺灣健保署2014年中文版ICD-10-CM值集",
+      "description" : "臺灣健保署2014年中文版ICD-10-CM值集。\n資料所屬單位：衛生福利部中央健康保險署。\n\n\n此值集所涵蓋代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－值集(Value Set)](https://fhir.mohw.gov.tw/ts/valueset.jsp)查閱",
+      "systems" : [
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-cm-2014-tw"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/icd-10-cm-2023-tw",
+      "version" : "2024-11-18",
+      "status" : "active",
+      "name" : "TW2023ICD10CM",
+      "title" : "臺灣健保署2023年中文版ICD-10-CM值集",
+      "description" : "臺灣健保署2023年中文版ICD-10-CM值集。\n資料所屬單位：衛生福利部中央健康保險署。\n\n此值集所涵蓋代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－值集(Value Set)](https://fhir.mohw.gov.tw/ts/valueset.jsp)查閱",
+      "systems" : [
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-cm-2023-tw"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/icd-10-pcs-2014-tw",
+      "version" : "2017-07-19",
+      "status" : "active",
+      "name" : "TW2014ICD10PCS",
+      "title" : "臺灣健保署2014年中文版ICD-10-PCS值集",
+      "description" : "臺灣健保署2014年中文版ICD-10-PCS值集。\n資料所屬單位：衛生福利部中央健康保險署。\n\n此值集所涵蓋代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－值集(Value Set)](https://fhir.mohw.gov.tw/ts/valueset.jsp)查閱",
+      "systems" : [
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2014-tw"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/icd-10-pcs-2021-tw",
+      "version" : "2022-07-29",
+      "status" : "active",
+      "name" : "TW2021ICD10PCS",
+      "title" : "臺灣健保署2021年中文版ICD-10-PCS值集",
+      "description" : "臺灣健保署2021年中文版ICD-10-PCS值集。\n資料所屬單位：衛生福利部中央健康保險署。\n\n此值集所涵蓋代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－值集(Value Set)](https://fhir.mohw.gov.tw/ts/valueset.jsp)查閱",
+      "systems" : [
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2021-tw"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ImagingStudy-twpas.html" : "DICOM影像-ImagingStudy TWPAS"
+    },
+    {
+      "url" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/icd-10-pcs-2023-tw",
+      "version" : "2024-11-18",
+      "status" : "active",
+      "name" : "TW2023ICD10PCS",
+      "title" : "臺灣健保署2023年中文版ICD-10-PCS值集",
+      "description" : "臺灣健保署2023年中文版ICD-10-PCS值集。\n資料所屬單位：衛生福利部中央健康保險署。\n\n此值集所涵蓋代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－值集(Value Set)](https://fhir.mohw.gov.tw/ts/valueset.jsp)查閱",
+      "systems" : [
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2023-tw"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ImagingStudy-twpas.html" : "DICOM影像-ImagingStudy TWPAS",
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    },
+    {
+      "url" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/identifier-type-tw",
+      "version" : "0.3.0",
+      "status" : "active",
+      "name" : "TWIdentifierType",
+      "title" : "IdentifierType + 臺灣衛福部資訊處識別碼類型值集",
+      "description" : "IdentifierType + 臺灣衛福部資訊處識別碼類型值集",
+      "systems" : [
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/v2-0203",
+        "http://terminology.hl7.org/CodeSystem/v2-0203"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Organization-genetic-testing-twpas.html" : "基因檢測機構-Organization Genetic Testing TWPAS",
+      "StructureDefinition-Patient-twpas.html" : "病人資訊-Patient TWPAS",
+      "StructureDefinition-Organization-twpas.html" : "醫事機構-Organization TWPAS",
+      "StructureDefinition-Practitioner-twpas.html" : "醫事人員-Practitioner TWPAS"
+    },
+    {
+      "url" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/laboratory-category-tw",
+      "version" : "2022-07-01",
+      "status" : "active",
+      "name" : "TWLaboratoryCategory",
+      "title" : "臺灣健保署醫療服務給付項目-檢驗值集",
+      "description" : "臺灣健保署醫療服務給付項目-檢驗值集。\n資料所屬單位：衛生福利部中央健康保險署。",
+      "systems" : [
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/medical-service-payment-tw"
+      ],
+      "uses" : {
+      },
+      "ConceptMap-nhi-loinc.html" : "臺灣健保署醫療服務給付項目對應LOINC"
+    },
+    {
+      "url" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/loinc-type-doc-code",
+      "version" : "2.77",
+      "status" : "active",
+      "name" : "LOINCDocumentType",
+      "title" : "LOINC Code Document Type值集",
+      "description" : "LOINC Code Document Type值集。  \n代碼版本：2.77；代碼更新日期：2024-06-14；資料所屬單位：Regenstrief Institute。",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-DocumentReference-twpas.html" : "文件參照-DocumentReference TWPAS"
+    },
+    {
+      "url" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/medcation-atc-tw",
+      "version" : "2022-10-24",
+      "status" : "active",
+      "name" : "TWMedcationATC",
+      "title" : "臺灣食藥署藥品藥理治療分類ATC碼值集",
+      "description" : "臺灣食藥署藥品藥理治療分類ATC碼值集。\n資料提供單位：衛生福利部食品藥物管理署。",
+      "systems" : ["http://www.whocc.no/atc"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/medical-consultation-department-tw",
+      "version" : "0.3.0",
+      "status" : "active",
+      "name" : "TWMedicalConsultationDepartment",
+      "title" : "無法對應至SNOMED CT之臺灣健保署就醫科別值集",
+      "description" : "無法對應至SNOMED CT之臺灣健保署就醫科別值集。\n\n此值集優先採用國際標準碼，國際標準碼未能表述之概念則以普遍被使用的臺灣健保署標準碼表述，請實作者留意。",
+      "systems" : [
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/medical-consultation-department-nhi-tw"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS"
+    },
+    {
+      "url" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/medical-department-sct-tw",
+      "version" : "0.3.0",
+      "status" : "active",
+      "name" : "TWMedicalDepartmentSCT",
+      "title" : "對應至 SNOMED CT之就醫科別 + 診療科別值集",
+      "description" : "因就醫科別與診療科別對應到之國際標準碼 SNOMED CT有共通代碼，因此本值集將兩者的對應代碼整合於同一值集中。  \n\n另為便於使用者更清晰地辨識「[就醫科別](ValueSet-medical-department-sct-tw.html#就醫科別對應表)」及「[診療科別](ValueSet-medical-department-sct-tw.html#診療科別對應表)」的各別完整值集範圍，請參閱以下兩個表格，代碼使用原則為：若想表達的語意有國際代碼可表述，便採用國際代碼；若無對應的國際代碼可表述，則採用健保署編訂的代碼。",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS"
+    },
+    {
+      "url" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/medical-treatment-department-tw",
+      "version" : "0.3.0",
+      "status" : "active",
+      "name" : "TWMedicalTreatmentDepartment",
+      "title" : "無法對應至SNOMED CT之臺灣健保署診療科別值集",
+      "description" : "無法對應至SNOMED CT之臺灣健保署診療科別值集。\n\n此值集優先採用國際標準碼，國際標準碼未能表述之概念則以普遍被使用的臺灣健保署標準碼表述，請實作者留意。",
+      "systems" : [
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/medical-treatment-department-nhi-tw"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Encounter-twpas.html" : "就醫科別-Encounter TWPAS"
+    },
+    {
+      "url" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/medication-fda-tw",
+      "version" : "0.3.0",
+      "status" : "active",
+      "name" : "TWMedicationFDA",
+      "title" : "臺灣食藥署藥品及醫療器材代碼值集",
+      "description" : "臺灣食藥署藥品及醫療器材代碼值集  \n資料所屬單位：衛生福利部食品藥物管理署。\n\n此值集所涵蓋代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－值集(Value Set)](https://fhir.mohw.gov.tw/ts/valueset.jsp)查閱",
+      "systems" : [
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/medication-device-fda-tw",
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/medication-fda-tw"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/medication-nhi-tw",
+      "version" : "2022-07-28",
+      "status" : "active",
+      "name" : "TWMedicationNHI",
+      "title" : "臺灣健保署用藥品項代碼值集",
+      "description" : "臺灣健保署用藥品項代碼值集\n資料所屬單位：衛生福利部中央健康保險署。\n\n\n此值集所涵蓋代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－值集(Value Set)](https://fhir.mohw.gov.tw/ts/valueset.jsp)查閱",
+      "systems" : [
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/medication-nhi-tw"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/medication-rxnorm-tw",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "TWMedicationRXNORM",
+      "title" : "RxNorm藥品代碼值集",
+      "description" : "RxNorm藥品代碼值集   \n資料所屬單位：Unified Medical Language System® (UMLS®)",
+      "systems" : ["http://www.nlm.nih.gov/research/umls/rxnorm"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/nhi-medication-ch-herb-tw",
+      "version" : "2024-05-31",
+      "status" : "active",
+      "name" : "TWCHHerbMedicationNHI",
+      "title" : "臺灣健保署中藥用藥品項值集",
+      "description" : "臺灣健保署中藥用藥品項值集。\n資料所屬單位：衛生福利部中央健康保險署。\n\n\n此值集所涵蓋代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[全國專門術語服務平臺－臺灣健保署健保中藥用藥品項值集](https://fhir.mohw.gov.tw/ts/valuesetRead.jsp?id=medication-nhi-tw&status=active&version=2022-07-28&metaId=1&composeId=0&composeSystem=0&composeVersion=0&pageSet=preview)查閱",
+      "systems" : [
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/nhi-medication-ch-herb-tw"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-apply-twpas.html" : "事前審查品項-MedicationRequest Apply TWPAS",
+      "StructureDefinition-MedicationRequest-treat-twpas.html" : "用藥品項-MedicationRequest Treat TWPAS"
+    },
+    {
+      "url" : "https://twcore.mohw.gov.tw/ig/twcore/ValueSet/procedure-tw",
+      "version" : "2024-05-27",
+      "status" : "active",
+      "name" : "TWMedicalServicePayment",
+      "title" : "臺灣健保署醫療服務給付項目-處置或手術值集",
+      "description" : "臺灣健保署醫療服務給付項目-處置或手術值集。\n資料所屬單位：衛生福利部中央健康保險署。",
+      "systems" : [
+        "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/medical-service-payment-tw"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Claim-twpas.html" : "事前審查-Claim TWPAS"
+    }
+  ]
+}

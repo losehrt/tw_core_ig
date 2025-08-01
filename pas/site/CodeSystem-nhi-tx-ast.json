@@ -1,0 +1,47 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "nhi-tx-ast",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem nhi-tx-ast</b></p><a name=\"nhi-tx-ast\"> </a><a name=\"hcnhi-tx-ast\"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-tx-ast</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">ICLL<a name=\"nhi-tx-ast-ICLL\"> </a></td><td>iwCLL (International Workshop on CLL)</td></tr><tr><td style=\"white-space:nowrap\">IREC<a name=\"nhi-tx-ast-IREC\"> </a></td><td>i-RECIST criteria</td></tr><tr><td style=\"white-space:nowrap\">MREC<a name=\"nhi-tx-ast-MREC\"> </a></td><td>mRECIST criteria</td></tr><tr><td style=\"white-space:nowrap\">REC1<a name=\"nhi-tx-ast-REC1\"> </a></td><td>RECIST 1.1 criteria</td></tr><tr><td style=\"white-space:nowrap\">IWGC<a name=\"nhi-tx-ast-IWGC\"> </a></td><td>International Working Group(IWG) Consensus Criteria</td></tr></table></div>"
+  },
+  "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-tx-ast",
+  "version" : "1.0.6",
+  "name" : "NHITreatmentAst",
+  "title" : "NHI-健保事前審查-治療後疾病狀態評估項目",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-07-01",
+  "publisher" : "衛生福利部中央健康保險署",
+  "contact" : [{
+    "name" : "衛生福利部中央健康保險署",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.nhi.gov.tw"
+    }]
+  }],
+  "description" : "臺灣衛生福利部中央健康保險署「治療後疾病狀態評估項目」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 5,
+  "concept" : [{
+    "code" : "ICLL",
+    "display" : "iwCLL (International Workshop on CLL)"
+  },
+  {
+    "code" : "IREC",
+    "display" : "i-RECIST criteria"
+  },
+  {
+    "code" : "MREC",
+    "display" : "mRECIST criteria"
+  },
+  {
+    "code" : "REC1",
+    "display" : "RECIST 1.1 criteria"
+  },
+  {
+    "code" : "IWGC",
+    "display" : "International Working Group(IWG) Consensus Criteria"
+  }]
+}

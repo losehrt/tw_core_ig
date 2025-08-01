@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="nhi-approve-comment"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem nhi-approve-comment</b></p><a name="nhi-approve-comment"> </a><a name="hcnhi-approve-comment"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-approve-comment</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">0<a name="nhi-approve-comment-0"> </a></td><td>審核中</td></tr><tr><td style="white-space:nowrap">1<a name="nhi-approve-comment-1"> </a></td><td>同意</td></tr><tr><td style="white-space:nowrap">2<a name="nhi-approve-comment-2"> </a></td><td>不予同意</td></tr><tr><td style="white-space:nowrap">3<a name="nhi-approve-comment-3"> </a></td><td>部份同意</td></tr><tr><td style="white-space:nowrap">4<a name="nhi-approve-comment-4"> </a></td><td>補件</td></tr><tr><td style="white-space:nowrap">5<a name="nhi-approve-comment-5"> </a></td><td>退件</td></tr><tr><td style="white-space:nowrap">6<a name="nhi-approve-comment-6"> </a></td><td>不予同意:對應手術亦不支付</td></tr><tr><td style="white-space:nowrap">7<a name="nhi-approve-comment-7"> </a></td><td>改核:如審查核定意見</td></tr></table></div>
+  </text>
+  <url value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-approve-comment"/>
+  <version value="1.0.6"/>
+  <name value="NHIApproveComment"/>
+  <title value="NHI-健保事前審查-核定註記"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-07-01"/>
+  <publisher value="衛生福利部中央健康保險署"/>
+  <contact>
+    <name value="衛生福利部中央健康保險署"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nhi.gov.tw"/>
+    </telecom>
+  </contact>
+  <description value="臺灣衛生福利部中央健康保險署「核定註記」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="8"/>
+  <concept>
+    <code value="0"/>
+    <display value="審核中"/>
+  </concept>
+  <concept>
+    <code value="1"/>
+    <display value="同意"/>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="不予同意"/>
+  </concept>
+  <concept>
+    <code value="3"/>
+    <display value="部份同意"/>
+  </concept>
+  <concept>
+    <code value="4"/>
+    <display value="補件"/>
+  </concept>
+  <concept>
+    <code value="5"/>
+    <display value="退件"/>
+  </concept>
+  <concept>
+    <code value="6"/>
+    <display value="不予同意:對應手術亦不支付"/>
+  </concept>
+  <concept>
+    <code value="7"/>
+    <display value="改核:如審查核定意見"/>
+  </concept>
+</CodeSystem>

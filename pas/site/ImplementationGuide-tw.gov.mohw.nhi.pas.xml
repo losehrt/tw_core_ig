@@ -1,0 +1,2151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="tw.gov.mohw.nhi.pas"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide tw.gov.mohw.nhi.pas</b></p><a name="tw.gov.mohw.nhi.pas"> </a><a name="hctw.gov.mohw.nhi.pas"> </a><h2>TWPAS</h2><p>The official URL for this implementation guide is: </p><pre>https://nhicore.nhi.gov.tw/pas/ImplementationGuide/tw.gov.mohw.nhi.pas</pre><div><p>臺灣健保癌症用藥事前審查實作指引(Taiwan NHI Cancer Prior Authorization Support Implementation Guide，TWPAS IG)</p>
+</div></div>
+  </text>
+  <url value="https://nhicore.nhi.gov.tw/pas/ImplementationGuide/tw.gov.mohw.nhi.pas"/>
+  <version value="1.0.6"/>
+  <name value="TWPAS"/>
+  <title value="臺灣健保癌症用藥事前審查實作指引"/>
+  <status value="active"/>
+  <date value="2025-07-30T10:48:03+08:00"/>
+  <publisher value="衛生福利部中央健康保險署"/>
+  <contact>
+    <name value="衛生福利部中央健康保險署"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nhi.gov.tw"/>
+    </telecom>
+  </contact>
+  <description value="臺灣健保癌症用藥事前審查實作指引(Taiwan NHI Cancer Prior Authorization Support Implementation Guide，TWPAS IG)"/>
+  <packageId value="tw.gov.mohw.nhi.pas"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="hl7tx">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+    </extension>
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r4"/>
+    <version value="6.5.0"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="5.2.0"/>
+  </dependsOn>
+  <dependsOn id="TWCore">
+    <uri value="https://twcore.mohw.gov.tw/ig/twcore/ImplementationGuide/tw.gov.mohw.twcore"/>
+    <packageId value="tw.gov.mohw.twcore"/>
+    <version value="0.3.2"/>
+  </dependsOn>
+  <dependsOn id="DaVinciPriorAuthorizationSupport">
+    <uri value="http://hl7.org/fhir/us/davinci-pas/ImplementationGuide/hl7.fhir.us.davinci-pas"/>
+    <packageId value="hl7.fhir.us.davinci-pas"/>
+    <version value="2.1.0"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2024+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="STU1.0.6"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="https://nhicore.nhi.gov.tw/pas/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools.r4#0.7.1"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2024+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="STU1.0.6"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="https://nhicore.nhi.gov.tw/pas/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/Bundle-id"/>
+      </reference>
+      <name value="Bundle-id"/>
+      <description value="事前審查(Bundle)的邏輯性ID"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/Claim-func-type"/>
+      </reference>
+      <name value="Claim-func-type"/>
+      <description value="事前審查(Claim)的就醫科別(extension: encounter)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/Claim-identifier"/>
+      </reference>
+      <name value="Claim-identifier"/>
+      <description value="事前審查(Claim)的受理編號(identifier)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/Claim-patient"/>
+      </reference>
+      <name value="Claim-patient"/>
+      <description value="事前審查(Claim)的病人資訊(patient)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/extension-claim-encounter"/>
+      </reference>
+      <name value="ClaimEncounter"/>
+      <description value="就醫科別"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/ClaimResponse-adjudication-reason"/>
+      </reference>
+      <name value="ClaimResponse-adjudication-reason"/>
+      <description value="事前審查回覆(ClaimResponse)的核定註記(item.adjudication.reason)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/ClaimResponse-created"/>
+      </reference>
+      <name value="ClaimResponse-created"/>
+      <description value="事前審查回覆(ClaimResponse)的受理日期或核定日期(Claim)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/ClaimResponse-disposition"/>
+      </reference>
+      <name value="ClaimResponse-disposition"/>
+      <description value="事前審查回覆(ClaimResponse)的案件受理狀態(disposition)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/ClaimResponse-request"/>
+      </reference>
+      <name value="ClaimResponse-request"/>
+      <description value="事前審查回覆(ClaimResponse)關聯的事前審查(Claim)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ImagingStudy-twpas"/>
+      </reference>
+      <name value="DICOM影像-ImagingStudy TWPAS"/>
+      <description value="此DICOM影像-ImagingStudy TWPAS Profile說明本IG如何進一步定義臺灣核心-影像檢查(TW Core ImagingStudy) Profile以呈現癌藥事前審查中疾病資訊之影像報告的影像檢查的身體部位及DICOM影像"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/Encounter-service-type"/>
+      </reference>
+      <name value="Encounter-service-type"/>
+      <description value="就醫科別(serviceType)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/medication-frequency-hl7-nhi"/>
+      </reference>
+      <name value="HL7 TimingAbbreviation + NHI-健保事前審查-藥品使用頻率值集"/>
+      <description value="HL7 TimingAbbreviation + NHI-健保事前審查-藥品使用頻率值集。為配合專案時程，使用暫時性代碼系統，日後將統一使用TW Core IG的臺灣健保署藥品使用頻率。  &#xA;代碼對應請參照[臺灣健保署藥品使用頻率代碼對應對應HL7 TimingAbbreviation](https://build.fhir.org/ig/cctwFHIRterm/MOHW_TWCoreIG_Build/ConceptMap-medication-frequency-tw.html)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dicom-cid-29-AcquisitionModality"/>
+      </reference>
+      <name value="HL7-AcquisitionModality值集"/>
+      <description value="原值集因總會工具問題無法正常顯示，故先自建值集。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/media-mimetypes"/>
+      </reference>
+      <name value="HL7-非DICOM影像MimeType值集"/>
+      <description value="HL7-非DICOM影像MimeType值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/inca-osiris"/>
+      </reference>
+      <name value="INCa-健保事前審查-基因突變類型"/>
+      <description value="INCa-健保事前審查-基因突變類型，資料所屬單位：Institut National du Cancer (INCa)，參照至：https://github.com/InstitutNationalduCancer/OSIRIS。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/pat-ast"/>
+      </reference>
+      <name value="LOINC + NHI-健保事前審查-病人狀態評估項目值集"/>
+      <description value="LOINC + NHI-病人狀態評估項目值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/gene-test-code"/>
+      </reference>
+      <name value="LOINC-健保事前審查-基因檢測代碼值集"/>
+      <description value="LOINC-健保事前審查-基因檢測代碼值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/specime-type"/>
+      </reference>
+      <name value="LOINC-健保事前審查-基因檢測檢體類型值集"/>
+      <description value="LOINC-健保事前審查-基因檢測檢體類型值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dna-change-type"/>
+      </reference>
+      <name value="LOINC-健保事前審查-基因突變類型值集"/>
+      <description value="LOINC-健保事前審查-基因突變類型值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/report-type"/>
+      </reference>
+      <name value="LOINC-健保事前審查-報告類型值集"/>
+      <description value="LOINC-健保事前審查-報告類型值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/nci-thesaurus"/>
+      </reference>
+      <name value="NCI 健保事前審查-Thesaurus"/>
+      <description value="NCI 健保事前審查-Thesaurus，參照至http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl  &#xA;代碼出版日期：2022-10-13。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/cancer-stage-score"/>
+      </reference>
+      <name value="NCI-健保事前審查-FIGO癌症分期量表結果值集"/>
+      <description value="NCI-健保事前審查-FIGO癌症分期量表結果值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nhi-approve-item-comment"/>
+      </reference>
+      <name value="NHI-健保事前審查-個別醫令核定註記值集"/>
+      <description value="NHI-健保事前審查-個別醫令核定註記值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nhi-approve-claim-comment"/>
+      </reference>
+      <name value="NHI-健保事前審查-受理審查案件核定註記值集"/>
+      <description value="NHI-健保事前審查-受理審查案件核定註記值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/nhi-pdf-type"/>
+      </reference>
+      <name value="NHI-健保事前審查-文件類型"/>
+      <description value="臺灣衛生福利部中央健康保險署「文件類型」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nhi-pdf-type"/>
+      </reference>
+      <name value="NHI-健保事前審查-文件類型值集"/>
+      <description value="NHI-健保事前審查-文件類型值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/nhi-approve-comment"/>
+      </reference>
+      <name value="NHI-健保事前審查-核定註記"/>
+      <description value="臺灣衛生福利部中央健康保險署「核定註記」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/nhi-acceptance-status"/>
+      </reference>
+      <name value="NHI-健保事前審查-案件受理狀態"/>
+      <description value="臺灣衛生福利部中央健康保險署「案件受理狀態」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nhi-acceptance-status"/>
+      </reference>
+      <name value="NHI-健保事前審查-案件受理狀態值集"/>
+      <description value="NHI-健保事前審查-案件受理狀態值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/nhi-tx-ast"/>
+      </reference>
+      <name value="NHI-健保事前審查-治療後疾病狀態評估項目"/>
+      <description value="臺灣衛生福利部中央健康保險署「治療後疾病狀態評估項目」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nhi-tx-ast"/>
+      </reference>
+      <name value="NHI-健保事前審查-治療後疾病狀態評估項目值集"/>
+      <description value="NHI-健保事前審查-治療後疾病狀態評估項目值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/organization-identifier-tw"/>
+      </reference>
+      <name value="NHI-健保事前審查-特約醫事機構"/>
+      <description value="臺灣衛生福利部中央健康保險署「特約醫事機構」代碼，參照至[衛福部健保署特約醫事機構代碼網路查詢服務](https://www.nhi.gov.tw/ch/cp-5548-135e8-2931-1.html)中的[健保特約醫療院所名冊](https://info.nhi.gov.tw/IODE0000/IODE0000S09?id=1120)&#xA;&#xA;代碼出版日期：2024-04-22；資料所屬單位：衛生福利部中央健康保險署。&#xA;&#xA;*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nhi-organization"/>
+      </reference>
+      <name value="NHI-健保事前審查-特約醫事機構值集"/>
+      <description value="NHI-健保事前審查-特約醫事機構值集，參照至[衛福部健保署特約醫事機構代碼網路查詢服務](https://www.nhi.gov.tw/ch/cp-5548-135e8-2931-1.html)中的[健保特約醫療院所名冊](https://info.nhi.gov.tw/IODE0000/IODE0000S09?id=1120)&#xA;&#xA;代碼出版日期：2024-04-22；資料所屬單位：衛生福利部中央健康保險署。&#xA;&#xA;*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/nhi-medication"/>
+      </reference>
+      <name value="NHI-健保事前審查-用藥品項"/>
+      <description value="NHI-健保事前審查-用藥品項，參照自[健保用藥品項](https://www.nhi.gov.tw/ch/lp-2466-1.html)中的「健保用藥品項114年4月查詢檔(帶走所有壓縮檔114.4.2更新)」。  &#xA;&#xA;代碼出版日期：2025-04-30；資料所屬單位：衛生福利部中央健康保險署。&#xA;&#xA;*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*  &#xA;&#xA;因代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處僅擷取部分代碼，相關代碼可至[健保用藥品項網路查詢服務](https://info.nhi.gov.tw/INAE3000/INAE3000S01)查閱"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nhi-medication"/>
+      </reference>
+      <name value="NHI-健保事前審查-用藥品項值集"/>
+      <description value="NHI-健保事前審查-用藥品項值集。  &#xA;此值集所涵蓋代碼量較大會使載入頁面時間較長，為方便使用者瀏覽，此處(本頁、XML、JSON、TTL)僅擷取部分代碼，完整代碼可至[健保用藥品項網路查詢服務](https://info.nhi.gov.tw/INAE3000/INAE3000S01)查閱"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/nhi-line-of-therapy"/>
+      </reference>
+      <name value="NHI-健保事前審查-用藥線別"/>
+      <description value="臺灣衛生福利部中央健康保險署「用藥線別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nhi-line-of-therapy"/>
+      </reference>
+      <name value="NHI-健保事前審查-用藥線別值集"/>
+      <description value="NHI-健保事前審查-用藥線別值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/nhi-apply-type"/>
+      </reference>
+      <name value="NHI-健保事前審查-申報類別"/>
+      <description value="臺灣衛生福利部中央健康保險署「申報類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nhi-apply-type"/>
+      </reference>
+      <name value="NHI-健保事前審查-申報類別值集"/>
+      <description value="NHI-健保事前審查-申報類別值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/nhi-tmhb-type"/>
+      </reference>
+      <name value="NHI-健保事前審查-申請案件類別"/>
+      <description value="臺灣衛生福利部中央健康保險署「申請案件類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nhi-tmhb-type"/>
+      </reference>
+      <name value="NHI-健保事前審查-申請案件類別值集"/>
+      <description value="NHI-健保事前審查-申請案件類別值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/nhi-apply-side"/>
+      </reference>
+      <name value="NHI-健保事前審查-申請部位"/>
+      <description value="臺灣衛生福利部中央健康保險署「申請部位」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nhi-apply-side"/>
+      </reference>
+      <name value="NHI-健保事前審查-申請部位值集"/>
+      <description value="NHI-健保事前審查-申請部位值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/nhi-pat-ast"/>
+      </reference>
+      <name value="NHI-健保事前審查-病人狀態評估項目"/>
+      <description value="臺灣衛生福利部中央健康保險署「病人狀態評估項目」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/nhi-apply-reason"/>
+      </reference>
+      <name value="NHI-健保事前審查-給付適應症"/>
+      <description value="臺灣衛生福利部中央健康保險署「給付適應症」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nhi-apply-reason"/>
+      </reference>
+      <name value="NHI-健保事前審查-給付適應症值集"/>
+      <description value="NHI-健保事前審查-給付適應症值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/nhi-continuation-status"/>
+      </reference>
+      <name value="NHI-健保事前審查-續用註記"/>
+      <description value="臺灣衛生福利部中央健康保險署「續用註記」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nhi-continuation-status"/>
+      </reference>
+      <name value="NHI-健保事前審查-續用註記值集"/>
+      <description value="NHI-健保事前審查-續用註記值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/medication-frequency-nhi-tw"/>
+      </reference>
+      <name value="NHI-健保事前審查-藥品使用頻率"/>
+      <description value="NHI-健保事前審查-藥品使用頻率，參照至[健保署檔案譯碼簿](https://www.nhi.gov.tw/ch/cp-1880-20811-3142-1.html)中的「藥品使用頻率（2022/8/2版本）」。&#xA;&#xA;代碼出版日期：2024-05-27；資料所屬單位：衛生福利部中央健康保險署。&#xA;&#xA;*因原始資料無代碼版本資訊，故使用其「更新日期」作為版本資訊。*"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/nhi-drug-category"/>
+      </reference>
+      <name value="NHI-健保事前審查-藥物類型"/>
+      <description value="臺灣衛生福利部中央健康保險署「藥物類型」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nhi-drug-category"/>
+      </reference>
+      <name value="NHI-健保事前審查-藥物類型值集"/>
+      <description value="NHI-健保事前審查-藥物類型值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/nhi-supporting-info-type"/>
+      </reference>
+      <name value="NHI-健保事前審查-補充資訊類別"/>
+      <description value="臺灣衛生福利部中央健康保險署「補充資訊類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nhi-supporting-info-type"/>
+      </reference>
+      <name value="NHI-健保事前審查-補充資訊類別值集"/>
+      <description value="NHI-健保事前審查-補充資訊類別值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/nhi-body-site"/>
+      </reference>
+      <name value="NHI-健保事前審查-身體部位"/>
+      <description value="臺灣衛生福利部中央健康保險署「身體部位」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nhi-body-site"/>
+      </reference>
+      <name value="NHI-健保事前審查-身體部位值集"/>
+      <description value="NHI-健保事前審查-身體部位值集，代碼對應請參考[臺灣健保署身體部位代碼對應SNOMED CT](ConceptMap-nhi-sct-body-site.html)。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/nhi-order-type"/>
+      </reference>
+      <name value="NHI-健保事前審查-醫令類別"/>
+      <description value="臺灣衛生福利部中央健康保險署「醫令類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nhi-order-type"/>
+      </reference>
+      <name value="NHI-健保事前審查-醫令類別值集"/>
+      <description value="NHI-健保事前審查-醫令類別值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/icd-10-pcs-2014-image"/>
+      </reference>
+      <name value="NHI-臺灣健保署2014年中文版ICD 10 PCS-影像報告值集"/>
+      <description value="NHI-臺灣健保署2014年中文版ICD 10 PCS-影像報告值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/icd-10-pcs-2014-radiotherapy"/>
+      </reference>
+      <name value="NHI-臺灣健保署2014年中文版ICD 10 PCS-放射治療項目值集"/>
+      <description value="NHI-臺灣健保署2014年中文版ICD 10 PCS-放射治療項目值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/icd-10-pcs-2023-image"/>
+      </reference>
+      <name value="NHI-臺灣健保署2023年中文版ICD 10 PCS-影像報告值集"/>
+      <description value="NHI-臺灣健保署2023年中文版ICD 10 PCS-影像報告值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/icd-10-pcs-2023-radiotherapy"/>
+      </reference>
+      <name value="NHI-臺灣健保署2023年中文版ICD 10 PCS-放射治療項目值集"/>
+      <description value="NHI-臺灣健保署2023年中文版ICD 10 PCS-放射治療項目值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/Patient-identifier"/>
+      </reference>
+      <name value="Patient-identifier"/>
+      <description value="病人的身分證號(identifier)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/Patient-name"/>
+      </reference>
+      <name value="Patient-name"/>
+      <description value="病人的姓名(name)，該查詢可能與 HumanName 中的任何字串匹配，包括完整的中文姓名(text)、英文姓(family)、英文名(given)、姓名前面的頭銜(prefix)、姓名後面的稱謂(suffix)。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/extension-requestedService"/>
+      </reference>
+      <name value="RequestedService"/>
+      <description value="事前審查品項"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/cancer-stage"/>
+      </reference>
+      <name value="SCT + NCI-健保事前審查-癌症分期量表項目值集"/>
+      <description value="SCT + NCI-健保事前審查-癌症分期量表項目值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/medication-path-sct-tw"/>
+      </reference>
+      <name value="SNOMED CT + 臺灣健保署-健保事前審查-給藥途徑值集"/>
+      <description value="SNOMED CT + 臺灣健保署-健保事前審查-給藥途徑值集。&#xA;代碼對應請參照[臺灣健保署給藥途徑代碼對應SNOMED CT](https://build.fhir.org/ig/cctwFHIRterm/MOHW_TWCoreIG_Build/ConceptMap-medication-path-tw.html)&#xA;&#xA;此值集優先採用國際標準碼，國際標準碼未能表述之概念，則以普遍被使用的臺灣健保署給藥途徑代碼表述，請實作者留意。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/sct-body-site"/>
+      </reference>
+      <name value="SNOMEDCT-健保事前審查-身體部位值集"/>
+      <description value="SNOMEDCT-健保事前審查-身體部位值集，代碼對應請參考[臺灣健保署身體部位代碼對應SNOMED CT](ConceptMap-nhi-sct-body-site.html)。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/ucum-units"/>
+      </reference>
+      <name value="UCUM-健保事前審查-UCUM單位值集"/>
+      <description value="UCUM-健保事前審查-UCUM單位值集"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Bundle-twpas"/>
+      </reference>
+      <name value="事前審查-Bundle TWPAS"/>
+      <description value="此事前審查-Bundle TWPAS Profile說明本IG如何進一步定義資料交換基本單位(TW Core Bundle) Profile以呈現癌藥事前審查之內容"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Claim-twpas"/>
+      </reference>
+      <name value="事前審查-Claim TWPAS"/>
+      <description value="此事前審查-Claim TWPAS Profile說明本IG如何進一步定義FHIR的Claim Resource以呈現癌藥事前審查之內容"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Claim"/>
+      </extension>
+      <reference>
+        <reference value="Claim/cla-3"/>
+      </reference>
+      <name value="事前審查-申復、有共病"/>
+      <description value="依據事前審查-Claim TWPAS Profile呈現事前審查之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Claim-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/bun-3"/>
+      </reference>
+      <name value="事前審查-申復、有共病"/>
+      <description value="依據事前審查-Bundle TWPAS Profile呈現癌藥事前審查之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Bundle-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/bun-uuid-example"/>
+      </reference>
+      <name value="事前審查-自主審查報備、多份影像報告（UUID）"/>
+      <description value="依據事前審查-Bundle TWPAS Profile呈現癌藥事前審查之自主審查報備範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Bundle-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Claim"/>
+      </extension>
+      <reference>
+        <reference value="Claim/cla-1"/>
+      </reference>
+      <name value="事前審查-送核、套組檢驗、多事前審查癌藥品項"/>
+      <description value="依據事前審查-Claim TWPAS Profile呈現事前審查之範例，含兩筆檢驗(查)。"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Claim-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/bun-1"/>
+      </reference>
+      <name value="事前審查-送核、套組檢驗、多事前審查癌藥品項"/>
+      <description value="依據事前審查-Bundle TWPAS Profile呈現癌藥事前審查之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Bundle-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MedicationRequest-apply-twpas"/>
+      </reference>
+      <name value="事前審查品項-MedicationRequest Apply TWPAS"/>
+      <description value="此事前審查品項-MedicationRequest Apply TWPAS Profile說明本IG如何進一步定義臺灣核心-藥品請求(TW Core MedicationRequest) Profile以呈現癌藥事前審查中申請項目之事前審查品項"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/medReq-apply"/>
+      </reference>
+      <name value="事前審查品項-多用法"/>
+      <description value="依據事前審查品項-MedicationRequest Apply TWPAS Profile呈現事前審查品項之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/MedicationRequest-apply-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/medReq-apply-2"/>
+      </reference>
+      <name value="事前審查品項-給付適應症特定代碼"/>
+      <description value="依據事前審查品項-MedicationRequest Apply TWPAS Profile呈現特定事前審查品項代碼之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/MedicationRequest-apply-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ClaimResponse"/>
+      </extension>
+      <reference>
+        <reference value="ClaimResponse/claim-response-example"/>
+      </reference>
+      <name value="事前審查回覆"/>
+      <description value="依據事前審查回覆-ClaimResponse TWPAS Profile呈現事前審查回覆之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/ClaimResponse-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/bun-response"/>
+      </reference>
+      <name value="事前審查回覆"/>
+      <description value="依據事前審查回覆-Bundle Response TWPAS Profile呈現癌藥事前審查回覆之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Bundle-response-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Bundle-response-twpas"/>
+      </reference>
+      <name value="事前審查回覆-Bundle Response TWPAS"/>
+      <description value="此事前審查回覆-Bundle Response TWPAS Profile說明本IG如何進一步定義資料交換基本單位(TW Core Bundle) Profile以呈現回覆癌藥事前審查之內容"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ClaimResponse-twpas"/>
+      </reference>
+      <name value="事前審查回覆-ClaimResponse TWPAS"/>
+      <description value="此事前審查回覆-ClaimResponse TWPAS Profile說明本IG如何進一步定義FHIR的ClaimResponse Resource以呈現癌藥事前審查回覆之內容"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/nhi-sct-body-site"/>
+      </reference>
+      <name value="健保事前審查-臺灣健保署身體部位代碼對應SNOMED CT"/>
+      <description value="此對應表為臺灣健保署身體部位代碼對應SNOMED CT，供實作者於撰寫程式以自動化對應或轉代碼時使用。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/nhi-loinc"/>
+      </reference>
+      <name value="健保事前審查-臺灣健保署醫療服務給付項目對應LOINC"/>
+      <description value="此對應表為臺灣健保署醫療服務給付項目對應LOINC，供實作者於撰寫程式以自動化對應或轉代碼時使用。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Coverage"/>
+      </extension>
+      <reference>
+        <reference value="Coverage/cov-min"/>
+      </reference>
+      <name value="健保事前審查計畫"/>
+      <description value="依據健保事前審查計畫-Coverage TWPAS Profile呈現健保事前審查計畫之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Coverage-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Coverage-twpas"/>
+      </reference>
+      <name value="健保事前審查計畫-Coverage TWPAS"/>
+      <description value="此健保事前審查計畫-Coverage TWPAS Profile說明本IG如何進一步定義FHIR的Coverage Resource以呈現癌藥事前審查之健保事前審查計畫"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ResponseModel"/>
+      </reference>
+      <name value="回覆(Response)癌症用藥癌藥事前審查之資料模型"/>
+      <description value="回覆(Response)癌症用藥癌藥事前審查之資料模型，此邏輯模型為定義癌症用藥事前審查情境下使用的所有資料欄位。  &#xA;為了便於實作者快速理解，資料欄位會使用易於理解的命名，實作者再透過邏輯模型中的功能頁籤「Mappings」瞭解各資料欄位實際使用本IG的哪個Profiles的哪個資料項目（element）。亦可配合[視覺化邏輯模型圖](vision.html#bundle%E6%9E%B6%E6%A7%8B%E5%9C%96)進行欄位對應"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/doc-gene-min"/>
+      </reference>
+      <name value="基因報告"/>
+      <description value="依據文件參照-DocumentReference TWPAS Profile呈現基因報告之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/DocumentReference-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/org-gene-example"/>
+      </reference>
+      <name value="基因檢測機構"/>
+      <description value="依據基因檢測機構-Organization Genetic Testing TWPAS Profile呈現基因檢測機構之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Organization-genetic-testing-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Organization-genetic-testing-twpas"/>
+      </reference>
+      <name value="基因檢測機構-Organization Genetic Testing TWPAS"/>
+      <description value="此基因檢測機構-Organization Genetic Testing TWPAS Profile說明本IG如何進一步定義臺灣核心-機構(TW Core Organization) Profile以呈現癌藥事前審查之基因檢測機構基本資料"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/spe-min"/>
+      </reference>
+      <name value="基因檢測檢體"/>
+      <description value="依據基因檢測檢體-Specimen TWPAS Profile呈現基因檢測檢體之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Specimen-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Specimen-twpas"/>
+      </reference>
+      <name value="基因檢測檢體-Specimen TWPAS"/>
+      <description value="此基因檢測檢體-Specimen TWPAS Profile說明本IG如何進一步定義臺灣核心-檢體(TW Core Specimen) Profile以呈現癌藥事前審查中基因資訊之檢測檢體相關內容"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/obs-diagnostic-min"/>
+      </reference>
+      <name value="基因資訊"/>
+      <description value="依據基因資訊-Observation Diagnostic TWPAS Profile呈現基因資訊之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-diagnostic-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-diagnostic-twpas"/>
+      </reference>
+      <name value="基因資訊-Observation Diagnostic TWPAS"/>
+      <description value="此基因資訊-Observation Diagnostic TWPAS Profile說明本IG如何進一步定義FHIR的Observation Resource以呈現癌藥事前審查之基因資訊"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/enc-min"/>
+      </reference>
+      <name value="就醫科別"/>
+      <description value="依據就醫科別-Encounter TWPAS Profile呈現就醫科別之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Encounter-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Encounter-twpas"/>
+      </reference>
+      <name value="就醫科別-Encounter TWPAS"/>
+      <description value="此就醫科別-Encounter TWPAS Profile說明本IG如何進一步定義臺灣核心-就醫事件(TW Core Encounter) Profile以呈現癌藥事前審查中院所資訊之就醫科別"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ImagingStudy"/>
+      </extension>
+      <reference>
+        <reference value="ImagingStudy/imaStu-min"/>
+      </reference>
+      <name value="影像"/>
+      <description value="依據DICOM影像-ImagingStudy TWPAS Profile呈現影像之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/ImagingStudy-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/diaRep-ima-min"/>
+      </reference>
+      <name value="影像報告"/>
+      <description value="依據影像報告-DiagnosticReport Image TWPAS Profile呈現影像報告之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/DiagnosticReport-image-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DiagnosticReport-image-twpas"/>
+      </reference>
+      <name value="影像報告-DiagnosticReport Image TWPAS"/>
+      <description value="此影像報告-DiagnosticReport Image TWPAS Profile說明本IG如何進一步定義臺灣核心-診斷報告(TW Core DiagnosticReport) Profile以呈現癌藥事前審查之影像報告"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/pro-min"/>
+      </reference>
+      <name value="放射治療"/>
+      <description value="依據放射治療-Procedure TWPAS Profile呈現放射治療之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Procedure-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Procedure-twpas"/>
+      </reference>
+      <name value="放射治療-Procedure TWPAS"/>
+      <description value="此放射治療-Procedure TWPAS Profile說明本IG如何進一步定義FHIR的Procedure Resource以呈現癌藥事前審查中治療資訊之放射治療"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Substance"/>
+      </extension>
+      <reference>
+        <reference value="Substance/sub-min"/>
+      </reference>
+      <name value="放射治療總劑量"/>
+      <description value="依據放射治療總劑量-Substance TWPAS Profile呈現放射治療之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Substance-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Substance-twpas"/>
+      </reference>
+      <name value="放射治療總劑量-Substance TWPAS"/>
+      <description value="此放射治療總劑量-Substance TWPAS Profile說明本IG如何進一步定義FHIR的Substance Resource以呈現癌藥事前審查中治療資訊之放射治療總劑量"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DocumentReference-twpas"/>
+      </reference>
+      <name value="文件參照-DocumentReference TWPAS"/>
+      <description value="此文件參照-DocumentReference TWPAS Profile說明本IG如何進一步定義臺灣核心-文件參照(TW Core DocumentReference) Profile以呈現癌藥事前審查之治療計畫文件及基因報告"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/diaRep-min"/>
+      </reference>
+      <name value="檢查報告"/>
+      <description value="依據檢查報告-DiagnosticReport TWPAS Profile呈現檢查報告之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/DiagnosticReport-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DiagnosticReport-twpas"/>
+      </reference>
+      <name value="檢查報告-DiagnosticReport TWPAS"/>
+      <description value="此檢查報告-DiagnosticReport TWPAS Profile說明本IG如何進一步定義臺灣核心-診斷報告(TW Core DiagnosticReport) Profile以呈現癌藥事前審查中疾病資訊之檢查報告"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/doc-test-min"/>
+      </reference>
+      <name value="檢驗(查)附件"/>
+      <description value="依據文件參照-DocumentReference TWPAS Profile呈現檢驗(查)附件之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/DocumentReference-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-laboratory-result-twpas"/>
+      </reference>
+      <name value="檢驗檢查-Observation Laboratory Result TWPAS"/>
+      <description value="此檢驗檢查-Observation Laboratory Result TWPAS Profile說明本IG如何進一步定義臺灣核心-檢驗檢查(TW Core Observation Laboratory Result) Profile以呈現癌藥事前審查中評估資訊之檢驗(查)相關資料"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/obs-lab-min"/>
+      </reference>
+      <name value="檢驗檢查-單項"/>
+      <description value="依據檢驗檢查-Observation Laboratory Result TWPAS Profile呈現單項檢驗檢查之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-laboratory-result-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/obs-lab-cbc"/>
+      </reference>
+      <name value="檢驗檢查-套組(全套血液檢查)"/>
+      <description value="依據檢驗檢查-Observation Laboratory Result TWPAS Profile呈現套組檢驗檢查之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-laboratory-result-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/obs-tx-min"/>
+      </reference>
+      <name value="治療後疾病狀態評估"/>
+      <description value="依據治療後疾病狀態評估-Observation Treatment Assessment TWPAS Profile呈現治療後疾病狀態評估之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-tx-assessment-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-tx-assessment-twpas"/>
+      </reference>
+      <name value="治療後疾病狀態評估-Observation Treatment Assessment TWPAS"/>
+      <description value="此治療後疾病狀態評估-Observation Treatment Assessment TWPAS Profile說明本IG如何進一步定義FHIR的Observation Resource以呈現癌藥事前審查中結果資訊之治療後疾病狀態評估"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/doc-careplan-min"/>
+      </reference>
+      <name value="治療計畫文件"/>
+      <description value="依據文件參照-DocumentReference TWPAS Profile呈現治療計畫文件之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/DocumentReference-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/medReq-treat"/>
+      </reference>
+      <name value="用藥品項"/>
+      <description value="依據用藥品項-MedicationRequest Treat TWPAS Profile呈現用藥品項之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/MedicationRequest-treat-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MedicationRequest-treat-twpas"/>
+      </reference>
+      <name value="用藥品項-MedicationRequest Treat TWPAS"/>
+      <description value="此用藥品項-MedicationRequest Treat TWPAS Profile說明本IG如何進一步定義臺灣核心-藥品請求(TW Core MedicationRequest) Profile以呈現癌藥事前審查中治療資訊之用藥品項"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ApplyModel"/>
+      </reference>
+      <name value="申請(Apply)癌症用藥癌藥事前審查之資料模型"/>
+      <description value="申請(Apply)癌症用藥癌藥事前審查之資料模型，此邏輯模型為定義癌症用藥事前審查情境下使用的所有資料欄位。  &#xA;為了便於實作者快速理解，資料欄位會使用易於理解的命名，實作者再透過邏輯模型中的功能頁籤「Mappings」瞭解各資料欄位實際使用本IG的哪個Profiles的哪個資料項目（element）。亦可配合[視覺化邏輯模型圖](vision.html#bundle%E6%9E%B6%E6%A7%8B%E5%9C%96)進行欄位對應"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/obs-pat-nyha"/>
+      </reference>
+      <name value="病人狀態評估-NYHA"/>
+      <description value="依據病人狀態評估-Observation Patient Assessment TWPAS Profile呈現病人狀態評估之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-pat-assessment-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-pat-assessment-twpas"/>
+      </reference>
+      <name value="病人狀態評估-Observation Patient Assessment TWPAS"/>
+      <description value="此病人狀態評估-Observation Patient Assessment TWPAS Profile說明本IG如何進一步定義FHIR的Observation Resource以呈現癌藥事前審查中評估資訊之病人狀態評估"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/obs-pat-pdai"/>
+      </reference>
+      <name value="病人狀態評估-PDAI"/>
+      <description value="依據病人狀態評估-Observation Patient Assessment TWPAS Profile呈現病人狀態評估之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-pat-assessment-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/pat-min"/>
+      </reference>
+      <name value="病人資訊"/>
+      <description value="依據病人資訊-Patient TWPAS Profile呈現病人資訊之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Patient-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Patient-twpas"/>
+      </reference>
+      <name value="病人資訊-Patient TWPAS"/>
+      <description value="此病人資訊-Patient TWPAS Profile說明本IG如何進一步定義臺灣核心-病人(TW Core Patient) Profile以呈現癌藥事前審查之病人基本資料"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/doc-medicalRecord-min"/>
+      </reference>
+      <name value="病歷資料"/>
+      <description value="依據文件參照-DocumentReference TWPAS Profile呈現病歷資料之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/DocumentReference-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/obs-cancer-cns"/>
+      </reference>
+      <name value="癌症分期量表-CNS"/>
+      <description value="依據癌症分期量表-Observation Cancer Stage TWPAS Profile呈現癌症分期量表WHO CNS之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-cancer-stage-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/obs-cancer-figo"/>
+      </reference>
+      <name value="癌症分期量表-FIGO"/>
+      <description value="依據癌症分期量表-Observation Cancer Stage TWPAS Profile呈現癌症分期量表FIGO之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-cancer-stage-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-cancer-stage-twpas"/>
+      </reference>
+      <name value="癌症分期量表-Observation Cancer Stage TWPAS"/>
+      <description value="此癌症分期量表-Observation Cancer Stage TWPAS Profile說明本IG如何進一步定義FHIR的Observation Resource以呈現癌藥事前審查中疾病資訊之癌症分期量表相關資料"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/obs-cancer-tnm"/>
+      </reference>
+      <name value="癌症分期量表-TNM"/>
+      <description value="依據癌症分期量表-Observation Cancer Stage TWPAS Profile呈現癌症分期量表之TNM範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-cancer-stage-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Operationoutcome-twpas"/>
+      </reference>
+      <name value="系統回應訊息-OperationOutcome TWPAS"/>
+      <description value="此系統回應訊-OperationOutcome TWPAS Profile說明本IG如何進一步定義FHIR的OperationOutcome Resource以呈現系統回應訊息之內容"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationOutcome"/>
+      </extension>
+      <reference>
+        <reference value="OperationOutcome/error-example"/>
+      </reference>
+      <name value="系統回應錯誤訊息"/>
+      <description value="依據系統回應訊息-OperationOutcome TWPAS Profile呈現使用錯誤語法查詢系統時之回應範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Operationoutcome-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ClaimResponse"/>
+      </extension>
+      <reference>
+        <reference value="ClaimResponse/self-assessment-example"/>
+      </reference>
+      <name value="自主審查報備"/>
+      <description value="依據自主審查報備-ClaimResponse Self Assessment TWPAS Profile呈現自主審查報備之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/ClaimResponse-self-assessment-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ClaimResponse-self-assessment-twpas"/>
+      </reference>
+      <name value="自主審查報備-ClaimResponse Self Assessment TWPAS"/>
+      <description value="此自主審查報備-ClaimResponse TWPAS Profile說明本IG如何進一步定義FHIR的ClaimResponse Resource以呈現自主審查報備之內容。 &#xA;  &#xA;現行開放自主事前審查項目僅有心臟及肝臟移植，若醫院要自主事前審查需向健保署申請，通過後，健保署會於署內系統維護，具有此資格之院所才可填報自主審查報備。"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/CapabilityStatementTWPASServer"/>
+      </reference>
+      <name value="臺灣癌藥事前審查-伺服端(TWPAS Server)"/>
+      <description value="臺灣健保癌症用藥事前審查實作指引(TWPAS IG)伺服端(Server)之能力聲明"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/CapabilityStatementTWPASClient"/>
+      </reference>
+      <name value="臺灣癌藥事前審查-用戶端(TWPAS Client)"/>
+      <description value="臺灣健保癌症用藥事前審查實作指引(TWPAS IG)用戶端(Client)之能力聲明"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/org-nhi"/>
+      </reference>
+      <name value="衛生福利部中央健康保險署"/>
+      <description value="依據臺灣核心-政府機構（TW Core Organization Government）Profile呈現衛生福利部中央健康保險署"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/pra-min"/>
+      </reference>
+      <name value="醫事人員"/>
+      <description value="依據醫事人員-Practitioner TWPAS Profile呈現醫事人員之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Practitioner-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Practitioner-twpas"/>
+      </reference>
+      <name value="醫事人員-Practitioner TWPAS"/>
+      <description value="此醫事人員-Practitioner TWPAS Profile說明本IG如何進一步定義臺灣核心-健康照護服務提供者(TW Core Practitioner) Profile以呈現癌藥事前審查之申請醫師、簽發影像報告醫師、簽發癌症分期報告醫師、檢查報告醫師、簽發檢驗(查)報告醫事人員及評估項目醫事人員基本資料"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/org-hosp-example"/>
+      </reference>
+      <name value="醫事機構"/>
+      <description value="依據機構-Organization TWPAS Profile呈現醫事機構之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Organization-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Organization-twpas"/>
+      </reference>
+      <name value="醫事機構-Organization TWPAS"/>
+      <description value="此醫事機構-Organization TWPAS Profile說明本IG如何進一步定義臺灣核心-機構(TW Core Organization) Profile以呈現癌藥事前審查之醫事機構基本資料"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Media"/>
+      </extension>
+      <reference>
+        <reference value="Media/med-min"/>
+      </reference>
+      <name value="非DICOM影像"/>
+      <description value="依據非DICOM影像-Media TWPAS Profile呈現非DICOM影像之範例"/>
+      <exampleCanonical value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Media-twpas"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Media-twpas"/>
+      </reference>
+      <name value="非DICOM影像-Media TWPAS"/>
+      <description value="此非DICOM影像-Media TWPAS Profile說明本IG如何進一步定義臺灣核心-多媒體(TW Core Media) Profile以呈現癌藥事前審查中疾病資訊之影像報告的非DICOM影像"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <page>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+        <valueUrl value="toc.html"/>
+      </extension>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="index.html"/>
+        </extension>
+        <nameUrl value="index.html"/>
+        <title value="應用說明"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="capabilitystatements.html"/>
+        </extension>
+        <nameUrl value="capabilitystatements.html"/>
+        <title value="能力聲明"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="searchparameters.html"/>
+        </extension>
+        <nameUrl value="searchparameters.html"/>
+        <title value="查詢參數"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="models.html"/>
+        </extension>
+        <nameUrl value="models.html"/>
+        <title value="邏輯模型"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="profiles-and-extensions.html"/>
+        </extension>
+        <nameUrl value="profiles-and-extensions.html"/>
+        <title value="FHIR Profiles及Extensions"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="terminologies.html"/>
+        </extension>
+        <nameUrl value="terminologies.html"/>
+        <title value="專門術語"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="examples.html"/>
+        </extension>
+        <nameUrl value="examples.html"/>
+        <title value="範例"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="downloads.html"/>
+        </extension>
+        <nameUrl value="downloads.html"/>
+        <title value="結構定義與範例檔下載"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="security.html"/>
+        </extension>
+        <nameUrl value="security.html"/>
+        <title value="安全性"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="vision.html"/>
+        </extension>
+        <nameUrl value="vision.html"/>
+        <title value="視覺化邏輯模型"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="ImplementationGuide-tw.gov.mohw.nhi.pas.html"/>
+        </extension>
+        <nameUrl value="ImplementationGuide-tw.gov.mohw.nhi.pas.html"/>
+        <title value="TWPAS ImplementationGuide Resource"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="validate.html"/>
+        </extension>
+        <nameUrl value="validate.html"/>
+        <title value="驗證教學"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

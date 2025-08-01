@@ -1,0 +1,59 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "nhi-approve-comment",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem nhi-approve-comment</b></p><a name=\"nhi-approve-comment\"> </a><a name=\"hcnhi-approve-comment\"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-approve-comment</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"nhi-approve-comment-0\"> </a></td><td>審核中</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"nhi-approve-comment-1\"> </a></td><td>同意</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"nhi-approve-comment-2\"> </a></td><td>不予同意</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"nhi-approve-comment-3\"> </a></td><td>部份同意</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"nhi-approve-comment-4\"> </a></td><td>補件</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"nhi-approve-comment-5\"> </a></td><td>退件</td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"nhi-approve-comment-6\"> </a></td><td>不予同意:對應手術亦不支付</td></tr><tr><td style=\"white-space:nowrap\">7<a name=\"nhi-approve-comment-7\"> </a></td><td>改核:如審查核定意見</td></tr></table></div>"
+  },
+  "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-approve-comment",
+  "version" : "1.0.6",
+  "name" : "NHIApproveComment",
+  "title" : "NHI-健保事前審查-核定註記",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-07-01",
+  "publisher" : "衛生福利部中央健康保險署",
+  "contact" : [{
+    "name" : "衛生福利部中央健康保險署",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.nhi.gov.tw"
+    }]
+  }],
+  "description" : "臺灣衛生福利部中央健康保險署「核定註記」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 8,
+  "concept" : [{
+    "code" : "0",
+    "display" : "審核中"
+  },
+  {
+    "code" : "1",
+    "display" : "同意"
+  },
+  {
+    "code" : "2",
+    "display" : "不予同意"
+  },
+  {
+    "code" : "3",
+    "display" : "部份同意"
+  },
+  {
+    "code" : "4",
+    "display" : "補件"
+  },
+  {
+    "code" : "5",
+    "display" : "退件"
+  },
+  {
+    "code" : "6",
+    "display" : "不予同意:對應手術亦不支付"
+  },
+  {
+    "code" : "7",
+    "display" : "改核:如審查核定意見"
+  }]
+}

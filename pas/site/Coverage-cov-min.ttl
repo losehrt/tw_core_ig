@@ -1,0 +1,33 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://nhicore.nhi.gov.tw/pas/Coverage/cov-min> a fhir:Coverage ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cov-min"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Coverage-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Coverage-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Profile：<a href=\"StructureDefinition-Coverage-twpas.html\">健保事前審查計畫-Coverage TWPAS</a></p></div><p><b>狀態</b>：active</p><p><b>受益人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a> \"王大明\"</p><p><b>保險人</b>：<a href=\"Organization-org-nhi.html\">Organization/org-nhi</a> \"衛生福利部中央健康保險署\"</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:beneficiary [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Patient/pat-min> ;
+     fhir:reference [ fhir:v "Patient/pat-min" ]
+  ] ; # 
+  fhir:payor ( [
+     fhir:link <https://nhicore.nhi.gov.tw/pas/Organization/org-nhi> ;
+     fhir:reference [ fhir:v "Organization/org-nhi" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

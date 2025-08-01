@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="inca-osiris"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem inca-osiris</b></p><a name="inca-osiris"> </a><a name="hcinca-osiris"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/inca-osiris</code> defines the following code:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">O55-2<a name="inca-osiris-O55-2"> </a></td><td>Delins</td></tr></table></div>
+  </text>
+  <url value="https://nhicore.nhi.gov.tw/pas/CodeSystem/inca-osiris"/>
+  <version value="1.0.6"/>
+  <name value="INCaOsiris"/>
+  <title value="INCa-健保事前審查-基因突變類型"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-07-01"/>
+  <publisher value="衛生福利部中央健康保險署"/>
+  <contact>
+    <name value="衛生福利部中央健康保險署"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nhi.gov.tw"/>
+    </telecom>
+  </contact>
+  <description value="INCa-健保事前審查-基因突變類型，資料所屬單位：Institut National du Cancer (INCa)，參照至：https://github.com/InstitutNationalduCancer/OSIRIS。"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="1"/>
+  <concept>
+    <code value="O55-2"/>
+    <display value="Delins"/>
+  </concept>
+</CodeSystem>

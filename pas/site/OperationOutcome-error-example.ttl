@@ -1,0 +1,34 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://nhicore.nhi.gov.tw/pas/OperationOutcome/error-example> a fhir:OperationOutcome ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "error-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Operationoutcome-twpas"^^xsd:anyURI ;
+       fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Operationoutcome-twpas>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3><b>系統回應錯誤訊息-錯誤查詢參數</b></h3><p><b>問題嚴重性</b>：Error <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">（ <a href=\"http://hl7.org/fhir/issue-severity\">IssueSeverity</a>#error</span></p><p><b>問題種類</b>：Processing Failure <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">（ <a href=\"http://hl7.org/fhir/issue-type\">IssueType</a>#processing)</span></p><p><b>訊息種類</b>：Parameter \"%s\" content is invalid <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">（ <a href=\"https://hl7.org/fhir/R4/codesystem-operation-outcome.html\">OperationOutcomeCodes</a>#operation-outcome-MSG_PARAM_INVALID）</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:issue ( [
+     fhir:severity [ fhir:v "error" ] ;
+     fhir:code [ fhir:v "processing" ] ;
+     fhir:details [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/operation-outcome"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "MSG_PARAM_INVALID" ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

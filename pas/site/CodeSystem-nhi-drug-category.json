@@ -1,0 +1,35 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "nhi-drug-category",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem nhi-drug-category</b></p><a name=\"nhi-drug-category\"> </a><a name=\"hcnhi-drug-category\"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-drug-category</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">nhi<a name=\"nhi-drug-category-nhi\"> </a></td><td>健保</td></tr><tr><td style=\"white-space:nowrap\">self<a name=\"nhi-drug-category-self\"> </a></td><td>自費</td></tr></table></div>"
+  },
+  "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-drug-category",
+  "version" : "1.0.6",
+  "name" : "NHIDrugCategory",
+  "title" : "NHI-健保事前審查-藥物類型",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-07-01",
+  "publisher" : "衛生福利部中央健康保險署",
+  "contact" : [{
+    "name" : "衛生福利部中央健康保險署",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.nhi.gov.tw"
+    }]
+  }],
+  "description" : "臺灣衛生福利部中央健康保險署「藥物類型」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 2,
+  "concept" : [{
+    "code" : "nhi",
+    "display" : "健保"
+  },
+  {
+    "code" : "self",
+    "display" : "自費"
+  }]
+}

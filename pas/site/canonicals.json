@@ -1,0 +1,709 @@
+[
+  {
+    "id" : "CapabilityStatementTWPASClient",
+    "type" : "CapabilityStatement",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CapabilityStatement/CapabilityStatementTWPASClient",
+    "version" : "1.0.6",
+    "name" : "CapabilityStatementTWPASClient"
+  },
+  {
+    "id" : "CapabilityStatementTWPASServer",
+    "type" : "CapabilityStatement",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CapabilityStatement/CapabilityStatementTWPASServer",
+    "version" : "1.0.6",
+    "name" : "CapabilityStatementTWPASServer"
+  },
+  {
+    "id" : "inca-osiris",
+    "type" : "CodeSystem",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/inca-osiris",
+    "version" : "1.0.6",
+    "name" : "INCaOsiris"
+  },
+  {
+    "id" : "medication-frequency-nhi-tw",
+    "type" : "CodeSystem",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw",
+    "version" : "1.0.6",
+    "name" : "NHIMedicationFrequency"
+  },
+  {
+    "id" : "nci-thesaurus",
+    "type" : "CodeSystem",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nci-thesaurus",
+    "version" : "1.0.6",
+    "name" : "NciThesaurus"
+  },
+  {
+    "id" : "nhi-acceptance-status",
+    "type" : "CodeSystem",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-acceptance-status",
+    "version" : "1.0.6",
+    "name" : "NHIAcceptanceStatus"
+  },
+  {
+    "id" : "nhi-apply-reason",
+    "type" : "CodeSystem",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-apply-reason",
+    "version" : "1.0.6",
+    "name" : "NHIApplyReason"
+  },
+  {
+    "id" : "nhi-apply-side",
+    "type" : "CodeSystem",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-apply-side",
+    "version" : "1.0.6",
+    "name" : "NHIApplySide"
+  },
+  {
+    "id" : "nhi-apply-type",
+    "type" : "CodeSystem",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-apply-type",
+    "version" : "1.0.6",
+    "name" : "NHIApplyType"
+  },
+  {
+    "id" : "nhi-approve-comment",
+    "type" : "CodeSystem",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-approve-comment",
+    "version" : "1.0.6",
+    "name" : "NHIApproveComment"
+  },
+  {
+    "id" : "nhi-body-site",
+    "type" : "CodeSystem",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-body-site",
+    "version" : "1.0.6",
+    "name" : "NHIBodySite"
+  },
+  {
+    "id" : "nhi-continuation-status",
+    "type" : "CodeSystem",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-continuation-status",
+    "version" : "1.0.6",
+    "name" : "NHIContinuationStatus"
+  },
+  {
+    "id" : "nhi-drug-category",
+    "type" : "CodeSystem",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-drug-category",
+    "version" : "1.0.6",
+    "name" : "NHIDrugCategory"
+  },
+  {
+    "id" : "nhi-line-of-therapy",
+    "type" : "CodeSystem",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-line-of-therapy",
+    "version" : "1.0.6",
+    "name" : "NHILOT"
+  },
+  {
+    "id" : "nhi-medication",
+    "type" : "CodeSystem",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-medication",
+    "version" : "1.0.6",
+    "name" : "NHIMedicationCodes"
+  },
+  {
+    "id" : "nhi-order-type",
+    "type" : "CodeSystem",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-order-type",
+    "version" : "1.0.6",
+    "name" : "NHIOrderType"
+  },
+  {
+    "id" : "nhi-pat-ast",
+    "type" : "CodeSystem",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pat-ast",
+    "version" : "1.0.6",
+    "name" : "PatAst"
+  },
+  {
+    "id" : "nhi-pdf-type",
+    "type" : "CodeSystem",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pdf-type",
+    "version" : "1.0.6",
+    "name" : "NHIPDFType"
+  },
+  {
+    "id" : "nhi-supporting-info-type",
+    "type" : "CodeSystem",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type",
+    "version" : "1.0.6",
+    "name" : "NHIPASSupportingInfoType"
+  },
+  {
+    "id" : "nhi-tmhb-type",
+    "type" : "CodeSystem",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-tmhb-type",
+    "version" : "1.0.6",
+    "name" : "NHITMHBType"
+  },
+  {
+    "id" : "nhi-tx-ast",
+    "type" : "CodeSystem",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-tx-ast",
+    "version" : "1.0.6",
+    "name" : "NHITreatmentAst"
+  },
+  {
+    "id" : "organization-identifier-tw",
+    "type" : "CodeSystem",
+    "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/organization-identifier-tw",
+    "version" : "1.0.6",
+    "name" : "NHIOrganization"
+  },
+  {
+    "id" : "nhi-loinc",
+    "type" : "ConceptMap",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ConceptMap/nhi-loinc",
+    "version" : "1.0.6",
+    "name" : "NHILoinc"
+  },
+  {
+    "id" : "nhi-sct-body-site",
+    "type" : "ConceptMap",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ConceptMap/nhi-sct-body-site",
+    "version" : "1.0.6",
+    "name" : "NHISNOMEDCT"
+  },
+  {
+    "id" : "tw.gov.mohw.nhi.pas",
+    "type" : "ImplementationGuide",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ImplementationGuide/tw.gov.mohw.nhi.pas",
+    "version" : "1.0.6",
+    "name" : "TWPAS"
+  },
+  {
+    "id" : "Bundle-id",
+    "type" : "SearchParameter",
+    "url" : "https://nhicore.nhi.gov.tw/pas/SearchParameter/Bundle-id",
+    "version" : "1.0.6",
+    "name" : "BundleID"
+  },
+  {
+    "id" : "Claim-func-type",
+    "type" : "SearchParameter",
+    "url" : "https://nhicore.nhi.gov.tw/pas/SearchParameter/Claim-func-type",
+    "version" : "1.0.6",
+    "name" : "ClaimFuncType"
+  },
+  {
+    "id" : "Claim-identifier",
+    "type" : "SearchParameter",
+    "url" : "https://nhicore.nhi.gov.tw/pas/SearchParameter/Claim-identifier",
+    "version" : "1.0.6",
+    "name" : "ClaimIdentifier"
+  },
+  {
+    "id" : "Claim-patient",
+    "type" : "SearchParameter",
+    "url" : "https://nhicore.nhi.gov.tw/pas/SearchParameter/Claim-patient",
+    "version" : "1.0.6",
+    "name" : "ClaimID"
+  },
+  {
+    "id" : "ClaimResponse-adjudication-reason",
+    "type" : "SearchParameter",
+    "url" : "https://nhicore.nhi.gov.tw/pas/SearchParameter/ClaimResponse-adjudication-reason",
+    "version" : "1.0.6",
+    "name" : "ClaimResponseAdjudicationReason"
+  },
+  {
+    "id" : "ClaimResponse-created",
+    "type" : "SearchParameter",
+    "url" : "https://nhicore.nhi.gov.tw/pas/SearchParameter/ClaimResponse-created",
+    "version" : "1.0.6",
+    "name" : "ClaimResponseCreated"
+  },
+  {
+    "id" : "ClaimResponse-disposition",
+    "type" : "SearchParameter",
+    "url" : "https://nhicore.nhi.gov.tw/pas/SearchParameter/ClaimResponse-disposition",
+    "version" : "1.0.6",
+    "name" : "ClaimResponseDisposition"
+  },
+  {
+    "id" : "ClaimResponse-request",
+    "type" : "SearchParameter",
+    "url" : "https://nhicore.nhi.gov.tw/pas/SearchParameter/ClaimResponse-request",
+    "version" : "1.0.6",
+    "name" : "ClaimResponseRequest"
+  },
+  {
+    "id" : "Encounter-service-type",
+    "type" : "SearchParameter",
+    "url" : "https://nhicore.nhi.gov.tw/pas/SearchParameter/Encounter-service-type",
+    "version" : "1.0.6",
+    "name" : "EncounterServiceType"
+  },
+  {
+    "id" : "Patient-identifier",
+    "type" : "SearchParameter",
+    "url" : "https://nhicore.nhi.gov.tw/pas/SearchParameter/Patient-identifier",
+    "version" : "1.0.6",
+    "name" : "PatientIdentifier"
+  },
+  {
+    "id" : "Patient-name",
+    "type" : "SearchParameter",
+    "url" : "https://nhicore.nhi.gov.tw/pas/SearchParameter/Patient-name",
+    "version" : "1.0.6",
+    "name" : "PatientName"
+  },
+  {
+    "id" : "ApplyModel",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/ApplyModel",
+    "version" : "1.0.6",
+    "name" : "ApplyModel"
+  },
+  {
+    "id" : "Bundle-response-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Bundle-response-twpas",
+    "version" : "1.0.6",
+    "name" : "BundleResponseTWPAS"
+  },
+  {
+    "id" : "Bundle-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Bundle-twpas",
+    "version" : "1.0.6",
+    "name" : "BundleTWPAS"
+  },
+  {
+    "id" : "Claim-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Claim-twpas",
+    "version" : "1.0.6",
+    "name" : "ClaimTWPAS"
+  },
+  {
+    "id" : "ClaimResponse-self-assessment-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/ClaimResponse-self-assessment-twpas",
+    "version" : "1.0.6",
+    "name" : "ClaimResponseSelfAssessmentTWPAS"
+  },
+  {
+    "id" : "ClaimResponse-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/ClaimResponse-twpas",
+    "version" : "1.0.6",
+    "name" : "ClaimResponseTWPAS"
+  },
+  {
+    "id" : "Coverage-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Coverage-twpas",
+    "version" : "1.0.6",
+    "name" : "CoverageTWPAS"
+  },
+  {
+    "id" : "DiagnosticReport-image-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/DiagnosticReport-image-twpas",
+    "version" : "1.0.6",
+    "name" : "DiagnosticReportImageTWPAS"
+  },
+  {
+    "id" : "DiagnosticReport-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/DiagnosticReport-twpas",
+    "version" : "1.0.6",
+    "name" : "DiagnosticReportTWPAS"
+  },
+  {
+    "id" : "DocumentReference-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/DocumentReference-twpas",
+    "version" : "1.0.6",
+    "name" : "DocumentReferenceTWPAS"
+  },
+  {
+    "id" : "Encounter-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Encounter-twpas",
+    "version" : "1.0.6",
+    "name" : "EncounterTWPAS"
+  },
+  {
+    "id" : "ImagingStudy-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/ImagingStudy-twpas",
+    "version" : "1.0.6",
+    "name" : "ImagingStudyTWPAS"
+  },
+  {
+    "id" : "Media-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Media-twpas",
+    "version" : "1.0.6",
+    "name" : "MediaTWPAS"
+  },
+  {
+    "id" : "MedicationRequest-apply-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/MedicationRequest-apply-twpas",
+    "version" : "1.0.6",
+    "name" : "MedicationRequestApplyTWPAS"
+  },
+  {
+    "id" : "MedicationRequest-treat-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/MedicationRequest-treat-twpas",
+    "version" : "1.0.6",
+    "name" : "MedicationRequestTreatTWPAS"
+  },
+  {
+    "id" : "Observation-cancer-stage-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-cancer-stage-twpas",
+    "version" : "1.0.6",
+    "name" : "ObservationCancerStageTWPAS"
+  },
+  {
+    "id" : "Observation-diagnostic-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-diagnostic-twpas",
+    "version" : "1.0.6",
+    "name" : "ObservationDiagnosticTWPAS"
+  },
+  {
+    "id" : "Observation-laboratory-result-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-laboratory-result-twpas",
+    "version" : "1.0.6",
+    "name" : "ObservationLaboratoryResultTWPAS"
+  },
+  {
+    "id" : "Observation-pat-assessment-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-pat-assessment-twpas",
+    "version" : "1.0.6",
+    "name" : "ObservationPatientAssessmentTWPAS"
+  },
+  {
+    "id" : "Observation-tx-assessment-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-tx-assessment-twpas",
+    "version" : "1.0.6",
+    "name" : "ObservationTreatmentAssessmentTWPAS"
+  },
+  {
+    "id" : "Operationoutcome-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Operationoutcome-twpas",
+    "version" : "1.0.6",
+    "name" : "OperationOutcomeTWPAS"
+  },
+  {
+    "id" : "Organization-genetic-testing-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Organization-genetic-testing-twpas",
+    "version" : "1.0.6",
+    "name" : "OrganizationGeneticTestingTWPAS"
+  },
+  {
+    "id" : "Organization-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Organization-twpas",
+    "version" : "1.0.6",
+    "name" : "OrganizationTWPAS"
+  },
+  {
+    "id" : "Patient-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Patient-twpas",
+    "version" : "1.0.6",
+    "name" : "PatientTWPAS"
+  },
+  {
+    "id" : "Practitioner-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Practitioner-twpas",
+    "version" : "1.0.6",
+    "name" : "PractitionerTWPAS"
+  },
+  {
+    "id" : "Procedure-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Procedure-twpas",
+    "version" : "1.0.6",
+    "name" : "ProcedureTWPAS"
+  },
+  {
+    "id" : "ResponseModel",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/ResponseModel",
+    "version" : "1.0.6",
+    "name" : "ResponseModel"
+  },
+  {
+    "id" : "Specimen-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Specimen-twpas",
+    "version" : "1.0.6",
+    "name" : "SpecimenTWPAS"
+  },
+  {
+    "id" : "Substance-twpas",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Substance-twpas",
+    "version" : "1.0.6",
+    "name" : "SubstanceTWPAS"
+  },
+  {
+    "id" : "extension-claim-encounter",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/extension-claim-encounter",
+    "version" : "1.0.6",
+    "name" : "ClaimEncounter"
+  },
+  {
+    "id" : "extension-requestedService",
+    "type" : "StructureDefinition",
+    "url" : "https://nhicore.nhi.gov.tw/pas/StructureDefinition/extension-requestedService",
+    "version" : "1.0.6",
+    "name" : "RequestedService"
+  },
+  {
+    "id" : "cancer-stage",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/cancer-stage",
+    "version" : "1.0.6",
+    "name" : "CancerStage"
+  },
+  {
+    "id" : "cancer-stage-score",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/cancer-stage-score",
+    "version" : "1.0.6",
+    "name" : "CancerStageScore"
+  },
+  {
+    "id" : "dicom-cid-29-AcquisitionModality",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/dicom-cid-29-AcquisitionModality",
+    "version" : "1.0.6",
+    "name" : "AcquisitionModality"
+  },
+  {
+    "id" : "dna-change-type",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/dna-change-type",
+    "version" : "1.0.6",
+    "name" : "DNAChangeType"
+  },
+  {
+    "id" : "gene-test-code",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/gene-test-code",
+    "version" : "1.0.6",
+    "name" : "GeneTestCode"
+  },
+  {
+    "id" : "icd-10-pcs-2014-image",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/icd-10-pcs-2014-image",
+    "version" : "1.0.6",
+    "name" : "ICD10PCSImage"
+  },
+  {
+    "id" : "icd-10-pcs-2014-radiotherapy",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/icd-10-pcs-2014-radiotherapy",
+    "version" : "1.0.6",
+    "name" : "ICD10PCSRadiotherapy"
+  },
+  {
+    "id" : "icd-10-pcs-2023-image",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/icd-10-pcs-2023-image",
+    "version" : "1.0.6",
+    "name" : "ICD10PCS2023Image"
+  },
+  {
+    "id" : "icd-10-pcs-2023-radiotherapy",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/icd-10-pcs-2023-radiotherapy",
+    "version" : "1.0.6",
+    "name" : "ICD10PCS2023Radiotherapy"
+  },
+  {
+    "id" : "media-mimetypes",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/media-mimetypes",
+    "version" : "1.0.6",
+    "name" : "MediaMimeTypes"
+  },
+  {
+    "id" : "medication-frequency-hl7-nhi",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/medication-frequency-hl7-nhi",
+    "version" : "1.0.6",
+    "name" : "NHIMedicationFrequencyHL7"
+  },
+  {
+    "id" : "medication-path-sct-tw",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/medication-path-sct-tw",
+    "version" : "1.0.6",
+    "name" : "TWPCSMedicationPathSCT"
+  },
+  {
+    "id" : "nhi-acceptance-status",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-acceptance-status",
+    "version" : "1.0.6",
+    "name" : "NHIAcceptanceStatus"
+  },
+  {
+    "id" : "nhi-apply-reason",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-apply-reason",
+    "version" : "1.0.6",
+    "name" : "NHIApplyReason"
+  },
+  {
+    "id" : "nhi-apply-side",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-apply-side",
+    "version" : "1.0.6",
+    "name" : "NHIApplySide"
+  },
+  {
+    "id" : "nhi-apply-type",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-apply-type",
+    "version" : "1.0.6",
+    "name" : "NHIApplyType"
+  },
+  {
+    "id" : "nhi-approve-claim-comment",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-approve-claim-comment",
+    "version" : "1.0.6",
+    "name" : "NHIApproveClaimComment"
+  },
+  {
+    "id" : "nhi-approve-item-comment",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-approve-item-comment",
+    "version" : "1.0.6",
+    "name" : "NHIApproveItemComment"
+  },
+  {
+    "id" : "nhi-body-site",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-body-site",
+    "version" : "1.0.6",
+    "name" : "NHIBodySite"
+  },
+  {
+    "id" : "nhi-continuation-status",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-continuation-status",
+    "version" : "1.0.6",
+    "name" : "NHIContinuationStatus"
+  },
+  {
+    "id" : "nhi-drug-category",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-drug-category",
+    "version" : "1.0.6",
+    "name" : "NHIDrugCategory"
+  },
+  {
+    "id" : "nhi-line-of-therapy",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-line-of-therapy",
+    "version" : "1.0.6",
+    "name" : "NHILOT"
+  },
+  {
+    "id" : "nhi-medication",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-medication",
+    "version" : "1.0.6",
+    "name" : "NHIMedication"
+  },
+  {
+    "id" : "nhi-order-type",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-order-type",
+    "version" : "1.0.6",
+    "name" : "NHIOrderType"
+  },
+  {
+    "id" : "nhi-organization",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-organization",
+    "version" : "1.0.6",
+    "name" : "NHIOrganization"
+  },
+  {
+    "id" : "nhi-pdf-type",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-pdf-type",
+    "version" : "1.0.6",
+    "name" : "NHIPDFType"
+  },
+  {
+    "id" : "nhi-supporting-info-type",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-supporting-info-type",
+    "version" : "1.0.6",
+    "name" : "NHIPASSupportingInfoType"
+  },
+  {
+    "id" : "nhi-tmhb-type",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-tmhb-type",
+    "version" : "1.0.6",
+    "name" : "NHITMHBType"
+  },
+  {
+    "id" : "nhi-tx-ast",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-tx-ast",
+    "version" : "1.0.6",
+    "name" : "NHITreatmentAst"
+  },
+  {
+    "id" : "pat-ast",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/pat-ast",
+    "version" : "1.0.6",
+    "name" : "PatAst"
+  },
+  {
+    "id" : "report-type",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/report-type",
+    "version" : "1.0.6",
+    "name" : "ReportType"
+  },
+  {
+    "id" : "sct-body-site",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/sct-body-site",
+    "version" : "1.0.6",
+    "name" : "SNOMEDCTBodySite"
+  },
+  {
+    "id" : "specime-type",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/specime-type",
+    "version" : "1.0.6",
+    "name" : "SpecimenType"
+  },
+  {
+    "id" : "ucum-units",
+    "type" : "ValueSet",
+    "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/ucum-units",
+    "version" : "1.0.6",
+    "name" : "UCUMUnits"
+  }
+]

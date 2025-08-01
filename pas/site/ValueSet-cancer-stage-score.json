@@ -1,0 +1,29 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "cancer-stage-score",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet cancer-stage-score</b></p><a name=\"cancer-stage-score\"> </a><a name=\"hccancer-stage-score\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-nci-thesaurus.html\"><code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nci-thesaurus</code></a></li></ul></div>"
+  },
+  "url" : "https://nhicore.nhi.gov.tw/pas/ValueSet/cancer-stage-score",
+  "version" : "1.0.6",
+  "name" : "CancerStageScore",
+  "title" : "NCI-健保事前審查-FIGO癌症分期量表結果值集",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-07-01",
+  "publisher" : "衛生福利部中央健康保險署",
+  "contact" : [{
+    "name" : "衛生福利部中央健康保險署",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.nhi.gov.tw"
+    }]
+  }],
+  "description" : "NCI-健保事前審查-FIGO癌症分期量表結果值集",
+  "compose" : {
+    "include" : [{
+      "system" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nci-thesaurus"
+    }]
+  }
+}

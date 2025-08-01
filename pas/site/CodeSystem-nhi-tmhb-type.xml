@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="nhi-tmhb-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem nhi-tmhb-type</b></p><a name="nhi-tmhb-type"> </a><a name="hcnhi-tmhb-type"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-tmhb-type</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">1<a name="nhi-tmhb-type-1"> </a></td><td>一般事前審查申請</td></tr><tr><td style="white-space:nowrap">3<a name="nhi-tmhb-type-3"> </a></td><td>自主審查報備</td></tr><tr><td style="white-space:nowrap">4<a name="nhi-tmhb-type-4"> </a></td><td>緊急報備</td></tr></table></div>
+  </text>
+  <url value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-tmhb-type"/>
+  <version value="1.0.6"/>
+  <name value="NHITMHBType"/>
+  <title value="NHI-健保事前審查-申請案件類別"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-07-01"/>
+  <publisher value="衛生福利部中央健康保險署"/>
+  <contact>
+    <name value="衛生福利部中央健康保險署"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nhi.gov.tw"/>
+    </telecom>
+  </contact>
+  <description value="臺灣衛生福利部中央健康保險署「申請案件類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="1"/>
+    <display value="一般事前審查申請"/>
+  </concept>
+  <concept>
+    <code value="3"/>
+    <display value="自主審查報備"/>
+  </concept>
+  <concept>
+    <code value="4"/>
+    <display value="緊急報備"/>
+  </concept>
+</CodeSystem>

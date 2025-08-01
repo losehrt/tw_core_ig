@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="media-mimetypes"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet media-mimetypes</b></p><a name="media-mimetypes"> </a><a name="hcmedia-mimetypes"> </a><ul><li>Include these codes as defined in <code>urn:ietf:bcp:13</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>image/jpeg</td><td style="color: #cccccc">image/jpeg</td></tr><tr><td>image/jpg</td><td style="color: #cccccc">image/jpg</td></tr><tr><td>image/bmp</td><td style="color: #cccccc">image/bmp</td></tr><tr><td>video/mpeg</td><td style="color: #cccccc">video/mpeg</td></tr><tr><td>video/mpg</td><td style="color: #cccccc">video/mpg</td></tr><tr><td>video/mp4</td><td style="color: #cccccc">video/mp4</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://nhicore.nhi.gov.tw/pas/ValueSet/media-mimetypes"/>
+  <version value="1.0.6"/>
+  <name value="MediaMimeTypes"/>
+  <title value="HL7-非DICOM影像MimeType值集"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-07-01"/>
+  <publisher value="衛生福利部中央健康保險署"/>
+  <contact>
+    <name value="衛生福利部中央健康保險署"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nhi.gov.tw"/>
+    </telecom>
+  </contact>
+  <description value="HL7-非DICOM影像MimeType值集"/>
+  <compose>
+    <include>
+      <system value="urn:ietf:bcp:13"/>
+      <concept>
+        <code value="image/jpeg"/>
+      </concept>
+      <concept>
+        <code value="image/jpg"/>
+      </concept>
+      <concept>
+        <code value="image/bmp"/>
+      </concept>
+      <concept>
+        <code value="video/mpeg"/>
+      </concept>
+      <concept>
+        <code value="video/mpg"/>
+      </concept>
+      <concept>
+        <code value="video/mp4"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

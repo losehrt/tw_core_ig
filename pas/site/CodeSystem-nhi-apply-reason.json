@@ -1,0 +1,172 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "nhi-apply-reason",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem nhi-apply-reason</b></p><a name=\"nhi-apply-reason\"> </a><a name=\"hcnhi-apply-reason\"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-apply-reason</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">C50P1<a name=\"nhi-apply-reason-C50P1\"> </a></td><td>早期乳癌-未發生腋下淋巴結轉移</td><td>事前審查品項代碼為KC010892B5、KC011162B5、JC00154261、KC009612B5(自113年12月擴增)、KC011112DE(114年1月起擴增)才可填寫</td></tr><tr><td style=\"white-space:nowrap\">C50P2<a name=\"nhi-apply-reason-C50P2\"> </a></td><td>早期乳癌-具腋下淋巴結轉移</td><td>事前審查品項代碼為KC009612B5、KC010892B5、KC011112DE、KC011162B5、KC011362B5、JC00154261才可填寫</td></tr><tr><td style=\"white-space:nowrap\">C50R1<a name=\"nhi-apply-reason-C50R1\"> </a></td><td>轉移性乳癌</td><td>事前審查品項代碼為KC009612B5、KC010892B5、KC011112DE、KC011162B5、KC011362B5、JC00154261才可填寫</td></tr><tr><td style=\"white-space:nowrap\">C16R1<a name=\"nhi-apply-reason-C16R1\"> </a></td><td>轉移性胃癌</td><td>事前審查品項代碼為KC009612B5、KC010892B5、KC011112DE、KC011162B5、KC011362B5、JC00154261才可填寫</td></tr><tr><td style=\"white-space:nowrap\">P001<a name=\"nhi-apply-reason-P001\"> </a></td><td>黑色素瘤</td><td>事前審查品項代碼為KC01013229、KC01013230、KC01025219才可填寫</td></tr><tr><td style=\"white-space:nowrap\">P011<a name=\"nhi-apply-reason-P011\"> </a></td><td>非小細胞肺癌-SQ-2線</td><td>事前審查品項代碼為KC01050238、KC01013229、KC01013230、KC01025219、KC01258235才可填寫</td></tr><tr><td style=\"white-space:nowrap\">P012<a name=\"nhi-apply-reason-P012\"> </a></td><td>非小細胞肺癌-Adeno-3線</td><td>事前審查品項代碼為KC01050238、KC01013229、KC01013230、KC01025219、KC01258235才可填寫</td></tr><tr><td style=\"white-space:nowrap\">P013<a name=\"nhi-apply-reason-P013\"> </a></td><td>非小細胞肺癌-1線</td><td>事前審查品項代碼為KC01050238、KC01025219、KC01258235才可填寫(114年1月起擴增)</td></tr><tr><td style=\"white-space:nowrap\">P014<a name=\"nhi-apply-reason-P014\"> </a></td><td>鱗狀非小細胞肺癌第一線用藥(併用化療)</td><td>事前審查品項代碼為KC01025219才可填寫</td></tr><tr><td style=\"white-space:nowrap\">P015<a name=\"nhi-apply-reason-P015\"> </a></td><td>非小細胞肺癌鞏固治療(單用)</td><td>事前審查品項代碼為KC01088229才可填寫(114年8月起擴增)</td></tr><tr><td style=\"white-space:nowrap\">P021<a name=\"nhi-apply-reason-P021\"> </a></td><td>小細胞肺癌(併用化療)</td><td>事前審查品項代碼為KC01050238、KC01088229、KC01258235才可填寫</td></tr><tr><td style=\"white-space:nowrap\">P031<a name=\"nhi-apply-reason-P031\"> </a></td><td>典型何杰金氏淋巴瘤</td><td>事前審查品項代碼為KC01013229、KC01013230、KC01025219才可填寫</td></tr><tr><td style=\"white-space:nowrap\">P041<a name=\"nhi-apply-reason-P041\"> </a></td><td>泌尿道上皮癌-2線</td><td>事前審查品項代碼為KC01013229、KC01013230、KC01025219、KC01050238(113/8/1停止新病人給付)、KC01258235(113/8/1停止新病人給付)才可填寫</td></tr><tr><td style=\"white-space:nowrap\">P042<a name=\"nhi-apply-reason-P042\"> </a></td><td>泌尿道上皮癌-1線</td><td>事前審查品項代碼為KC01025219、KC01050238(113/8/1停止新病人給付)、KC01258235(113/8/1停止新病人給付)才可填寫</td></tr><tr><td style=\"white-space:nowrap\">P043<a name=\"nhi-apply-reason-P043\"> </a></td><td>局部晚期或轉移性泌尿道上皮癌之維持療法</td><td>事前審查品項代碼為KC01085229才可填寫</td></tr><tr><td style=\"white-space:nowrap\">P052<a name=\"nhi-apply-reason-P052\"> </a></td><td>胃癌-1線(併用化療)</td><td>事前審查品項代碼為KC01013230才可填寫</td></tr><tr><td style=\"white-space:nowrap\">P061<a name=\"nhi-apply-reason-P061\"> </a></td><td>腎細胞癌</td><td>事前審查品項代碼為KC01013229、KC01013230才可填寫</td></tr><tr><td style=\"white-space:nowrap\">P072<a name=\"nhi-apply-reason-P072\"> </a></td><td>晚期肝細胞癌-1線(併用標靶bevacizumab)</td><td>事前審查品項代碼為KC01050238、KC01088229、KC01258235、KC01242235才可填寫</td></tr><tr><td style=\"white-space:nowrap\">P081<a name=\"nhi-apply-reason-P081\"> </a></td><td>頭頸部鱗狀細胞癌第二線用藥</td><td>事前審查品項代碼為KC01013229、KC01013230、KC01025219才可填寫</td></tr><tr><td style=\"white-space:nowrap\">P082<a name=\"nhi-apply-reason-P082\"> </a></td><td>頭頸部鱗狀細胞癌第一線用藥</td><td>事前審查品項代碼為KC01025219才可填寫</td></tr><tr><td style=\"white-space:nowrap\">P091<a name=\"nhi-apply-reason-P091\"> </a></td><td>默克細胞癌</td><td>事前審查品項代碼為KC01085229才可填寫</td></tr><tr><td style=\"white-space:nowrap\">P101<a name=\"nhi-apply-reason-P101\"> </a></td><td>食道鱗狀細胞癌</td><td>事前審查品項代碼為KC01013230才可填寫</td></tr><tr><td style=\"white-space:nowrap\">P111<a name=\"nhi-apply-reason-P111\"> </a></td><td>惡性肋膜間皮瘤(ipilimumab併用nivolumab 120mg)</td><td>事前審查品項代碼「先申請KC00958229，再申請KC01013230」才可填寫</td></tr><tr><td style=\"white-space:nowrap\">P121<a name=\"nhi-apply-reason-P121\"> </a></td><td>膽道癌(併用化療)</td><td>事前審查品項代碼為KC01088229才可填寫</td></tr><tr><td style=\"white-space:nowrap\">P131<a name=\"nhi-apply-reason-P131\"> </a></td><td>早期三陰性乳癌(併用化療)</td><td>KC01025219(114年6月起擴增)</td></tr><tr><td style=\"white-space:nowrap\">P141<a name=\"nhi-apply-reason-P141\"> </a></td><td>大腸直腸癌</td><td>KC01025219(114年6月起擴增)</td></tr><tr><td style=\"white-space:nowrap\">C83N2<a name=\"nhi-apply-reason-C83N2\"> </a></td><td>單獨使用於先前接受過至少一種化學或標靶治療方式無效或復發的被套細胞淋巴瘤成人病人</td><td>事前審查品項代碼為BC28160100才可填寫(114年8月起擴增)</td></tr><tr><td style=\"white-space:nowrap\">C88N3<a name=\"nhi-apply-reason-C88N3\"> </a></td><td>單獨使用於曾接受一種含單柱抗體及一種靜脈注射之alkylating agent之chemoimmunotherapy至少4療程以上後復發者的華氏巨球蛋白血症成年病人</td><td>事前審查品項代碼為BC28160100才可填寫(114年8月起擴增)</td></tr><tr><td style=\"white-space:nowrap\">C82N3<a name=\"nhi-apply-reason-C82N3\"> </a></td><td>與obinutuzumab併用，治療先前曾接受至少兩線(每線至少4個療程)全身性治療無效或復發的濾泡性淋巴瘤成人病人</td><td>事前審查品項代碼為BC28160100才可填寫(114年8月起擴增)</td></tr></table></div>"
+  },
+  "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-apply-reason",
+  "version" : "1.0.6",
+  "name" : "NHIApplyReason",
+  "title" : "NHI-健保事前審查-給付適應症",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-07-01",
+  "publisher" : "衛生福利部中央健康保險署",
+  "contact" : [{
+    "name" : "衛生福利部中央健康保險署",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.nhi.gov.tw"
+    }]
+  }],
+  "description" : "臺灣衛生福利部中央健康保險署「給付適應症」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 29,
+  "concept" : [{
+    "code" : "C50P1",
+    "display" : "早期乳癌-未發生腋下淋巴結轉移",
+    "definition" : "事前審查品項代碼為KC010892B5、KC011162B5、JC00154261、KC009612B5(自113年12月擴增)、KC011112DE(114年1月起擴增)才可填寫"
+  },
+  {
+    "code" : "C50P2",
+    "display" : "早期乳癌-具腋下淋巴結轉移",
+    "definition" : "事前審查品項代碼為KC009612B5、KC010892B5、KC011112DE、KC011162B5、KC011362B5、JC00154261才可填寫"
+  },
+  {
+    "code" : "C50R1",
+    "display" : "轉移性乳癌",
+    "definition" : "事前審查品項代碼為KC009612B5、KC010892B5、KC011112DE、KC011162B5、KC011362B5、JC00154261才可填寫"
+  },
+  {
+    "code" : "C16R1",
+    "display" : "轉移性胃癌",
+    "definition" : "事前審查品項代碼為KC009612B5、KC010892B5、KC011112DE、KC011162B5、KC011362B5、JC00154261才可填寫"
+  },
+  {
+    "code" : "P001",
+    "display" : "黑色素瘤",
+    "definition" : "事前審查品項代碼為KC01013229、KC01013230、KC01025219才可填寫"
+  },
+  {
+    "code" : "P011",
+    "display" : "非小細胞肺癌-SQ-2線",
+    "definition" : "事前審查品項代碼為KC01050238、KC01013229、KC01013230、KC01025219、KC01258235才可填寫"
+  },
+  {
+    "code" : "P012",
+    "display" : "非小細胞肺癌-Adeno-3線",
+    "definition" : "事前審查品項代碼為KC01050238、KC01013229、KC01013230、KC01025219、KC01258235才可填寫"
+  },
+  {
+    "code" : "P013",
+    "display" : "非小細胞肺癌-1線",
+    "definition" : "事前審查品項代碼為KC01050238、KC01025219、KC01258235才可填寫(114年1月起擴增)"
+  },
+  {
+    "code" : "P014",
+    "display" : "鱗狀非小細胞肺癌第一線用藥(併用化療)",
+    "definition" : "事前審查品項代碼為KC01025219才可填寫"
+  },
+  {
+    "code" : "P015",
+    "display" : "非小細胞肺癌鞏固治療(單用)",
+    "definition" : "事前審查品項代碼為KC01088229才可填寫(114年8月起擴增)"
+  },
+  {
+    "code" : "P021",
+    "display" : "小細胞肺癌(併用化療)",
+    "definition" : "事前審查品項代碼為KC01050238、KC01088229、KC01258235才可填寫"
+  },
+  {
+    "code" : "P031",
+    "display" : "典型何杰金氏淋巴瘤",
+    "definition" : "事前審查品項代碼為KC01013229、KC01013230、KC01025219才可填寫"
+  },
+  {
+    "code" : "P041",
+    "display" : "泌尿道上皮癌-2線",
+    "definition" : "事前審查品項代碼為KC01013229、KC01013230、KC01025219、KC01050238(113/8/1停止新病人給付)、KC01258235(113/8/1停止新病人給付)才可填寫"
+  },
+  {
+    "code" : "P042",
+    "display" : "泌尿道上皮癌-1線",
+    "definition" : "事前審查品項代碼為KC01025219、KC01050238(113/8/1停止新病人給付)、KC01258235(113/8/1停止新病人給付)才可填寫"
+  },
+  {
+    "code" : "P043",
+    "display" : "局部晚期或轉移性泌尿道上皮癌之維持療法",
+    "definition" : "事前審查品項代碼為KC01085229才可填寫"
+  },
+  {
+    "code" : "P052",
+    "display" : "胃癌-1線(併用化療)",
+    "definition" : "事前審查品項代碼為KC01013230才可填寫"
+  },
+  {
+    "code" : "P061",
+    "display" : "腎細胞癌",
+    "definition" : "事前審查品項代碼為KC01013229、KC01013230才可填寫"
+  },
+  {
+    "code" : "P072",
+    "display" : "晚期肝細胞癌-1線(併用標靶bevacizumab)",
+    "definition" : "事前審查品項代碼為KC01050238、KC01088229、KC01258235、KC01242235才可填寫"
+  },
+  {
+    "code" : "P081",
+    "display" : "頭頸部鱗狀細胞癌第二線用藥",
+    "definition" : "事前審查品項代碼為KC01013229、KC01013230、KC01025219才可填寫"
+  },
+  {
+    "code" : "P082",
+    "display" : "頭頸部鱗狀細胞癌第一線用藥",
+    "definition" : "事前審查品項代碼為KC01025219才可填寫"
+  },
+  {
+    "code" : "P091",
+    "display" : "默克細胞癌",
+    "definition" : "事前審查品項代碼為KC01085229才可填寫"
+  },
+  {
+    "code" : "P101",
+    "display" : "食道鱗狀細胞癌",
+    "definition" : "事前審查品項代碼為KC01013230才可填寫"
+  },
+  {
+    "code" : "P111",
+    "display" : "惡性肋膜間皮瘤(ipilimumab併用nivolumab 120mg)",
+    "definition" : "事前審查品項代碼「先申請KC00958229，再申請KC01013230」才可填寫"
+  },
+  {
+    "code" : "P121",
+    "display" : "膽道癌(併用化療)",
+    "definition" : "事前審查品項代碼為KC01088229才可填寫"
+  },
+  {
+    "code" : "P131",
+    "display" : "早期三陰性乳癌(併用化療)",
+    "definition" : "KC01025219(114年6月起擴增)"
+  },
+  {
+    "code" : "P141",
+    "display" : "大腸直腸癌",
+    "definition" : "KC01025219(114年6月起擴增)"
+  },
+  {
+    "code" : "C83N2",
+    "display" : "單獨使用於先前接受過至少一種化學或標靶治療方式無效或復發的被套細胞淋巴瘤成人病人",
+    "definition" : "事前審查品項代碼為BC28160100才可填寫(114年8月起擴增)"
+  },
+  {
+    "code" : "C88N3",
+    "display" : "單獨使用於曾接受一種含單柱抗體及一種靜脈注射之alkylating agent之chemoimmunotherapy至少4療程以上後復發者的華氏巨球蛋白血症成年病人",
+    "definition" : "事前審查品項代碼為BC28160100才可填寫(114年8月起擴增)"
+  },
+  {
+    "code" : "C82N3",
+    "display" : "與obinutuzumab併用，治療先前曾接受至少兩線(每線至少4個療程)全身性治療無效或復發的濾泡性淋巴瘤成人病人",
+    "definition" : "事前審查品項代碼為BC28160100才可填寫(114年8月起擴增)"
+  }]
+}

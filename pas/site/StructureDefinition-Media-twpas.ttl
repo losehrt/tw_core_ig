@@ -1,0 +1,1955 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://nhicore.nhi.gov.tw/pas/StructureDefinition/Media-twpas> a fhir:StructureDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Media-twpas"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition Media-twpas</b></p><a name=\"Media-twpas\"> </a><a name=\"hcMedia-twpas\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-Media-twpas-definitions.html#Media\">Media</a><a name=\"Media\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://twcore.mohw.gov.tw/ig/twcore/0.3.2/StructureDefinition-Media-twcore.html\">TWCoreMedia</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-Media-twpas-definitions.html#Media.subject\">subject</a><a name=\"Media.subject\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"StructureDefinition-Patient-twpas.html\">病人資訊-Patient TWPAS</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">多媒體紀錄的對象是誰或什麼？</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-Media-twpas-definitions.html#Media.bodySite\">bodySite</a><a name=\"Media.bodySite\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"https://twcore.mohw.gov.tw/ig/twcore/0.3.2/StructureDefinition-CodeableConcept-tw.html\" title=\"CodeableConcept\">CodeableConceptTW</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">影像檢查的身體部位<br class=\"binding\"/><span style=\"font-weight:bold\" title=\"null\" class=\"binding\">Binding: </span><a href=\"ValueSet-sct-body-site.html\" title=\"https://nhicore.nhi.gov.tw/pas/ValueSet/sct-body-site\" class=\"binding\">SNOMEDCT-健保事前審查-身體部位值集</a><span title=\"null\" class=\"binding\"> (</span><a href=\"http://hl7.org/fhir/R4/terminologies.html#required\" title=\"To be conformant, the concept in this element SHALL be from the specified value set.\" class=\"binding\">required</a><span title=\"null\" class=\"binding\">)</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-Media-twpas-definitions.html#Media.content\">content</a><a name=\"Media.content\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;; padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;\" href=\"http://hl7.org/fhir/R4/conformance-rules.html#constraints\" title=\"This element has or is affected by constraints ( UploadContent )\">C</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Attachment\">Attachment</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">實際的多媒體 - 參照或資料。</span><br class=\"constraint\"/><span title=\"null\" class=\"constraint\">Constraints: </span><span style=\"font-weight:bold\" title=\"填寫格式：file://檔名.副檔名，例如：file://US01.jpg、file://PathologyReport01.pdf、file://GenReport01.pdf、file://王大明病歷.pdf\" class=\"constraint\">UploadContent</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-Media-twpas-definitions.html#Media.content.contentType\">contentType</a><a name=\"Media.content.contentType\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..<span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Mime type of the content, with charset etc.</span><br class=\"binding\"/><span style=\"font-weight:bold\" title=\"null\" class=\"binding\">Binding: </span><a href=\"ValueSet-media-mimetypes.html\" title=\"https://nhicore.nhi.gov.tw/pas/ValueSet/media-mimetypes\" class=\"binding\">HL7-非DICOM影像MimeType值集</a><span title=\"null\" class=\"binding\"> (</span><a href=\"http://hl7.org/fhir/R4/terminologies.html#required\" title=\"To be conformant, the concept in this element SHALL be from the specified value set.\" class=\"binding\">required</a><span title=\"null\" class=\"binding\">)</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-Media-twpas-definitions.html#Media.content.url\">url</a><a name=\"Media.content.url\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..<span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#url\">url</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">非DICOM影像（請填寫完整檔案路徑）。填寫上傳附件檔名，例如：file://US01.jpg，且需上傳壓縮後的影像圖檔。<br/><span style=\"font-weight:bold\">Example General: </span><span style=\"color: darkgreen\">file://US01.jpg</span></td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Media-twpas"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.6"] ; # 
+  fhir:name [ fhir:v "MediaTWPAS"] ; # 
+  fhir:title [ fhir:v "非DICOM影像-Media TWPAS"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2025-07-30T10:48:03+08:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "衛生福利部中央健康保險署"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "衛生福利部中央健康保險署" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.nhi.gov.tw" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "此非DICOM影像-Media TWPAS Profile說明本IG如何進一步定義臺灣核心-多媒體(TW Core Media) Profile以呈現癌藥事前審查中疾病資訊之影像報告的非DICOM影像"] ; # 
+  fhir:fhirVersion [ fhir:v "4.0.1"] ; # 
+  fhir:mapping ( [
+     fhir:identity [ fhir:v "workflow" ] ;
+     fhir:uri [ fhir:v "http://hl7.org/fhir/workflow"^^xsd:anyURI ] ;
+     fhir:name [ fhir:v "Workflow Pattern" ]
+  ] [
+     fhir:identity [ fhir:v "rim" ] ;
+     fhir:uri [ fhir:v "http://hl7.org/v3"^^xsd:anyURI ] ;
+     fhir:name [ fhir:v "RIM Mapping" ]
+  ] [
+     fhir:identity [ fhir:v "w5" ] ;
+     fhir:uri [ fhir:v "http://hl7.org/fhir/fivews"^^xsd:anyURI ] ;
+     fhir:name [ fhir:v "FiveWs Pattern Mapping" ]
+  ] [
+     fhir:identity [ fhir:v "dicom" ] ;
+     fhir:uri [ fhir:v "http://nema.org/dicom"^^xsd:anyURI ] ;
+     fhir:name [ fhir:v "DICOM Tag Mapping" ]
+  ] [
+     fhir:identity [ fhir:v "v2" ] ;
+     fhir:uri [ fhir:v "http://hl7.org/v2"^^xsd:anyURI ] ;
+     fhir:name [ fhir:v "HL7 v2 Mapping" ]
+  ] [
+     fhir:identity [ fhir:v "sct-concept" ] ;
+     fhir:uri [ fhir:v "http://snomed.info/conceptdomain"^^xsd:anyURI ] ;
+     fhir:name [ fhir:v "SNOMED CT Concept Domain Binding" ]
+  ] [
+     fhir:identity [ fhir:v "sct-attr" ] ;
+     fhir:uri [ fhir:v "http://snomed.org/attributebinding"^^xsd:anyURI ] ;
+     fhir:name [ fhir:v "SNOMED CT Attribute Binding" ]
+  ] ) ; # 
+  fhir:kind [ fhir:v "resource"] ; # 
+  fhir:abstract [ fhir:v false] ; # 
+  fhir:type [ fhir:v "Media"^^xsd:anyURI] ; # 
+  fhir:baseDefinition [
+     fhir:v "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Media-twcore"^^xsd:anyURI ;
+     fhir:link <https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Media-twcore>
+  ] ; # 
+  fhir:derivation [ fhir:v "constraint"] ; # 
+  fhir:snapshot [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "0.3.2"
+       ]
+     ] ) ;
+     fhir:element ( [
+       fhir:id [ fhir:v "Media" ] ;
+       fhir:path [ fhir:v "Media" ] ;
+       fhir:short [ fhir:v "健康照護中獲取或使用的影像、影片或音檔，實際內容可能置於行內或透過直接參照提供。" ] ;
+       fhir:definition [ fhir:v "健康照護中獲取或使用的影像、影片或音檔，實際內容可能置於行內或透過直接參照提供。" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "dom-2" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "If the resource is contained in another resource, it SHALL NOT contain nested Resources" ] ;
+         fhir:expression [ fhir:v "contained.contained.empty()" ] ;
+         fhir:xpath [ fhir:v "not(parent::f:contained and f:contained)" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+         ]
+       ] [
+         fhir:key [ fhir:v "dom-3" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource" ] ;
+         fhir:expression [ fhir:v "contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()" ] ;
+         fhir:xpath [ fhir:v "not(exists(for $id in f:contained/*/f:id/@value return $contained[not(parent::*/descendant::f:reference/@value=concat('#', $contained/*/id/@value) or descendant::f:reference[@value='#'])]))" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+         ]
+       ] [
+         fhir:key [ fhir:v "dom-4" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated" ] ;
+         fhir:expression [ fhir:v "contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()" ] ;
+         fhir:xpath [ fhir:v "not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+         ]
+       ] [
+         fhir:key [ fhir:v "dom-5" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "If a resource is contained in another resource, it SHALL NOT have a security label" ] ;
+         fhir:expression [ fhir:v "contained.meta.security.empty()" ] ;
+         fhir:xpath [ fhir:v "not(exists(f:contained/*/f:meta/f:security))" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:boolean ;
+             fhir:v true
+           ]
+         ] [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:markdown ;
+             fhir:v "When a resource has no narrative, only systems that fully understand the data can display the resource to a human safely. Including a human readable representation in the resource makes for a much more robust eco-system and cheaper handling of resources by intermediary systems. Some ecosystems restrict distribution of resources to only those systems that do fully understand the resources, and as a consequence implementers may believe that the narrative is superfluous. However experience shows that such eco-systems often open up to new participants over time."
+           ]
+         ] ) ;
+         fhir:key [ fhir:v "dom-6" ] ;
+         fhir:severity [ fhir:v "warning" ] ;
+         fhir:human [ fhir:v "A resource should have narrative for robust management" ] ;
+         fhir:expression [ fhir:v "text.`div`.exists()" ] ;
+         fhir:xpath [ fhir:v "exists(f:text/h:div)" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v false ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "Entity. Role, or Act" ]
+       ] [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "Event" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "Act[classCode=\"DGIMG\", moodCode=\"EVN\"]" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.id" ] ;
+       fhir:path [ fhir:v "Media.id" ] ;
+       fhir:short [ fhir:v "不重複的ID用以識別儲存在特定FHIR Server中的Media紀錄，通常又稱為邏輯性ID。" ] ;
+       fhir:definition [ fhir:v "resource的邏輯ID，在resource的URL中使用。一旦指定，這個值永遠不會改變。" ] ;
+       fhir:comment [ fhir:v "一個resource使用新增操作（create operation）提交給伺服器時，此resource沒有id，它的id在resource被創建後由伺器分配/指定。" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Resource.id" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "id"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:code [ fhir:v "http://hl7.org/fhirpath/System.String"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ]
+     ] [
+       fhir:id [ fhir:v "Media.meta" ] ;
+       fhir:path [ fhir:v "Media.meta" ] ;
+       fhir:short [ fhir:v "此Media Resource的metadata" ] ;
+       fhir:definition [ fhir:v "關於resource的metadata。這是由基礎建設維護的內容。內容的更改可能並不總是與resource的版本更改相關聯。" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Resource.meta" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Meta"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ]
+     ] [
+       fhir:id [ fhir:v "Media.implicitRules" ] ;
+       fhir:path [ fhir:v "Media.implicitRules" ] ;
+       fhir:short [ fhir:v "創建此內容所依據的一組規則" ] ;
+       fhir:definition [ fhir:v "構建resource時遵循的一系列規則的參照，在處理內容時必須理解這些規則。通常這是對IG所定義之特殊規則及其他profiles的參照。" ] ;
+       fhir:comment [ fhir:v "宣告這套規則限制了內容只能被有限的交易夥伴所理解。這從本質上限制了資料的長期有用性。然而，現有的健康生態體系高度分裂，還沒有準備好以普遍可計算的方式定義、收集和交換資料。只要有可能，實作者和/或規範編寫者應該避免使用這個資料項目。通常在使用時，此URL是對IG的參照，此IG將這些特殊規則與其他profiles、value sets等一起定義為其敘述的一部分。" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Resource.implicitRules" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "uri"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v true ] ;
+       fhir:isModifierReason [ fhir:v "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation" ] ;
+       fhir:isSummary [ fhir:v true ]
+     ] [
+       fhir:id [ fhir:v "Media.language" ] ;
+       fhir:path [ fhir:v "Media.language" ] ;
+       fhir:short [ fhir:v "用以表述Media Resource內容的語言。" ] ;
+       fhir:definition [ fhir:v "編寫此resource的語言" ] ;
+       fhir:comment [ fhir:v "提供語言是為了支援索引和可存取性（通常，文字表述轉語音等服務使用此語言標籤）。html lanuage tag適用於此敘述。resource上的語言標籤可用於指定從resource中的資料所產成的其他表述之語言。不是所有的內容都必須使用此語言。不應該假定Resource.language自動適用於敘述。如果指定語言，它也應該被指定在html中的div資料項目（關於xml:lang和html lang屬性之間的關係，見HTML5中的規則）。" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Resource.language" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "code"^^xsd:anyURI ]
+       ] ) ;
+       fhir:example ( [
+         fhir:label [ fhir:v "Value" ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "zh-TW"
+         ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v false ] ;
+       fhir:binding [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:canonical ;
+             fhir:v "http://hl7.org/fhir/ValueSet/all-languages"^^xsd:anyURI ;
+             fhir:link <http://hl7.org/fhir/ValueSet/all-languages>
+           ]
+         ] [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:string ;
+             fhir:v "Language"
+           ]
+         ] ) ;
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "人類語言；鼓勵使用CommonLanguages代碼表中的代碼，但不強制一定要使用此代碼表，你也可使用其他代碼表的代碼或單純以文字表示。" ] ;
+         fhir:valueSet [
+           fhir:v "http://hl7.org/fhir/ValueSet/languages"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/ValueSet/languages>
+         ]
+       ]
+     ] [
+       fhir:id [ fhir:v "Media.text" ] ;
+       fhir:path [ fhir:v "Media.text" ] ;
+       fhir:short [ fhir:v "Media Resource之內容摘要以供人閱讀" ] ;
+       fhir:definition [ fhir:v "人可讀的敘述，包含resource的摘要，可用於向人表述resource的內容。敘述不需要對所有的結構化資料進行編碼，但需要包含足夠的細節使人在閱讀敘述時理解「臨床安全性」。resource定義有哪些內容應該在敘述中表示，以確保臨床安全。" ] ;
+       fhir:comment [ fhir:v "內嵌（contained）的resource沒有敘述，非內嵌（contained）的resource則**建議應該（SHOULD）**有敘述。有時resource可能只有文字表述，很少或沒有額外的結構化資料（只要滿足所有minOccurs=1的資料項目）。這可能出現在舊系統的資料，當資訊以 「文字表述區塊（text blob） 」的形式被取得，或者文字表述是原始輸入或說明，而編碼資訊稍後再添加。" ] ;
+       fhir:alias ( [ fhir:v "narrative" ] [ fhir:v "html" ] [ fhir:v "xhtml" ] [ fhir:v "display" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DomainResource.text" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Narrative"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v false ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "Act.text?" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.contained" ] ;
+       fhir:path [ fhir:v "Media.contained" ] ;
+       fhir:short [ fhir:v "Contained, inline Resources" ] ;
+       fhir:definition [ fhir:v "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope." ] ;
+       fhir:comment [ fhir:v "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels." ] ;
+       fhir:alias ( [ fhir:v "inline resources" ] [ fhir:v "anonymous resources" ] [ fhir:v "contained resources" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DomainResource.contained" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Resource"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v false ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.extension" ] ;
+       fhir:path [ fhir:v "Media.extension" ] ;
+       fhir:short [ fhir:v "Additional content defined by implementations" ] ;
+       fhir:definition [ fhir:v "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ] ;
+       fhir:comment [ fhir:v "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ] ;
+       fhir:alias ( [ fhir:v "extensions" ] [ fhir:v "user content" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DomainResource.extension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] [
+         fhir:key [ fhir:v "ext-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Must have either extensions or value[x], not both" ] ;
+         fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
+         fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v false ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.modifierExtension" ] ;
+       fhir:path [ fhir:v "Media.modifierExtension" ] ;
+       fhir:short [ fhir:v "Extensions that cannot be ignored" ] ;
+       fhir:definition [ fhir:v "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." ] ;
+       fhir:comment [ fhir:v "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ] ;
+       fhir:requirements [ fhir:v "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension)." ] ;
+       fhir:alias ( [ fhir:v "extensions" ] [ fhir:v "user content" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DomainResource.modifierExtension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] [
+         fhir:key [ fhir:v "ext-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Must have either extensions or value[x], not both" ] ;
+         fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
+         fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v true ] ;
+       fhir:isModifierReason [ fhir:v "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them" ] ;
+       fhir:isSummary [ fhir:v false ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.identifier" ] ;
+       fhir:path [ fhir:v "Media.identifier" ] ;
+       fhir:short [ fhir:v "影像的識別碼" ] ;
+       fhir:definition [ fhir:v "影像相關的識別碼，可能包括影像本身的識別碼，以及用於其收集上下文（例如：系列識別碼）和其他工作流程識別碼，例如存取號等。" ] ;
+       fhir:comment [ fhir:v "識別碼的標籤和使用可以用來確定它是什麼類型的識別碼" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.identifier" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Identifier"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "Event.identifier" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "FiveWs.identifier" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".id" ]
+       ] [
+         fhir:identity [ fhir:v "dicom" ] ;
+         fhir:map [ fhir:v "0008,0018 | ~0008,0050 | 0020,000D | 0020,000E" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.basedOn" ] ;
+       fhir:path [ fhir:v "Media.basedOn" ] ;
+       fhir:short [ fhir:v "導致產生此多媒體的程序" ] ;
+       fhir:definition [ fhir:v "由創建此多媒體文件而完全或部分完成的程序。例如，如果多媒體文件是一張X光影像，那麼這個程序可能是一次X光檢查。" ] ;
+       fhir:requirements [ fhir:v "此功能可追蹤事件的授權情況，並追蹤建議或推薦是否已執行。" ] ;
+       fhir:alias ( [ fhir:v "fulfills" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.basedOn" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile ( [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/ServiceRequest"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/ServiceRequest>
+         ] [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/CarePlan"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/CarePlan>
+         ] )
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "Event.basedOn" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".outboundRelationship[typeCode=FLFS].target" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.partOf" ] ;
+       fhir:path [ fhir:v "Media.partOf" ] ;
+       fhir:short [ fhir:v "參照事件的一部分" ] ;
+       fhir:definition [ fhir:v "這個特定事件是更大事件的一部分，或者是一個步驟。" ] ;
+       fhir:comment [ fhir:v "不應該使用此屬性將事件與一次就診關聯 - 請使用 Media.encounter 來完成這個目的。\n\n[對於事件 resource，所允許的參照resources可能會根據需要進行調整。]" ] ;
+       fhir:requirements [ fhir:v "舉例來說，藥物管理可以是某個程序的一部分，而這個程序則可能是某個觀察過程的一部分等等。" ] ;
+       fhir:alias ( [ fhir:v "container" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.partOf" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile ( [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Resource"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Resource>
+         ] )
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "Event.partOf" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".inboundRelationship[typeCode=COMP].source[moodCode=EVN]" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.status" ] ;
+       fhir:path [ fhir:v "Media.status" ] ;
+       fhir:short [ fhir:v "preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown" ] ;
+       fhir:definition [ fhir:v "多媒體的目前狀態" ] ;
+       fhir:comment [ fhir:v "可以在[[event.html#statemachine | 事件模式]]文件中找到一個標準的狀態轉換圖。\n\n「未知」不代表「其他」狀態 - 必須使用其中一個已定義的狀態，「未知」用於表示不確定當前狀態。" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.status" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "code"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v true ] ;
+       fhir:isModifierReason [ fhir:v "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid" ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:binding [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:string ;
+             fhir:v "MediaStatus"
+           ]
+         ] ) ;
+         fhir:strength [ fhir:v "required" ] ;
+         fhir:description [ fhir:v "代表事件生命週期階段的代碼；應填入所綁定值集中的其中一個代碼" ] ;
+         fhir:valueSet [
+           fhir:v "http://hl7.org/fhir/ValueSet/event-status|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/ValueSet/event-status|4.0.1>
+         ]
+       ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "Event.status" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "FiveWs.status" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "Varies by domain" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".status" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.type" ] ;
+       fhir:path [ fhir:v "Media.type" ] ;
+       fhir:short [ fhir:v "將多媒體分類為影像、影片或音檔" ] ;
+       fhir:definition [ fhir:v "一個代碼，用於分類多媒體是否為影像、影片或音檔或其他多媒體類別。" ] ;
+       fhir:comment [ fhir:v "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." ] ;
+       fhir:requirements [ fhir:v "用於篩選取得和顯示的檢驗檢查結果" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.type" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "CodeableConcept"^^xsd:anyURI ] ;
+         fhir:profile ( [
+           fhir:v "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"^^xsd:anyURI ;
+           fhir:link <https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw>
+         ] )
+       ] ) ;
+       fhir:condition ( [ fhir:v "ele-1" ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:binding [
+         fhir:strength [ fhir:v "extensible" ] ;
+         fhir:description [ fhir:v "應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。" ] ;
+         fhir:valueSet [
+           fhir:v "http://hl7.org/fhir/ValueSet/media-type"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/ValueSet/media-type>
+         ]
+       ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "CE/CNE/CWE" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "CD" ]
+       ] [
+         fhir:identity [ fhir:v "orim" ] ;
+         fhir:map [ fhir:v "fhir:CodeableConcept rdfs:subClassOf dt:CD" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.modality" ] ;
+       fhir:path [ fhir:v "Media.modality" ] ;
+       fhir:short [ fhir:v "取得影像的設備/過程" ] ;
+       fhir:definition [ fhir:v "在醫學影像領域中，描述多媒體類型（即影像）的細節時重要的幾個方面。通常，這包括影像是如何被獲取的，比如使用了什麼設備或技術。如果這些影像是從DICOM系統中獲得的，並且被存儲在一種稱為「Media resource」的格式中，那麼這個過程中用到的特定技術或設備類型被稱為「儀器(modality)」。儀器是指影像如何被產生，比如CT掃描、MRI掃描或X光等。" ] ;
+       fhir:comment [ fhir:v "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.modality" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "CodeableConcept"^^xsd:anyURI ] ;
+         fhir:profile ( [
+           fhir:v "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"^^xsd:anyURI ;
+           fhir:link <https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw>
+         ] )
+       ] ) ;
+       fhir:condition ( [ fhir:v "ele-1" ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:binding [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:string ;
+             fhir:v "MediaModality"
+           ]
+         ] ) ;
+         fhir:strength [ fhir:v "example" ] ;
+         fhir:description [ fhir:v "可參考MediaModality代碼表，但此代碼表只是針對這個欄位的一個可能值的示例，不預期也不鼓勵使用者一定要使用此代碼表的代碼。" ] ;
+         fhir:valueSet [
+           fhir:v "http://hl7.org/fhir/ValueSet/media-modality"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/ValueSet/media-modality>
+         ]
+       ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "CE/CNE/CWE" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "CD" ]
+       ] [
+         fhir:identity [ fhir:v "orim" ] ;
+         fhir:map [ fhir:v "fhir:CodeableConcept rdfs:subClassOf dt:CD" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.view" ] ;
+       fhir:path [ fhir:v "Media.view" ] ;
+       fhir:short [ fhir:v "影像視圖，從不同的角度拍攝醫學影像，例如：側位（Lateral，從旁邊看）或前後部位（Antero-posterior，從前面或後面看）" ] ;
+       fhir:definition [ fhir:v "影像視圖的名稱，例如：側位或前後部位（AP）。" ] ;
+       fhir:comment [ fhir:v "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.view" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "CodeableConcept"^^xsd:anyURI ] ;
+         fhir:profile ( [
+           fhir:v "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"^^xsd:anyURI ;
+           fhir:link <https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw>
+         ] )
+       ] ) ;
+       fhir:condition ( [ fhir:v "ele-1" ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:binding [
+         fhir:strength [ fhir:v "extensible" ] ;
+         fhir:description [ fhir:v "應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。" ] ;
+         fhir:valueSet [
+           fhir:v "http://hl7.org/fhir/ValueSet/media-view"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/ValueSet/media-view>
+         ]
+       ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "CE/CNE/CWE" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "CD" ]
+       ] [
+         fhir:identity [ fhir:v "orim" ] ;
+         fhir:map [ fhir:v "fhir:CodeableConcept rdfs:subClassOf dt:CD" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.subject" ] ;
+       fhir:path [ fhir:v "Media.subject" ] ;
+       fhir:short [ fhir:v "多媒體紀錄的對象是誰或什麼？" ] ;
+       fhir:definition [ fhir:v "多媒體紀錄的對象是誰或什麼？" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.subject" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile ( [
+           fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Patient-twpas"^^xsd:anyURI ;
+           fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Patient-twpas>
+         ] )
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:mustSupport [ fhir:v true ] ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "Event.subject" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "FiveWs.subject[x]" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".participation[typeCode=\"SUBJ\"]???" ]
+       ] [
+         fhir:identity [ fhir:v "dicom" ] ;
+         fhir:map [ fhir:v "~0010,0020" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "FiveWs.subject" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.encounter" ] ;
+       fhir:path [ fhir:v "Media.encounter" ] ;
+       fhir:short [ fhir:v "與此Media相關的就醫事件（Encounter）" ] ;
+       fhir:definition [ fhir:v "此多媒體是在什麼樣的就醫過程中產生或被使用的。例如：有一次具體的就診活動（比如病人因為某種疼痛去看醫生），在這次就醫中產生了這份X光影像，從而為這份影像提供了相關的就醫背景或情境。" ] ;
+       fhir:comment [ fhir:v "這通常會是多媒體產生時所在的就醫情境" ] ;
+       fhir:requirements [ fhir:v "將多媒體與 「就醫」背景連結起來" ] ;
+       fhir:alias ( [ fhir:v "context" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.encounter" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile ( [
+           fhir:v "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Encounter-twcore"^^xsd:anyURI ;
+           fhir:link <https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Encounter-twcore>
+         ] )
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "Event.encounter" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "FiveWs.context" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".inboundRelationship(typeCode=COMP].source[classCode<=PCPR, moodCode=EVN]" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.created[x]" ] ;
+       fhir:path [ fhir:v "Media.created[x]" ] ;
+       fhir:short [ fhir:v "Media被收集的時間" ] ;
+       fhir:definition [ fhir:v "多媒體收集的日期和時間" ] ;
+       fhir:alias ( [ fhir:v "timing" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.created[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "dateTime"^^xsd:anyURI ]
+       ] [
+         fhir:code [ fhir:v "Period"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "Event.occurrence[x]" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "FiveWs.done[x]" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".effectiveTime" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.issued" ] ;
+       fhir:path [ fhir:v "Media.issued" ] ;
+       fhir:short [ fhir:v "此版本提供的日期/時間" ] ;
+       fhir:definition [ fhir:v "當一份多媒體資料（比如影像、文件等）經過專業人士的審查之後，確定無誤或達到一定標準，便會選擇一個時間點，把這份經過審查的多媒體版本提供給其他醫療專業人員或相關人士使用。這個「日期和時間」就是指這份多媒體資料被正式認可並開放給相關人士使用的具體時刻。" ] ;
+       fhir:comment [ fhir:v "它可能與resource本身的最後更新時間相同。但對於那些確實需要對某些更新進行審查和驗證的Observations，如果更新是非臨床顯著的，則不需要對新版本進行再次審查和驗證，因此它也可能與resource本身的最後更新時間不同。" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.issued" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "instant"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "FiveWs.recorded" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "OBR.22 (or MSH.7), or perhaps OBX-19 (depends on who observation made)" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "participation[typeCode=AUT].time" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.operator" ] ;
+       fhir:path [ fhir:v "Media.operator" ] ;
+       fhir:short [ fhir:v "產生影像的人" ] ;
+       fhir:definition [ fhir:v "負責收集影像的人" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.operator" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile ( [
+           fhir:v "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Practitioner-twcore"^^xsd:anyURI ;
+           fhir:link <https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Practitioner-twcore>
+         ] [
+           fhir:v "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/PractitionerRole-twcore"^^xsd:anyURI ;
+           fhir:link <https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/PractitionerRole-twcore>
+         ] [
+           fhir:v "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Organization-twcore"^^xsd:anyURI ;
+           fhir:link <https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Organization-twcore>
+         ] [
+           fhir:v "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CareTeam-twcore"^^xsd:anyURI ;
+           fhir:link <https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CareTeam-twcore>
+         ] [
+           fhir:v "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Patient-twcore"^^xsd:anyURI ;
+           fhir:link <https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Patient-twcore>
+         ] [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Device"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Device>
+         ] [
+           fhir:v "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/RelatedPerson-twcore"^^xsd:anyURI ;
+           fhir:link <https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/RelatedPerson-twcore>
+         ] )
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "Event.performer.actor" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "FiveWs.actor" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".participation[typeCode=\"PERF\"]???" ]
+       ] [
+         fhir:identity [ fhir:v "dicom" ] ;
+         fhir:map [ fhir:v "0008,1060?" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.reasonCode" ] ;
+       fhir:path [ fhir:v "Media.reasonCode" ] ;
+       fhir:short [ fhir:v "為什麼會進行這個事件？" ] ;
+       fhir:definition [ fhir:v "以編碼或文字形式描述了事件發生的原因" ] ;
+       fhir:comment [ fhir:v "文字形式的原因可以使用reasonCode.text來取得" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.reasonCode" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "CodeableConcept"^^xsd:anyURI ] ;
+         fhir:profile ( [
+           fhir:v "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"^^xsd:anyURI ;
+           fhir:link <https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw>
+         ] )
+       ] ) ;
+       fhir:condition ( [ fhir:v "ele-1" ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:binding [
+         fhir:strength [ fhir:v "extensible" ] ;
+         fhir:description [ fhir:v "應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。" ] ;
+         fhir:valueSet [
+           fhir:v "http://hl7.org/fhir/ValueSet/procedure-reason"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/ValueSet/procedure-reason>
+         ]
+       ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "CE/CNE/CWE" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "CD" ]
+       ] [
+         fhir:identity [ fhir:v "orim" ] ;
+         fhir:map [ fhir:v "fhir:CodeableConcept rdfs:subClassOf dt:CD" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.bodySite" ] ;
+       fhir:path [ fhir:v "Media.bodySite" ] ;
+       fhir:short [ fhir:v "影像檢查的身體部位" ] ;
+       fhir:definition [ fhir:v "表示在受檢者身上進行檢查的部位（即目標部位）" ] ;
+       fhir:comment [ fhir:v "只有在Observation.code中發現的代碼中沒有隱含的情況下才使用。在許多系統中，這可能被表示為一個相關的觀察，而不是一個內聯元件。如果用例要求將BodySite作為一個單獨的resource來處理（例如，單獨識別和跟蹤），那麼就使用標準擴展 bodySite。" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.bodySite" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "CodeableConcept"^^xsd:anyURI ] ;
+         fhir:profile ( [
+           fhir:v "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw"^^xsd:anyURI ;
+           fhir:link <https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw>
+         ] )
+       ] ) ;
+       fhir:condition ( [ fhir:v "ele-1" ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:mustSupport [ fhir:v true ] ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:binding [
+         fhir:strength [ fhir:v "required" ] ;
+         fhir:valueSet [
+           fhir:v "https://nhicore.nhi.gov.tw/pas/ValueSet/sct-body-site"^^xsd:anyURI ;
+           fhir:link <https://nhicore.nhi.gov.tw/pas/ValueSet/sct-body-site>
+         ]
+       ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "CE/CNE/CWE" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "CD" ]
+       ] [
+         fhir:identity [ fhir:v "orim" ] ;
+         fhir:map [ fhir:v "fhir:CodeableConcept rdfs:subClassOf dt:CD" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.deviceName" ] ;
+       fhir:path [ fhir:v "Media.deviceName" ] ;
+       fhir:short [ fhir:v "設備/製造商的名稱" ] ;
+       fhir:definition [ fhir:v "用來進行錄製的設備名稱/製造商" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.deviceName" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".participation[typeCode=\"DEV\"].role.player.Entity[classCode=\"DEV\"].name" ]
+       ] [
+         fhir:identity [ fhir:v "dicom" ] ;
+         fhir:map [ fhir:v "0008,0070" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.device" ] ;
+       fhir:path [ fhir:v "Media.device" ] ;
+       fhir:short [ fhir:v "影像、影片、音檔的補捉設備。" ] ;
+       fhir:definition [ fhir:v "用來收集多媒體的設備" ] ;
+       fhir:comment [ fhir:v "如果需要對設備進行進一步的類型化，應該使用擴展。用於支援收集多媒體的次要設備可以使用擴展或通過Observation.related資料項目表示。" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.device" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile ( [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Device"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Device>
+         ] [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DeviceMetric"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DeviceMetric>
+         ] [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Device"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Device>
+         ] )
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "sct-concept" ] ;
+         fhir:map [ fhir:v "< 49062001 |Device|" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "participation[typeCode=DEV]" ]
+       ] [
+         fhir:identity [ fhir:v "sct-attr" ] ;
+         fhir:map [ fhir:v "424226004 |Using device|" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.height" ] ;
+       fhir:path [ fhir:v "Media.height" ] ;
+       fhir:short [ fhir:v "以像素為單位的影像高度（影像/影像）" ] ;
+       fhir:definition [ fhir:v "以像素為單位的影像高度（影像/影像）。" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.height" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "positiveInt"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".outboundRelationship[typeCode=\"COMP].target[classCode=\"OBS\", moodCode=\"EVN\",code=\"<CODE>\"].value" ]
+       ] [
+         fhir:identity [ fhir:v "dicom" ] ;
+         fhir:map [ fhir:v "0028,0010" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.width" ] ;
+       fhir:path [ fhir:v "Media.width" ] ;
+       fhir:short [ fhir:v "以像素為單位的影像寬度（影像/影像）" ] ;
+       fhir:definition [ fhir:v "以像素為單位的影像寬度（影像/影像）。" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.width" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "positiveInt"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".outboundRelationship[typeCode=\"COMP].target[classCode=\"OBS\", moodCode=\"EVN\",code=\"<CODE>\"].value" ]
+       ] [
+         fhir:identity [ fhir:v "dicom" ] ;
+         fhir:map [ fhir:v "0028,0011" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.frames" ] ;
+       fhir:path [ fhir:v "Media.frames" ] ;
+       fhir:short [ fhir:v "> 1 的影格（影像）。" ] ;
+       fhir:definition [ fhir:v "這段話講述的是在某些情況下，一份影像或文件可能包含多個獨立的影像影格(frame)，而這些影格是組成整個文件的部分。例如：在醫療影像、動畫GIF圖像或多頁傳真文件中，可能會有多影格影像。如果一份文件或影像實際上包含多於一個的影像影格，那麼它需要標記一個具體的數值來表示這些影格的數量。這樣做的目的是為了讓使用這份文件或影像的軟體知道，它需要使用一種能夠顯示或處理多個影像影格的特殊工具或功能，稱為渲染小部件(rendering widget）。簡單來說，如果一個文件包含多個影像影格，那麼需要透過特定的方式告知相關的軟體，以便正確顯示或處理這些影格。" ] ;
+       fhir:comment [ fhir:v "如果沒有提供幀的數量，該值可能是未知的。除非明確說明，否則應用程式不應假定只有一個框架。" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.frames" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "positiveInt"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".outboundRelationship[typeCode=\"COMP].target[classCode=\"OBS\", moodCode=\"EVN\",code=\"<CODE>\"].value" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.duration" ] ;
+       fhir:path [ fhir:v "Media.duration" ] ;
+       fhir:short [ fhir:v "以秒為單位的長度（音檔/影片）。" ] ;
+       fhir:definition [ fhir:v "錄製的持續時間，以秒為單位 - 對於音檔/影片。" ] ;
+       fhir:comment [ fhir:v "如果記錄被暫停，持續時間可能與發生時間不同。" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.duration" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "decimal"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".outboundRelationship[typeCode=\"COMP].target[classCode=\"OBS\", moodCode=\"EVN\",code=\"<CODE>\"].value" ]
+       ] [
+         fhir:identity [ fhir:v "dicom" ] ;
+         fhir:map [ fhir:v "~0028,0002" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.content" ] ;
+       fhir:path [ fhir:v "Media.content" ] ;
+       fhir:short [ fhir:v "實際的多媒體 - 參照或資料。" ] ;
+       fhir:definition [ fhir:v "多媒體的實際內容 -內置或直接參照多媒體原始檔案。" ] ;
+       fhir:comment [ fhir:v "推薦的內容類別型：image/jpeg, image/png, image/tiff, video/mpeg, audio/mp4, application/dicom。Application/dicom可以包含傳輸語法作為一個參數。對於涵蓋一段時期的多媒體（視頻/聲音），content.creationTime是結束時間。創建時間用於跟蹤、組織版本和查詢。" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.content" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Attachment"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] [
+         fhir:key [ fhir:v "UploadContent" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "填寫格式：file://檔名.副檔名，例如：file://US01.jpg、file://PathologyReport01.pdf、file://GenReport01.pdf、file://王大明病歷.pdf" ] ;
+         fhir:expression [ fhir:v "url.matches('^file://[a-zA-Z0-9_一-龥()（）－]+.[a-zA-Z]{2,5}$')" ] ;
+         fhir:source [
+           fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Media-twpas"^^xsd:anyURI ;
+           fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Media-twpas>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".text" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.content.id" ] ;
+       fhir:path [ fhir:v "Media.content.id" ] ;
+       fhir:representation ( [ fhir:v "xmlAttr" ] ) ;
+       fhir:short [ fhir:v "Unique id for inter-element referencing" ] ;
+       fhir:definition [ fhir:v "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.id" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "string"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:code [ fhir:v "http://hl7.org/fhirpath/System.String"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v false ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.content.extension" ] ;
+       fhir:path [ fhir:v "Media.content.extension" ] ;
+       fhir:slicing [
+         fhir:discriminator ( [
+           fhir:type [ fhir:v "value" ] ;
+           fhir:path [ fhir:v "url" ]
+         ] ) ;
+         fhir:description [ fhir:v "Extensions are always sliced by (at least) url" ] ;
+         fhir:rules [ fhir:v "open" ]
+       ] ;
+       fhir:short [ fhir:v "Additional content defined by implementations" ] ;
+       fhir:definition [ fhir:v "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ] ;
+       fhir:comment [ fhir:v "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ] ;
+       fhir:alias ( [ fhir:v "extensions" ] [ fhir:v "user content" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.extension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] [
+         fhir:key [ fhir:v "ext-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Must have either extensions or value[x], not both" ] ;
+         fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
+         fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v false ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.content.contentType" ] ;
+       fhir:path [ fhir:v "Media.content.contentType" ] ;
+       fhir:short [ fhir:v "Mime type of the content, with charset etc." ] ;
+       fhir:definition [ fhir:v "Identifies the type of the data in the attachment and allows a method to be chosen to interpret or render the data. Includes mime type parameters such as charset where appropriate." ] ;
+       fhir:requirements [ fhir:v "Processors of the data need to be able to know how to interpret the data." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Attachment.contentType" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "code"^^xsd:anyURI ]
+       ] ) ;
+       fhir:example ( [
+         fhir:label [ fhir:v "General" ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "text/plain; charset=UTF-8, image/png"
+         ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:mustSupport [ fhir:v true ] ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:binding [
+         fhir:strength [ fhir:v "required" ] ;
+         fhir:valueSet [
+           fhir:v "https://nhicore.nhi.gov.tw/pas/ValueSet/media-mimetypes"^^xsd:anyURI ;
+           fhir:link <https://nhicore.nhi.gov.tw/pas/ValueSet/media-mimetypes>
+         ]
+       ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "ED.2+ED.3/RP.2+RP.3. Note conversion may be needed if old style values are being used" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "./mediaType, ./charset" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.content.language" ] ;
+       fhir:path [ fhir:v "Media.content.language" ] ;
+       fhir:short [ fhir:v "Human language of the content (BCP-47)" ] ;
+       fhir:definition [ fhir:v "The human language of the content. The value can be any valid value according to BCP 47." ] ;
+       fhir:requirements [ fhir:v "Users need to be able to choose between the languages in a set of attachments." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Attachment.language" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "code"^^xsd:anyURI ]
+       ] ) ;
+       fhir:example ( [
+         fhir:label [ fhir:v "General" ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "en-AU"
+         ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:binding [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:canonical ;
+             fhir:v "http://hl7.org/fhir/ValueSet/all-languages"^^xsd:anyURI ;
+             fhir:link <http://hl7.org/fhir/ValueSet/all-languages>
+           ]
+         ] [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:string ;
+             fhir:v "Language"
+           ]
+         ] ) ;
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "A human language." ] ;
+         fhir:valueSet [
+           fhir:v "http://hl7.org/fhir/ValueSet/languages"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/ValueSet/languages>
+         ]
+       ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "./language" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.content.data" ] ;
+       fhir:path [ fhir:v "Media.content.data" ] ;
+       fhir:short [ fhir:v "Data inline, base64ed" ] ;
+       fhir:definition [ fhir:v "The actual data of the attachment - a sequence of bytes, base64 encoded." ] ;
+       fhir:comment [ fhir:v "The base64-encoded data SHALL be expressed in the same character set as the base resource XML or JSON." ] ;
+       fhir:requirements [ fhir:v "The data needs to able to be transmitted inline." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Attachment.data" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "base64Binary"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v false ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "ED.5" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "./data" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.content.url" ] ;
+       fhir:path [ fhir:v "Media.content.url" ] ;
+       fhir:short [ fhir:v "非DICOM影像（請填寫完整檔案路徑）。填寫上傳附件檔名，例如：file://US01.jpg，且需上傳壓縮後的影像圖檔。" ] ;
+       fhir:definition [ fhir:v "A location where the data can be accessed." ] ;
+       fhir:comment [ fhir:v "If both data and url are provided, the url SHALL point to the same content as the data contains. Urls may be relative references or may reference transient locations such as a wrapping envelope using cid: though this has ramifications for using signatures. Relative URLs are interpreted relative to the service url, like a resource reference, rather than relative to the resource itself. If a URL is provided, it SHALL resolve to actual data." ] ;
+       fhir:requirements [ fhir:v "The data needs to be transmitted by reference." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Attachment.url" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "url"^^xsd:anyURI ]
+       ] ) ;
+       fhir:example ( [
+         fhir:label [ fhir:v "General" ] ;
+         fhir:value [
+           a fhir:url ;
+           fhir:v "http://www.acme.com/logo-small.png"^^xsd:anyURI
+         ]
+       ] [
+         fhir:label [ fhir:v "General" ] ;
+         fhir:value [
+           a fhir:url ;
+           fhir:v "file://US01.jpg"^^xsd:anyURI
+         ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:mustSupport [ fhir:v true ] ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "RP.1+RP.2 - if they refer to a URL (see v2.6)" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "./reference/literal" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.content.size" ] ;
+       fhir:path [ fhir:v "Media.content.size" ] ;
+       fhir:short [ fhir:v "Number of bytes of content (if url provided)" ] ;
+       fhir:definition [ fhir:v "The number of bytes of data that make up this attachment (before base64 encoding, if that is done)." ] ;
+       fhir:comment [ fhir:v "The number of bytes is redundant if the data is provided as a base64binary, but is useful if the data is provided as a url reference." ] ;
+       fhir:requirements [ fhir:v "Representing the size allows applications to determine whether they should fetch the content automatically in advance, or refuse to fetch it at all." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Attachment.size" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "unsignedInt"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A (needs data type R3 proposal)" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.content.hash" ] ;
+       fhir:path [ fhir:v "Media.content.hash" ] ;
+       fhir:short [ fhir:v "Hash of the data (sha-1, base64ed)" ] ;
+       fhir:definition [ fhir:v "The calculated hash of the data using SHA-1. Represented using base64." ] ;
+       fhir:comment [ fhir:v "The hash is calculated on the data prior to base64 encoding, if the data is based64 encoded. The hash is not intended to support digital signatures. Where protection against malicious threats a digital signature should be considered, see [Provenance.signature](http://hl7.org/fhir/R4/provenance-definitions.html#Provenance.signature) for mechanism to protect a resource with a digital signature." ] ;
+       fhir:requirements [ fhir:v "Included so that applications can verify that the contents of a location have not changed due to technical failures (e.g., storage rot, transport glitch, incorrect version)." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Attachment.hash" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "base64Binary"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".integrityCheck[parent::ED/integrityCheckAlgorithm=\"SHA-1\"]" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.content.title" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:boolean ;
+           fhir:v true
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "Media.content.title" ] ;
+       fhir:short [ fhir:v "Label to display in place of the data" ] ;
+       fhir:definition [ fhir:v "A label or set of text to display in place of the data." ] ;
+       fhir:requirements [ fhir:v "Applications need a label to display to a human user in place of the actual data if the data cannot be rendered or perceived by the viewer." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Attachment.title" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:example ( [
+         fhir:label [ fhir:v "General" ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Official Corporate Logo"
+         ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "./title/data" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.content.creation" ] ;
+       fhir:path [ fhir:v "Media.content.creation" ] ;
+       fhir:short [ fhir:v "Date attachment was first created" ] ;
+       fhir:definition [ fhir:v "The date that the attachment was first created." ] ;
+       fhir:requirements [ fhir:v "This is often tracked as an integrity issue for use of the attachment." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Attachment.creation" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "dateTime"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v true ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A (needs data type R3 proposal)" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.note" ] ;
+       fhir:path [ fhir:v "Media.note" ] ;
+       fhir:short [ fhir:v "對此Media的意見" ] ;
+       fhir:definition [ fhir:v "執行者、對象或其他參與者對Media的意見" ] ;
+       fhir:comment [ fhir:v "不能用於觀察、結論等。而是使用基於多媒體/影像研究resource的觀察。" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Media.note" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Annotation"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v false ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "Event.note" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "NTE" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".inboundRelationship(typeCode=SUBJ].source[classCode=ANNGEN, moodCode=EVN].value[xsi:type=ST]" ]
+       ] )
+     ] )
+  ] ; # 
+  fhir:differential [
+     fhir:element ( [
+       fhir:id [ fhir:v "Media.subject" ] ;
+       fhir:path [ fhir:v "Media.subject" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile ( [
+           fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Patient-twpas"^^xsd:anyURI ;
+           fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Patient-twpas>
+         ] )
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.bodySite" ] ;
+       fhir:path [ fhir:v "Media.bodySite" ] ;
+       fhir:short [ fhir:v "影像檢查的身體部位" ] ;
+       fhir:mustSupport [ fhir:v true ] ;
+       fhir:binding [
+         fhir:strength [ fhir:v "required" ] ;
+         fhir:valueSet [
+           fhir:v "https://nhicore.nhi.gov.tw/pas/ValueSet/sct-body-site"^^xsd:anyURI ;
+           fhir:link <https://nhicore.nhi.gov.tw/pas/ValueSet/sct-body-site>
+         ]
+       ]
+     ] [
+       fhir:id [ fhir:v "Media.content" ] ;
+       fhir:path [ fhir:v "Media.content" ] ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "UploadContent" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "填寫格式：file://檔名.副檔名，例如：file://US01.jpg、file://PathologyReport01.pdf、file://GenReport01.pdf、file://王大明病歷.pdf" ] ;
+         fhir:expression [ fhir:v "url.matches('^file://[a-zA-Z0-9_一-龥()（）－]+.[a-zA-Z]{2,5}$')" ] ;
+         fhir:source [
+           fhir:v "https://nhicore.nhi.gov.tw/pas/StructureDefinition/Media-twpas"^^xsd:anyURI ;
+           fhir:link <https://nhicore.nhi.gov.tw/pas/StructureDefinition/Media-twpas>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "Media.content.contentType" ] ;
+       fhir:path [ fhir:v "Media.content.contentType" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:mustSupport [ fhir:v true ] ;
+       fhir:binding [
+         fhir:strength [ fhir:v "required" ] ;
+         fhir:valueSet [
+           fhir:v "https://nhicore.nhi.gov.tw/pas/ValueSet/media-mimetypes"^^xsd:anyURI ;
+           fhir:link <https://nhicore.nhi.gov.tw/pas/ValueSet/media-mimetypes>
+         ]
+       ]
+     ] [
+       fhir:id [ fhir:v "Media.content.url" ] ;
+       fhir:path [ fhir:v "Media.content.url" ] ;
+       fhir:short [ fhir:v "非DICOM影像（請填寫完整檔案路徑）。填寫上傳附件檔名，例如：file://US01.jpg，且需上傳壓縮後的影像圖檔。" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:example ( [
+         fhir:label [ fhir:v "General" ] ;
+         fhir:value [
+           a fhir:url ;
+           fhir:v "file://US01.jpg"^^xsd:anyURI
+         ]
+       ] ) ;
+       fhir:mustSupport [ fhir:v true ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

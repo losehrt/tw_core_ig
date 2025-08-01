@@ -1,0 +1,169 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://nhicore.nhi.gov.tw/pas/ConceptMap/nhi-sct-body-site> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "nhi-sct-body-site"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap nhi-sct-body-site</b></p><a name=\"nhi-sct-body-site\"> </a><a name=\"hcnhi-sct-body-site\"> </a><p>Mapping from <a href=\"ValueSet-nhi-body-site.html\">NHI-健保事前審查-身體部位值集</a> to <a href=\"ValueSet-sct-body-site.html\">SNOMEDCT-健保事前審查-身體部位值集</a></p><br/><p><b>Group 1 </b>Mapping from <a href=\"CodeSystem-nhi-body-site.html\">NHI-健保事前審查-身體部位version: null1.0.6)</a> to <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\">SNOMED CT (all versions)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>H (頭部)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>69536005 (Head)</td></tr><tr><td>A (頸部)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>45048000 (Neck)</td></tr><tr><td>F (頭頸部)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>774007 (Head and neck structure)</td></tr><tr><td>U (胸部)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>43799004 (Thoracic cavity)</td></tr><tr><td>N (頸椎)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>122494005 (Cervical spine)</td></tr><tr><td>J (胸椎)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>122495006 (Thoracic spine)</td></tr><tr><td>K (腰椎)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>122496007 (Lumbar spine)</td></tr><tr><td>G (胸部及上腹部)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>416550000 (Chest and/or abdomen structure (body structure))</td></tr><tr><td>C (上腹部)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>80581009 (Upper abdomen)</td></tr><tr><td>I (腹部(含骨盆腔))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>818987002 (Abdominopelvic cavity)</td></tr><tr><td>P (骨盆腔)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>816991004 (Structure of cavity of true pelvis (body structure))</td></tr><tr><td>E (肢部)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>66019005 (Extremity)</td></tr><tr><td>Q (臂神經血管叢)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>36582005 (Brachial plexus)</td></tr><tr><td>M (骨骼肌肉系統)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>26107004 (Musculoskeletal system)</td></tr><tr><td>V (心血管系統)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>113257007 (Cardiovascular system)</td></tr><tr><td>B (薦椎)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>87141009 (Sacral vertebra)</td></tr><tr><td>D (周邊神經)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equal\" title=\"equal\">is equal to</a></td><td>3058005 (Peripheral nervous system)</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://nhicore.nhi.gov.tw/pas/ConceptMap/nhi-sct-body-site"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.6"] ; # 
+  fhir:name [ fhir:v "NHISNOMEDCT"] ; # 
+  fhir:title [ fhir:v "臺灣健保署身體部位代碼對應SNOMED CT"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-07-01"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "衛生福利部中央健康保險署"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "衛生福利部中央健康保險署" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.nhi.gov.tw" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "此對應表為臺灣健保署身體部位代碼對應SNOMED CT，供實作者於撰寫程式以自動化對應或轉代碼時使用。"] ; # 
+  fhir:source [
+     a fhir:canonical ;
+     fhir:v "https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-body-site"^^xsd:anyURI ;
+     fhir:link <https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-body-site>
+  ] ; # 
+  fhir:target [
+     a fhir:canonical ;
+     fhir:v "https://nhicore.nhi.gov.tw/pas/ValueSet/sct-body-site"^^xsd:anyURI ;
+     fhir:link <https://nhicore.nhi.gov.tw/pas/ValueSet/sct-body-site>
+  ] ; # 
+  fhir:group ( [
+     fhir:source [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-body-site"^^xsd:anyURI ] ;
+     fhir:sourceVersion [ fhir:v "1.0.6" ] ;
+     fhir:target [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "H" ] ;
+       fhir:display [ fhir:v "頭部" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "69536005" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "A" ] ;
+       fhir:display [ fhir:v "頸部" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "45048000" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "F" ] ;
+       fhir:display [ fhir:v "頭頸部" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "774007" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "U" ] ;
+       fhir:display [ fhir:v "胸部" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "43799004" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "N" ] ;
+       fhir:display [ fhir:v "頸椎" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "122494005" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "J" ] ;
+       fhir:display [ fhir:v "胸椎" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "122495006" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "K" ] ;
+       fhir:display [ fhir:v "腰椎" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "122496007" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "G" ] ;
+       fhir:display [ fhir:v "胸部及上腹部" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "416550000" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "C" ] ;
+       fhir:display [ fhir:v "上腹部" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "80581009" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "I" ] ;
+       fhir:display [ fhir:v "腹部(含骨盆腔)" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "818987002" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "P" ] ;
+       fhir:display [ fhir:v "骨盆腔" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "816991004" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "E" ] ;
+       fhir:display [ fhir:v "肢部" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "66019005" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Q" ] ;
+       fhir:display [ fhir:v "臂神經血管叢" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "36582005" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "M" ] ;
+       fhir:display [ fhir:v "骨骼肌肉系統" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "26107004" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "V" ] ;
+       fhir:display [ fhir:v "心血管系統" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "113257007" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "B" ] ;
+       fhir:display [ fhir:v "薦椎" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "87141009" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "D" ] ;
+       fhir:display [ fhir:v "周邊神經" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "3058005" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

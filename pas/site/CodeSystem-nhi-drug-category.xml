@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="nhi-drug-category"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem nhi-drug-category</b></p><a name="nhi-drug-category"> </a><a name="hcnhi-drug-category"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-drug-category</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">nhi<a name="nhi-drug-category-nhi"> </a></td><td>健保</td></tr><tr><td style="white-space:nowrap">self<a name="nhi-drug-category-self"> </a></td><td>自費</td></tr></table></div>
+  </text>
+  <url value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-drug-category"/>
+  <version value="1.0.6"/>
+  <name value="NHIDrugCategory"/>
+  <title value="NHI-健保事前審查-藥物類型"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-07-01"/>
+  <publisher value="衛生福利部中央健康保險署"/>
+  <contact>
+    <name value="衛生福利部中央健康保險署"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nhi.gov.tw"/>
+    </telecom>
+  </contact>
+  <description value="臺灣衛生福利部中央健康保險署「藥物類型」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="2"/>
+  <concept>
+    <code value="nhi"/>
+    <display value="健保"/>
+  </concept>
+  <concept>
+    <code value="self"/>
+    <display value="自費"/>
+  </concept>
+</CodeSystem>

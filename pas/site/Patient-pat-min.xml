@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="pat-min"/>
+  <meta>
+    <profile value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Patient-twpas"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-Patient-twpas.html">病人資訊-Patient TWPAS</a></p></div><blockquote><p><b>識別碼型別</b>：National Person Identifier <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="http://terminology.hl7.org/CodeSystem/v2-0203">Identifier Type Codes</a>#NNxxx）</span><br/><b>身分證字號（official）</b>：A123456789 （http://www.moi.gov.tw）</p></blockquote><blockquote><p><b>識別碼型別</b>：Medical record number <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="http://terminology.hl7.org/CodeSystem/v2-0203">Identifier Type Codes</a>#MR）</span><br/><b>病歷號（official）</b>：123456 （https://tpech.gov.taipei）</p></blockquote><p><b>姓名（usual）</b>：王大明</p><p><b>性別</b>：男</p><p><b>出生日期</b>：2001-01-01</p></div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="NNxxx"/>
+      </coding>
+    </type>
+    <system value="http://www.moi.gov.tw"/>
+    <value value="A123456789"/>
+  </identifier>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="MR"/>
+      </coding>
+    </type>
+    <system value="https://tpech.gov.taipei"/>
+    <value value="123456"/>
+  </identifier>
+  <name>
+    <use value="usual"/>
+    <text value="王大明"/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="2001-01-01"/>
+</Patient>

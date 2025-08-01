@@ -1,0 +1,27 @@
+{
+  "resourceType" : "Observation",
+  "id" : "obs-tx-min",
+  "meta" : {
+    "profile" : ["https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-tx-assessment-twpas"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Observation-tx-assessment-twpas.html\">治療後疾病狀態評估-Observation Treatment Assessment TWPAS</a></p></div><p><b>狀態</b>：final</p><p><b>治療後疾病狀態評估項目</b>：International Working Group(IWG) Consensus Criteria<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-nhi-tx-ast.html\">NHI-治療後疾病狀態評估項目值集</a>#IWGC)</span></p><p><b>病人</b>：<a href=\"Patient-pat-min.html\">Patient/pat-min</a></p><p><b>治療後疾病狀態評估日期</b>：2024-01-01</p><p><b>治療後疾病狀態評估結果</b>：Partial remission (PR)</p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-tx-ast",
+      "code" : "IWGC",
+      "display" : "International Working Group(IWG) Consensus Criteria"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/pat-min"
+  },
+  "effectiveDateTime" : "2024-05-07",
+  "performer" : [{
+    "reference" : "Practitioner/pra-min"
+  }],
+  "valueString" : "Partial remission (PR)"
+}

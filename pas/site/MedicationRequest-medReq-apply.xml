@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="medReq-apply"/>
+  <meta>
+    <profile value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/MedicationRequest-apply-twpas"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-MedicationRequest-apply-twpas.html">事前審查品項-MedicationRequest Apply TWPAS</a></p></div><p><b>狀態</b>：On Hold</p><p><b>目的</b>：Plan</p><p><b>事前審查品項代碼</b>：Alunbrig film-coated tablets 30mgL<span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="CodeSystem-nhi-medication.html">NHI-健保事前審查-用藥品項值集</a>#BC27730100)</span></p><p><b>病人</b>：<a href="Patient-pat-min.html">Patient/pat-min</a> &quot;王大明&quot;</p><blockquote><p><b>事前審查藥物預定處方起始日期</b>：2024-01-01</p><p><b>事前審查藥物預定處方終止日期</b>：2024-02-11</p><p><b>事前審查藥品使用頻率及服用時間</b>：Every day at institution specified times.、飯前1小時使用<span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="ValueSet-medication-frequency-hl7-nhi.html">HL7 TimingAbbreviation + 臺灣健保署藥品使用頻率值集</a>#BIW、#AC1H)</span></p><p><b>事前審查藥品每次處方劑量</b>：75 mg/m2</p><p><b>事前審查藥品療程／週期數</b>：42</p><p><b>給藥途徑／作用部位</b>：Oral use <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">(<a href="http://snomed.info/sct/">SNOMED CT + 臺灣健保署給藥途徑值集</a>#26643006)</span></p></blockquote><blockquote><p><b>事前審查藥物預定處方起始日期</b>：2024-02-12</p><p><b>事前審查藥物預定處方終止日期</b>：2024-03-10</p><p><b>事前審查藥品使用頻率及服用時間</b>：每4週的第1天、每4週的第2天、每4週的第3天、每4週的第4天、每4週的第5天、飯前1小時使用<span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="ValueSet-medication-frequency-hl7-nhi.html">HL7 TimingAbbreviation + 臺灣健保署藥品使用頻率值集</a>#Q4WD1、#Q4WD2、#Q4WD3、#Q4WD4、#Q4WD5、#AC1H)</span></p><p><b>事前審查藥品每次處方劑量</b>：150 mg/m2</p><p><b>事前審查藥品療程／週期數</b>：1</p><p><b>給藥途徑／作用部位</b>：Oral use <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">(<a href="http://snomed.info/sct/">SNOMED CT + 臺灣健保署給藥途徑值集</a>#26643006)</span></p></blockquote></div>
+  </text>
+  <status value="on-hold"/>
+  <intent value="plan"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-medication"/>
+      <code value="BC27730100"/>
+    </coding>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/pat-min"/>
+  </subject>
+  <dosageInstruction>
+    <timing>
+      <repeat>
+        <boundsPeriod>
+          <start value="2024-01-01"/>
+          <end value="2024-02-11"/>
+        </boundsPeriod>
+        <count value="42"/>
+      </repeat>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"/>
+          <code value="QD"/>
+        </coding>
+        <coding>
+          <system value="https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"/>
+          <code value="AC1H"/>
+        </coding>
+      </code>
+    </timing>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="26643006"/>
+      </coding>
+    </route>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="75"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg/m2"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosageInstruction>
+  <dosageInstruction>
+    <timing>
+      <repeat>
+        <boundsPeriod>
+          <start value="2024-02-12"/>
+          <end value="2024-03-10"/>
+        </boundsPeriod>
+        <count value="1"/>
+      </repeat>
+      <code>
+        <coding>
+          <system value="https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"/>
+          <code value="Q4WD1"/>
+        </coding>
+        <coding>
+          <system value="https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"/>
+          <code value="Q4WD2"/>
+        </coding>
+        <coding>
+          <system value="https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"/>
+          <code value="Q4WD3"/>
+        </coding>
+        <coding>
+          <system value="https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"/>
+          <code value="Q4WD4"/>
+        </coding>
+        <coding>
+          <system value="https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"/>
+          <code value="Q4WD5"/>
+        </coding>
+        <coding>
+          <system value="https://nhicore.nhi.gov.tw/pas/CodeSystem/medication-frequency-nhi-tw"/>
+          <code value="AC1H"/>
+        </coding>
+      </code>
+    </timing>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="26643006"/>
+      </coding>
+    </route>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="150"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg/m2"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosageInstruction>
+</MedicationRequest>

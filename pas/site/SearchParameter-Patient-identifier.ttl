@@ -1,0 +1,36 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://nhicore.nhi.gov.tw/pas/SearchParameter/Patient-identifier> a fhir:SearchParameter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Patient-identifier"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: SearchParameter Patient-identifier</b></p><a name=\"Patient-identifier\"> </a><a name=\"hcPatient-identifier\"> </a><h2>PatientIdentifier</h2><p>Parameter <code>identifier</code>:<code>token</code></p><div><p>病人的身分證號(identifier)</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a></td></tr><tr><td>Expression</td><td><code>Patient.identifier</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: It's up to the server whether the parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: It's up to the server whether the parameter can have multiple values (separated by comma) where at least one must be true</li></ul></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://nhicore.nhi.gov.tw/pas/SearchParameter/Patient-identifier"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.6"] ; # 
+  fhir:name [ fhir:v "PatientIdentifier"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2024-08-31"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "衛生福利部中央健康保險署"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "衛生福利部中央健康保險署" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.nhi.gov.tw" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "病人的身分證號(identifier)"] ; # 
+  fhir:code [ fhir:v "identifier"] ; # 
+  fhir:base ( [ fhir:v "Patient"] ) ; # 
+  fhir:type [ fhir:v "token"] ; # 
+  fhir:expression [ fhir:v "Patient.identifier"] . # 
+
+# -------------------------------------------------------------------------------------
+

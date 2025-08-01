@@ -1,0 +1,14 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"ResponseModel","ResponseModel","","","",0,*,"","","","null {[]} {[]}
+","回覆(Response)癌症用藥癌藥事前審查之資料模型","回覆(Response)癌症用藥癌藥事前審查之資料模型，此邏輯模型為定義癌症用藥事前審查情境下使用的所有資料欄位。  
+為了便於實作者快速理解，資料欄位會使用易於理解的命名，實作者再透過邏輯模型中的功能頁籤「Mappings」瞭解各資料欄位實際使用本IG的哪個Profiles的哪個資料項目（element）。亦可配合[視覺化邏輯模型圖](vision.html#bundle%E6%9E%B6%E6%A7%8B%E5%9C%96)進行欄位對應","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"ResponseModel.approveDate","ResponseModel.approveDate","","","",1,1,"","","","dateTime {[]} {[]}
+","核定日期","核定日期","","","","","","","","","",,,,,"",,,,"ResponseModel.approveDate",1,1,"",""
+"ResponseModel.acptNo","ResponseModel.acptNo","","","",1,1,"","","","string {[]} {[]}
+","案件受理狀態","案件受理狀態","","","","","","","","","",,,,,"",,,,"ResponseModel.acptNo",1,1,"",""
+"ResponseModel.approveClaimComment","ResponseModel.approveClaimComment","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","受理審查案件核定註記","受理審查案件核定註記。1:同意 | 2:不予同意 | 3:部份同意 | 4:補件 | 5:退件","","","","","","","","","",,,,,"",,,,"ResponseModel.approveClaimComment",0,1,"",""
+"ResponseModel.approveNum","ResponseModel.approveNum","","","",0,1,"","","","decimal {[]} {[]}
+","核定數量","核定數量","","","","","","","","","",,,,,"",,,,"ResponseModel.approveNum",0,1,"",""
+"ResponseModel.approveItemComment","ResponseModel.approveItemComment","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","個別醫令核定註記","個別醫令核定註記。0:審核中 | 1:同意 | 2:不予同意 | 3:部份同意 | 4:補件 | 5:退件 | 6:不予同意:對應手術亦不支付 | 7:改核:如審查核定意見","","","","","","","","","",,,,,"",,,,"ResponseModel.approveItemComment",0,1,"",""

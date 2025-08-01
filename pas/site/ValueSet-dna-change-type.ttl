@@ -1,0 +1,73 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://nhicore.nhi.gov.tw/pas/ValueSet/dna-change-type> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "dna-change-type"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet dna-change-type</b></p><a name=\"dna-change-type\"> </a><a name=\"hcdna-change-type\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/LA6692-3/\">LA6692-3</a></td><td>Deletion</td></tr><tr><td><a href=\"https://loinc.org/LA6686-5/\">LA6686-5</a></td><td>Duplication</td></tr><tr><td><a href=\"https://loinc.org/LA6687-3/\">LA6687-3</a></td><td>Insertion</td></tr><tr><td><a href=\"https://loinc.org/LA6688-1/\">LA6688-1</a></td><td>Insertion/Deletion</td></tr><tr><td><a href=\"https://loinc.org/LA6689-9/\">LA6689-9</a></td><td>Inversion</td></tr><tr><td><a href=\"https://loinc.org/LA6690-7/\">LA6690-7</a></td><td>Substitution</td></tr><tr><td><a href=\"https://loinc.org/101397-8/\">101397-8</a></td><td>Copy number variation analysis Sequencing Doc (Bld/Tiss)</td></tr><tr><td><a href=\"https://loinc.org/81695-9/\">81695-9</a></td><td>MSI Ca spec-Imp</td></tr><tr><td><a href=\"https://loinc.org/94077-5/\">94077-5</a></td><td>TMB Tumor-Imp</td></tr></table></li><li>Include these codes as defined in <a href=\"CodeSystem-inca-osiris.html\"><code>https://nhicore.nhi.gov.tw/pas/CodeSystem/inca-osiris</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-inca-osiris.html#inca-osiris-O55-2\">O55-2</a></td><td>Delins</td></tr></table></li></ul></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://nhicore.nhi.gov.tw/pas/ValueSet/dna-change-type"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.6"] ; # 
+  fhir:name [ fhir:v "DNAChangeType"] ; # 
+  fhir:title [ fhir:v "LOINC-健保事前審查-基因突變類型值集"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-07-01"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "衛生福利部中央健康保險署"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "衛生福利部中央健康保險署" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.nhi.gov.tw" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "LOINC-健保事前審查-基因突變類型值集"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "LA6692-3" ] ;
+         fhir:display [ fhir:v "Deletion" ]
+       ] [
+         fhir:code [ fhir:v "LA6686-5" ] ;
+         fhir:display [ fhir:v "Duplication" ]
+       ] [
+         fhir:code [ fhir:v "LA6687-3" ] ;
+         fhir:display [ fhir:v "Insertion" ]
+       ] [
+         fhir:code [ fhir:v "LA6688-1" ] ;
+         fhir:display [ fhir:v "Insertion/Deletion" ]
+       ] [
+         fhir:code [ fhir:v "LA6689-9" ] ;
+         fhir:display [ fhir:v "Inversion" ]
+       ] [
+         fhir:code [ fhir:v "LA6690-7" ] ;
+         fhir:display [ fhir:v "Substitution" ]
+       ] [
+         fhir:code [ fhir:v "101397-8" ] ;
+         fhir:display [ fhir:v "Copy number variation analysis Sequencing Doc (Bld/Tiss)" ]
+       ] [
+         fhir:code [ fhir:v "81695-9" ] ;
+         fhir:display [ fhir:v "MSI Ca spec-Imp" ]
+       ] [
+         fhir:code [ fhir:v "94077-5" ] ;
+         fhir:display [ fhir:v "TMB Tumor-Imp" ]
+       ] )
+     ] [
+       fhir:system [ fhir:v "https://nhicore.nhi.gov.tw/pas/CodeSystem/inca-osiris"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "O55-2" ] ;
+         fhir:display [ fhir:v "Delins" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

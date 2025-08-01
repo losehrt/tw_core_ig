@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="nhi-pdf-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem nhi-pdf-type</b></p><a name="nhi-pdf-type"> </a><a name="hcnhi-pdf-type"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pdf-type</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">gene<a name="nhi-pdf-type-gene"> </a></td><td>基因報告</td></tr><tr><td style="white-space:nowrap">careplan<a name="nhi-pdf-type-careplan"> </a></td><td>治療計畫文件</td></tr><tr><td style="white-space:nowrap">test<a name="nhi-pdf-type-test"> </a></td><td>檢驗(查)附件</td></tr><tr><td style="white-space:nowrap">medrec<a name="nhi-pdf-type-medrec"> </a></td><td>病歷資料</td></tr></table></div>
+  </text>
+  <url value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-pdf-type"/>
+  <version value="1.0.6"/>
+  <name value="NHIPDFType"/>
+  <title value="NHI-健保事前審查-文件類型"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-07-01"/>
+  <publisher value="衛生福利部中央健康保險署"/>
+  <contact>
+    <name value="衛生福利部中央健康保險署"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nhi.gov.tw"/>
+    </telecom>
+  </contact>
+  <description value="臺灣衛生福利部中央健康保險署「文件類型」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="gene"/>
+    <display value="基因報告"/>
+  </concept>
+  <concept>
+    <code value="careplan"/>
+    <display value="治療計畫文件"/>
+  </concept>
+  <concept>
+    <code value="test"/>
+    <display value="檢驗(查)附件"/>
+  </concept>
+  <concept>
+    <code value="medrec"/>
+    <display value="病歷資料"/>
+  </concept>
+</CodeSystem>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="nhi-apply-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem nhi-apply-type</b></p><a name="nhi-apply-type"> </a><a name="hcnhi-apply-type"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-apply-type</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">1<a name="nhi-apply-type-1"> </a></td><td>送核</td></tr><tr><td style="white-space:nowrap">2<a name="nhi-apply-type-2"> </a></td><td>送核補件</td></tr><tr><td style="white-space:nowrap">3<a name="nhi-apply-type-3"> </a></td><td>申復</td></tr><tr><td style="white-space:nowrap">4<a name="nhi-apply-type-4"> </a></td><td>爭議審議</td></tr><tr><td style="white-space:nowrap">5<a name="nhi-apply-type-5"> </a></td><td>申復補件</td></tr></table></div>
+  </text>
+  <url value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-apply-type"/>
+  <version value="1.0.6"/>
+  <name value="NHIApplyType"/>
+  <title value="NHI-健保事前審查-申報類別"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-07-01"/>
+  <publisher value="衛生福利部中央健康保險署"/>
+  <contact>
+    <name value="衛生福利部中央健康保險署"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nhi.gov.tw"/>
+    </telecom>
+  </contact>
+  <description value="臺灣衛生福利部中央健康保險署「申報類別」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="5"/>
+  <concept>
+    <code value="1"/>
+    <display value="送核"/>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="送核補件"/>
+  </concept>
+  <concept>
+    <code value="3"/>
+    <display value="申復"/>
+  </concept>
+  <concept>
+    <code value="4"/>
+    <display value="爭議審議"/>
+  </concept>
+  <concept>
+    <code value="5"/>
+    <display value="申復補件"/>
+  </concept>
+</CodeSystem>

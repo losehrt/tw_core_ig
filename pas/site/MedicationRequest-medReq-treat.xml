@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="medReq-treat"/>
+  <meta>
+    <profile value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/MedicationRequest-treat-twpas"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4;
+        border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Profile：<a href="StructureDefinition-MedicationRequest-treat-twpas.html">用藥品項-MedicationRequest Treat TWPAS</a></p></div><p><b>藥物使用狀態</b>：completed</p><p><b>藥物處方終止原因</b>：Try another treatment first <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">(<a href="https://hl7.org/fhir/R4/codesystem-medicationrequest-status-reason.html">MedicationRequest Status Reason Codes</a>#altchoice)</span></p><p><b>意圖</b>：Order <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">( <a href="http://hl7.org/fhir/CodeSystem/medicationrequest-intent">medicationRequest Intent</a>#order)</span></p><p><b>自費註記</b>：健保 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">(<a href="CodeSystem-nhi-drug-category.html">NHI-藥物類型</a>#nhi)</span></p><p><b>藥品代碼</b>：ANTI-CUGH SYRUP 60ML <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">(<a href="CodeSystem-nhi-medication.html">NHI-健保事前審查-用藥品項值集</a>#A000755151)</span></p><p><b>病人</b>：<a href="Patient-pat-min.html">Patient/pat-min</a> &quot;&quot;</p><p><b>藥品使用頻率及服用時間</b>：1W3D</p><p><b>藥物每次處方劑量(單位)</b>：4 (tablets <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">(<a href="https://hl7.org/fhir/R4/valueset-ucum-common.html">Common UCUM units</a>#{tbl})</span>)</p><p><b>藥物處方起始日期</b>：2024-05-01</p><p><b>藥物處方終止日期</b>：2024-05-07</p><p><b>給藥途徑／作用部位</b>：Oral use <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">(<a href="http://snomed.info/sct/">SNOMED CT + 臺灣健保署給藥途徑值集</a>#26643006)</span></p></div>
+  </text>
+  <status value="completed"/>
+  <statusReason>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason"/>
+      <code value="altchoice"/>
+    </coding>
+  </statusReason>
+  <intent value="order"/>
+  <category>
+    <coding>
+      <system value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-drug-category"/>
+      <code value="nhi"/>
+    </coding>
+  </category>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-medication"/>
+      <code value="A000755151"/>
+    </coding>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/pat-min"/>
+  </subject>
+  <dosageInstruction>
+    <timing>
+      <repeat>
+        <boundsPeriod>
+          <start value="2024-05-01"/>
+          <end value="2024-05-07"/>
+        </boundsPeriod>
+      </repeat>
+      <code>
+        <text value="1W3D"/>
+      </code>
+    </timing>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="26643006"/>
+      </coding>
+    </route>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="4"/>
+        <unit value="tablets"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="{tbl}"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosageInstruction>
+</MedicationRequest>

@@ -1,0 +1,26 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "Encounter-service-type",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: SearchParameter Encounter-service-type</b></p><a name=\"Encounter-service-type\"> </a><a name=\"hcEncounter-service-type\"> </a><h2>EncounterServiceType</h2><p>Parameter <code>service-type</code>:<code>token</code></p><div><p>就醫科別(serviceType)</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/encounter.html\">Encounter</a></td></tr><tr><td>Expression</td><td><code>Encounter.serviceType</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: It's up to the server whether the parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: It's up to the server whether the parameter can have multiple values (separated by comma) where at least one must be true</li></ul></td></tr></table></div>"
+  },
+  "url" : "https://nhicore.nhi.gov.tw/pas/SearchParameter/Encounter-service-type",
+  "version" : "1.0.6",
+  "name" : "EncounterServiceType",
+  "status" : "active",
+  "date" : "2024-08-31",
+  "publisher" : "衛生福利部中央健康保險署",
+  "contact" : [{
+    "name" : "衛生福利部中央健康保險署",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.nhi.gov.tw"
+    }]
+  }],
+  "description" : "就醫科別(serviceType)",
+  "code" : "service-type",
+  "base" : ["Encounter"],
+  "type" : "token",
+  "expression" : "Encounter.serviceType"
+}

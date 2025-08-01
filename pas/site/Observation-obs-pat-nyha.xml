@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="obs-pat-nyha"/>
+  <meta>
+    <profile value="https://nhicore.nhi.gov.tw/pas/StructureDefinition/Observation-pat-assessment-twpas"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-Observation-pat-assessment-twpas.html">病人狀態評估-Observation Patient Assessment TWPAS</a></p></div><p><b>狀態</b>：final</p><p><b>病人狀態評估項目代碼</b>：Functional capacity NYHA <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">(<a href="http://loinc.org">LOINC + NHI-病人狀態評估項目值集 </a>#88020-3)</span></p><p><b>病人</b>：<a href="Patient-pat-min.html">Patient/pat-min</a></p><p><b>病人狀態評估日期</b>：2024-01-01</p><p><b>評估項目醫事人員身分證號</b>：<a href="Practitioner-pra-min.html">Practitioner/pra-min</a></p><p><b>病人狀態評估結果</b>：class1</p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-supporting-info-type"/>
+      <code value="patientAssessment"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="88020-3"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/pat-min"/>
+  </subject>
+  <effectiveDateTime value="2024-01-01"/>
+  <performer>
+    <reference value="Practitioner/pra-min"/>
+  </performer>
+  <valueString value="class1"/>
+</Observation>

@@ -1,0 +1,35 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "nhi-continuation-status",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem nhi-continuation-status</b></p><a name=\"nhi-continuation-status\"> </a><a name=\"hcnhi-continuation-status\"> </a><p>This case-sensitive code system <code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-continuation-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"nhi-continuation-status-1\"> </a></td><td>初次使用</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"nhi-continuation-status-2\"> </a></td><td>申請再次使用</td></tr></table></div>"
+  },
+  "url" : "https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-continuation-status",
+  "version" : "1.0.6",
+  "name" : "NHIContinuationStatus",
+  "title" : "NHI-健保事前審查-續用註記",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-07-01",
+  "publisher" : "衛生福利部中央健康保險署",
+  "contact" : [{
+    "name" : "衛生福利部中央健康保險署",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.nhi.gov.tw"
+    }]
+  }],
+  "description" : "臺灣衛生福利部中央健康保險署「續用註記」代碼，代碼出版日期：2025-07-01；資料所屬單位：臺灣衛生福利部中央健康保險署。",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 2,
+  "concept" : [{
+    "code" : "1",
+    "display" : "初次使用"
+  },
+  {
+    "code" : "2",
+    "display" : "申請再次使用"
+  }]
+}

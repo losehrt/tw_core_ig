@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="nhi-line-of-therapy"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet nhi-line-of-therapy</b></p><a name="nhi-line-of-therapy"> </a><a name="hcnhi-line-of-therapy"> </a><ul><li>Include all codes defined in <a href="CodeSystem-nhi-line-of-therapy.html"><code>https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-line-of-therapy</code></a></li></ul></div>
+  </text>
+  <url value="https://nhicore.nhi.gov.tw/pas/ValueSet/nhi-line-of-therapy"/>
+  <version value="1.0.6"/>
+  <name value="NHILOT"/>
+  <title value="NHI-健保事前審查-用藥線別值集"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-07-01"/>
+  <publisher value="衛生福利部中央健康保險署"/>
+  <contact>
+    <name value="衛生福利部中央健康保險署"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nhi.gov.tw"/>
+    </telecom>
+  </contact>
+  <description value="NHI-健保事前審查-用藥線別值集"/>
+  <compose>
+    <include>
+      <system value="https://nhicore.nhi.gov.tw/pas/CodeSystem/nhi-line-of-therapy"/>
+    </include>
+  </compose>
+</ValueSet>

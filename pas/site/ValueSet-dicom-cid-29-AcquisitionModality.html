@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>HL7-AcquisitionModality值集 - 臺灣健保癌症用藥事前審查實作指引 v1.0.6</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+<link href="assets/css/ig.css" rel="stylesheet" />
+    
+<!-- Google tag (gtag.js) HITSTDIO>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1Y4JEG6RS2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1Y4JEG6RS2');
+</script-->
+
+<!-- Google tag (gtag.js) TWCORE 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60R1T0P9G0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60R1T0P9G0');
+</script>-->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"13.46"}
+    h3,h4,h5,h6{--heading-prefix:"13.46"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div id="hl7-nav">
+  <a id="hl7-logo" no-external="true" href="index.html" style="width: 10px;">
+    <img height="50" alt="TW" src="assets/images/logo-header.png" />
+  </a>
+</div>
+<div id="hl7-search">
+  <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR"
+      src="assets/images/search.png" /></a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">臺灣健保癌症用藥事前審查實作指引</span>
+            <br/>
+            <span style="display:inline-block;">1.0.6 - STU1.0.6
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+	<li><a href="index.html">應用說明</a></li>
+	<li><a href="toc.html">目錄</a></li>
+	<li><a href="vision.html">視覺化邏輯模型</a></li>
+ 	<li class="dropdown">
+		<a href="artifacts.html">規範文件<b class="caret"></b></a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="capabilitystatements.html">能力聲明</a>
+			</li>
+			<li>
+				<a href="searchparameters.html">查詢參數</a>
+			</li>
+			<li>
+				<a href="models.html">邏輯模型</a>
+			</li>
+			<li>
+				<a href="profiles-and-extensions.html">FHIR Profiles及Extensions</a>
+			</li>
+			<li>
+				<a href="terminologies.html">專門術語</a>
+			</li>
+		</ul>
+	</li>
+ 	<li><a href="examples.html">範例</a></li>
+	<li><a href="downloads.html">結構定義與範例檔下載</a></li>
+	<li><a href="security.html">安全性</a></li>
+	<li><a href="validate.html">驗證教學</a></li>
+</ul>      
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>HL7-AcquisitionModality值集</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">臺灣健保癌症用藥事前審查實作指引 - Downloaded Version 1.0.6 See the <a href="https://nhicore.nhi.gov.tw/pas/history.html">Directory of published versions</a></p></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-dicom-cid-29-AcquisitionModality.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-dicom-cid-29-AcquisitionModality.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-dicom-cid-29-AcquisitionModality.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+  <h2 id="root">ValueSet: HL7-AcquisitionModality值集
+
+  </h2>
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://nhicore.nhi.gov.tw/pas/ValueSet/dicom-cid-29-AcquisitionModality<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://nhicore.nhi.gov.tw/pas/ValueSet/dicom-cid-29-AcquisitionModality"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">1.0.6<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://nhicore.nhi.gov.tw/pas/ValueSet/dicom-cid-29-AcquisitionModality|1.0.6"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Active
+          
+            as of 2024-03-31
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">AcquisitionModality</span></td>
+    </tr>
+
+
+
+
+    <tr>
+      <td colspan="5"><p><em>Copyright/Legal</em>: © 2024 NEMA</p>
+</td>
+    </tr>
+
+  </table>
+
+<p>
+<p>原值集因總會工具問題無法正常顯示，故先自建值集。</p>
+
+</p>
+
+
+  <p>
+    <b>References</b>
+  </p>
+  
+<ul>
+ <li><a href="StructureDefinition-ImagingStudy-twpas.html">DICOM影像-ImagingStudy TWPAS</a></li>
+</ul>
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <a name="definition"> </a>
+
+<!-- Content Logical Definition heading in the fragment -->
+  <h3>Logical Definition (CLD)</h3>
+<div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"></p><a name="dicom-cid-29-AcquisitionModality"> </a><a name="hcdicom-cid-29-AcquisitionModality"> </a>
+<ul><li>Include these codes as defined in <a href="http://dicom.nema.org/resources/ontology/DCM"><code>http://dicom.nema.org/resources/ontology/DCM</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><code>BMD</code></td><td>Bone Mineral Densitometry</td><td>An acquisition device, process or method that performs bone mineral densitometry by X-Ray, including dual-energy X-Ray absorptiometry (DXA) and morphometric X-Ray absorptiometry (MXA).</td></tr><tr><td><code>EOG</code></td><td>Electrooculography</td><td>An acquisition device, process or method that performs electrooculography.</td></tr><tr><td><code>SM</code></td><td>Slide Microscopy</td><td>An acquisition device, process or method that performs slide microscopy.</td></tr><tr><td><code>OP</code></td><td>Ophthalmic Photography</td><td>An acquisition device, process or method that performs ophthalmic photography.</td></tr><tr><td><code>ECG</code></td><td>Electrocardiography</td><td>An acquisition device, process or method that performs electrocardiography.</td></tr><tr><td><code>GM</code></td><td>General Microscopy</td><td>An acquisition device, process or method that performs general microscopy.</td></tr><tr><td><code>XA</code></td><td>X-Ray Angiography</td><td>An acquisition device, process or method that performs X-Ray angiography.</td></tr><tr><td><code>XC</code></td><td>External-camera Photography</td><td>An acquisition device, process or method that performs photography with an external camera.</td></tr><tr><td><code>DMS</code></td><td>Dermoscopy</td><td>An acquisition device, process or method that performs imaging of the surface of the skin using epiluminescence microscopy.</td></tr><tr><td><code>IVUS</code></td><td>Intravascular Ultrasound</td><td>An acquisition device, process or method that performs intravascular ultrasound.</td></tr><tr><td><code>CR</code></td><td>Computed Radiography</td><td>An acquisition device, process or method that performs computed radiography.</td></tr><tr><td><code>CT</code></td><td>Computed Tomography</td><td>An acquisition device, process or method that performs computed tomography.</td></tr><tr><td><code>OSS</code></td><td>Optical Surface Scanner</td><td>An acquisition device, process or method that performs optical surface scanning.</td></tr><tr><td><code>TG</code></td><td>Thermography</td><td>An acquisition device, process or method that performs thermography.</td></tr><tr><td><code>LEN</code></td><td>Lensometry</td><td>An acquisition device, process or method that performs lensometry.</td></tr><tr><td><code>OPTENF</code></td><td>Ophthalmic Tomography En Face</td><td>An acquisition device, process or method that creates en face tomography images of the eye based on light and optical principles. Tomography based on other principles, such as ultrasound, is excluded.</td></tr><tr><td><code>HD</code></td><td>Hemodynamic Waveform</td><td>An acquisition device, process or method that records hemodynamic waveforms.</td></tr><tr><td><code>OCT</code></td><td>Optical Coherence Tomography</td><td>An acquisition device, process or method that uses an interferometric, non-invasive optical tomographic technique to image 2D slices and 3D volumes of tissue using visible and near visible frequencies.</td></tr><tr><td><code>BDUS</code></td><td>Ultrasound Bone Densitometry</td><td>An acquisition device, process or method that performs ultrasound bone densitometry.</td></tr><tr><td><code>DG</code></td><td>Diaphanography</td><td>An acquisition device, process or method that performs diaphanography.</td></tr><tr><td><code>PT</code></td><td>Positron emission tomography</td><td>An acquisition device, process or method that performs positron emission tomography (PET).</td></tr><tr><td><code>EPS</code></td><td>Cardiac Electrophysiology</td><td>An acquisition device, process or method that performs cardiac electrophysiology.</td></tr><tr><td><code>LS</code></td><td>Laser Scan</td><td>An acquisition device, process or method that performs laser surface scanning.</td></tr><tr><td><code>PX</code></td><td>Panoramic X-Ray</td><td>An acquisition device, process or method that performs panoramic X-Rays.</td></tr><tr><td><code>OPM</code></td><td>Ophthalmic Mapping</td><td>An acquisition device, process or method that measures corneal topography, corneal or retinal thickness, and other similar parameters that are typically displayed as maps.</td></tr><tr><td><code>OPTBSV</code></td><td>Ophthalmic Tomography B-scan Volume Analysis</td><td>An acquisition device, process or method that performs B-scan volume analysis of tomography images of the eye based on light and optical principles. Tomography based on other principles, such as ultrasound, is excluded.</td></tr><tr><td><code>OPV</code></td><td>Ophthalmic Visual Field</td><td>An acquisition device, process or method that measures visual fields and perform visual perimetry.</td></tr><tr><td><code>DX</code></td><td>Digital Radiography</td><td>An acquisition device, process or method that performs digital radiography.</td></tr><tr><td><code>OPT</code></td><td>Ophthalmic Tomography</td><td>An acquisition device, process or method that performs tomography of the eye that is based on light and optical principles. Tomography based on other principles, such as ultrasound, is excluded.</td></tr><tr><td><code>MG</code></td><td>Mammography</td><td>An acquisition device, process or method that performs mammography.</td></tr><tr><td><code>US</code></td><td>Ultrasound</td><td>An acquisition device, process or method that performs ultrasound.</td></tr><tr><td><code>EMG</code></td><td>Electromyography</td><td>An acquisition device, process or method that performs electromyography.</td></tr><tr><td><code>IVOCT</code></td><td>Intravascular Optical Coherence Tomography</td><td>An acquisition device, process or method that performs intravascular optical coherence tomography</td></tr><tr><td><code>MR</code></td><td>Magnetic Resonance</td><td>An acquisition device, process or method that performs magnetic resonance imaging.</td></tr><tr><td><code>IO</code></td><td>Intra-oral Radiography</td><td>An acquisition device, process or method that performs intra-oral radiography.</td></tr><tr><td><code>EEG</code></td><td>Electroencephalography</td><td>An acquisition device, process or method that performs electroencephalography.</td></tr><tr><td><code>RTIMAGE</code></td><td>RT Image</td><td>An acquisition device, process or method that performs radiotherapy imaging; includes portal imaging.</td></tr><tr><td><code>VA</code></td><td>Visual Acuity</td><td>An acquisition device, process or method that measures visual acuity.</td></tr><tr><td><code>RESP</code></td><td>Respiratory Waveform</td><td>A device, process or method that produces waveforms of electrical signals from the patient’s respiratory system.</td></tr><tr><td><code>ES</code></td><td>Endoscopy</td><td>An acquisition device, process or method that records images during endoscopy.</td></tr><tr><td><code>AR</code></td><td>Autorefraction</td><td>An acquisition device, process or method that measures autorefraction.</td></tr><tr><td><code>POS</code></td><td>Position Sensor</td><td>A device or sensor measuring the orientation of the patient’s body.</td></tr><tr><td><code>RG</code></td><td>Radiographic imaging</td><td>An acquisition device, process or method that performs radiographic imaging (conventional film/screen).</td></tr><tr><td><code>RF</code></td><td>Radiofluoroscopy</td><td>An acquisition device, process or method that performs radiofluoroscopy.</td></tr><tr><td><code>KER</code></td><td>Keratometry</td><td>An acquisition device, process or method that performs keratometry.</td></tr><tr><td><code>OAM</code></td><td>Ophthalmic Axial Measurements</td><td>An acquisition device, process or method that measures the axial length of the eye.</td></tr><tr><td><code>NM</code></td><td>Nuclear Medicine</td><td>An acquisition device, process or method that performs nuclear medicine imaging.</td></tr><tr><td><code>BI</code></td><td>Biomagnetic Imaging</td><td>An acquisition device, process or method that performs biomagnetic imaging.</td></tr><tr><td><code>SRF</code></td><td>Subjective Refraction</td><td>An acquisition device, process or method that records subjective refraction.</td></tr></table></li></ul></div>
+
+  <p>&#160;</p>
+  <a name="expansion"> </a>
+  <h3 id="expansion">Expansion</h3>
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"/><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on codesystem DICOM v2022.4.20221006 (CodeSystem)</p><p>This value set contains 49 concepts</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>System</b></td><td><b>Display (en-US)</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-BMD"> </a>  <code>BMD</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Bone Mineral Densitometry</td><td><div><p>An acquisition device, process or method that performs bone mineral densitometry by X-Ray, including dual-energy X-Ray absorptiometry (DXA) and morphometric X-Ray absorptiometry (MXA).</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-EOG"> </a>  <code>EOG</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Electrooculography</td><td><div><p>An acquisition device, process or method that performs electrooculography.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-SM"> </a>  <code>SM</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Slide Microscopy</td><td><div><p>An acquisition device, process or method that performs slide microscopy.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-OP"> </a>  <code>OP</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Ophthalmic Photography</td><td><div><p>An acquisition device, process or method that performs ophthalmic photography.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-ECG"> </a>  <code>ECG</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Electrocardiography</td><td><div><p>An acquisition device, process or method that performs electrocardiography.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-GM"> </a>  <code>GM</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>General Microscopy</td><td><div><p>An acquisition device, process or method that performs general microscopy.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-XA"> </a>  <code>XA</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>X-Ray Angiography</td><td><div><p>An acquisition device, process or method that performs X-Ray angiography.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-XC"> </a>  <code>XC</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>External-camera Photography</td><td><div><p>An acquisition device, process or method that performs photography with an external camera.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-DMS"> </a>  <code>DMS</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Dermoscopy</td><td><div><p>An acquisition device, process or method that performs imaging of the surface of the skin using epiluminescence microscopy.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-IVUS"> </a>  <code>IVUS</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Intravascular Ultrasound</td><td><div><p>An acquisition device, process or method that performs intravascular ultrasound.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-CR"> </a>  <code>CR</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Computed Radiography</td><td><div><p>An acquisition device, process or method that performs computed radiography.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-CT"> </a>  <code>CT</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Computed Tomography</td><td><div><p>An acquisition device, process or method that performs computed tomography.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-OSS"> </a>  <code>OSS</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Optical Surface Scanner</td><td><div><p>An acquisition device, process or method that performs optical surface scanning.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-TG"> </a>  <code>TG</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Thermography</td><td><div><p>An acquisition device, process or method that performs thermography.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-LEN"> </a>  <code>LEN</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Lensometry</td><td><div><p>An acquisition device, process or method that performs lensometry.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-OPTENF"> </a>  <code>OPTENF</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Ophthalmic Tomography En Face</td><td><div><p>An acquisition device, process or method that creates en face tomography images of the eye based on light and optical principles. Tomography based on other principles, such as ultrasound, is excluded.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-HD"> </a>  <code>HD</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Hemodynamic Waveform</td><td><div><p>An acquisition device, process or method that records hemodynamic waveforms.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-OCT"> </a>  <code>OCT</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Optical Coherence Tomography</td><td><div><p>An acquisition device, process or method that uses an interferometric, non-invasive optical tomographic technique to image 2D slices and 3D volumes of tissue using visible and near visible frequencies.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-BDUS"> </a>  <code>BDUS</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Ultrasound Bone Densitometry</td><td><div><p>An acquisition device, process or method that performs ultrasound bone densitometry.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-DG"> </a>  <code>DG</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Diaphanography</td><td><div><p>An acquisition device, process or method that performs diaphanography.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-PT"> </a>  <code>PT</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Positron emission tomography</td><td><div><p>An acquisition device, process or method that performs positron emission tomography (PET).</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-EPS"> </a>  <code>EPS</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Cardiac Electrophysiology</td><td><div><p>An acquisition device, process or method that performs cardiac electrophysiology.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-LS"> </a>  <code>LS</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Laser Scan</td><td><div><p>An acquisition device, process or method that performs laser surface scanning.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-PX"> </a>  <code>PX</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Panoramic X-Ray</td><td><div><p>An acquisition device, process or method that performs panoramic X-Rays.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-OPM"> </a>  <code>OPM</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Ophthalmic Mapping</td><td><div><p>An acquisition device, process or method that measures corneal topography, corneal or retinal thickness, and other similar parameters that are typically displayed as maps.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-OPTBSV"> </a>  <code>OPTBSV</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Ophthalmic Tomography B-scan Volume Analysis</td><td><div><p>An acquisition device, process or method that performs B-scan volume analysis of tomography images of the eye based on light and optical principles. Tomography based on other principles, such as ultrasound, is excluded.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-OPV"> </a>  <code>OPV</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Ophthalmic Visual Field</td><td><div><p>An acquisition device, process or method that measures visual fields and perform visual perimetry.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-DX"> </a>  <code>DX</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Digital Radiography</td><td><div><p>An acquisition device, process or method that performs digital radiography.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-OPT"> </a>  <code>OPT</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Ophthalmic Tomography</td><td><div><p>An acquisition device, process or method that performs tomography of the eye that is based on light and optical principles. Tomography based on other principles, such as ultrasound, is excluded.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-MG"> </a>  <code>MG</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Mammography</td><td><div><p>An acquisition device, process or method that performs mammography.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-US"> </a>  <code>US</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Ultrasound</td><td><div><p>An acquisition device, process or method that performs ultrasound.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-EMG"> </a>  <code>EMG</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Electromyography</td><td><div><p>An acquisition device, process or method that performs electromyography.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-IVOCT"> </a>  <code>IVOCT</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Intravascular Optical Coherence Tomography</td><td><div><p>An acquisition device, process or method that performs intravascular optical coherence tomography</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-MR"> </a>  <code>MR</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Magnetic Resonance</td><td><div><p>An acquisition device, process or method that performs magnetic resonance imaging.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-IO"> </a>  <code>IO</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Intra-oral Radiography</td><td><div><p>An acquisition device, process or method that performs intra-oral radiography.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-EEG"> </a>  <code>EEG</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Electroencephalography</td><td><div><p>An acquisition device, process or method that performs electroencephalography.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-RTIMAGE"> </a>  <code>RTIMAGE</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>RT Image</td><td><div><p>An acquisition device, process or method that performs radiotherapy imaging; includes portal imaging.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-VA"> </a>  <code>VA</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Visual Acuity</td><td><div><p>An acquisition device, process or method that measures visual acuity.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-RESP"> </a>  <code>RESP</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Respiratory Waveform</td><td><div><p>A device, process or method that produces waveforms of electrical signals from the patient’s respiratory system.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-ES"> </a>  <code>ES</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Endoscopy</td><td><div><p>An acquisition device, process or method that records images during endoscopy.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-AR"> </a>  <code>AR</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Autorefraction</td><td><div><p>An acquisition device, process or method that measures autorefraction.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-POS"> </a>  <code>POS</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Position Sensor</td><td><div><p>A device or sensor measuring the orientation of the patient’s body.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-RG"> </a>  <code>RG</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Radiographic imaging</td><td><div><p>An acquisition device, process or method that performs radiographic imaging (conventional film/screen).</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-RF"> </a>  <code>RF</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Radiofluoroscopy</td><td><div><p>An acquisition device, process or method that performs radiofluoroscopy.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-KER"> </a>  <code>KER</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Keratometry</td><td><div><p>An acquisition device, process or method that performs keratometry.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-OAM"> </a>  <code>OAM</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Ophthalmic Axial Measurements</td><td><div><p>An acquisition device, process or method that measures the axial length of the eye.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-NM"> </a>  <code>NM</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Nuclear Medicine</td><td><div><p>An acquisition device, process or method that performs nuclear medicine imaging.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-BI"> </a>  <code>BI</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Biomagnetic Imaging</td><td><div><p>An acquisition device, process or method that performs biomagnetic imaging.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://dicom.nema.org/resources/ontology/DCM-SRF"> </a>  <code>SRF</code></td><td>http://dicom.nema.org/resources/ontology/DCM</td><td>Subjective Refraction</td><td><div><p>An acquisition device, process or method that records subjective refraction.</p>
+</div></td></tr></table></div>
+
+  <hr/>
+  <p>
+    Explanation of the columns that may appear on this page:
+  </p>
+  <table class="grid">
+    <tr>
+      <td>Level</td>
+      <td>A few code lists that FHIR defines are hierarchical - each code is assigned a level.
+          In this scheme, some codes are under other codes, and imply that the code they are under also applies</td>
+    </tr>
+    <tr>
+      <td>System</td>
+      <td>The source of the definition of the code (when the value set draws in codes defined elsewhere)</td>
+    </tr>
+    <tr>
+      <td>Code</td>
+      <td>The code (used as the code in the resource instance)</td>
+    </tr>
+    <tr>
+      <td>Display</td>
+      <td>The display (used in the <i>display</i> element of a <a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a>). If there is no display, implementers should not simply display the code, but map the concept into their application</td>
+    </tr>
+    <tr>
+      <td>Definition</td>
+      <td>An explanation of the meaning of the concept</td>
+    </tr>
+    <tr>
+      <td>Comments</td>
+      <td>Additional notes about how to use the code</td>
+    </tr>
+  </table>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.nhi.gov.tw">衛生福利部中央健康保險署</a>.  Package tw.gov.mohw.nhi.pas#1.0.6 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 30, 2025 10:52+0800">2025-07-30</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="https://nhicore.nhi.gov.tw/pas/history.html">Version History</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
