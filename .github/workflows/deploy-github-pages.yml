@@ -28,6 +28,9 @@ jobs:
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
+        with:
+          # 自動啟用 GitHub Pages
+          enablement: true
         
       - name: Prepare site content
         run: |
