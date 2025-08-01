@@ -37,9 +37,10 @@ jobs:
           # 建立輸出目錄
           mkdir -p _site
           
-          # 如果有 pas/site 目錄，複製內容到根目錄
+          # 如果有 pas/site 目錄，複製內容到 pas 子目錄
           if [ -d "pas/site" ]; then
-            cp -r pas/site/* _site/
+            mkdir -p _site/pas
+            cp -r pas/site/* _site/pas/
           fi
           
           # 建立一個簡單的首頁，列出所有的 IG
@@ -119,7 +120,7 @@ jobs:
                       <p class="description">
                           Prior Authorization Support (PAS) Implementation Guide for Taiwan NHI Cancer Drug Pre-authorization
                       </p>
-                      <a href="index.html">查看實作指引</a>
+                      <a href="./pas/index.html">查看實作指引</a>
                   </div>
                   
                   <!-- 未來可以在這裡新增其他的 IG -->
