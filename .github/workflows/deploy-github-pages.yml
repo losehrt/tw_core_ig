@@ -1,0 +1,143 @@
+name: Deploy FHIR IG to GitHub Pages
+
+on:
+  # 當推送到 main 分支時觸發
+  push:
+    branches: ["main"]
+  # 允許手動觸發工作流程
+  workflow_dispatch:
+
+# 設定 GITHUB_TOKEN 的權限以允許部署到 GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 只允許一個並發部署，跳過正在進行的部署
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # 建構工作
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        
+      - name: Prepare site content
+        run: |
+          # 建立輸出目錄
+          mkdir -p _site
+          
+          # 如果有 pas/site 目錄，複製內容到根目錄
+          if [ -d "pas/site" ]; then
+            cp -r pas/site/* _site/
+          fi
+          
+          # 建立一個簡單的首頁，列出所有的 IG
+          cat > _site/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html lang="zh-TW">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>FHIR TW Core Implementation Guides</title>
+              <style>
+                  body {
+                      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                      max-width: 1200px;
+                      margin: 0 auto;
+                      padding: 20px;
+                      background-color: #f5f5f5;
+                  }
+                  .container {
+                      background-color: white;
+                      padding: 30px;
+                      border-radius: 8px;
+                      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                  }
+                  h1 {
+                      color: #333;
+                      border-bottom: 3px solid #0066cc;
+                      padding-bottom: 10px;
+                  }
+                  .ig-card {
+                      background-color: #f8f9fa;
+                      border: 1px solid #dee2e6;
+                      border-radius: 5px;
+                      padding: 20px;
+                      margin: 20px 0;
+                      transition: transform 0.2s;
+                  }
+                  .ig-card:hover {
+                      transform: translateY(-2px);
+                      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                  }
+                  .ig-card h2 {
+                      color: #0066cc;
+                      margin-top: 0;
+                  }
+                  .ig-card a {
+                      display: inline-block;
+                      margin-top: 10px;
+                      padding: 8px 16px;
+                      background-color: #0066cc;
+                      color: white;
+                      text-decoration: none;
+                      border-radius: 4px;
+                      transition: background-color 0.2s;
+                  }
+                  .ig-card a:hover {
+                      background-color: #0052a3;
+                  }
+                  .version {
+                      color: #666;
+                      font-size: 0.9em;
+                  }
+                  .description {
+                      margin: 10px 0;
+                      color: #555;
+                  }
+              </style>
+          </head>
+          <body>
+              <div class="container">
+                  <h1>FHIR Taiwan Core Implementation Guides</h1>
+                  <p>衛生福利部發布的 FHIR 實作指引</p>
+                  
+                  <div class="ig-card">
+                      <h2>臺灣健保癌症用藥事前審查實作指引 (PAS)</h2>
+                      <p class="version">版本: 1.0.6</p>
+                      <p class="description">
+                          Prior Authorization Support (PAS) Implementation Guide for Taiwan NHI Cancer Drug Pre-authorization
+                      </p>
+                      <a href="index.html">查看實作指引</a>
+                  </div>
+                  
+                  <!-- 未來可以在這裡新增其他的 IG -->
+              </div>
+          </body>
+          </html>
+          EOF
+          
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+  # 部署工作
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
